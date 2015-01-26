@@ -47,7 +47,9 @@ Discuss the similarities and differences between the two graphs below.  Why are 
 	\end{array}$
 
 			\begin{freeResponse}
-			The notations $\frac{f(x)-f(a)}{x-a}$ and $\frac{f(a+h)-f(a)}{h}$ both express the same number on the two graphs: they each give the slope of the secant line through $P$ 				and $Q$.  Note that $x-a=h$ and thus $x=a+h$.  Both notations are mathematically equivalent but in a given problem one may be easier to work with than the other.  			Both graphs show that as we let $Q$ get closer to $P$, the secant line through $PQ$ approaches the tangent line through $P$.  We can summarize this by a suggestive 				phrase: the limit of the secant lines is the tangent line (it is suggestive but not precise).  Thus the limit of the slopes of the secant lines is the slope of the tangent line.
+			The notations $\frac{f(x)-f(a)}{x-a}$ and $\frac{f(a+h)-f(a)}{h}$ both express the same number on the two graphs: they each give the slope of the secant line through $P$ 				and $Q$.  Note that $x-a=h$ and thus $x=a+h$.  Both notations are mathematically equivalent but in a given problem one may be easier to work with than the other.  
+
+			Both graphs show that as we let $Q$ get closer to $P$, the secant line through $PQ$ approaches the tangent line through $P$.  We can summarize this by a suggestive 				phrase: the limit of the secant lines is the tangent line (it is suggestive but not precise).  Thus the limit of the slopes of the secant lines is the slope of the tangent line.
 			\end{freeResponse}
 \end{problem}
 	
@@ -134,6 +136,63 @@ Find the equation of the tangent line to the graph of the given function at $x=3
 		
 	
 	\end{enumerate}
+\end{problem}
+
+
+
+
+
+
+
+
+
+%problem 3			
+\begin{problem}
+Let $f(x) = |5-x|$.
+	
+	\begin{enumerate}
+	
+	%part a
+	\item For $a < 5$, find $f'(a)$.
+	
+		\begin{freeResponse}
+		Recall that $f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x-a}$.  When $a < 5$, $0 < 5-a$ and so $f(a) = |5-a| = 5-a$.  Since we are considering the limit as $x$ approaches $a$, we may also assume that $x > 5$ and therefore $f(x) = 5-x$.  Thus
+		
+		$f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x-a}
+		= \lim_{x \to a} \frac{(5-x) - (5-a)}{x-a}
+		= \lim_{x \to a} \frac{-(x-a)}{x-a}
+		= \lim_{x \to a} -1 = -1$.
+		\end{freeResponse}
+		
+		
+	
+	%part b
+	\item For $a > 5$, find $f'(a)$.
+	
+		\begin{freeResponse}
+		When $a > 5$, $0 > 5-a$ and so $f(a) = |5-a| = -(5-a) = a-5$.  Since we are considering the limit as $x$ approaches $a$, we may also assume that $x < 5$ and therefore $f(x) = x-5$.  Thus
+		
+		$f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x-a}
+		= \lim_{x \to a} \frac{(x-5) - (a-5)}{x-a}
+		= \lim_{x \to a} \frac{x-a}{x-a}
+		= \lim_{x \to a} 1 = 1$.
+
+		\end{freeResponse}
+		
+		
+	
+	%part c
+	\item Use your work from parts (a) and (b) to answer the question ``Does $f'(5)$ exist and, if so, what is $f'(a)$?".
+	
+		\begin{freeResponse}
+		$f'(5) = \lim_{x \to 5} \frac{f(x) - f(5)}{x-5}$ provided this limit exists.  We know from part (a) that, as $x$ approaches $5$ from the left, this limit exists and equals $-1$.  We similarly know from part (b) that, as $x$ approaches $5$ from the right, this limit exists and equals $1$.  Since $\lim_{x \to 5^-} \frac{f(x) - f(5)}{x-5} = -1 \neq 1 = \lim_{x \to 5^+} \frac{f(x) - f(5)}{x-5}$, we know that $\lim_{x \to 5} \frac{f(x) - f(5)}{x-5}$ DNE.  Therefore, $f'(5)$ does not exist.
+		\end{freeResponse}
+		
+		
+	
+	\end{enumerate}
+
+
 \end{problem}
 	
 	
