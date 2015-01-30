@@ -73,9 +73,19 @@ Use the ``short-cut derivative rules" to compute the derivatives of the followin
 
 %problem 2			
 \begin{problem}
-
+Find the slope of the function $f(x) = 2x^3 - 5x^2 + 7x - 9$ at $x=3$ two ways.  First, by finding it directly by the limit definition and, secondly, by using the ``derivative short-cut" to find $f'(x)$ and then evaluating it at $x=3$.  Then, find the equation of the tangent line to the graph of $f(x)$ at $x=3$.
 		\begin{freeResponse}
-
+		$f'(3) = \lim_{x \to 3} \frac{f(x) - f(3)}{x-3}
+		= \lim_{x \to 3} \frac{(2x^3 - 5x^2 + 7x - 9) - (54 - 45 + 21 - 9)}{x-3}
+		= \lim_{x \to 3} \frac{(2x^3 - 5x^2 + 7x - 9) - 21}{x-3}
+		= \lim_{x \to 3} \frac{2x^3 - 5x^2 + 7x - 30}{x-3}
+		= \lim_{x \to 3} \frac{(x-3)(2x^2 + x + 10)}{x-3}
+		= \lim_{x \to 3} (2x^2 + x + 10)
+		= 18 + 3 + 10 = 31.$
+		
+		Using the ``short-cut rules", $f'(x) = 6x^2 - 10x + 7$ and so $f'(3) = 6(9) - 10(3) + 7 = 54 - 30 + 7 = 31$.
+		
+		The tangent line to the graph of $f(x)$ at $x=3$ has slope $m=31$ and goes through the point $(3,21)$.  Thus, the equation of the tangent line is $y-21=31(x-3)$, or $y = 31x -72$. 
 		\end{freeResponse}
 		
 \end{problem}
@@ -88,31 +98,6 @@ Use the ``short-cut derivative rules" to compute the derivatives of the followin
 
 
 
-%problem 3			
-\begin{problem}
-
-		\begin{freeResponse}
-		
-		\end{freeResponse}
-		
-\end{problem}
-
-
-
-
-
-
-
-%problem 4
-\begin{problem}
-
-		\begin{freeResponse}
-		\end{freeResponse}
-		
-
-
-
-\end{problem}
 	
 	
 	

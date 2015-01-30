@@ -15,8 +15,16 @@
 \maketitle
 
 \section*{Warm up:} 
-	
+Differentiate the function $f(x) = \frac{1}{x^8}$ two different ways.
+
 	\begin{freeResponse}
+	First way:  Since $f(x) = \frac{1}{x^8} = x^{-8}$, $f'(x) = -8x^{-8-1} = -8x^{-9} = -\frac{8}{x^9}$.
+	
+	Second way:  Using the quotient rule, 
+	$f'(x) = \frac{(x^8 \cdot \ddx(1)) - (1 \cdot \ddx(x^8))}{(x^8)^2}
+	= \frac{(x^8 \cdot 0) - (1 \cdot 8x^7)}{x^{16}}
+	= \frac{-8x^7}{x^{16}}
+	= - \frac{8}{x^9}$.
 	\end{freeResponse}	
 	
 	
@@ -28,10 +36,34 @@
 
 %problem 1
 \begin{problem}
+Differentiate the following functions:
 
+	\begin{enumerate}
+	
+	%part a
+	\item  $f(x) = (x^2 + 4x - 7) e^{-2x}$
 			\begin{freeResponse}
-			
+			$f'(x) = \left( \ddx(x^2 + 4x - 7) \cdot e^{-2x} \right) + \left((x^2 + 4x - 7) \cdot \ddx(e^{-2x}) \right)
+			= ((2x+4)(e^{-2x}) + (x^2 + 4x - 7)(-2e^{-2x})
+			= (2x + 4 - 2x^2 - 8x + 14)e^{-2x}
+			= (-2x^2 - 6x + 18)e^{-2x}$.
 			\end{freeResponse}
+			
+			
+			
+	%part b
+	\item  $g(x) = \frac{x^2 + 4x - 7}{e^{-2x}}$
+			\begin{freeResponse}
+			$g'(x) = \frac{\left( e^{-2x} \cdot \ddx(x^2 + 4x - 7) \right) - \left( (x^2 + 4x - 7) \cdot \ddx(e^{-2x}) \right)}{(e^{-2x})^2}
+			= \frac{((e^{-2x}) \cdot (2x+4)) - ((x^2 + 4x - 7) \cdot (-2e^{-2x}))}{e^{-4x}}
+			= \frac{(2x + 4 + 2x^2 + 8x - 14)e^{-2x}}{e^{-4x}}
+			= \frac{2x^2 + 10x - 10}{e^{-2x}}$.
+			\end{freeResponse}
+			
+			
+			
+			
+	\end{enumerate}		
 \end{problem}
 	
 	
@@ -42,10 +74,45 @@
 
 %problem 2			
 \begin{problem}
+Suppose that $f(5) = 7$, $f'(5) = 8$, $g(5) = 3$, and $g'(5) = -4$.  Find:
 
+	\begin{enumerate}
+	
+	%part a
+	\item  $(fg)'(5)$.
 		\begin{freeResponse}
-
+		$(fg)'(5) = (f'(5) \cdot g(5)) + (f(5) \cdot g'(5))
+		= (8)(3) + (7)(-4)
+		= 24 - 28 = -4$.
 		\end{freeResponse}
+		
+		
+		
+	%part b
+	\item $ \left( \frac{f}{g} \right)' (5)$
+		\begin{freeResponse}
+		$ \left( \frac{f}{g} \right)' (5)
+		= \frac{(g(5) \cdot f'(5)) - (f(5) \cdot g'(5))}{(g(5))^2}
+		= \frac{(3)(8) - (7)(-4)}{3^2}
+		= \frac{24 + 28}{9}
+		= \frac{52}{9}$.
+		\end{freeResponse}
+		
+		
+		
+	%part c
+	\item $ \left( \frac{g}{f} \right)' (5)$
+		\begin{freeResponse}
+		$\left( \frac{g}{f} \right)' (5)
+		= \frac{(f(5) \cdot g'(5)) - (g(5) \cdot f'(5))}{(f(5))^2}
+		= \frac{(7)(-4) - (3)(8)}{7^2}
+		= \frac{-28 - 24}{49}
+		= - \frac{52}{49}$.
+		\end{freeResponse}
+		
+	
+	
+	\end{enumerate}
 		
 \end{problem}
 
@@ -59,10 +126,50 @@
 
 %problem 3			
 \begin{problem}
-
+Find the following derivatives:
+	\begin{enumerate}
+	
+	%part a
+	\item  Given $g(x) = x^3 f(x)$, $f(2) = 4$, and $f'(2) = 7$, find the equation of the tangent line to the graph of $g(x)$ at $x=2$.
+		\begin{freeResponse}
+		$g'(x) = 3x^2 f(x) + x^3 f'(x)$.  So $g'(2) = 12$
+		\end{freeResponse}
+		
+		
+		
+	%part b
+	\item  Given that $h(x) = \frac{x f(x)}{x-3}$, $f(2) = 4$, and $f'(2) = 7$, find the equation of the tangent line to the graph of $h(x)$ at $x=2$.  
 		\begin{freeResponse}
 		
 		\end{freeResponse}
+		
+		
+		
+	%part c
+	\item  Given the following table, find $\ddx \left( \frac{f(x)}{e^x g(x)} \right)$ at $x=2$. 
+	
+	$\begin{array}{|c|c|c|c|c|c|}
+	\hline
+	x	&	1	&	2	&	3	&	4	&	5	\\
+	\hline
+	f(x)	&	5	&	3	&	0	&	-4	&	3	\\
+	\hline
+	f'(x)	&	-3	&	-5	&	-2	&	6	&	-4	\\
+	\hline
+	g(x)	&	6	&	9	&	-8	&	13	&	15	\\
+	\hline
+	g'(x)	&	8	&	5	&	-10	&	7	&	6	\\
+	\hline
+	\end{array}$
+	
+	 
+		\begin{freeResponse}
+		
+		\end{freeResponse}
+		
+		
+		
+	\end{enumerate}
 		
 \end{problem}
 
@@ -72,16 +179,6 @@
 
 
 
-%problem 4
-\begin{problem}
-
-		\begin{freeResponse}
-		\end{freeResponse}
-		
-
-
-
-\end{problem}
 	
 	
 	
