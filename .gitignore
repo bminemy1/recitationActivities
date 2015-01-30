@@ -44,3 +44,9 @@ Temporary Items
 *.aux
 *.log
 *.out
+
+*.pdf
+
+*.gz
+
+*.pdf
