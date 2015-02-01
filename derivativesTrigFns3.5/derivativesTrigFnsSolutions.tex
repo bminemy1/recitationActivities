@@ -15,8 +15,11 @@
 \maketitle
 
 \section*{Warm up:} 
-	
+Let $f(x) = \sin(x)$ and $g(x) = \cos(x)$.  Can you compute $f^{(48)}(x)$ and $g^{(42)}(x)$?  Does this remind you of anything that you learned in a high school mathematics course?
 	\begin{freeResponse}
+	Recall that, for $n$ a nonnegative integer, $f^{(4n)}(x) = f(x) = \sin(x)$ and $g^{(4n)}(x) = g(x) = \cos(x)$.  Thus, $f^{(48)}(x) = \sin(x)$ and $g^{(42)}(x) = g''(x) = - \cos(x)$.  
+
+	This may remind you of the fact that, for $n$ a nonnegative integer, $i^{4n} = i$ where $i$ is the number such that $i^2 = -1$.  It is not going to play a role in this class at all, but these two phenomena really are related (which I think is pretty cool haha)!
 	\end{freeResponse}	
 	
 	
@@ -35,7 +38,10 @@ Find the following limits:
 	%part a
 	\item  $\lim_{x \to 0} \frac{\sin(8x)}{x}$
 			\begin{freeResponse}
-			
+			$\lim_{x \to 0} \frac{\sin(8x)}{x} \cdot \frac{8}{8}
+			= 8 \lim_{x \to 0} \frac{\sin(8x)}{8x}
+			= 8 \lim_{u \to 0} \frac{\sin(u)}{u}
+			= 8 \cdot 1 = 8$  where $u = 8x$.  
 			\end{freeResponse}
 			
 			
@@ -43,7 +49,11 @@ Find the following limits:
 	%part b
 	\item  $\lim_{x \to 0} \frac{\cos^2(x) - 1}{4x}$
 			\begin{freeResponse}
-			
+			$\lim_{x \to 0} \frac{\cos^2(x) - 1}{4x}
+			= \lim_{x \to 0} \frac{\sin^2(x)}{4x}
+			= \lim_{x \to 0} \left( \sin(x) \frac{\sin(x)}{4x} \right)
+			= \frac{1}{4} \left( \lim_{x \to 0} \sin(x) \right) \cdot \left( \lim_{x \to 0} \frac{\sin(x)}{x} \right)
+			= \frac{1}{4} (0) (1) = 0$
 			\end{freeResponse}
 			
 			
@@ -51,7 +61,13 @@ Find the following limits:
 	%part c
 	\item  $\lim_{x \to 0} \frac{x}{\tan(5x)}$
 			\begin{freeResponse}
+			$\lim_{x \to 0} \frac{x}{\tan(5x)}
+			= \lim_{x \to 0} \frac{x}{\frac{\sin(5x)}{\cos(5x)}}
+			= \lim_{x \to 0} \left( \frac{x}{1} \cdot \frac{\cos(5x)}{\sin(5x)} \right)$
 			
+			$= \lim_{x \to 0} \left( \cos(5x) \frac{x}{\sin(5x)} \cdot \frac{5}{5} \right)
+			= \frac{1}{5} \left( \lim_{x \to 0} \cos(5x) \right) \left( \lim_{x \to 0} \frac{5x}{\sin(5x)} \right)
+			= \frac{1}{5} (1) (1) = \frac{1}{5}$
 			\end{freeResponse}
 			
 			
@@ -123,9 +139,53 @@ Find the derivative of the following functions:
 
 %problem 3			
 \begin{problem}
+Find values for $a$ and $b$ so that the following function is both continuous and differentiable everywhere (and where $c$ is an arbitrary constant).
 
+$f(x) =   \left\{ \begin{array}{cl}
+	a \sin(x) + b \cos(x)		 	&	\qquad \text{if } x < 0					\\
+	ax^2 + bx + c   				&	\qquad \text{if } x \geq 0	 \end{array} \right.  $
 		\begin{freeResponse}
+		First, we need that $\lim_{x \to 0^-} f(x) = \lim_{x \to 0^+} f(x)$.  Observe that
 		
+		\begin{itemize}
+		
+		\item $\lim_{x \to 0^-} f(x) 
+		= \lim_{x \to 0^-} (a\sin(x) + b\cos(x)
+		= b(1) = b$.
+		
+		\item  $ \lim_{x \to 0^+} f(x)
+		= \lim_{x \to 0^+} ax^2 + bx + c 
+		= c$.
+		
+		\end{itemize}
+		
+		Thus, we must have that $b = c$, and so 
+		
+		$f(x) =   \left\{ \begin{array}{cl}
+			a \sin(x) + c \cos(x)		 	&	\qquad \text{if } x < 0					\\
+			ax^2 + cx + c   				&	\qquad \text{if } x \geq 0	 \end{array} \right.  $
+			
+		For $f'(0)$ to exist, we need the limit $\lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$ to exist.  So we need 
+		$$ \lim_{h \to 0^-} \frac{f(x+h) - f(x)}{h} = \lim_{h \to 0^+} \frac{f(x+h) - f(x)}{h} $$
+		But notice that the left hand limit is just the derivative of $a\sin(x) + c\cos(x)$ evaluated at $x=0$, and similarly the right hand limit is just the derivative of $ax^2 + cx + c$ evaluated at $x=0$.  So we compute
+		
+		\begin{itemize}
+		
+		\item $\ddx \left( a\sin(x) + c\cos(x) \right)\bigg|_{x=0}
+			= \left( a\cos(x) - c\sin(x) \right)\bigg|_{x=0}
+			= a$.
+		
+		\item $\ddx \left( ax^2 + cx + c \right)\bigg|_{x=0}
+			=\left( 2ax + c \right)\bigg|_{x=0}
+			= c$.
+		
+		\end{itemize}
+		
+		So, $a = c$ as well, and thus we can finally conclude that
+		
+		$f(x) =   \left\{ \begin{array}{cl}
+			c \sin(x) + c \cos(x)		 	&	\qquad \text{if } x < 0					\\
+			cx^2 + cx + c   				&	\qquad \text{if } x \geq 0	 \end{array} \right.  $
 		\end{freeResponse}
 		
 \end{problem}
@@ -136,16 +196,7 @@ Find the derivative of the following functions:
 
 
 
-%problem 4
-\begin{problem}
 
-		\begin{freeResponse}
-		\end{freeResponse}
-		
-
-
-
-\end{problem}
 	
 	
 	
