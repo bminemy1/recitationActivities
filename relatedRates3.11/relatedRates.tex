@@ -115,7 +115,41 @@ An oil spill is being cleaned up by the deployment of bacteria that consume the 
 
 
 
+
 %problem 2
+\begin{problem}
+A hot air balloon is 150 ft above the ground when a motorcycle passes directly beneath it traveling at a rate of 60 ft/sec (in a straight line on a horizontal road).  If the balloon is rising vertically at a rate of 10 ft/s, what is the rate of change of the distance between the motorcycle and the balloon 10 seconds later?
+		\begin{freeResponse}
+		Let $P$ denote the point on the ground directly below the hot air balloon, let $x$ denote the distance from the motorcycle to $P$, let $y$ denote the distance from the hot air balloon to $P$, and let $z$ denote the distance from the motorcycle to the hot air balloon.  The location of the motorcycle, the hot air balloon, and the point $P$ form a right triangle, and so we have that 
+		\begin{equation}\label{Pythagorean}
+		x^2 + y^2 = z^2.
+		\end{equation}
+		  We are given that $\dd[x]{t} = 60$ and $\dd[y]{t} = 10$, and the question asks us to find $\dd[z]{t}$ at time $t=10$ (meaning 10 seconds after the motorcycle passes the point $P$).  We can also easily compute that:
+		$$ x(10) = 60 \cdot 10 = 600 ft $$
+		$$ y(10) = 150 + (10 \cdot 10) = 250 ft $$
+		$$ z(10) = \sqrt{ 600^2 + 250^2} = \sqrt{360000 + 62500} = \sqrt{422500} = 650 ft $$
+		where $x(10), y(10), and $z(10) denote the values of $x$, $y$, and $z$ 10 seconds after the motorcycle passes the point $P$.  
+		
+		Differentiating equation \ref{Pythagorean} with respect to time, substituting, and solving for $\dd[z]{t}$ yields:
+		$$ 2x \dd[x]{t} + 2y \dd[y]{t} = 2z \dd[z]{t} $$
+		$$ x \dd[x]{t} + y \dd[y]{t} = z \dd[z]{t} $$
+		$$ (600)(60) + (250)(10) = (650) \dd[z]{t} $$
+		$$ \dd[z]{t} = \frac{36000 + 2500}{650} \frac{ft}{sec} = \frac{3850}{65} \frac{ft}{sec} = \frac{770}{13} \frac{ft}{sec} \approx 59.23 \frac{ft}{sec} $$
+		
+		\end{freeResponse}
+			
+			
+		
+\end{problem}
+
+
+
+
+
+
+
+
+%problem 3
 \begin{problem}
 A swimming pool is 20 feet long and has transverse cross sections which look like the figure below.   If the pool is being filled at a rate of 0.8 cubic feet per minute, how fast is the water level rising when the depth of the water is 3 feet? 
 	\begin{image}
@@ -159,33 +193,7 @@ A swimming pool is 20 feet long and has transverse cross sections which look lik
 	
 	
 			
-			
-
-%problem 3
-\begin{problem}
-A hot air balloon is 150 ft above the ground when a motorcycle passes directly beneath it traveling at a rate of 60 ft/sec (in a straight line on a horizontal road).  If the balloon is rising vertically at a rate of 10 ft/s, what is the rate of change of the distance between the motorcycle and the balloon 10 seconds later?
-		\begin{freeResponse}
-		Let $P$ denote the point on the ground directly below the hot air balloon, let $x$ denote the distance from the motorcycle to $P$, let $y$ denote the distance from the hot air balloon to $P$, and let $z$ denote the distance from the motorcycle to the hot air balloon.  The location of the motorcycle, the hot air balloon, and the point $P$ form a right triangle, and so we have that 
-		\begin{equation}\label{Pythagorean}
-		x^2 + y^2 = z^2.
-		\end{equation}
-		  We are given that $\dd[x]{t} = 60$ and $\dd[y]{t} = 10$, and the question asks us to find $\dd[z]{t}$ at time $t=10$ (meaning 10 seconds after the motorcycle passes the point $P$).  We can also easily compute that:
-		$$ x(10) = 60 \cdot 10 = 600 ft $$
-		$$ y(10) = 150 + (10 \cdot 10) = 250 ft $$
-		$$ z(10) = \sqrt{ 600^2 + 250^2} = \sqrt{360000 + 62500} = \sqrt{422500} = 650 ft $$
-		where $x(10), y(10), and $z(10) denote the values of $x$, $y$, and $z$ 10 seconds after the motorcycle passes the point $P$.  
-		
-		Differentiating equation \ref{Pythagorean} with respect to time, substituting, and solving for $\dd[z]{t}$ yields:
-		$$ 2x \dd[x]{t} + 2y \dd[y]{t} = 2z \dd[z]{t} $$
-		$$ x \dd[x]{t} + y \dd[y]{t} = z \dd[z]{t} $$
-		$$ (600)(60) + (250)(10) = (650) \dd[z]{t} $$
-		$$ \dd[z]{t} = \frac{36000 + 2500}{650} \frac{ft}{sec} = \frac{3850}{65} \frac{ft}{sec} = \frac{770}{13} \frac{ft}{sec} \approx 59.23 \frac{ft}{sec} $$
-		
-		\end{freeResponse}
-			
-			
-		
-\end{problem}
+	
 
 
 

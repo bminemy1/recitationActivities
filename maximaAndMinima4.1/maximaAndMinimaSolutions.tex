@@ -29,10 +29,63 @@
 \maketitle
 
 \section*{Warm up:} 
+Determine whether the following statements are true or false and give either an explanation or a counterexample.
 
+	\begin{enumerate}
+	
+	%part a
+	\item  The function $f(x) = \sqrt{x}$ has a local maximum on the interval $[0,1]$.
 		\begin{freeResponse}
+		False.  Since $\sqrt{x}$ is increasing over the entire region $[0,1]$, the only candidate for a local maximum would be $x=1$.  But by definition, endpoints are never local extrema.  So $f(x) = \sqrt{x}$ has no local maximum on the interval $[0,1]$.
+		\end{freeResponse}	
+		
+		
+		
+	%part b
+	\item  If a function has an absolute maximum value on a closed interval, then the function must be continuous on that closed interval.  
+		\begin{freeResponse}
+		False.  Consider the following graph for a counterexample.  The function has an absolute maximum on the interval $[2,10]$, but it is not continuous over the entire interval.
+		
+		\begin{image}
+		\includegraphics[trim= 170 380 250 180]{Figure1.pdf}
+		\end{image}
+		
+		It is worth noting though that the converse to the original statement is true.  i.e., if a function is continuous on a closed interval then it obtains an absolute maximum value on that closed interval.
+
+		\end{freeResponse}	
+		
+		
+		
+	%part c
+	\item  If $f'(2)=0$, then $x=2$ is either a local maximum or local minimum of $f$.
+		\begin{freeResponse}
+		False.  Consider $f(x) = (x-2)^3$.  $f'(x) = 3(x-2)^2$, and so $f'(2) = 0$.  But we can see by looking at the graph of $f$ that $x=2$ is not a local extreme value for $f$.
+		
+		\begin{image}
+		\includegraphics[trim= 100 430 250 180]{Figure2.pdf}
+		\end{image}
 		
 		\end{freeResponse}	
+		
+		
+		
+	%part d
+	\item  Absolute extreme values on a closed interval always occur at a critical point or an endpoint of the interval.
+		\begin{freeResponse}
+		True.  The pretty much follows directly from the Local Extreme Value Theorem.  All absolute extrema must either be local extrema or endpoints.  And by the Local Extreme Value Theorem, all local extrema must be critical points of the function.  
+		\end{freeResponse}	
+		
+		
+		
+	%part e
+	\item  If $x=3$ is in the domain of $f$ and if $f'(3)$ does not exist, then $x=3$ is a critical point of $f$.
+		\begin{freeResponse}
+		Technically this is false, but morally it is true.  If the domain of $f$ is some closed interval with $3$ as an endpoint, then $3$ is in the domain of $f$ and $f'(3)$ does not exist (since one of the sided limits of the derivative will not exist).  Certainly $x=3$ may not be a critical point of $f$, for example, consider the function $f(x) = x$ with domain $[0,3]$.  But this whole setup is a technicality because we had to restrict the natural domain of the function.  If $f'(3)$ does not exist and $x=3$ is an \emph{interior} point of the domain of $f$, then $x=3$ is a critical point of $f$.  
+		\end{freeResponse}	
+		
+		
+		
+	\end{enumerate}
 		
 		
 		
@@ -49,11 +102,23 @@
 
 %problem 1
 \begin{problem}
+For each of the points identified on the graph below, determine if the point is a critical point, a local max or min, and/or an absolute max or min.
 
+	\begin{center}
+	\begin{image}
+	\includegraphics[trim= 20 430 250 200]{Figure3.pdf}
+	\end{image}
+	\end{center}	
+	
 		\begin{freeResponse}
-		
-		\end{freeResponse}
-		
+(a) This point is the absolute minimum.
+(p) This point is a critical point and is the absolute maximum.  It is also a local maximum.
+(q) This point is a critical point and is a local minimum.
+(r) This point is a critical point and is a local maximum.
+(s) The derivative does not exist because the function has a corner.  This point is a critical point and is a local minimum.
+(t) This point is a critical point but is not a local maximum or minimum.
+(b) This point is not an absolute or local max or min.
+		\end{freeResponse}	
 		
 \end{problem}
 
@@ -74,10 +139,90 @@
 
 %problem 2
 \begin{problem}
-
-		\begin{freeResponse}
+Find the critical points of $f$ on the given interval, and determine the absolute extreme values of $f$ on the interval.
+		\begin{enumerate}
 		
-		\end{freeResponse}
+			%part a
+			\item  $f(x) = x \sqrt{2-x^2}$ on $[-\sqrt{2}, \sqrt{2}]$.
+				
+				\begin{freeResponse}
+				First note that $f$ is continuous on this closed interval, and so it must attain a maximum and minimum value on the interval $[-\sqrt{2}, \sqrt{2}]$.
+				\begin{align*}
+				f'(x) &= \sqrt{2-x^2} + x \left( \frac{1}{2 \sqrt{2-x^2}} (-2x) \right) \\
+				&= \sqrt{2-x^2} - \frac{x^2}{\sqrt{2-x^2}} \\
+				&= \frac{2-x^2-x^2}{\sqrt{2-x^2}} \\
+				&= \frac{2(1-x^2)}{\sqrt{2-x^2}}
+				\end{align*}
+				
+				Critical points of $f$ occur where $f'(x) = 0$ or where $f'(x)$ does not exist.  Solving $f'(x) = 0$ yields that $2(1-x^2) = 0$, or $x = \pm 1$.  $f'(x)$ does not exist when $2-x^2 \leq 0$.  But since we are restricting to the interval $[-\sqrt{2}, \sqrt{2}]$, the only points where $f'(x)$ does not exist are the endpoints $\pm \sqrt{2}$.  
+				
+				So the critical points of $f$ in the interval $[-\sqrt{2}, \sqrt{2}]$ are $x = \pm 1, \pm \sqrt{2}$.  Since this set of points also contains the endpoints of the interval, $f$ must attain its maximum and minimum values in this set.  So we compute
+				$$ f(-\sqrt{2}) = 0 = f(\sqrt{2}) $$
+				$$ f(1) = 1 \sqrt{2-1} = \sqrt{1} = 1 = f(-1) $$
+				
+				Thus, $f$ has a maximum value of $1$ (obtained at $x=\pm 1$) and a minimum value of 0 (obtained at $x=\pm \sqrt{2}$) over the interval $[-\sqrt{2}, \sqrt{2}]$.
+				\end{freeResponse}
+				
+				
+				
+			%part b
+			\item  $f(x) = x^3 e^{-x}$ on $[-1,5]$.
+			
+				\begin{freeResponse}
+				First note that $f$ is continuous on this closed interval, and so it must attain a maximum and minimum value on the interval $[-1,5]$.
+				\begin{align*}
+				f'(x) &= 3x^2 e^{-x} + x^3(-e^{-x}) \\
+				&= x^2 e^{-x} (3-x)
+				\end{align*}
+				
+				Notice that $f'(x)$ always exists, and so all of the critical points of $f$ occur when $f'(x)=0$.  Solving this equation:
+				$$ x^2 e^{-x} (3-x) = 0 $$
+				$$ x^2 (3-x) = 0 $$
+				$$ x = 0 \qquad \text{or} \qquad x=3 $$
+				
+				Since both critical points are in the given interval, we need to consider the points $x=-1,0,3,5$.
+				$$ f(-1) = -e $$
+				$$ f(0) = 0 $$
+				$$ f(3) = 27e^{-3} $$
+				$$ f(5) = 125 e^{-5} $$
+				
+				Since $-e$ is the only negative value, the minimum value of $f$ over the interval is $-e$.  Since $e^3 < 27$, $27e^{-3} > 1$.  But $e^5 > 125$, and so $125e^{-5} < 1$.  Thus the maximum value of $f$ over the interval is $27e^{-3}$.  
+		
+				\end{freeResponse}
+				
+				
+				
+			%part c
+			\item  $f(x) = x \ln \left( \frac{x}{5} \right)$ on $[0.1, 5]$.
+			
+				\begin{freeResponse}
+				First note that $f$ is continuous on this closed interval, and so it must attain a maximum and minimum value on the interval $[0.1,5]$.
+				\begin{align*}
+				f'(x) &= \ln \left( \frac{x}{5} \right) + x \cdot \frac{5}{x} \cdot \frac{1}{5} \\
+				&= \ln \left( \frac{x}{5} \right) + 1
+				\end{align*}
+				
+				Notice that $f'(x)$ exists for all values in $[0.1,5]$, and so all of the critical points of $f$ occur when $f'(x)=0$.  Solving this equation:
+				$$ \ln \left( \frac{x}{5} \right) + 1 = 0 $$
+				$$ \ln \left( \frac{x}{5} \right) = -1 $$
+				$$ \frac{x}{5} = e^{-1} $$
+				$$ x = 5e^{-1} = \frac{5}{e} $$
+				
+				Since $1 < \frac{5}{e} < 2$, $\frac{5}{e}$ is in the given interval.  So we need to consider the points $x = \frac{1}{10}, \frac{5}{e}, 5$.
+				$$ f \left( \frac{1}{10} \right) = \frac{1}{10} \ln \left( \frac{1}{50} \right)  = \frac{1}{10} \left( \ln 1 - \ln 50 \right) = -\frac{1}{10} \ln 50 $$
+				$$ f \left( \frac{5}{e} \right) = \frac{5}{e} \ln \left( \frac{1}{e} \right) = - \frac{5}{e} $$
+				$$ f(5) = 5 \ln 1 = 0 $$
+				
+				Since the first two values are negative, $0$ is the maximum value of $f$ on $[0.1,5]$.  
+				
+				
+		
+				\end{freeResponse}
+				
+				
+				
+			\end{enumerate}
+
 		
 		
 		
@@ -96,7 +241,7 @@
 
 %problem 3
 \begin{problem}
-
+All rectangles with an area of $64$ have a perimeter given by $P(x)=2x+\frac{128}{x}$, where $x$ is the length of one side of the rectangle.  Find the absolute minimum value of the perimeter function.  What are the dimensions of the rectangle with minimum perimeter?   
 		\begin{freeResponse}
 			
 		\end{freeResponse}
@@ -112,19 +257,6 @@
 
 
 
-
-
-
-%problem 4
-\begin{problem}
-
-		\begin{freeResponse}
-
-		\end{freeResponse}
-			
-			
-	
-\end{problem}
 
 
 
