@@ -112,12 +112,18 @@ For each of the points identified on the graph below, determine if the point is 
 	
 		\begin{freeResponse}
 (a) This point is the absolute minimum.
-(p) This point is a critical point and is the absolute maximum.  It is also a local maximum.
-(q) This point is a critical point and is a local minimum.
-(r) This point is a critical point and is a local maximum.
-(s) The derivative does not exist because the function has a corner.  This point is a critical point and is a local minimum.
-(t) This point is a critical point but is not a local maximum or minimum.
-(b) This point is not an absolute or local max or min.
+
+(p) This point is a critical point and is the absolute maximum.  It is also a local maximum.
+
+(q) This point is a critical point and is a local minimum.
+
+(r) This point is a critical point and is a local maximum.
+
+(s) The derivative does not exist because the function has a corner.  This point is a critical point and is a local minimum.
+
+(t) This point is a critical point but is not a local maximum or minimum.
+
+(b) This point is not an absolute or local max or min.
 		\end{freeResponse}	
 		
 \end{problem}
@@ -213,7 +219,7 @@ Find the critical points of $f$ on the given interval, and determine the absolut
 				$$ f \left( \frac{5}{e} \right) = \frac{5}{e} \ln \left( \frac{1}{e} \right) = - \frac{5}{e} $$
 				$$ f(5) = 5 \ln 1 = 0 $$
 				
-				Since the first two values are negative, $0$ is the maximum value of $f$ on $[0.1,5]$.  
+				Since the first two values are negative, $0$ is the maximum value of $f$ on $[0.1,5]$.  Also, since $e^{10} > 50$, $\ln 50 < 10$ and therefore $-1 < -\frac{1}{10} \ln 50$.  But clearly $\frac{-5}{e} < -1$, and so $- \frac{5}{e}$ is the minimum value of $f$ on $[0.1, 5]$.  
 				
 				
 		
@@ -243,7 +249,15 @@ Find the critical points of $f$ on the given interval, and determine the absolut
 \begin{problem}
 All rectangles with an area of $64$ have a perimeter given by $P(x)=2x+\frac{128}{x}$, where $x$ is the length of one side of the rectangle.  Find the absolute minimum value of the perimeter function.  What are the dimensions of the rectangle with minimum perimeter?   
 		\begin{freeResponse}
-			
+		First note that the domain for $P(x)$ is $(0,\infty)$.  To find the critical points of $P$, we solve the equation $P'(x) = 0$:
+		$$ P'(x) = 2 - \frac{128}{x^2} := 0 $$
+		$$ \frac{128}{x^2} = 2 $$
+		$$ 2x^2 = 128 $$
+		$$ x^2 = 64 $$
+		$$ x = \pm 8 $$
+		but since we must have $x>0$, our only critical point is $x=8$.  Notice that for $x \in (0,8)$, $P'(x) < 0$, and for $x \in (8, \infty)$, $P'(x) > 0$.  Thus $x=8$ is a local minimum by the first derivative test.  But since $P$ is decreasing over the entire interval $(0,8)$ and increasing over the entire interval $(8,\infty)$, $x=8$ must be an absolute minimum.
+		
+		Hence, the absolute minimum perimeter is $P(4) = 16 + \frac{128}{8} = 16 + 16 = 32$.  Since the dimensions of such a rectangle are $8 \times 8$, a rectangle of minimum perimeter is a square.
 		\end{freeResponse}
 			
 			
