@@ -1,4 +1,4 @@
-\documentclass[nooutcomes]{ximera}
+\documentclass[handout,nooutcomes]{ximera}
 %% handout
 %% space
 %% newpage
@@ -22,7 +22,7 @@
 
 \input{../preamble.tex} %% we can turn off input when making a master document
 
-\title{Recitation \#16 - 4.2 What Derivatives Tell Us (Solutions)}  
+\title{Recitation \#16 - 4.2 What Derivatives Tell Us}  
 
 \begin{document}
 \begin{abstract}		\end{abstract}
@@ -226,30 +226,6 @@ Let $f(x) = \frac{1}{1 + x^2}$ on the interval $[-2,2]$.  Find the following for
  		& f(2)=\frac{1}{5} \\ 
 		\end{align*}
 		So the absolute maximum value of $f$ on $[-2,2]$ is $f(0)=1$.  Both $f(-2)=\frac{1}{5}$ and $f(2)=\frac{1}{5}$ are the absolute minimum values of $f$ on $[-2,2]$.
-		
-		The graph of the function looks like:
-		
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\begin{tikzpicture}[xscale=2,yscale=2]
-
-\draw [<->] (0,2) -- (0,0) -- (3,0);
-\draw [<->] (0,-1) -- (0,0) -- (-3,0);
-\draw[red, ultra thick, domain=-2:2] plot (\x, {1/(1+(\x)^2)});
-\draw (-2,0.1) -- (-2,-0.1);
-\draw (2,0.1) -- (2,-0.1);
-\draw (-2,-0.3)node[below]{$-2$};
-\draw (2,-0.3)node[below]{$2$};
-\draw (-0.57735,0.1) -- (-0.57735,-0.1);
-\draw (0.57735,0.1) -- (0.57735,-0.1);
-\draw (-0.57735,-0.2)node[below]{$- \frac{1}{\sqrt{3}}$};
-\draw (0.57735,-0.2)node[below]{$\frac{1}{\sqrt{3}}$};
-
-\end{tikzpicture}
-\end{center}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 		\end{freeResponse}
 	
 	\end{enumerate}

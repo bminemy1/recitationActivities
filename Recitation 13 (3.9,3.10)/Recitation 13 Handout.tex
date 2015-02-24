@@ -36,7 +36,7 @@ Explain what each of the following means:
 	%part a
 	\item  $\sin^{-1}(x)$
 		\begin{freeResponse}
-		This denotes the inverse function to $sin(x)$, sometimes denoted by $\arcsin(x)$.  
+		This denotes the inverse function to $\sin(x)$, sometimes denoted by $\arcsin(x)$.  
 		\end{freeResponse}	
 		
 	%part b
@@ -73,7 +73,6 @@ Explain what each of the following means:
 		
 	\end{enumerate}
 	\end{multicols}
-		
 		
 		
 
@@ -126,10 +125,16 @@ Find the derivatives of the following functions:
 	%part c
 	\item  $h(x) = \sqrt[4]{\frac{(x^2 - 7)^5 \ln x}{\cos^7(x^2 - 5)}}$
 		\begin{freeResponse}
-		$$h'(x) = \ddx \left( \left( \frac{(x^2 - 7)^5 \ln x}{\cos^7(x^2 - 5)} \right)^{\frac{1}{4}} \right) $$
-		
-		$$=  \frac{1}{4} \left( \frac{(x^2 - 7)^5 \ln x}{\cos^7(x^2 - 5)} \right)^{\frac{-3}{4}} \cdot $$
-		$$\left( \frac{\cos^7(x^2 - 5)(5(x^2-7)^4(2x) \ln x + (x^2-7)^5 \frac{1}{x}) - (x^2-7)^5 \ln x (7\cos^6(x^2-5) (-\sin(x^2 - 5))(2x))}{\cos^{14}(x^2 - 5)} \right)$$
+		\begin{align*}
+		\ln (h(x)) &= \ln \left( \sqrt[4]{\frac{(x^2 - 7)^5 \ln x}{\cos^7(x^2 - 5)}} \right) \\
+		&= \frac{1}{4} \ln \left( \frac{(x^2 - 7)^5 \ln x}{\cos^7(x^2 - 5)} \right) \\
+		&= \frac{1}{4} \left( \ln \left( (x^2 - 7)^5 \ln x \right) - \ln \left( \cos^7(x^2 - 5) \right) \right) \\
+		&= \frac{1}{4} \left( 5\ln (x^2 - 7) + \ln (\ln x) - 7 \ln (\cos (x^2 -5)) \right) \\
+		\end{align*}
+		Thus,
+		$$\frac{1}{h(x)} h'(x) = \frac{1}{4} \left( \frac{5}{x^2 - 7}(2x) + \frac{1}{\ln x} \left( \frac{1}{x} \right) - \frac{7}{\cos(x^2-5)}(-2x \sin(x^2-5)) \right)$$
+		$$h'(x) = \frac{1}{4} h(x) \left( \frac{10x}{x^2 - 7} + \frac{1}{x \ln x} + 14x \tan(x^2 - 5) \right) $$
+		$$ h'(x) = \frac{1}{4} \sqrt[4]{\frac{(x^2 - 7)^5 \ln x}{\cos^7(x^2 - 5)}} \left( \frac{10x}{x^2 - 7} + \frac{1}{x \ln x} + 14x \tan(x^2 - 5) \right) $$
 		\end{freeResponse}
 		
 		
@@ -231,9 +236,9 @@ Suppose that $f(x)$ is a differentiable function which is one-to-one.  Given the
 \hline
 \dfn{x}	&	1	&	7	&	11	\\
 \hline
-\dfn{f(x)}	&	7	&	11	&	1	\\
+\dfn{f(x)}	&	7	&	11	&	15	\\
 \hline
-\dfn{f'(x)}	&	61	&	-17	&	71	\\
+$\dfn{f'(x)}$	&	61	&	2	&	71	\\
 \hline
 \end{tabular}
 
