@@ -1,4 +1,4 @@
-\documentclass[nooutcomes]{ximera}
+\documentclass[handout,nooutcomes]{ximera}
 %% handout
 %% space
 %% newpage
@@ -22,7 +22,7 @@
 
 \input{../preamble.tex} %% we can turn off input when making a master document
 
-\title{4.7 L'Hospital's Rule (Solutions)}  
+\title{Recitation \#21 - 4.7 L'Hospital's Rule and 4.9 Antiderivatives}  
 
 \begin{document}
 \begin{abstract}		\end{abstract}
@@ -51,6 +51,7 @@ True or False:  You can use L'Hospital's Rule to compute $\lim_{x \to 0} \frac{|
 \begin{problem}
 State the form of each of the following limits.  If possible, state the answer to the limit based on the form.  Do not do any algebra to change the form.  If the form is indeterminate, just say it is indeterminate.
 	\begin{enumerate}
+	\begin{multicols}{2}
 	%part a
 	\item  $\lim_{x \to \infty}\left( \ln (1 + e^{-x}) \right)^x $
 		\begin{freeResponse}
@@ -94,6 +95,7 @@ State the form of each of the following limits.  If possible, state the answer t
 		$$\lim_{x \to 0^+} (\sin x \cot x ) = \lim_{x \to 0^+} \cos x = 1 .$$
 		\end{freeResponse}
 		
+	\end{multicols}
 	\end{enumerate}
 		
 		
@@ -118,6 +120,7 @@ State the form of each of the following limits.  If possible, state the answer t
 \begin{problem}
 Determine the following limits.  Use L'Hospital's Rule if applicable.
 	\begin{enumerate}
+	\begin{multicols}{2}
 	%part a
 	\item  $\lim_{x \to \infty} \frac{x}{\sqrt{x^2 + 1}}  $
 		\begin{freeResponse}
@@ -161,6 +164,7 @@ where ``L.R.'' above an equals sign means that that equality is due to ``L'Hospi
 		
 		
 		
+	\end{multicols}
 	\end{enumerate}
 		
 		
@@ -178,6 +182,60 @@ where ``L.R.'' above an equals sign means that that equality is due to ``L'Hospi
 			
 			
 
+%problem 3
+\begin{problem}
+Find the most general antiderivative of the function
+$$ g(t) = e^{-2t} - 5 + 6\sqrt{t}-\frac{7}{t} + \frac{5}{11 + t^2} $$
+		\begin{freeResponse}
+		Note that:
+			\begin{itemize}
+			\item  taking an antiderivative is \dfn{linear} over addition, meaning that we can find the antiderivative of each summand of $g(t)$, and then add them together.
+			\item  An antiderivative of $e^{-2t}$ is $-\frac{1}{2} e^{-2t}$.
+			\item  An antiderivative of $5$ is $5t$.
+			\item  An antiderivative of $6 \sqrt{t}$ is $6 \left( \frac{2}{3} t^{\frac{3}{2}} \right) = 4t^{\frac{3}{2}}$.
+			\item  An antiderivative of $\frac{7}{t}$ is $7 \ln |t|$.
+			\item  An antiderivative of $\frac{5}{11 + t^2} = \frac{5}{11} \cdot \frac{1}{1 + \left( \frac{t}{\sqrt{11}} \right)^2 }$
+			is $\frac{5}{\sqrt{11}} \arctan \left( \frac{t}{\sqrt{11}} \right)$
+			\end{itemize}
+		Thus, the most general antiderivative of $g(t)$ is:
+		$$ -\frac{1}{2} e^{-2t} - 5t + 4t^{\frac{3}{2}} - 7 \ln |t| + \frac{5}{\sqrt{11}} \arctan \left( \frac{t}{\sqrt{11}} \right) + C $$
+		\end{freeResponse}
+		
+		
+\end{problem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%problem 4
+\begin{problem}
+Assume that $f^\prime (t) = 4t^3 + 2t$ and $f(3) = 5$.  Find $f(t)$.
+		\begin{freeResponse}
+		By taking the antiderivative of $f^\prime (t)$, we know that $f(t)$ is of the form
+		$$f(t) = t^4 + t^2 + C .$$
+		Then,
+		$$ 5 = f(3) = 3^4 + 3^2 + C = 81 + 9 + C = 90 + C$$
+		$$\Longrightarrow \quad  C = -85 $$
+		and so
+		$$ f(t) = t^4 + t^2 - 85. $$
+		\end{freeResponse}
+		
+		
+		
+
+\end{problem}
 
 
 
