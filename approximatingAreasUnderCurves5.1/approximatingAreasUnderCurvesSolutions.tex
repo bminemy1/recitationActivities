@@ -29,7 +29,7 @@
 \maketitle
 
 \section*{Warm up:} 
-If a function is positive and decreasing on an interva l$[a,b]$, will a right Riemann sum underestimate or overestimate the area of the region under the graph of the function? Justify your answer.
+If a function is positive and decreasing on an interval $[a,b]$, will a right Riemann sum underestimate or overestimate the area of the region under the graph of the function? Justify your answer.
 		\begin{freeResponse}
 		Because the function is decreasing, a right Reimann sum will be an underestimate.  By definition, $f(x_k)< f(x)$ for all $x$ in the interval $[x_{k-1},x_k]$ 
 		\end{freeResponse}	
@@ -55,12 +55,12 @@ inches per hour for $t$ in $[0,4]$ (i.e., the snow falls for 4 hours- from noon 
 
 There were already $5$ inches of snow on the ground when the storm started.  What does this statement say notation-wise?
 
-A natural question would be to ask how much snow fell during the storm (what is the notation for this?).  But because the rate is always changing, this is a difficult question to answer (Yet, we will eventually answer it!).  Let’s take what we know about constant rates and amounts and use that to help us answer our question (i.e., once again, taking what we know and using it to find out something about what we don’t know).
+A natural question would be to ask how much the amount of snow on the ground changed during the storm.  But because the rate is always changing, this is a difficult question to answer (yet, we will eventually answer it!).  Let’s take what we know about constant rates and amounts and use that to help us answer our question (i.e., once again, taking what we know and using it to find out something about what we do not know).
 
 	\begin{enumerate}
 	
 	%part a
-	\item  Assume the rate stays the same as it was at the start of the storm: 0.3 inches per hour.  How much snow fell?  Is this a realistic estimate?
+	\item  Assume the rate stays the same as it was at the start of the storm: 0.3 inches per hour.  How much did the height of the snow on the ground change?  Is this a realistic estimate?
 		\begin{freeResponse}
 		We are assuming that snow is falling at a constant rate of $f^\prime (0)=.3$ inches per hour for the full four hours.  We estimate that the net amount of snow fallen is:
 		
@@ -72,7 +72,7 @@ A natural question would be to ask how much snow fell during the storm (what is 
 		
 		
 	%part b
-	\item  Now assume the rate is the same as it is at the start for the first two hours, then changes to what it is at 2PM for the final two hours.  How much snow fell?  Is this a realistic estimate?  Is it likely to be better or worse than that of part (a)?
+	\item  Now assume the rate is the same as it is at the start for the first two hours, then changes to what it is at 2PM for the final two hours.  How much did the height of the snow on the ground change?  Is this a realistic estimate?  Is it likely to be better or worse than that of part (a)?
 		\begin{freeResponse}
 		We are assuming that snow is falling at a constant rate of $f^\prime (0)=.3$ inches per hour for the first two hours, then at the constant rate of $f^\prime (2)=2.3$ inches per hour for the final two hours.  Thus, we estimate that the net amount of snow fallen is:
 		
@@ -84,7 +84,7 @@ A natural question would be to ask how much snow fell during the storm (what is 
 		
 		
 	%part c
-	\item  Now assume the rate stays constant by the hour (i.e., it only changes on the hour to its rate at those times of noon, 1PM, 2PM, and 3PM).  How much snow fell?
+	\item  Now assume the rate stays constant by the hour (i.e., it only changes on the hour to its rate at those times of noon, 1PM, 2PM, and 3PM).  How much did the height of the snow change?
 		\begin{freeResponse}
 		We are assuming that snow is falling at a constant rate of $f^\prime (0)=.3$ inches per hour for the first hour, then at the constant rate of $f^\prime (1)=1.55$ inches per hour for the second hour, then at a constant rate of $f^\prime (2)=2.3$ inches per hour for the third hour, and finally at a constant rate of $f^\prime (3)=2.55$ inches per hour for the final hour.  c. Thus, we estimate that the net amount of snow fallen is:
 		$$ (0.3)(1) + (1.55)(1) + (2.3)(1) + (2.55)(1) = 0.3 + 1.55 + 2.3 + 2.55 = 6.7 $$
@@ -107,7 +107,7 @@ A natural question would be to ask how much snow fell during the storm (what is 
 		
 		
 	%part e
-	\item  What would we need to do to find the exact amount that fell?  Describe this in words, do not try to calculate it.
+	\item  What would we need to do to find the exact amount that the height of the snow on the ground changed?  And how much snow in total would be on the ground?  Describe these in words, do not try to calculate them.
 		\begin{freeResponse}
 		To find the exact amount of snow that fell, we would need to calculate the amount of snow that fell at $n$ different places, add them up, multiply by $\frac{4}{n}$, and then take the limit at $n$ goes to infinity.
 		\end{freeResponse}
