@@ -29,9 +29,22 @@
 \maketitle
 
 \section*{Warm up:} 
-
+How do the functions $f(x) = \left( e^x \right)^2$ and $g(x) = e^{x^2}$ differ, and how does that effect the computations of the integrals:
+$$ \int_0^1 \left(e^x \right)^2 \d x	\qquad	\text{and}	\qquad	\int_0^1 e^{x^2} \d x $$
 		\begin{freeResponse}
-		
+		$f(x) = \left( e^x \right)^2 = e^x \cdot e^x = e^{x+x} = e^{2x}$.  
+		So $f(x) \neq g(x)$ since $2x \neq x^2$.  
+		Then,
+			\begin{align*}
+			\int_0^1 f(x) \d x &= \int_0^1 \left(e^x \right)^2 \d x  \\
+			&= \int_0^1 e^{2x} \d x  \\
+			&= \eval{\frac{1}{2} e^{2x}}_0^1  \\
+			&= \frac{1}{2} \left( e^2 - e^0 \right)  \\
+			&= \frac{1}{2} \left( e^2 - 1 \right).  
+			\end{align*}
+			
+		We do not have the tools to prove it in this class, but $g(x) = e^{x^2}$ does not have a ``closed form" antiderivative.  
+		Therefore, we do not have a nice way to compute $\int_0^1 e^{x^2} \d x$ using the Fundamental Theorem of Calculus (Part II).
 		\end{freeResponse}	
 		
 		
@@ -111,6 +124,7 @@ Compute the following definite integrals:
 
 
 
+After completing problem 1, review for Midterm 3.
 
 
 
@@ -123,60 +137,6 @@ Compute the following definite integrals:
 
 
 
-
-%problem 2
-\begin{problem}
-
-		\begin{freeResponse}
-		
-		\end{freeResponse}
-		
-		
-		
-
-\end{problem}
-	
-	
-	
-	
-	
-	
-	
-	
-			
-			
-
-%problem 3
-\begin{problem}
-
-		\begin{freeResponse}
-			
-		\end{freeResponse}
-			
-			
-		
-\end{problem}
-
-
-
-
-
-
-
-
-
-
-
-%problem 4
-\begin{problem}
-
-		\begin{freeResponse}
-
-		\end{freeResponse}
-			
-			
-	
-\end{problem}
 
 
 
