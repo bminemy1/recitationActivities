@@ -17,7 +17,10 @@
 \section*{Warm up:} 
 Let $f(x) = \sin(x)$ and $g(x) = \cos(x)$.  Can you compute $f^{(48)}(x)$ and $g^{(42)}(x)$?  Does this remind you of anything that you learned in a high school mathematics course?
 	\begin{freeResponse}
-	Recall that, for $n$ a nonnegative integer, $f^{(4n)}(x) = f(x) = \sin(x)$ and $g^{(4n)}(x) = g(x) = \cos(x)$.  Thus, $f^{(48)}(x) = \sin(x)$ and $g^{(42)}(x) = g''(x) = - \cos(x)$.  
+	Recall that, for $n$ a nonnegative integer, 
+	$$f^{(4n)}(x) = f(x) = \sin(x) \quad \text{and} \quad g^{(4n)}(x) = g(x) = \cos(x).$$
+	Thus, 
+	$$f^{(48)}(x) = \sin(x) \quad \text{and} \quad g^{(42)}(x) = g''(x) = - \cos(x).$$  
 
 	This may remind you of the fact that, for $n$ a nonnegative integer, $i^{4n} = i$ where $i$ is the number such that $i^2 = -1$.  It is not going to play a role in this class at all, but these two phenomena really are related!
 	\end{freeResponse}	
@@ -38,10 +41,13 @@ Find the following limits:
 	%part a
 	\item  $\lim_{x \to 0} \frac{\sin(8x)}{x}$
 			\begin{freeResponse}
-			$\lim_{x \to 0} \frac{\sin(8x)}{x} \cdot \frac{8}{8}
-			= 8 \lim_{x \to 0} \frac{\sin(8x)}{8x}
-			= 8 \lim_{u \to 0} \frac{\sin(u)}{u}
-			= 8 \cdot 1 = 8$  where $u = 8x$.  
+			\begin{align*}
+			\lim_{x \to 0} \frac{\sin(8x)}{x} &= \lim_{x \to 0} \frac{\sin(8x)}{x} \cdot \frac{8}{8}  \\
+			&= 8 \lim_{x \to 0} \frac{\sin(8x)}{8x}  \\
+			&= 8 \lim_{u \to 0} \frac{\sin(u)}{u}  \\
+			&= 8 \cdot 1 = 8
+			\end{align*}
+			where $u = 8x$.  
 			\end{freeResponse}
 			
 			
@@ -49,11 +55,12 @@ Find the following limits:
 	%part b
 	\item  $\lim_{x \to 0} \frac{\cos^2(x) - 1}{4x}$
 			\begin{freeResponse}
-			$\lim_{x \to 0} \frac{\cos^2(x) - 1}{4x}
-			= \lim_{x \to 0} \frac{- \sin^2(x)}{4x}
-			= \lim_{x \to 0} \left(- \sin(x) \frac{\sin(x)}{4x} \right)
-			= - \frac{1}{4} \left( \lim_{x \to 0} \sin(x) \right) \left( \lim_{x \to 0} \frac{\sin(x)}{x} \right)
-			= - \frac{1}{4} (0) (1) = 0$
+			\begin{align*}
+			\lim_{x \to 0} \frac{\cos^2(x) - 1}{4x} &= \lim_{x \to 0} \frac{- \sin^2(x)}{4x}  \\
+			&= \lim_{x \to 0} \left(- \sin(x) \frac{\sin(x)}{4x} \right)  \\
+			&= - \frac{1}{4} \left( \lim_{x \to 0} \sin(x) \right) \left( \lim_{x \to 0} \frac{\sin(x)}{x} \right)  \\
+			&= - \frac{1}{4} (0) (1) = 0.
+			\end{align*}
 			\end{freeResponse}
 			
 			
@@ -61,13 +68,13 @@ Find the following limits:
 	%part c
 	\item  $\lim_{x \to 0} \frac{x}{\tan(5x)}$
 			\begin{freeResponse}
-			$\lim_{x \to 0} \frac{x}{\tan(5x)}
-			= \lim_{x \to 0} \frac{x}{\frac{\sin(5x)}{\cos(5x)}}
-			= \lim_{x \to 0} \left( \frac{x}{1} \cdot \frac{\cos(5x)}{\sin(5x)} \right)$
-			
-			$= \lim_{x \to 0} \left( \cos(5x) \frac{x}{\sin(5x)} \cdot \frac{5}{5} \right)
-			= \frac{1}{5} \left( \lim_{x \to 0} \cos(5x) \right) \left( \lim_{x \to 0} \frac{5x}{\sin(5x)} \right)
-			= \frac{1}{5} (1) (1) = \frac{1}{5}$
+			\begin{align*}
+			\lim_{x \to 0} \frac{x}{\tan(5x)} &= \lim_{x \to 0} \frac{x}{\frac{\sin(5x)}{\cos(5x)}}  \\
+			&= \lim_{x \to 0} \left( \frac{x}{1} \cdot \frac{\cos(5x)}{\sin(5x)} \right)  \\
+			&= \lim_{x \to 0} \left( \cos(5x) \frac{x}{\sin(5x)} \cdot \frac{5}{5} \right)  \\
+			&= \frac{1}{5} \left( \lim_{x \to 0} \cos(5x) \right) \left( \lim_{x \to 0} \frac{5x}{\sin(5x)} \right)  \\
+			&= \frac{1}{5} (1) (1) = \frac{1}{5}
+			\end{align*}
 			\end{freeResponse}
 			
 			
@@ -90,9 +97,10 @@ Find the derivative of the following functions:
 	%part a
 	\item  $f(x) = \frac{x+5}{7x^6 + \cot(x)}$
 			\begin{freeResponse}
-			$f'(x) = \frac{(7x^6 + \cot(x))(1) - (x+5)(42x^5 - \csc^2(x))}{(7x^6 + \cot(x))^2}$
-			
-			$= \frac{7x^6 + \cot(x) - (x+5)(42x^5 - \csc^2(x))}{(7x^6 + \cot(x))^2}$.
+			\begin{align*}
+			f'(x) &= \frac{(7x^6 + \cot(x))(1) - (x+5)(42x^5 - \csc^2(x))}{(7x^6 + \cot(x))^2}  \\
+			&= \frac{7x^6 + \cot(x) - (x+5)(42x^5 - \csc^2(x))}{(7x^6 + \cot(x))^2}.
+			\end{align*}
 			\end{freeResponse}
 			
 			
@@ -100,7 +108,7 @@ Find the derivative of the following functions:
 	%part b
 	\item  $f(x) = \sin(x) \cos(x)$
 			\begin{freeResponse}
-			$f'(x) = (\cos(x))(\cos(x)) + (\sin(x))(-\sin(x)) = \cos^2(x) - \sin^2(x)$.
+			$$f'(x) = (\cos(x))(\cos(x)) + (\sin(x))(-\sin(x)) = \cos^2(x) - \sin^2(x).$$
 			\end{freeResponse}
 			
 			
@@ -108,8 +116,10 @@ Find the derivative of the following functions:
 	%part c
 	\item  $f(x) = \frac{e^x \tan(x)}{\sec(x) + 2}$
 			\begin{freeResponse}
-			$f'(x) = \frac{(\sec(x)+2)(e^x \tan(x) + e^x \sec^2(x)) - e^x \tan(x) (\sec(x) \tan(x))}{(\sec(x) + 2)^2}
-			= \frac{e^x[(\sec(x) + 2)(\tan(x) + \sec^2(x)) - \sec(x) \tan^2(x)]}{(\sec(x) + 2)^2}$.
+			\begin{align*}
+			f'(x) &= \frac{(\sec(x)+2)(e^x \tan(x) + e^x \sec^2(x)) - e^x \tan(x) (\sec(x) \tan(x))}{(\sec(x) + 2)^2}  \\
+			&= \frac{e^x[(\sec(x) + 2)(\tan(x) + \sec^2(x)) - \sec(x) \tan^2(x)]}{(\sec(x) + 2)^2}.
+			\end{align*}
 			\end{freeResponse}
 			
 			
@@ -117,11 +127,11 @@ Find the derivative of the following functions:
 	%part d
 	\item  $f(x) = \sin(x) \cos(x) e^{3x}$
 			\begin{freeResponse}
-			$f'(x) = \ddx[\sin(x) \cos(x)] e^{3x} + (\sin(x) \cos(x)) \ddx(e^{3x})$
-			
-			$= (\cos^2(x) - \sin^2(x))e^{3x} + 3e^{3x} \sin(x) \cos(x)$
-			
-			$= e^{3x}(\cos^2(x) + 3\sin(x) \cos(x) - \sin^2(x))$.
+			\begin{align*}
+			f'(x) &= \ddx[\sin(x) \cos(x)] e^{3x} + (\sin(x) \cos(x)) \ddx(e^{3x})  \\
+			&= (\cos^2(x) - \sin^2(x))e^{3x} + 3e^{3x} \sin(x) \cos(x)  \\
+			&= e^{3x}(\cos^2(x) + 3\sin(x) \cos(x) - \sin^2(x)).
+			\end{align*}
 			\end{freeResponse}
 			
 			
@@ -144,7 +154,7 @@ Find the derivative of the following functions:
 % make a and b "more complicated" functions of c.  Maybe make the 2nd equation something like 3ax^2 + 2bx + c
 % possibly eliminate telling students that the function needs to be continuous in order to be differentiable
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		
+
 \begin{problem}
 Find values for $a$ and $b$ so that the following function is both continuous and differentiable everywhere (and where $c$ is an arbitrary constant).
 

@@ -28,13 +28,18 @@
 Differentiate the function $f(x) = \frac{1}{x^8}$ two different ways.
 
 	\begin{freeResponse}
-	First way:  Since $f(x) = \frac{1}{x^8} = x^{-8}$, $f'(x) = -8x^{-8-1} = -8x^{-9} = -\frac{8}{x^9}$.
+	First way:  Since 
+	$$f(x) = \frac{1}{x^8} = x^{-8}$$
+	we have that
+	$$f'(x) = -8x^{-8-1} = -8x^{-9} = -\frac{8}{x^9}.$$
 	
-	Second way:  Using the quotient rule, 
-	$f'(x) = \frac{(x^8 \cdot \ddx(1)) - (1 \cdot \ddx(x^8))}{(x^8)^2}
-	= \frac{(x^8 \cdot 0) - (1 \cdot 8x^7)}{x^{16}}
-	= \frac{-8x^7}{x^{16}}
-	= - \frac{8}{x^9}$.
+	Second way:  Using the quotient rule: 
+	\begin{align*}
+	f'(x) &= \frac{(x^8 \cdot \ddx(1)) - (1 \cdot \ddx(x^8))}{(x^8)^2}  \\
+	&= \frac{(x^8 \cdot 0) - (1 \cdot 8x^7)}{x^{16}}  \\
+	&= \frac{-8x^7}{x^{16}}  \\
+	&= - \frac{8}{x^9}.
+	\end{align*}
 	\end{freeResponse}	
 	
 	
@@ -56,7 +61,9 @@ Use the ``short-cut derivative rules" to compute the derivatives of the followin
 	\item $f(x) = \sqrt{x}$
 	
 		\begin{freeResponse}
-		$f(x) = \sqrt{x} = x^{\frac{1}{2}}.$  So $f'(x) = \frac{1}{2} x^{\frac{1}{2} - 1} = \frac{1}{2} x^{-\frac{1}{2}} = \frac{1}{2\sqrt{x}}$.
+		$$f(x) = \sqrt{x} = x^{\frac{1}{2}}.$$ 
+		So 
+		$$f'(x) = \frac{1}{2} x^{\frac{1}{2} - 1} = \frac{1}{2} x^{-\frac{1}{2}} = \frac{1}{2\sqrt{x}}.$$
 		\end{freeResponse}
 			
 			
@@ -65,7 +72,9 @@ Use the ``short-cut derivative rules" to compute the derivatives of the followin
 	\item $f(x) = \frac{5}{x^2}$
 	
 		\begin{freeResponse}
-		$f(x) = \frac{5}{x^2} = 5x^{-2}.$  So $f'(x) = 5(-2) x^{-2-1} = -10x^{-3} = \frac{-10}{x^3}$.  
+		$$f(x) = \frac{5}{x^2} = 5x^{-2}.$$  
+		So 
+		$$f'(x) = 5(-2) x^{-2-1} = -10x^{-3} = \frac{-10}{x^3}.$$  
 		\end{freeResponse}
 			
 			
@@ -74,7 +83,8 @@ Use the ``short-cut derivative rules" to compute the derivatives of the followin
 	\item $f(x) = x^5 + 4x^3 + \pi $
 	
 		\begin{freeResponse}
-		$f'(x) = 5x^{5-1} + 4(3)x^{3-1} + 0 = 5x^4 + 12x^2$.  Note that $\ddx (\pi) = 0$ because $\pi$ is a constant.	
+		$$f'(x) = 5x^{5-1} + 4(3)x^{3-1} + 0 = 5x^4 + 12x^2.$$  
+		Note that $\ddx (\pi) = 0$ because $\pi$ is a constant.	
 		\end{freeResponse}
 			
 			
@@ -106,10 +116,12 @@ Differentiate the following functions:
 	%part a
 	\item  $f(x) = (x^2 + 4x - 7) e^{-2x}$
 			\begin{freeResponse}
-			$f'(x) = \left( \ddx(x^2 + 4x - 7) \cdot e^{-2x} \right) + \left((x^2 + 4x - 7) \cdot \ddx(e^{-2x}) \right)
-			= ((2x+4)(e^{-2x}) + (x^2 + 4x - 7)(-2e^{-2x})
-			= (2x + 4 - 2x^2 - 8x + 14)e^{-2x}
-			= (-2x^2 - 6x + 18)e^{-2x}$.
+			\begin{align*}
+			f'(x) &= \left( \ddx(x^2 + 4x - 7) \cdot e^{-2x} \right) + \left((x^2 + 4x - 7) \cdot \ddx(e^{-2x}) \right)  \\
+			&= ((2x+4)(e^{-2x}) + (x^2 + 4x - 7)(-2e^{-2x})  \\
+			&= (2x + 4 - 2x^2 - 8x + 14)e^{-2x}  \\
+			&= (-2x^2 - 6x + 18)e^{-2x}.
+			\end{align*}
 			\end{freeResponse}
 			
 			
@@ -117,10 +129,12 @@ Differentiate the following functions:
 	%part b
 	\item  $g(x) = \frac{x^2 + 4x - 7}{e^{-2x}}$
 			\begin{freeResponse}
-			$g'(x) = \frac{\left( e^{-2x} \cdot \ddx(x^2 + 4x - 7) \right) - \left( (x^2 + 4x - 7) \cdot \ddx(e^{-2x}) \right)}{(e^{-2x})^2}
-			= \frac{((e^{-2x}) \cdot (2x+4)) - ((x^2 + 4x - 7) \cdot (-2e^{-2x}))}{e^{-4x}}
-			= \frac{(2x + 4 + 2x^2 + 8x - 14)e^{-2x}}{e^{-4x}}
-			= \frac{2x^2 + 10x - 10}{e^{-2x}}$.
+			\begin{align*}
+			g'(x) &= \frac{\left( e^{-2x} \cdot \ddx(x^2 + 4x - 7) \right) - \left( (x^2 + 4x - 7) \cdot \ddx(e^{-2x}) \right)}{(e^{-2x})^2}  \\
+			&= \frac{((e^{-2x}) \cdot (2x+4)) - ((x^2 + 4x - 7) \cdot (-2e^{-2x}))}{e^{-4x}}  \\
+			&= \frac{(2x + 4 + 2x^2 + 8x - 14)e^{-2x}}{e^{-4x}}  \\
+			&= \frac{2x^2 + 10x - 10}{e^{-2x}}.
+			\end{align*}
 			\end{freeResponse}
 			
 			
@@ -144,9 +158,11 @@ Suppose that $f(5) = 7$, $f'(5) = 8$, $g(5) = 3$, and $g'(5) = -4$.  Find:
 	%part a
 	\item  $(fg)'(5)$.
 		\begin{freeResponse}
-		$(fg)'(5) = (f'(5) \cdot g(5)) + (f(5) \cdot g'(5))
-		= (8)(3) + (7)(-4)
-		= 24 - 28 = -4$.
+		\begin{align*}
+		(fg)'(5) &= (f'(5) \cdot g(5)) + (f(5) \cdot g'(5))  \\
+		&= (8)(3) + (7)(-4)  \\
+		&= 24 - 28 = -4.
+		\end{align*}
 		\end{freeResponse}
 		
 		
@@ -154,11 +170,11 @@ Suppose that $f(5) = 7$, $f'(5) = 8$, $g(5) = 3$, and $g'(5) = -4$.  Find:
 	%part b
 	\item $ \left( \frac{f}{g} \right)' (5)$
 		\begin{freeResponse}
-		$ \left( \frac{f}{g} \right)' (5)
-		= \frac{(g(5) \cdot f'(5)) - (f(5) \cdot g'(5))}{(g(5))^2}
-		= \frac{(3)(8) - (7)(-4)}{3^2}
-		= \frac{24 + 28}{9}
-		= \frac{52}{9}$.
+		\begin{align*}
+		\left( \frac{f}{g} \right)' (5) &= \frac{(g(5) \cdot f'(5)) - (f(5) \cdot g'(5))}{(g(5))^2}  \\
+		&= \frac{(3)(8) - (7)(-4)}{3^2}  \\
+		&= \frac{24 + 28}{9} = \frac{52}{9}.
+		\end{align*}
 		\end{freeResponse}
 		
 		
@@ -166,11 +182,11 @@ Suppose that $f(5) = 7$, $f'(5) = 8$, $g(5) = 3$, and $g'(5) = -4$.  Find:
 	%part c
 	\item $ \left( \frac{g}{f} \right)' (5)$
 		\begin{freeResponse}
-		$\left( \frac{g}{f} \right)' (5)
-		= \frac{(f(5) \cdot g'(5)) - (g(5) \cdot f'(5))}{(f(5))^2}
-		= \frac{(7)(-4) - (3)(8)}{7^2}
-		= \frac{-28 - 24}{49}
-		= - \frac{52}{49}$.
+		\begin{align*}
+		\left( \frac{g}{f} \right)' (5) &= \frac{(f(5) \cdot g'(5)) - (g(5) \cdot f'(5))}{(f(5))^2}  \\
+		&= \frac{(7)(-4) - (3)(8)}{7^2}  \\
+		&= \frac{-28 - 24}{49} = - \frac{52}{49}.
+		\end{align*}
 		\end{freeResponse}
 		
 	
@@ -195,9 +211,11 @@ Find the following derivatives:
 	%part a
 	\item  Given $g(x) = x^3 f(x)$, $f(2) = 4$, and $f'(2) = 7$, find the equation of the tangent line to the graph of $g(x)$ at $x=2$.
 		\begin{freeResponse}
-		$g'(x) = 3x^2 f(x) + x^3 f'(x)$.  So $g'(2) = 12(4) + 8(7) = 48 + 56 = 104$.  Also, $g(2) = 8f(2) = 32$.  Thus, the equation of the tangent line to the graph of $g(x)$ at $x=2$ is
-		
-		$y-32 = 104(x-2)$ or $y = 104x - 176$.  
+		$$g'(x) = 3x^2 f(x) + x^3 f'(x).$$  
+		So 
+		$$g'(2) = 12(4) + 8(7) = 48 + 56 = 104.$$  
+		Also, $g(2) = 8f(2) = 32$.  Thus, the equation of the tangent line to the graph of $g(x)$ at $x=2$ is
+		$$y-32 = 104(x-2) \quad \text{or} \quad y = 104x - 176.$$  
 		\end{freeResponse}
 		
 		
@@ -205,17 +223,20 @@ Find the following derivatives:
 	%part b
 	\item  Given that $h(x) = \frac{x f(x)}{x-3}$, $f(2) = 4$, and $f'(2) = 7$, find the equation of the tangent line to the graph of $h(x)$ at $x=2$.  
 		\begin{freeResponse}
-		$h'(x) = \frac{ (x-3)\ddx(xf(x)) - xf(x)\ddx(x-3)}{(x-3)^2}
-		= \frac{(x-3)(f(x) + xf'(x)) - xf(x)(1)}{(x-3)^2}$.
-		
-		So, $h'(2) = 
-		\frac{(2-3)(f(2) + 2f'(2)) - 2f(2)}{(2-3)^2}
-		= -(4 + 2(7)) - 2(4)
-		= -18 - 8 = -26$.
-		
-		Also, $h(2) = \frac{2f(2)}{2-3} = \frac{8}{-1} = -8$.  Thus, the equation of the tangent line to the graph of $h(x)$ at $x=2$ is
-		
-		$y-(-8) = -26(x-2)$ or $y = -26x + 44$.  
+		\begin{align*}
+		h'(x) &= \frac{ (x-3)\ddx(xf(x)) - xf(x)\ddx(x-3)}{(x-3)^2}  \\
+		&= \frac{(x-3)(f(x) + xf'(x)) - xf(x)(1)}{(x-3)^2}.
+		\end{align*}
+		So, 
+		\begin{align*}
+		h'(2) &= \frac{(2-3)(f(2) + 2f'(2)) - 2f(2)}{(2-3)^2}  \\
+		&= -(4 + 2(7)) - 2(4)  \\
+		&= -18 - 8 = -26.
+		\end{align*}
+		Also, 
+		$$h(2) = \frac{2f(2)}{2-3} = \frac{8}{-1} = -8.$$  
+		Thus, the equation of the tangent line to the graph of $h(x)$ at $x=2$ is
+		$$y-(-8) = -26(x-2) \quad \text{or} \quad y = -26x + 44.$$  
 		\end{freeResponse}
 		
 		
@@ -239,15 +260,17 @@ Find the following derivatives:
 	
 	 
 		\begin{freeResponse}
-		$\ddx \left( \frac{f(x)}{e^x g(x)} \right)
-		= \frac{e^x g(x) f'(x) - f(x)(e^x g(x) + e^x g'(x))}{(e^x g(x))^2}$.
+		$$\ddx \left( \frac{f(x)}{e^x g(x)} \right)
+		= \frac{e^x g(x) f'(x) - f(x)(e^x g(x) + e^x g'(x))}{(e^x g(x))^2}.$$
 		
-		So, $\ddx\left(\frac{f(x)}{e^x g(x)}\right) \bigg|_{x=2}
-		= \frac{e^2 g(2) f'(2) - f(2)(e^2 g(2) + e^2 g'(2))}{(e^2 g(2))^2}
-		= \frac{e^2 (9)(-5) - (3)(9e^2 + 5e^2)}{(9e^2)^2}
-		= \frac{-45e^2 -42e^2}{81e^4}
-		= \frac{-87e^2}{81e^4}
-		= - \frac{87}{81e^2}$.
+		So, 
+		\begin{align*}
+		\ddx\left(\frac{f(x)}{e^x g(x)}\right) \bigg|_{x=2}
+		&= \frac{e^2 g(2) f'(2) - f(2)(e^2 g(2) + e^2 g'(2))}{(e^2 g(2))^2}  \\
+		&= \frac{e^2 (9)(-5) - (3)(9e^2 + 5e^2)}{(9e^2)^2}  \\
+		&= \frac{-45e^2 -42e^2}{81e^4}  \\
+		&= \frac{-87e^2}{81e^4} = - \frac{87}{81e^2}.
+		\end{align*}
 		\end{freeResponse}
 		
 		

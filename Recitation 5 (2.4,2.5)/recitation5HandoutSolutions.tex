@@ -145,40 +145,38 @@ Find any vertical or horizontal asymptotes for the given function.  Be sure to t
 		
 		\begin{freeResponse}
 		To find the vertical asymptote, solve:
-		
-		$3x-5=0 \qquad \Longrightarrow \qquad 3x = 5 \qquad \Longrightarrow \qquad x = \frac{5}{3}.$
+		$$3x-5=0 \qquad \Longrightarrow \qquad 3x = 5 \qquad \Longrightarrow \qquad x = \frac{5}{3}.$$
 		
 		$\lim_{x \to \frac{5}{3}^+} \frac{\sqrt{2x^2 + 1}}{3x-5} = \infty$ and $\lim_{x \to \frac{5}{3}^-} \frac{\sqrt{2x^2 + 1}}{3x-5} = - \infty$ since in both limits the numerator approaches $\frac{\sqrt{59}}{3}$, but the denominator of the first limit approaches $0$ from the right whereas the denominator of the second limit approaches $0$ from the left.
 		
 		To find the horizontal asymptotes:
-		
-		(as $x \to \infty$)  $\lim_{x \to \infty} \frac{\sqrt{2x^2 + 1}}{3x-5} 
-		= \lim_{x \to \infty} \frac{\sqrt{2x^2 + 1}}{3x-5} \cdot \frac{\frac{1}{x}}{\frac{1}{x}} 
-		= \lim_{x \to \infty} \frac{\frac{\sqrt{2x^2 + 1}}{x}}{\frac{3x-5}{x}} 
-		= \lim_{x \to \infty}  \frac{\frac{\sqrt{2x^2 + 1}}{\sqrt{x^2}}}{3 - \frac{5}{x}} 
-		= \lim_{x \to \infty}  \frac{\sqrt{\frac{2x^2 + 1}{x^2}}}{3 - \frac{5}{x}} 
-		= \lim_{x \to \infty}  \frac{\sqrt{2 + \frac{1}{x^2}}}{3 - \frac{5}{x}} 
-		= \frac{\sqrt{2+0}}{3-0} 
-		= \frac{\sqrt{2}}{3} $
-		
-		(as $x \to -\infty$)  $\lim_{x \to -\infty} \frac{\sqrt{2x^2 + 1}}{3x-5} 
-		= \lim_{x \to -\infty} \frac{\sqrt{2x^2 + 1}}{3x-5} \cdot \frac{\frac{1}{x}}{\frac{1}{x}} 
-		= \lim_{x \to -\infty} \frac{\frac{\sqrt{2x^2 + 1}}{x}}{\frac{3x-5}{x}} 
-		= \lim_{x \to -\infty}  \frac{\frac{\sqrt{2x^2 + 1}}{-\sqrt{x^2}}}{3 - \frac{5}{x}} 
-		= \lim_{x \to -\infty}  -\frac{\sqrt{\frac{2x^2 + 1}{x^2}}}{3 - \frac{5}{x}} 
-		= \lim_{x \to -\infty}  -\frac{\sqrt{2 + \frac{1}{x^2}}}{3 - \frac{5}{x}} 
-		= -\frac{\sqrt{2+0}}{3-0} 
-		= -\frac{\sqrt{2}}{3} $
+		\begin{align*}
+		(\text{as} x \to \infty)  \lim_{x \to \infty} \frac{\sqrt{2x^2 + 1}}{3x-5} &= \lim_{x \to \infty} \frac{\sqrt{2x^2 + 1}}{3x-5} \cdot \frac{\frac{1}{x}}{\frac{1}{x}} \\
+		&= \lim_{x \to \infty} \frac{\frac{\sqrt{2x^2 + 1}}{x}}{\frac{3x-5}{x}} \\
+		&= \lim_{x \to \infty}  \frac{\frac{\sqrt{2x^2 + 1}}{\sqrt{x^2}}}{3 - \frac{5}{x}} \\
+		&= \lim_{x \to \infty}  \frac{\sqrt{\frac{2x^2 + 1}{x^2}}}{3 - \frac{5}{x}} \\
+		&= \lim_{x \to \infty}  \frac{\sqrt{2 + \frac{1}{x^2}}}{3 - \frac{5}{x}} \\
+		&= \frac{\sqrt{2+0}}{3-0} = \frac{\sqrt{2}}{3} 
+		\end{align*}
+		\begin{align*}
+		(\text{as} x \to -\infty)  \lim_{x \to -\infty} \frac{\sqrt{2x^2 + 1}}{3x-5} &= \lim_{x \to -\infty} \frac{\sqrt{2x^2 + 1}}{3x-5} \cdot \frac{\frac{1}{x}}{\frac{1}{x}} \\
+		&= \lim_{x \to -\infty} \frac{\frac{\sqrt{2x^2 + 1}}{x}}{\frac{3x-5}{x}} \\
+		&= \lim_{x \to -\infty}  \frac{\frac{\sqrt{2x^2 + 1}}{-\sqrt{x^2}}}{3 - \frac{5}{x}} \\
+		&= \lim_{x \to -\infty}  -\frac{\sqrt{\frac{2x^2 + 1}{x^2}}}{3 - \frac{5}{x}} \\
+		&= \lim_{x \to -\infty}  -\frac{\sqrt{2 + \frac{1}{x^2}}}{3 - \frac{5}{x}} \\
+		&= -\frac{\sqrt{2+0}}{3-0} = -\frac{\sqrt{2}}{3} 
+		\end{align*}
 		
 		So there are horizontal asymptotes at $y = \pm \frac{\sqrt{2}}{3}$.  
 		
 		In order for the graph of $f(x)$ to cross $y = \frac{\sqrt{2}}{3}$, we must have that 
-		$\frac{\sqrt{2x^2 + 1}}{3x-5} = \frac{\sqrt{2}}{3}
-		\qquad \Longrightarrow \qquad 3 \sqrt{2x^2+1} = \sqrt{2}(3x-5)
-		\qquad \Longrightarrow \qquad 9 (2x^2 + 1) = 2(9x^2 - 30x + 25)
-		\qquad \Longrightarrow \qquad 18x^2 + 9 = 18x^2 - 60x + 50
-		\qquad \Longrightarrow \qquad 60x = 41
-		\qquad \Longrightarrow \qquad x = \frac{41}{60}$.
+		\begin{align*}
+		\frac{\sqrt{2x^2 + 1}}{3x-5} = \frac{\sqrt{2}}{3} &\qquad \Longrightarrow \qquad 3 \sqrt{2x^2+1} = \sqrt{2}(3x-5) \\
+		&\qquad \Longrightarrow \qquad 9 (2x^2 + 1) = 2(9x^2 - 30x + 25)  \\
+		&\qquad \Longrightarrow \qquad 18x^2 + 9 = 18x^2 - 60x + 50  \\
+		&\qquad \Longrightarrow \qquad 60x = 41  \\
+		&\qquad \Longrightarrow \qquad x = \frac{41}{60}.
+		\end{align*}
 		
 		We need to check this:  $f \left( \frac{41}{60} \right) = -\frac{\sqrt{2}}{3}$.  So the graph of $f(x)$ never crosses the line $y= \frac{\sqrt{2}}{3}$, but it crosses $y= -\frac{\sqrt{2}}{3}$ at the point $\left( \frac{41}{60}, - \frac{\sqrt{2}}{3} \right)$.  
 		\end{freeResponse}
