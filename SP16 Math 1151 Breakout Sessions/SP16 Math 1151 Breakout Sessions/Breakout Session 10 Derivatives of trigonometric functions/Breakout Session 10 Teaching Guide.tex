@@ -1,0 +1,65 @@
+\documentclass[handout,nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}P\arabic{problem} Outcome: #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 10 Teaching Guide}  
+
+\begin{document}
+\begin{abstract}
+  % \textbf{A look back:} In the previous (February 9, 2016) Breakout Session you were introduced to the sum, product, and quotient rules for computing derivatives.
+  % These rules help us to compute derivatives quickly and accurately.
+
+  % \textbf{Overview:} In today's (February 11, 2016) Breakout Session you'll practice how to evaluate special trigonometric limits and the basic derivatives of trigonometric functions.
+
+  % \textbf{A look ahead:} In the next (February 16, 2016) Breakout Session you will practice real world interpretations of derivatives (as rates of change) and learn the last major differentiation rule.
+\end{abstract}
+\maketitle
+
+\section{Notes for problem 1}
+Before working these problems remind students about the two standard limits they'll be using.
+
+For part (a), when working through this problem you should emphasize the substitution of $u$ for $8x$.
+
+For part (b), you should remind students of the Pythagorean trigonometric identity $\cos^2(x) + \sin^2(x) = 1$ when evaluating this limit.
+Also, you can solve this problem by factoring the numerator.
+(It's good to show students both ways of solving the problem.)
+
+For part (c), you should work carefully through this problem and remind the students that $\lim_{x \to 0} \sin(x)/x = 1$ implies $\lim_{x \to 0} x/\sin(x) = 1$.
+Also when computing $\lim_{x \to 0} 5x/\sin(5x)$ be explicit about the use of substitution.
+
+\section{Notes for problem 2}
+These are fairly standard differentiation problems involving trigonometric functions.
+Before working through them you should remind students about the derivatives of sin, cos, tan, csc, sec, and cot and the connection between the derivative of a trigonometric function and its co-function.
+
+
+
+\section{Notes for problem 4}
+This problem will be difficult for the students to work through.
+Carefully go through the steps involved using the continuity checklist and the ``differentiability checklist''.
+(Unfortunately, there is no explicit differentiability checklist given in the book, but you should remind students that a two-sided limit exists if and only if the right-sided limit and left-sided limit both exist and are equal.
+
+\end{document} 

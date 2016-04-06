@@ -1,0 +1,90 @@
+\documentclass[handout,nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}P\arabic{problem} Outcome: #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 8 Teaching Guide}  
+
+\begin{document}
+\begin{abstract}
+ \textbf{Theme of calculus:} Calculus is the application of  \href{https://en.wikipedia.org/wiki/Derivative}{rates of change} and \href{https://en.wikipedia.org/wiki/Integral}{accumulation} to understand \href{https://en.wikipedia.org/wiki/Elementary_function}{famous functions} in their application to both real world and mathematical processes.
+
+  \textbf{Goal of Math 1151 course:} Promote and cultivate an environment which improves students' ability to construct, organize, and demonstrate their knowledge of calculus.
+\end{abstract}
+\maketitle
+
+\section{Notes for Problem 1}
+For part (I), this problem focuses on students' conceptual understanding of ``differentiable at a point implies continuous at a point''.
+(This is Question 7 from Cornell Good Questions project.)
+
+In addition to identifying the correct answer, it may be useful to state why each of the incorrect answers are incorrect.
+Don't try to prove things formally!
+Just provide a brief explanation along with a picture showing why statements (a), (c), and (d) are incorrect.
+
+Part (a) is incorrect because ``differentiable at a point implies continuous at a point implies limit exists at a point and we know what the limit is equal to''.
+For instance, (c) is incorrect because there are many functions where $f'(2)$ exists but $f'(2) \ne \lim_{x \to 2} f(x)$.
+(A suitable linear function should do.)
+Part (d) is incorrect because ``differentiable at a point implies continuous at a point implies limit exists at a point''.
+
+For part (II), this problem focuses on students' conceptual interpretation of a limit and is tricky.
+(This problem is also from the Cornell Good Questions project.)
+The tricky part involves interpreting a tangent line in two different ways: part (b) indicates that this limit gives the slope of the tangent line at $x = 0$ while part (e) indicates that tangent lines provides good approximations.
+
+Some students may be tempted to select (a) or (d).
+It's important to emphasize that $0/0$ is an indeterminate form and so, by itself, can never be equal to 1.
+Selecting part (d) is a less serious error but is still technically wrong.
+(Arguing against part (d) will be tricky: in some courses writing $\sin(x) = x$ means $\sin(x) \approx x$.)
+
+Finally, some students may be tempted to select part (c).
+It's important to remind them and emphasize that $\sin$ is a function and so it ``captures'' the $x$ in $\sin(x)$.
+(Unfortunately, this error is caused by our inconsistent mathematical notation: `$fx$' can stand for ``multiplying $f$ by $x$'' or ``applying the function $f$ to $x$'' or many other things.)
+
+\section{Notes for Problem 2}
+When working this problem, it is important to emphasize that the derivative $f'$ helps determine the shape of the graph of $f$.
+After solving this problem it's helpful to summarize by drawing the graph of the original function $f$, and under this graph, draw the graph of $f'$.
+
+
+\section{Notes for Problem 3}
+The point of this problem is to test students's understanding of contrapositive form of ``differentiable at a point implies continuous at a point''.
+We exclude the endpoints $0$ and $4$ since we \emph{won't} be discussing one-sided derivatives.
+
+\section{Notes for Problem 4}
+This will be a difficult problem for the students, especially when they attempt to draw the derivative near the vertical asymptotes.
+(It's difficult to see but this graph has a vertical asymptote at $x = -5$, a corner at $x = 10$ and is smooth everywhere else.)
+
+Again, make sure you draw the graph of the original function $h$ and nearby draw the graph of $h'$.
+
+\section{Notes for Problem 5}
+This is a problem from the AU15 Exam 2.
+Work carefully through the algebra!
+
+\section{Notes for Problem 6}
+For part (a), it may be helpful to start students off by substituting `$x$' for `$3$' in the first line.
+The algebra will be difficult for some students, so it's important not to skip any steps while computing $f'(x)$.
+
+The point of parts (b), (c), and (d) is to emphasize that $f'$ is a function itself.
+All functions have a domain, a range, and (as far as the students know) a graph.
+\end{document} 

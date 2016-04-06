@@ -1,0 +1,55 @@
+\documentclass[handout,nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}P\arabic{problem} Outcome: #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 12 Teaching Guide}  
+
+\begin{document}
+\begin{abstract}
+\end{abstract}
+\maketitle
+
+\section{Notes for problem 1}
+You should go through all three parts of this problem.
+Make sure you carefully work through the solution for part (a): some students may be uneasy with the algebra.
+When implicitly differentiating you should emphasize that we (implicitly) differentiate first, then solve for the derivative.
+
+Writing the implicit differentiation step with proper notation is important.
+I recommend you tell students they should write the derivative of $y$ (in terms of $x$) using $dy/dx$ instead of $y'$.
+$dy/dx$ is harder to lose in an equation involving $x$s and $y$s.
+(The prime symbol in $y'$ can easily be lost when rewriting.)
+
+\section{Notes for problem 2}
+This problem is similar to the first problem.
+(It's from AU15 Exam 2.)
+As usual stress writing $dy/dx$.
+
+\section{Notes for problem 3}
+Pick one of these three problems to work, you won't have time to work all three.
+Again stress writing $dy/dx$ for implicit problems and go slowly through the algebra.
+
+\end{document} 

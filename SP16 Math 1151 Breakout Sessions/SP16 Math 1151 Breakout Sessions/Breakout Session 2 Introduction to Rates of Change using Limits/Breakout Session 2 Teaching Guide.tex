@@ -1,0 +1,75 @@
+\documentclass[handout, nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}P\arabic{problem} Outcome: #1\end{raggedright}}}}}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+\title{Breakout Session 2 Teaching Guide}  
+
+\begin{document}
+\begin{abstract}
+ \textbf{Theme of calculus:} Calculus is the application of  \href{https://en.wikipedia.org/wiki/Derivative}{rates of change} and \href{https://en.wikipedia.org/wiki/Integral}{accumulation} to understand \href{https://en.wikipedia.org/wiki/Elementary_function}{famous functions} in their application to both real world and mathematical processes.
+
+  \textbf{Goal of Math 1151 course:} Promote and cultivate an environment which improves students' ability to construct, organize, and demonstrate their knowledge of calculus.
+\end{abstract}
+\maketitle
+
+\section{Teaching notes for problems}
+\subsection*{Notes for problem 1}
+For part (a), it may be useful to remind students the slope of a secant line gives the average rate of change of a function between two points and a tangent line gives the instantaneous rate of change at a particular point.
+Since a linear function, by definition, has a constant rate of change the function will be identical to its secant and tangent lines at every point.
+
+You could demonstrate this fact analytically, but it is probably quicker and easier just to argue using a graph.
+
+For part (b), this example can be used to demonstrate the differences between a secant line and a tangent line.
+Intuitively secant lines only give us information about a function at a ``fixed zoom level'', while tangent lines give us information by zooming infinitely close to a point.
+You may also want to preview the fact that the slope of a tangent line on an interval gives us certain qualitative information on the graph of a function.
+
+For part (c), this example can be used to demonstrate that a tangent line may intersect a graph at more than one point.
+(Many students will mistakenly believe a tangent line can only intersect a graph at exactly one point.)
+        
+I think it's important to emphasize again that one visible difference between tangent lines and secant lines is that secant lines work at a ``fixed zoom level'' while tangent lines zoom infinitely close to a point.
+
+\subsection*{Notes for problem 2}
+For part (b), it may be useful to demonstrate the path of the ball by throwing a crumpled piece of paper up and down.
+Many students may mistakenly think this graph gives the path of the ball: they be mentally thinking of a basketball being shot toward the net.
+
+It may also be useful to draw a ``stop frame picture'' of the path of the ball and line each up picture its corresponding spot on the position-time graph.
+
+For part (d), parts (a), (b) and (c) all lead up to this part.
+The students should recognize that the given graph at the start of the problem needs to be modified to give the actual position-time graph of the ball.
+
+Emphasize the important of knowing the domain (and range) of a function and remind the students of Breakout Session 1.
+
+
+For part (f), it's important to emphasize the formula for average velocity, the formula's connection to the slope of a secant line, and how we can conjecture the instantaneous velocity using a table of values.
+
+For part (g), it may be useful to draw, on a separate graph, the velocity-time graph of this function.
+(Of course if you do this, tell students that they will learn how to construct this graph for themselves later!)
+Emphasize that the shape of the position-time graph can gives us clues to the qualitative aspects of velocity.
+
+For part (h), if you draw the velocity-time graph for part (g), you should refer to it.
+
+\subsection*{Notes for problem 3}
+This problem is from the Autumn 2015 Exam 1.
+Many students incorrectly computed the average velocity in part (III), so before working this problem I suggest reminding students of the formula average velocity over an interval.
+
+Many students also had problems in part (IV): several simply differentiated and others didn't see the connection between part (III) and this problem.
+It's helpful to remind students that instantaneous velocity is the defined by limits.
+
+For part (V).(c), many students didn't notice the connection between the slope of the tangent line and the instantaneous velocity at a point.
+It's important to make this connection explicit.
+\end{document} 

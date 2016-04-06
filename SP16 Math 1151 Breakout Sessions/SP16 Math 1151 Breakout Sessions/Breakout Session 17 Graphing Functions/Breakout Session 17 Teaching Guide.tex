@@ -1,0 +1,61 @@
+\documentclass[handout,nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}P\arabic{problem} Outcome: #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 17 Teaching Guide}
+
+\begin{document}
+\begin{abstract}
+  % \textbf{A look back:} In the previous (March 3, 2016) Breakout Session you practiced using the signs of the first and second derivatives to locate local extrema and determine intervals where the function is increasing, is decreasing, is concave up, or is concave down.
+
+  % \textbf{Overview:} In today's (March 10, 2016) Breakout Session you'll practice how to sketch the graph  of a function.
+  
+  % \textbf{A look ahead:} In the next (March 22, 2016) Breakout Session you'll learn how to optimize using calculus.
+\end{abstract}
+\maketitle
+
+\section{Overall notes}
+\begin{itemize}
+  \item 
+    I recommend you handout the \textsl{Graph Sketching Summary Sheet} at the end of the recitation.
+    
+  \item
+    During the recitation, when solving the problems, you should be verbally referring to the steps in this summary sheet.
+    I also encourage you to write the step you're working with on the board.
+
+  \item 
+    It's important to emphasize, to the students, organizing their work and boxing their final answers for each part.
+
+  \item 
+    When computing asymptotes, be sure to stress that students \textit{must} check the appropriate limits.
+    (Briggs does give a criterion for when a rational function has a vertical and horizontal asymptote: so some students may be tempted to refer to this.
+    I suggest you emphasize that students develop the habit of checking a limit when they must locate vertical and horizontal asymptotes.)
+
+  \item 
+    Similar to previous Recitations, whenever you derive a conclusion analytically, relate this conclusion to its graphical meaning.
+\end{itemize}
+\end{document} 

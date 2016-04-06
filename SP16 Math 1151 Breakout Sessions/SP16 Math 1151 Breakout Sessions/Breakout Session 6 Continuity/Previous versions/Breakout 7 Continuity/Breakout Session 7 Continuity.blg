@@ -1,0 +1,15 @@
+[1] Config.pm:324> INFO - This is Biber 2.1
+[1] Config.pm:327> INFO - Logfile is 'Breakout Session 7 Continuity.blg'
+[76] biber-darwin:276> INFO - === Mon Sep 14, 2015, 10:49:59
+[76] Biber.pm:333> INFO - Reading 'Breakout Session 7 Continuity.bcf'
+[195] Biber.pm:645> INFO - Found 1 citekeys in bib section 0
+[234] Biber.pm:2977> INFO - Processing section 0
+[260] Biber.pm:3115> INFO - Looking for bibtex format file 'References.bib' for section 0
+[262] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[263] bibtex.pm:895> INFO - Found BibTeX data source 'References.bib'
+[315] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[315] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[315] Biber.pm:2854> INFO - Sorting list 'nty' of type 'entry' with scheme 'nty' and locale 'en-US'
+[316] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
+[320] bbl.pm:505> INFO - Writing 'Breakout Session 7 Continuity.bbl' with encoding 'ascii'
+[321] bbl.pm:596> INFO - Output to Breakout Session 7 Continuity.bbl

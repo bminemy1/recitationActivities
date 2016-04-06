@@ -1,0 +1,46 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{nty}{nty}
+    \entry{briggs_calculus_2015}{book}{}
+      \name{author}{3}{}{%
+        {{hash=10f1c28a8da81d82b8d196e3b051b249}{Briggs}{B\bibinitperiod}{William}{W\bibinitperiod}{}{}{}{}}%
+        {{hash=a556f7897c167b3ff22b7cff0d18bbf2}{Cochran}{C\bibinitperiod}{Lyle}{L\bibinitperiod}{}{}{}{}}%
+        {{hash=fbf39495417deb7932922c1a1305a804}{Gillett}{G\bibinitperiod}{Bernard}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{ef346fb947cfcb44b6b6cd6bcfd2cfb4}
+      \strng{fullhash}{ef346fb947cfcb44b6b6cd6bcfd2cfb4}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{edition}{2nd custom for the Ohio State University}
+      \field{isbn}{978-1-269-93919-5}
+      \field{shorttitle}{Calculus}
+      \field{title}{Calculus for Scientists and Engineers Early Transcendentals}
+      \field{year}{2015}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

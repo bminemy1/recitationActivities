@@ -1,0 +1,352 @@
+\documentclass[nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}\textbf{P\arabic{problem} Outcome:} #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 6 Solutions}  
+
+\begin{document}
+\begin{abstract}
+  % \textbf{A look back:} In the previous (January 26, 2016) Breakout Session you practiced how to interpert and compute infinite limits and limits at infinity.
+  % Infinite limits are how we defined vertical asymptotes and limits at infinity are how we defined horizontal asymptotes.
+
+  % \textbf{Overview:} In today's (January 28, 2016) Breakout Session you will practice working with continuous functions.
+  % Similar to asymptotes, continuity is defined in terms of limits and gives us information on the behavior of a graph of a function.
+
+  % \textbf{A look ahead:} In the next (February 2, 2016) Breakout Session you will resume the study of rates of change and review for Exam 1.
+\end{abstract}
+\maketitle
+
+% \section{Learning Outcomes}
+% \label{section:learning-outcomes}
+% The following outcomes are \emph{not an exhaustive} list of the skills you will need to develop and integrate for demonstration on quizzes and exams.
+% This list is meant to be a starting point for conversation (with your Lecturer, Breakout Session Instructor, and fellow learners) for organizing your knowledge and monitoring the development of your skills.
+% \begin{itemize}
+%   \item 
+%     Find where a function is and is not continuous.
+
+%   \item 
+%     Understand what it means for a function to be continuous at a point.
+
+%   \item
+%     Understand the connection between continuity of a function at a point and the value of a limit.
+
+%   \item
+%     Compute limits using continuity.
+
+%   \item
+%     Determine the intervals of continuity.
+
+%   \item
+%     State the Intermediate value theorem.
+
+%   \item 
+%     Apply the Intermediate value theorem.
+% \end{itemize}
+
+% \newpage
+
+\begin{problem}
+  \label{problem:application-of-ivt}
+  \mbox{}
+  \outcome{State the Intermediate value theorem.}
+  \outcome{Apply the Intermediate value theorem.}
+  \begin{itemize}
+    \item[(a)]
+      Explain why the Intermediate Value Theorem does not guarantee a zero for $f(x) = \frac{x-1}{x^2 - 5x}$ on the interval $(2,6)$, even though $f(2) < 0$ and $f(6) > 0$.
+      \begin{freeResponse}
+        $f$ is undefined for $x = 5$ implies $f$ does not satisfy the conditions for the Intermediate Value Theorem.
+      \end{freeResponse}
+
+    \item[(b)]
+      True or False: At some time since you were born your weight in pounds exactly equaled your height in inches.
+      \begin{freeResponse}
+        True: if $w(t)$ represent your weight in pounds at timeand let $h(t)$ represent your height in inches at time $t$, then $w$ and $h$ are both continuous functions implies $w - h$ is also continuous.
+        If $t = 0$ is the moment you where born and $t = T_0$ is the present time, then $w(0) - h(0) > 0$ and $w(T_0) - h(T_0) < 0$.
+        Hence by the Intermediate Value Theorem there is a point in the past where your weight in pounds is equal to your height in inches.
+      \end{freeResponse}
+  \end{itemize}
+\end{problem}
+
+\begin{problem}
+  \label{problem:finding-a-root}
+  \outcome{State the Intermediate value theorem.}
+  \outcome{Apply the Intermediate value theorem.}
+  Use the Intermediate value theorem to find an interval in which you can guarantee that there is a solution to the equation $x^3 = x + \sin x + 1$.
+  Do not use a graphing device or calculator to solve this problem!
+  \begin{freeResponse}
+    We have
+    \begin{align*}
+      x^3 = x + \sin x + 1 &\implies x^3 - x - \sin x - 1 = 0.
+    \end{align*}
+    Put $f(x) =  x^3 - x - \sin(x) - 1$.
+
+    Since $f(0) = (-1)^3 - (-1) - \sin(0) = -1$,  $f(\pi) = \pi^3 - \pi - \sin(\pi) = \pi(\pi^2 - 1) - 1 > 3 \cdot (3^2 - 1) - 1 = 23$, and $f$ is continuous on $[0, \pi]$, the Intermediate Value Theorem implies there is some $c$ with $0 < c < \pi$ such that $f(c) = 0$, that is, $c^3 = c + \sin (c) + 1$.
+  \end{freeResponse}
+\end{problem}
+
+\begin{problem}
+  \label{problem:can-we-apply-limit-laws}
+  True or False: If $f$ and $g$ are two functions defined on $(-1, 1)$, and if $\displaystyle \lim_{x \to 0} g(x) = 0$, then it must be true that $\displaystyle \lim_{x \to 0} (f(x) \cdot g(x)) = 0$.
+  \begin{freeResponse}
+    False: Suppose 
+    \[
+      f(x) =
+      \begin{cases}
+        \frac{1}{x} & \mbox{if $x \ne 0$}\\
+        0 & \mbox{if $x = 0$}
+      \end{cases}
+    \]
+    and $g(x) = x$.
+    Then $\lim_{x \to 0} g(x) = 0$ but
+    \[
+      \lim_{x \to 0} f(x) \cdot g(x) = \lim_{x \to 0} \frac{1}{x} \cdot x = \lim_{x \to 0} 1 = 1.
+    \]
+  \end{freeResponse}
+
+\end{problem}
+
+\begin{problem}
+  \label{problem:cont-and-limit-laws}
+  \outcome{Understand what it means for a function to be continuous at a point.}
+  \outcome{Understand the connection between continuity of a function at a point and the value of a limit.}
+  True or False: If $f$ is continuous on $(-1, 1)$, and if $f(0) = 10$ and $\displaystyle \lim_{x \to 0} g(x) = 2$, then
+  \[
+    \lim_{x \to 0} \frac{f(x)}{g(x)} = 5.
+  \]
+  \begin{freeResponse}
+    True: application of quotient rule.
+  \end{freeResponse}
+\end{problem}
+
+\begin{problem}
+  \label{problem:cont-and-limit-laws}
+  \outcome{State the Intermediate value theorem.}
+  \outcome{Apply the Intermediate value theorem.}
+  True or False: If $f$ is continuous on $[1, 3]$, and if $f(1) = 0$ and $f(3) = 4$, then the equation $f(x) = \pi$ has a solution in $(1, 3)$.
+  \begin{freeResponse}
+    True: $f$ is continuous on $[1, 3]$, $f(1) = 0 < \pi < 4 = f(3)$, and intermediate value theorem implies there is some $x$ in $(1, 3)$ with $f(x) = \pi$.
+  \end{freeResponse}
+\end{problem}
+
+\begin{problem}
+  \label{problem:vertical-asymptote}
+  True or False: Let $f$ be a positive function with vertical asymptote $x = 5$. Then
+  \[
+    \lim_{x \to 5} f(x) = \infty.
+  \]
+  \begin{freeResponse}
+    False: Suppose $f$ is defined by
+    \[
+      f(x) =
+      \begin{cases}
+        \frac{1}{x - 5} & \mbox{if $x > 5$}\\
+        2 & \mbox{if $x \le 5$}.
+      \end{cases}
+    \]
+    
+    Then $f$ has a vertical asymptote at $x = 5$:
+    \begin{align*}
+      \lim_{x \to 5^+} \underbrace{\frac{1}{x-5}}_\text{form $\mbox{pos}/0^+$} = \infty.
+    \end{align*}
+
+    But, $\displaystyle \lim{x \to 5^-} f(x) = 2$.
+  \end{freeResponse}
+\end{problem}
+
+\section{Extra Problems for Personal Practice}
+\label{section:extra-problems}
+\begin{problem}
+  \label{problem:finding-intervals-of-continuity}
+  \outcome{Find where a function is and is not continuous.}
+  \outcome{Determine the intervals of continuity.}
+  \outcome{Understand what it means for a function to be continuous at a point.}
+  \outcome{Understand the connection between continuity of a function at a point and the value of a limit.}
+  For the following function $g$ defined by
+  \[
+    g(t) =
+    \begin{cases}
+      5t + 7 & \mbox{if $t < -3$,}\\
+      \displaystyle\frac{(t-1)(t+2)}{t+2} & \mbox{if $-3 \leq t < 1$ and $t \neq -2$, and}\\
+      4 \ln(t) & \mbox{if $t \geq 1$,}
+    \end{cases}
+  \]
+  find the intervals where $g$ is continuous.
+  (\textbf{Important Note:} Write your answer as a list of intervals with each interval separated by a comma.)
+  \begin{freeResponse}
+    The function $g$ is continuous on $(\infty, -3)$ since, in this interval, $g(t)=5t+7$ is a polynomial and therefore continuous on its domain.
+  
+  $g$ is not continuous at $t = -3$:
+  \[
+    \lim_{t \to -3^-} g(t) = \lim_{t \to -3^-} 5t+7 = 5(-3) + 7 = -8
+  \]
+  and
+  \[
+    g(-3) = \frac{(-3-1)(-3+2)}{-3+2} = \frac{4}{-1} = -4.
+  \]
+
+  The function $g$ is continuous on $(-3, 1)$ since, in this interval, $g(t) = \frac{(t-1)(t+2)}{t+2}$ is a rational function whose denominator is not zero.
+
+  $g$ is right-continuous at $t = -3$:
+  \[
+    \lim_{t \to -3^+} g(t) = \lim_{t \to -3^+} \frac{(t-1)(t+2)}{t+2} = \frac{(-3-1)(-3+2)}{-3+2} = -4 = g(-3).
+  \]
+
+  $g$ is left-continuous at $t = 1$:
+  \[
+    \lim_{t \to 1^-} g(x) = \lim_{t \to 1^-} \frac{(x-1)(x+2)}{x+2} = \frac{0}{3} = 0,
+  \]
+  and $g(1) = 4 \ln(1) = 0$.
+
+  To summarize: on the interval $(-3, 1)$ we have that $g$ is continuous on $[-3, -2)$ and $(-2, 1]$.
+  
+  $g$ is continuous on $[1, \infty)$, since, on this interval, $g(t) =  4 \ln(t)$ is a logarithmic function.
+
+  To finish we can combine the interval $(-2, 1]$ with the interval $[1, \infty)$ to yield $(-2, \infty)$.
+  To conclude: $g$ is continuous on the intervals \[(-\infty, -3), [-3, -2), (-2, \infty)\]
+  \end{freeResponse}
+\end{problem}
+
+\begin{problem}
+  \label{problem:makeing-a-function-cont}
+  \outcome{Understand what it means for a function to be continuous at a point.}
+  \outcome{Understand the connection between continuity of a function at a point and the value of a limit.}
+  Find all real numbers $a$ and $b$ such that the function $h$ defined by
+  \[
+    h(z) =
+    \begin{cases}
+      az^2 + 38 &  \mbox{if $z < 3$,}\\
+      a + b & \mbox{if $z = 3$, and }\\
+      2bz - a &	\mbox{if $z > 3$,}
+    \end{cases}
+  \]
+  is continuous for all real numbers $z$.
+\end{problem}
+\begin{freeResponse}
+    To make sure $h$ is continuous at $z = 3$ we must satisfy the three requirements on the continuity checklist:
+  \begin{itemize}
+    \item[$\square$]
+      $h$ is defined at $z = 3$,
+
+    \item[$\square$]
+      $\lim_{z \to 3} h(z)$ exists, and
+
+    \item[$\square$]  
+      $\lim_{z \to 3} h(z) = h(3)$.
+  \end{itemize}
+    \subsubsection*{Continuity Checklist: $\square$ $h$ is defined at $z = 3$}
+  Since, by definition of $h$, we have $h(3) = a + b$ and so $h$ is defined at $z = 3$.
+  We can then check this item off the checklist:
+  \begin{itemize}
+    \item[$\text{\rlap{$\checkmark$}}\square$]
+      $h$ is defined at $z = 3$,
+
+    \item[$\square$]
+      $\lim_{z \to 3} h(z)$ exists, and
+
+    \item[$\square$]  
+      $\lim_{z \to 3} h(z) = h(3)$.
+  \end{itemize}
+
+  \subsubsection*{Continuity Checklist: $\square$ $\lim_{z \to 3} h(z)$ exists}
+  To determine if $\lim_{z \to 3} h(z)$ exists we focus on the right-sided limit and left-sided limit as $z \to 3$.
+
+  \begin{align*}
+    \lim_{z \to 3^+} h(z) &= \lim_{z \to 3^+} 2bz - a\\
+    &= 2b\cdot 3 - a \\
+    &= 6b - a.
+  \end{align*}
+
+  \begin{align*}
+    \lim_{z \to 3^-} h(z) &= \lim_{z \to 3^+} az^2 + 38\\
+    &= a\cdot 3^2 +38 \\
+    &= 9a + 38.
+  \end{align*}
+
+  To satisfy this continuity checklist item we must then have $6b - a = 9a + 38 \implies a = (-1/10) \cdot (-6b + 38)$.
+  We can then check this item off the checklist:
+  \begin{itemize}
+    \item[$\text{\rlap{$\checkmark$}}\square$]
+      $h$ is defined at $z = 3$,
+
+    \item[$\text{\rlap{$\checkmark$}}\square$]
+      $\lim_{z \to 3} h(z)$ exists, and
+
+    \item[$\square$]  
+      $\lim_{z \to 3} h(z) = h(3)$.
+  \end{itemize}
+
+  \subsubsection*{Continuity Checklist: $\square$ $\lim_{z \to 3} h(z) = h(3)$}
+  To finish we must also have $\lim_{z \to 3} h(z) = h(3)$.
+  
+  Right-sided limit:
+  \begin{align*}
+    \lim_{z \to 3^+} h(z) &= a + b \\
+    &\implies 6b - a = a + b \\
+    &\implies 5b - 2a = 0\\
+    &\implies 20b - 8a = 0 
+  \end{align*}
+
+  Left-sided limit:
+  \begin{align*}
+    \lim_{z \to 3^-} h(z) &= a + b \\
+    &\implies 9a + 38 = a + b \\
+    &\implies 8a - b  = -38.
+  \end{align*}
+
+  Then 
+  \begin{align*}
+    20b - 8a &= 0 \\
+    8a - b  &= -38
+  \end{align*}
+  is a system of two equations with two unknowns.
+
+  We can add these two equations:
+  \begin{align*}
+     20b - 8a &= 0 \\
+   + (8a - b  &= -38)\\
+     \cline{1-2}
+    19b &= -38 \\
+    &\implies b = -2
+  \end{align*}
+
+  Then $a = (-1/10) \cdot (-6b + 38)$ and $b = -2$ implies $a = -5$.
+
+  % We can now check the final item off the checklist:
+  % \begin{itemize}
+  %   \item[$\text{\rlap{$\checkmark$}}\square$]
+  %     $h$ is defined at $z = 3$,
+
+  %   \item[$\text{\rlap{$\checkmark$}}\square$]
+  %     $\lim_{z \to 3} h(z)$ exists, and
+
+  %   \item[$\text{\rlap{$\checkmark$}}\square$]  
+  %     $\lim_{z \to 3} h(z) = h(3)$.
+  % \end{itemize}
+  
+  Therefore $h$ is continuos at $z = 3$ when $a = -5$ and $b = -2$.
+\end{freeResponse}
+\end{document} 

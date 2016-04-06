@@ -1,0 +1,243 @@
+\message{ !name(Breakout Session 1 Solutions.tex)}\documentclass[nooutcomes]{ximera}
+
+%% Options for ximera class: handout, space, newpage, numbers, nooutcomes
+
+%\usepackage{graphicx}
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{1.5in}{\begin{raggedright}\textbf{P\arabic{problem} Outcome:} #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 1 Solutions}  
+
+\begin{document}
+
+\message{ !name(Breakout Session 1 Solutions.tex) !offset(-3) }
+
+\begin{abstract}
+  % \small
+  % Calculus is the application of  \href{https://en.wikipedia.org/wiki/Derivative}{rates of change} and \href{https://en.wikipedia.org/wiki/Integral}{accumulation} to understand \href{https://en.wikipedia.org/wiki/Elementary_function}{famous functions} in their application to both real world and mathematical processes.
+  
+  % In today's (January 12, 2016) Breakout Session you will investigate the basic properties of a few famous functions.
+  % In future Breakout Sessions you will investigate how ``rates of change'' helps us further analyze properties of famous functions.
+\end{abstract}
+\maketitle
+
+% \section{Learning Outcomes}
+% The following outcomes are \emph{not an exhaustive} list of the skills you will need to develop and integrate for demonstration on quizzes and exams.
+% This list is meant to be a starting point for conversation (with your Lecturer, Breakout Session Instructor, and fellow learners) for organizing your knowledge and monitoring the development of your skills.
+
+% \begin{itemize}
+%   \item
+%     Define a function.
+%     (Understand that the definition of a function consists of three interrelated components: domain, “rule”, and range.)
+
+%   \item 
+%     Find domain and range of a function.
+%     (Understand that the domain and range can be determined by a function's formulaic representation (if it has one), graphical representation, verbal representation, or tabular representation.)
+
+%   \item
+%     Determine where a function is positive, negative, or zero.
+
+%   \item
+%     Define and work with inverse functions.
+%     (Understand that not all functions are invertible, those functions that have inverses can be determined graphically, and the notation for inverse functions is \emph{strange}.)
+
+%   \item
+%     Understand the relationship between exponential and logarithmic functions.
+%     (A special case of an invertible function and its inverse.)
+    
+%   \item
+%     Evaluate expressions and solve equations involving trigonometric functions and inverse trigonometric functions.
+    
+%   \item
+%     Understand the properties of trigonometric functions.
+
+%   \item
+%     Know the graphs and properties of ``famous'' functions.
+%     (The famous functions are polynomial functions, rational functions, algebraic functions, exponential functions, logarithmic functions, trigonometric functions, and inverse trigonometric functions.)
+% \end{itemize}
+% \newpage
+
+\section{Inverse Functions}
+\label{section:inverse-functions}
+
+\begin{problem}
+  \label{problem:properties-of-fuction-from-graph}
+  \outcome{Define a function.}
+  \outcome{Find domain and range of a function.}
+  \outcome{Determine and work with inverse functions.}
+  We're given the following graph of a function:
+  \begin{image}
+    \includegraphics[scale = 0.7]{"Graph of piecewise defined function".png}
+  \end{image}
+  Use this graph to answer the following questions:
+  \begin{itemize}
+    \item[(a)]
+      What is the domain of this function?
+      \begin{freeResponse}
+        $(-\infty, 1) \cup (1, \infty)$
+      \end{freeResponse}
+
+    \item[(b)]
+      What is the range of this function?
+      \begin{freeResponse}
+        $(-\infty, -1) \cup (0, \infty)$
+      \end{freeResponse}
+
+    \item[(c)]
+      What is the value of $f(0)$, $f(1)$, and $f(2)$?
+      \begin{freeResponse}
+        $f(0) = 3$, $f(1)$ does not exist, $f(2) = -2$
+      \end{freeResponse}
+
+    \item[(d)]
+      Does this function have an inverse?
+      (Why or why not?)
+      \begin{freeResponse}
+        No, the function does not have an inverse.
+        It is not one-to-one (that is, it does not pass the horizontal line test).
+      \end{freeResponse}
+      
+    \item[(e)]
+      Find at least two intervals on which the function is one-to-one.
+      \begin{freeResponse}
+        The function becomes one-to-one when we restrict its domain to $(-\infty, 0]$:
+        \begin{image}
+          \includegraphics[scale = 0.7]{"Graph of restricted function".png}
+        \end{image}
+        The function also becomes one-to-one when we restrict its domain to $[0, \infty)$:
+        \begin{image}
+          \includegraphics[scale = 0.7]{"Graph of second restricted function".png}
+        \end{image}
+      \end{freeResponse}
+
+    \item[(f)]
+      Find $f^{-1}(3)$ on a restricted domain of $f$.
+      \begin{freeResponse}
+        In this case restrict the domain of $f$ to $(-\infty, 0]$.
+        By definition we have $f^{-1}(3) = y \iff 3 = f(y)$.
+        Looking at the first graph of the restricted function we see that $f(0) = 3$, that is, $f^{-1}(3) = 0$.
+      \end{freeResponse}
+  \end{itemize}
+\end{problem}
+
+\begin{problem}
+  \label{problem:applying-definition-of-inverse-function}
+  \outcome{Determine and work with inverse functions.}
+  Let $g$ be a one-to-one function and let $g^{-1}$ be its inverse.
+  \textbf{True or False:}
+  If the point $(2, 1/5)$ lies on the graph of $g$, then the point $(2, 5)$ lies on the graph of $g^{-1}$.
+  \begin{freeResponse}
+    This statement is \textbf{false}: we have $g(2) = 1/5 \iff 2 = g^{-1}(1/5)$.
+    The notation $g^{-1}$ never, in this course, means $1/g$.
+  \end{freeResponse}
+\end{problem}
+
+\section{Trigonometric functions and their inverses}
+\label{section:trigonometric-functions-and-their-inverses}
+
+\begin{problem}
+  \label{problem:applying-domain-of-arccos}
+  Without using a calculator, determine if the equation
+  \[
+    \cos^{-1}\bigl(\cos(7\pi/6)\bigr) = 7\pi/6
+  \]
+  is true or false.
+  \begin{freeResponse}
+    This statement is \textbf{false}: the correct equation is $\cos^{-1}\bigl(\cos(7\pi/6)\bigr) = 5\pi/6$. (Why?)
+
+    (\textbf{Spoiler Alert}: the cosine function is \emph{not} invertible since its graph fails the horizontal line test.
+    \begin{image}
+      \includegraphics[scale = 0.7]{"Graph of cosine function".png}
+    \end{image}
+    To produce the inverse cosine we must first restrict the domain of cosine to produce an invertible function:
+    \begin{image}
+      \includegraphics[scale = 0.7]{"Graph of restricted cosine function".png}
+    \end{image}
+  \end{freeResponse}
+\end{problem}
+
+\begin{problem}
+  \label{problem:applying-domain-of-arcsin}
+  \textbf{True or False:}
+  $\sin^{-1}(0) = \pi$.
+\end{problem}
+
+\begin{problem}
+  \label{problem:solving-trigonometric-equations}
+  Find all real numbers which satisfy each of the equations.
+  \begin{itemize}
+    \item[(a)]
+      $\cos(x) = 1$
+    \item[(b)]
+      $\sin(3 \theta) = \sqrt{3}/2$ for $0 \leq \theta \leq 2\pi$
+  \end{itemize}
+\end{problem}
+
+\begin{problem}
+  \label{problem:simplifying-trigonometric-expressions}
+  Simplify each of the following expressions.
+  \begin{itemize}
+    \item[(a)]
+      $\cos^{-1} \bigl( \sin(\pi/2) \bigr)$
+    \item[(b)]
+      $\tan \bigl( \sin^{-1}(4/x ) \bigr)$
+  \end{itemize}
+\end{problem}
+
+\section{Extra Problems for  Personal Practice}
+\label{section:extra-problems}
+
+\begin{problem}
+  \label{problem:computing-inverse-algebraically}
+  Each of the following functions are invertible on their given domains.
+  For each one find a formula for its inverse and give the domain and range of the inverse.
+  \begin{itemize}
+    \item[(a)]
+      The function $f$ defined by $f(x)=x^2-4x-5$ for every $x \ge 2$.
+
+    \item[(b)]
+      The function $g$ defined by $g(u) = \sqrt[4]{u + 2}$.
+
+    \item[(c)]
+      The function $h$ defined by $h(t) = 1/(t+2)^2$ for every $t > -2$.
+
+    \item[(d)]
+      The function $p$ defined by $p(s) = e^{3s+1}$.
+  \end{itemize}
+\end{problem}
+
+\begin{problem}
+  \label{problem:solving-logarithmic-exponential-equations}
+  Find all real numbers $x$ which satisfy each of the following equations.
+  \begin{itemize}
+    \item[(a)]
+      $\log_x 25 = 2$.
+
+    \item[(b)]
+      $7^x = 15$
+
+    \item[(c)]
+      $\ln(x) + 1 = 0$.
+  \end{itemize}
+\end{problem}
+\end{document} 
+
+\message{ !name(Breakout Session 1 Solutions.tex) !offset(-243) }

@@ -1,0 +1,89 @@
+\documentclass[nooutcomes]{ximera}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}\textbf{P\arabic{problem} Outcome:} #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+\title{Breakout Session 4 Teaching Guide}  
+
+\begin{document}
+\begin{abstract}
+ \textbf{Theme of calculus:} Calculus is the application of  \href{https://en.wikipedia.org/wiki/Derivative}{rates of change} and \href{https://en.wikipedia.org/wiki/Integral}{accumulation} to understand \href{https://en.wikipedia.org/wiki/Elementary_function}{famous functions} in their application to both real world and mathematical processes.
+
+  \textbf{Goal of Math 1151 course:} Promote and cultivate an environment which improves students' ability to construct, organize, and demonstrate their knowledge of calculus.
+\end{abstract}
+\maketitle
+
+\section{Notes for problem 1}
+This problem gives the students practice in recognizing which limit law justify which step in computing a limit.
+
+Usually students won't be annotating their limit solutions with this much detail but it is important to stress that they should keep these laws in mind while they work through the following limits.
+
+\section{Notes for problem 2}
+I think it's important to emphasize that nearly all limit techniques involve reshaping a harder limit to an easier one.
+This recitation covers the initial techniques implementing this goal: limit laws, algebra, ``multiply by 1 trick'', and squeeze theorem.
+
+This particular problem provides a first example using algebra and canceling.
+(Initially students---for those that have had calculus before---may be tempted to always apply L'H\^{o}pital's rule to any limit problem.
+It's important to emphasize that this is a valid technique, \emph{that must be used with care}, but they can only use this rule after we have covered it.)
+
+You should point out that the domain of the first ``complicated function'' $x \mapsto \frac{4x^2 - 144}{x-6}$ is different from the domain of the ``simpler function'' $x \mapsto 4(x+6)$.
+However since the functions are equal around a small neighborhood of $6$ that excludes $6$ as far as the limit is concerned they both evaluate to the same thing.
+I recommend you make a similar verbal remark for all the following parts of this problem as well.
+
+For part (b), you may need to carefully work through the ``multiply by 1 trick'' using the conjugate and the algebraic identity part.
+(Most students will have seen this in their precalculus class but they may have forgotten some details.)
+
+Also, I think it's important to emphasize again that we can cancel precisely because the limit ``doesn't care'' what happens at $x = 6$.
+Some students may forgot that algebraic manipulations are only valid under certain conditions.
+(In this case you can only cancel when the denominator is not 0.)
+
+For part (c), some students may find it easier to expand $(3x - 2)^2 - 16$, collect like terms, then factor to get $(3x-6)(3x-2)$; this method is okay.
+
+Again, emphasize that for limits we only care about those values near 2 and not when $x = 2$.
+(The reason you should emphasize this point is that some students will confuse the value of $f$ at $a$ with $\lim_{x \to a} f(x)$.
+This confusion is a natural response since most of the limits students will remember seems to involve just evaluating $f(a)$ to find $\lim_{x \to a} f(x)$.
+Of course the limit notation itself and the usual way we write computations of limits adds to the confusion.)
+
+For part (d), you should again carefully work through the ``multiply by 1 trick''.
+
+\section{Notes for problem 3}
+I think it would be helpful to draw several graphs of the piecewise defined function with several different values of $a$.
+This way the students can visually see how changing the parameter $a$ changes the shape of the function.
+
+Once you have a visual picture you can point to, you can proceed with the usual computations of the left-sided and right-sided limits.
+While going through the computations I recommend you emphasize that $a$ is just a ``fancy'' name for a number.
+Some students may be confused about the role of $a$ in this problem.
+(They may even conflate the ``$a$'' in this problem with the ``$a$'' in $\lim_{x \to a} f(x)$!)
+I think it's important to emphasize that they shouldn't be too intimidated by notation.
+To finish I recommend drawing the graph with $a = 1/6$.
+
+\section{Notes for problem 4}
+This is a simple application of the squeeze theorem.
+Unfortunately, some students may believe the squeeze theorem only applies to computing limits of trigonometric functions: so I suggest at least working the problem 6 also.
+
+\section{Notes for problem 5}
+Another standard squeeze theorem problem.
+Here things are a bit more difficult since students must first write down the appropriate inequalities themselves.
+\end{document} 

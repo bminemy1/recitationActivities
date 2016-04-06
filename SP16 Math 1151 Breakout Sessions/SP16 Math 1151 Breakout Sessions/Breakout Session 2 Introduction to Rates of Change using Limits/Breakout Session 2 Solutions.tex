@@ -1,0 +1,450 @@
+\documentclass[nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}\textbf{P\arabic{problem} Outcome:} #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+\title{Breakout Session 2 Solutions}  
+
+\begin{document}
+\begin{abstract}
+  % \textbf{A look back:} In the previous (January 12, 2016) Breakout Session you practiced how to use the graphs of a function to determine its properties and reviewed the famous functions.
+  % (The most famous of the famous functions are exponential, logarithm, and trigonometric functions.)
+
+  % \textbf{Overview:} In today's (January 14, 2016) Breakout Session you will begin studying how calculus is used to formulate instantaneous rate of change of a function and how this formulation applies to real world processes~---~average and instantaneous velocity~---~and mathematical processes~---~secant lines
+  
+  % and tangent lines.
+
+  % \textbf{A look ahead:} In the next (January 19, 2016) Breakout Session you will learn the definition of a limit and practice using this tool to produce precise information about the behaviour of a function near a point.
+\end{abstract}
+\maketitle
+
+% \section{Learning Outcomes}
+% \label{section:learning-outcomes}
+% The following outcomes are \emph{not an exhaustive} list of the skills you will need to develop and integrate for demonstration on quizzes and exams.
+% This list is meant to be a starting point for conversation (with your Lecturer, Breakout Session Instructor, and fellow learners) for organizing your knowledge and monitoring the development of your skills.
+
+% \begin{itemize}
+%   \item
+%     Compute average velocity.
+
+%   \item
+%     Approximate instantaneous velocity.
+
+%   \item
+%     Compare average and instantaneous velocity.
+
+%   \item
+%     Calculate slope of a secant line.
+
+%   \item
+%     Compare secant and tangent lines.
+
+%   \item
+%     Understand the concept of a limit.
+% \end{itemize}
+
+% \newpage
+
+\section{Secant and Tangent Lines}
+\label{section:secant-and-tangent-lines}
+
+\begin{problem}
+  \mbox{}
+  \label{problem:secant-and-tangent-lines}
+  \outcome{Compare secant and tangent lines.}
+  \begin{itemize}
+    \item[(a)]
+      What does the secant line to a linear function look like?
+      What does a tangent line to a linear function look like?
+      \begin{freeResponse}
+        A (non-vertical) line can be represented by a function $L$ defined by $L(x) = mx + b$, where $m$ is the slope of the line and $b$ is the $y$-intercept.
+      
+        For instance, here is the graph of a particular linear function
+        \begin{image}
+          \includegraphics[scale = 0.7]{Images/"Graph of linear function".png}
+        \end{image}
+
+        If we draw a secant line between two points of this graph we have
+        \begin{image}
+          \includegraphics[scale = 0.7]{Images/"Graph of linear function with secant line".png}
+        \end{image}
+        So the secant line is identical to the line itself.
+
+        If we draw a tangent line at one point on this graph we have
+        \begin{image}
+          \includegraphics[scale = 0.7]{Images/"Graph of linear function with tangent line".png}
+        \end{image}
+        So the tangent line is identical to the line itself.
+      \end{freeResponse}
+
+    \item[(b)]
+      What might the secant line and tangent line of the function $f$, defined by $f(x) = x^2$, look like?
+      \begin{freeResponse}
+         \begin{image}
+           \includegraphics[scale = 0.8]{Images/"Graph of quadratic function with negative slope secant line".png}
+         \end{image}
+         \begin{image}
+           \includegraphics[scale = 0.8]{Images/"Graph of quadratic function with zero slope secant line".png}
+         \end{image}
+         \begin{image}
+           \includegraphics[scale = 0.8]{Images/"Graph of quadratic function with positive slope secant line".png}
+         \end{image}
+       
+          \begin{image}
+            \includegraphics[scale = 0.8]{Images/"Graph of quadratic function with negative slope tangent line".png}
+          \end{image}
+          \begin{image}
+            \includegraphics[scale = 0.8]{Images/"Graph of quadratic function with zero slope tangent line".png}
+          \end{image}
+          \begin{image}
+            \includegraphics[scale = 0.8]{Images/"Graph of quadratic function with positive slope tangent line".png}
+          \end{image}
+
+          There is an important difference between secant lines and tangent lines!
+          
+          When we zoom in enough, \emph{at an appropriate point}, the tangent line looks \emph{nearly} indistinguishable from the graph itself:
+          \begin{image}
+            \includegraphics[scale = 0.3]{Images/"Graph of zoomed in quadratic function".png}
+          \end{image}
+          Secant lines usually don't have this property.
+      \end{freeResponse}
+
+    \item[(c)]
+      In the graph
+      \begin{center}
+        \includegraphics[scale = 0.5]{Images/"A secant or tangent line".png}
+      \end{center}
+      is the given line a secant line or a tangent line?
+      \begin{freeResponse}
+        This is a trick question!
+      
+        The given line is a tangent line---when we zoom in enough the graph is nearly indistinguishable from its tangent line at that point.
+        But, it can also be considered a secant line---it intersects the graph at two points.
+
+        By convention however, since we have drawn the graph by emphasizing only one point of intersection we usually interpert such a line as a tangent line.
+      \end{freeResponse}
+  \end{itemize}
+\end{problem}
+
+\section{Average and Instantaneous Velocities}
+\label{section:average-and-instantaneous-velocities}
+
+\begin{problem}
+  \label{problem:position-time-graph-and-velocity}
+  \outcome{Compute average velocity.}
+  \outcome{Approximate instantaneous velocity.}
+  \outcome{Compare average and instantaneous velocity.}
+  Part of the given graph can be used to model to ``position-time''graph of a ball thrown straight up into the air.
+  Use this graph, and the given function, to answer the following questions.
+  \begin{image}
+    \includegraphics[scale = 0.3]{Images/"Graph of polynomial function".png}
+  \end{image}
+  \begin{itemize}
+    \item[(a)]
+      What are the units on the $t$ axis?
+      What are the units on the $y$ axis?
+      \begin{freeResponse}
+        The units on the $t$ axis are ``seconds'' (for time), while the units on the $f(t)$ axis are ``feet'' (for height).        
+      \end{freeResponse}
+
+    \item[(b)]
+      Is the position-time graph of the ball the path the ball follows?
+      Why or why not?
+      \begin{freeResponse}
+        No, the position-time graph is \emph{not} the path the ball follows.
+        The graph shows the height of the ball at a given \emph{time}.
+        The ball is thrown straight up and has no horizontal movement.
+      \end{freeResponse}
+
+    \item[(c)]
+      When will the ball hit the ground?
+      \begin{freeResponse}
+        The ball will hit the ground when the height $f(t)$ equals zero:
+        \begin{align*}
+          f(t) = 0 &\implies -16t^2 + 128t + 144 = 0 \\
+          &\implies -16(t^2 - 8t - 9) = 0 \\
+          &\implies -16(t + 1)(t - 9) = 0 \\
+          &\implies \mbox{$t = -1$ or $t = 9$} \\
+          &\implies t = 9 \\
+          &\hspace{1em} \mbox{\parbox[b][]{6cm}{(we assume we can't have negative time)}}
+        \end{align*}
+      \end{freeResponse}
+
+
+    \item[(d)]
+      What is the domain of the position-time graph of the ball?
+      Which parts of the graph of $f$ gives the position-time graph of the ball?
+      \begin{freeResponse}
+        The domain of $f$ is the interval $[0, 9]$.
+        With this domain the position-time graph of the ball is given by
+        \begin{center}
+          \includegraphics[scale = 0.4]{Images/"Position time graph of ball".png}
+        \end{center}
+      \end{freeResponse}
+
+
+    \item[(e)]
+      Using the following two tables setup the equation to find the average velocity of the ball between $t = 2$ seconds and $t = 2.001$ seconds.
+      \begin{center}
+    \begin{tabular}[c]{rl}
+      \toprule
+      $t$ & $\approx f(t)$\\
+      \midrule
+      1.9 & 329.44\\
+      1.99 & 335.3584\\
+      1.999 & 335.935984\\
+      1.9999 & 335.99359984\\
+      2 & 336 \\
+      2.1 & 342.24\\
+      2.01 & 336.6384\\
+      2.001 & 336.063984\\
+      2.0001 & 336.00639984\\
+      \bottomrule
+    \end{tabular}
+    \hspace{1in}
+    \begin{tabular}[c]{rl}
+      \toprule
+      $t$ & $\approx f(t)$\\
+      \midrule
+      8.9 & 15.84\\
+      8.99 & 1.6\\
+      8.999 & 0.159984\\
+      8.9999 & 0.0159998\\
+      9 & 0 \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \begin{freeResponse}
+    The average velocity of the ball between $t = 2$ seconds and $t = 2.001$ seconds is
+    \[
+       \frac{f(2.001) - f(2)}{2.001 - 2} = \frac{336.063984 - 336}{0.001} = 63.984.
+    \]
+  \end{freeResponse}
+
+
+   \item[(f)]
+     Complete the following table of values to find average velocities.
+     Use this table to conjecture the instantaneous velocity when the ball hits the ground.
+     \begin{center}
+       \begin{tabular}[c]{ccr}
+         \toprule
+         $\Delta  t$ & $\Delta f$ & \hspace{8em}$\Delta f / \Delta t$\\
+         \midrule
+         $9 - 8.9 = 0.1$ & $f(9) - f(8.9) = $ & \\
+         $9 - 8.99 = 0.01$ & $f(9) - f(8.99) = $ & \\
+         $9 - 8.999 = 0.001$ & $f(9) - f(8.999) = $ & \\
+         $9 - 8.9999 = 0.0001$ & $f(9) - f(8.9999) = $ & \\
+         \bottomrule
+       \end{tabular}
+     \end{center}
+     \begin{freeResponse}
+      The instantaneous velocity of the ball hitting the ground appears to be $-160$ ft/sec.
+      \begin{center}
+        \begin{tabular}[c]{ccr}
+          \toprule
+          $\Delta  t$ & $\Delta f$ & \hspace{4em}$\Delta f / \Delta t$\\
+          \midrule
+          $9 - 8.9 = 0.1$ & $f(9) - f(8.9) = -15.84 $ & $-158.4$ \\
+          $9 - 8.99 = 0.01$ & $f(9) - f(8.99) = -1.6$ & $-159.84$\\
+          $9 - 8.999 = 0.001$ & $f(9) - f(8.999) = -0.16$ & $-159.98$\\
+          $9 - 8.9999 = 0.0001$ & $f(9) - f(8.9999) = -0.02$ & $-160$\\
+          \bottomrule
+        \end{tabular}
+      \end{center}
+      
+     \end{freeResponse}
+    \item[(g)]
+      Use the following graph to determine if the ball has instantaneous velocity equal to 0.
+      Why or why not?
+      \begin{image}
+        \includegraphics[scale = 0.3]{Images/"Graph of polynomial function".png}
+      \end{image}
+      \begin{freeResponse}
+        The ball has zero instantaneous velocity when it has a tangent line with zero slope:
+        \begin{image}
+          \includegraphics[scale = 0.5]{Images/"Position time graph with zero velocity".png}
+        \end{image}
+      \end{freeResponse}
+    
+     \item[(h)]
+      For which times is the instantaneous velocity of the ball negative?
+      What happens to the height of the ball when its velocity is negative?
+      \begin{freeResponse}
+        The instantaneous velocity of the ball is negative for $t > 4$:
+        \begin{image}
+          \includegraphics[scale = 0.5]{Images/"Position time graph with negative velocity".png}
+        \end{image}
+        The height of the ball is decreasing at those times.
+      \end{freeResponse}
+
+  \end{itemize}
+\end{problem}
+
+\begin{problem}
+  \label{problem:computing-instantaneous-velocity-using-a-limit}
+  \outcome{Compute average velocity.}
+  \outcome{Compare average and instantaneous velocity.}
+  \outcome{Understand the concept of a limit.}
+  The position, $s(t)$, of an object moving along a horizontal line is given by $s(t) = t^2 - 4$.
+  \begin{itemize}
+    \item[(I)]
+      Mark the position of the object on the line at time $t = 1$:
+      \begin{image}
+        \includegraphics[scale = 1]{Images/"Position of object at time 1".png}
+      \end{image}
+
+    \item[(II)]
+      Find the average velocity, $v_{\mathrm{AV}}$, of the object during the time interval $[1, 3]$.
+      \begin{freeResponse}
+        The average velocity over $[1, 3]$ is
+        \[
+          \frac{s(3) - s(1)}{3-1}  = \frac{5 - (-3)}{2} = \frac{8}{2} = 4.
+        \]
+      \end{freeResponse}
+
+
+    \item[(III)]
+      Compute the average velocity, $v_{\mathrm{AV}}(t)$, of the object during the time interval
+      \begin{itemize}
+        \item[(a)]
+          $[1, t]$, for $t > 1$;
+          \begin{freeResponse}
+            The average velocity over $[1, t]$ is
+            \begin{align*}
+              \frac{s(t) - s(1)}{t-1}  &= \frac{(t^2-4) - (-3)}{t-1}\\
+              &= \frac{t^2-1}{t-1} = t+1.
+            \end{align*}
+          \end{freeResponse}
+
+        \item[(b)]
+          $[t, 1]$, for $0 < t < 1$.
+          \begin{freeResponse}
+            The average velocity over $[t, 1]$ is
+            \begin{align*}
+              \frac{s(1) - s(t)}{1-t}  &= \frac{(-3) - (t^2-4)}{1-t}\\
+              &= \frac{1-t^2}{1-t} = 1+t.
+            \end{align*}
+          \end{freeResponse}
+      \end{itemize}
+
+    \item [(IV)]
+      Find the instantaneous velocity, $v_{\mathrm{inst}}$, of the object at $t = 1$.
+      Justify your answer.
+      \begin{freeResponse}
+        The instantaneous velocity of the object at $t = 1$ is
+        \begin{align*}
+          v_{\mathrm{inst}} &= \lim_{t \to 1} \frac{s(t) - s(1)}{t-1} \\
+          &= \lim_{t \to 1} t+1 = 2.
+        \end{align*}
+      \end{freeResponse}
+
+
+    \item[(V)]
+      The position-time graph of the function $s$ is given in the figure below.
+      \begin{image}
+        \includegraphics[scale = 1]{Images/"Position time graph of object".png}
+      \end{image}
+      \begin{itemize}
+        \item[(a)]
+          Assume $P$ is a point on the graph of $s$.
+          Fill in the blank.
+          \[
+            P = (1, \mbox{\underline{\hspace{2em}}}).
+          \]
+          \begin{freeResponse}
+            $P = (1, \mbox{\underline{$-3$}})$
+          \end{freeResponse}
+
+
+        \item[(b)]
+          Plot the point $P$ and draw the tangent line at this point in the figure above.
+          \begin{freeResponse}
+            \begin{image}
+              \includegraphics[scale = 1]{Images/"Tangent at time 1".png}
+            \end{image}
+          \end{freeResponse}
+
+
+        \item[(c)]
+          Find the slope, $m_{\mathrm{tan}}$, of the tangent line in part (b).
+          Explain.
+          \begin{freeResponse}
+            The slope of the tangent line at $t = 1$ is the same as the instantaneous velocity at $t = 1$.
+            Therefore $m_{\mathrm{tan}} = v_{\mathrm{inst}} = 2$.
+          \end{freeResponse}
+      \end{itemize}
+
+
+  \end{itemize}
+\end{problem}
+
+\section{Extra Problem for Personal Practice}
+\label{section:extra-problems}
+
+\begin{problem}
+  \label{problem:graphically-comparing-secant-and-tangent-lines}
+  \outcome{Calculate slope of a secant line.}
+  \outcome{Compare secant and tangent lines.}
+  \outcome{Understand the concept of a limit.}
+  Consider the function $f$ defined by $f(x) = x^2 + 2x$.
+  \begin{itemize}
+    \item[(a)]
+      Make a table of slopes of secant lines between $x = 2$ and $x = a$, where $a$ approaches 2.
+      Then approximate the slope of the tangent line at the point $x = 2$.
+      \begin{freeResponse}
+        \begin{center}
+         \begin{tabular}[c]{rl}
+           \toprule
+           $x$ & $\approx f(x)$\\
+           \midrule
+           1.9 & 7.41\\
+           1.99 & 7.9401\\
+           1.999 & 7.994001\\
+           1.9999 & 7.99940001\\
+           2 & 8 \\
+           2.1 & 8.61\\
+           2.01 & 8.0601\\
+           2.001 & 8.006001\\
+           2.0001 & 8.00060001\\
+           \bottomrule
+         \end{tabular}
+       \end{center}
+       Computing the slope of the secant lines from this table implys that the slope of the tangent line at $x = 2$ is $6$.
+      \end{freeResponse}
+
+
+    \item[(b)]
+      On the following graph of this function draw a secant line on the interval $[1, 3]$ and draw the tangent line at $x = 2$.
+      \begin{image}
+        \includegraphics[scale = 1]{Images/"Comparing secant to tangent lines".png}
+      \end{image}
+      \begin{freeResponse}
+        \begin{image}
+          \includegraphics[scale = 1]{Images/"Graph of secant and tangent line".png}
+        \end{image}
+      \end{freeResponse}
+  \end{itemize}
+\end{problem}
+\end{document} 

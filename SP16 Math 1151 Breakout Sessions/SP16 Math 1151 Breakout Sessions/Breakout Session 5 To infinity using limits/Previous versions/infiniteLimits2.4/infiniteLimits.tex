@@ -1,0 +1,174 @@
+\documentclass[handout,nooutcomes]{ximera}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+
+\input{../preamble.tex} %% we can turn off input when making a master document
+
+\title{Section - 2.4:  Infinite Limits}  
+
+\begin{document}
+\begin{abstract}		\end{abstract}
+\maketitle
+
+\section*{Warm up:}  
+Come up with your own example of a limit of a function $f(x)$, as $x$ approaches 4, that will be of the following form:
+
+	\begin{enumerate}[label=(\alph*)]
+	
+	\item  Limit is of the form $\frac{0}{0}$ and the limit exists as a finite number.
+		\begin{freeResponse}
+		Let $f(x) = \frac{4-x}{x(4-x)}$.  Then $\lim_{x \to 4} f(x)$ is of the form $\frac{0}{0}$ and $\lim_{x \to 4} \frac{4-x}{x(4-x)} = \lim_{x \to 4} \frac{1}{x} = \frac{1}{4} $.  
+		\end{freeResponse}
+	
+	
+	
+	\item  Limit is of the form $\frac{0}{0}$ and the limit is infinite.
+		\begin{freeResponse}
+		Let $f(x) = \frac{4-x}{(4-x)^3}$.  Notice that, for $x \neq 4$, $f(x) = \frac{1}{(x-4)^2}$.  $\lim_{x \to 4} f(x)$ is of the form $\frac{0}{0}$, and $\lim_{x \to 4} \frac{1}{(x-4)^2} $ is of the form $\frac{1}{0}$.  Thus the limit is infinite, and since both $1$ and $(x-4)^2$ are always positive (for $x \neq 4$) we have that $\lim_{x \to 4} f(x) = \infty $.  		
+		\end{freeResponse}
+	
+	\item  Limit is infinite and approaches positive infinity from both sides of 4.
+		\begin{freeResponse}
+		 The same function as part (b) works. 
+		 \end{freeResponse}
+	
+	
+	
+	\item  Limit does not exist (DNE), but approaches positive infinity from the left side of 4 and negative infinity from the right side of 4.
+		\begin{freeResponse}  Let $f(x) = \frac{1}{4-x}$.  Since $\lim_{x \to 4} f(x)$ is of the form $\frac{1}{0}$, the limit is either $\infty, \, -\infty, $ or DNE.  Since $1 > 0$, $4-x > 0$ as $x \to 4$ from the left, and $4-x < 0$ as $x \to 4$ from the right, we have that $ \lim_{x \to 4^-} f(x) = \infty  $ and $ \lim_{x \to 4^+} f(x) = - \infty  $.
+		\end{freeResponse}
+	
+	\end{enumerate}
+
+
+
+\section*{Group work:}
+
+\begin{problem}
+Determine the following limits:
+	\begin{enumerate}
+			
+	\item  $\lim_{x \to 3} \frac{x^2 - 3}{x^2 - x - 6}   $
+		\begin{freeResponse}
+		Notice that as $x \to 3$, $(x^2 - 3) \to 6$ and $(x^2 - x - 6) \to 0$.  Thus, this limit is of the form $\frac{\neq 0}{0}$ and therefore the answer is one of $\infty$, $-\infty$, or the limit does not exist (DNE).  What we need to do is check the limits as $x$ approaches $3$ from both the left and right hand sides.  Notice that, in either sided limit, the numerator approaches $9 > 0$.  Also, the denominator factors as $(x-3)(x+2)$.  As $x \to 3^-$, $(x-3)$ is negative making the denominator and thus the entire fraction negative (note that $x+2$ approaches $5$ which is positive).  As $x \to 3^+$, $(x-3)$ is positive making the entire fraction positive.  So we can conclude: 
+		
+		$ \lim_{x \to 3^-} \frac{x^2 - 3}{x^2 - x - 6} = -\infty$
+		
+		$ \lim_{x \to 3^+} \frac{x^2 - 3}{x^2 - x - 6} = \infty$
+		
+		Therefore \, $ \lim_{x \to 3} \frac{x^2 - 3}{x^2 - x - 6}$ \, DNE
+		\end{freeResponse}
+			
+			
+			
+	\item  $\lim_{x \to 5} \frac{x^2 + 6}{x^2 - 3x - 10}   $
+		\begin{freeResponse}
+		Just like part (a), this limit is of the form $\frac{\neq 0}{0}$, and so we need to consider the sided limits.  As $x$ approaches $5$, the numerator approaches $31$ which is positive.  The denominator factors as $(x-5)(x+2)$, and as $x$ approaches $5$ from eithe side, $(x+2)$ approaches $7$ which is positive.  Now, as $x$ approaches $5$ from the left hand side, $(x-5)$ is negative, making the entire fraction negative.  Similarly, as $x$ approaches $5$ from the right, $(x-5)$ is positive and thus the entire fraction is positive.  Hence:
+		
+		$ \lim_{x \to 5^-} \frac{x^2 + 6}{x^2 - 3x - 10} = -\infty$
+		
+		$ \lim_{x \to 5^+} \frac{x^2 + 6}{x^2 - 3x - 10} = \infty$
+		
+		Therefore \, $ \lim_{x \to 5} \frac{x^2 + 6}{x^2 - 3x - 10}$ \, DNE
+		\end{freeResponse}		
+	
+	
+			
+	\item  $\lim_{x \to 1} \frac{4-x}{x^2 - 2x + 1}   $
+		\begin{freeResponse}
+		This is exactly like parts (a) and (b) above in that the limit is of the form $\frac{\neq 0}{0}$, and so we need to consider the sided limits.  The function can be rewritten as $\frac{4-x}{(x-1)^2}$.  As $x \to 1$ (from either side), $(4-x) \to 3$ and 3 is positive.  But now notice that, for $x \neq 1$, the denominator $(x-1)^2$ is always positive.  So as $x$ approaches 1 from \textbf{both} the left and right hand sides, the entire fraction is positive.  Thus:
+		
+		$ \lim_{x \to 1^-} \frac{4-x}{x^2 - 2x + 1} = \infty$
+		
+		$ \lim_{x \to 1^+} \frac{4-x}{x^2 - 2x + 1} = \infty$
+		
+		Therefore \, $ \lim_{x \to 1} \frac{4-x}{x^2 - 2x + 1} = \infty$  
+		\end{freeResponse}
+		
+			
+	\end{enumerate}
+\end{problem}
+			
+			
+			
+			
+\begin{problem}	
+Use the Squeeze Theorem to determine the value of $ \lim_{x \to 0} x \cos \left( \frac{1}{x} \right)  $
+		\begin{freeResponse}
+		For all $x \neq 0$ we have that
+		
+		\begin{equation}
+		-1 \leq \cos \left( \frac{1}{x} \right) \leq 1.
+		\end{equation}
+		
+		We now need to split the problem up into two cases, as $x$ approaches $0$ from the right and as $x$ approaches $0$ from the left.
+		
+		(Case 1:  $x \to 0^+$)
+		
+		In this case $x > 0$, and so multiplying equation (1) by $x$ yields
+		
+		$$ -x \leq x \cos \left( \frac{1}{x} \right) \leq x. $$
+		
+		But we know that $\lim_{x \to 0^+} (-x) = 0 = \lim_{x \to 0^+} x$, and thus by the Squeeze Theorem we can conclude that $\lim_{x \to 0^+} x \cos \left( \frac{1}{x} \right) = 0$.
+		
+		(Case 2:  $x \to 0^-$)
+		
+		In this case $x < 0$, and so multiplying equation (1) by $x$ yields
+		
+		$$ -x \geq x \cos \left( \frac{1}{x} \right) \geq x.$$
+		
+		But just like in Case 1 we know that $\lim_{x \to 0^-} x = 0 = \lim_{x \to 0^-} (-x)$, and thus by the Squeeze Theorem we can conclude that $\lim_{x \to 0^-} x \cos \left( \frac{1}{x} \right) = 0$.
+		
+		Therefore, since $\lim_{x \to 0^-} x \cos \left( \frac{1}{x} \right) = 0 = \lim_{x \to 0^+} x \cos \left( \frac{1}{x} \right) = 0$, we can conclude that $\lim_{x \to 0} x \cos \left( \frac{1}{x} \right) = 0$.
+		\end{freeResponse}
+\end{problem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

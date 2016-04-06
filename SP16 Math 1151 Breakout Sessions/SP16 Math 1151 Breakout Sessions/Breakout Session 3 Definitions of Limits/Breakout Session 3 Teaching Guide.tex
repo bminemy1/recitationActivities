@@ -1,0 +1,61 @@
+\documentclass[nooutcomes]{ximera}
+
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}P\arabic{problem} Outcome: #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 3 Teaching Guide}  
+
+\begin{document}
+\begin{abstract}
+ \textbf{Theme of calculus:} Calculus is the application of  \href{https://en.wikipedia.org/wiki/Derivative}{rates of change} and \href{https://en.wikipedia.org/wiki/Integral}{accumulation} to understand \href{https://en.wikipedia.org/wiki/Elementary_function}{famous functions} in their application to both real world and mathematical processes.
+
+  \textbf{Goal of Math 1151 course:} Promote and cultivate an environment which improves students' ability to construct, organize, and demonstrate their knowledge of calculus.
+\end{abstract}
+\maketitle
+
+\section{Teaching notes for problem}
+\subsection*{Notes for problem 1}
+For part (a), in section 2.1 Briggs's motivation for limits really using right-side limits.
+So, some students may have the mistaken impression that we just need to know the right-side limit to compute the two-sided limit.
+
+For part (b), some students' previous experience with calculus they may mistaken believe that all limits are computed by evaluating a function at a particular value.
+It's important to emphasize that initially most limits we will encounter cannot be evaluated in this way, but instead we transform our harder limit into an easier limit which is often the limit of a continuous function.
+
+\subsection*{Notes for problem 2}
+Parts (a), (b), and (c) of this problem is similar to the Warmup's part (b).
+We're trying to force the students to consider that function equality, domain of functions, and limits of functions, while all related are subtlety difference and distinct.
+
+\subsection*{Notes for problem 3}
+This is part of a problem from the Autumn 2015 exam. 
+Further practice in distinguishing function values from two-sided limits and from one-sided limits.
+
+\subsection*{Notes for problem 4}
+The important point here is to emphasize that \emph{there is} a method to graphing given these properties.
+You'll want to go over this problem carefully.
+
+\end{document} 

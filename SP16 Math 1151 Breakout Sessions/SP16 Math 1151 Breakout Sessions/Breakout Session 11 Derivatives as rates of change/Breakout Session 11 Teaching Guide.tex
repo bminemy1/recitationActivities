@@ -1,0 +1,61 @@
+\documentclass[nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}\textbf{P\arabic{problem} Outcome:} #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 11 Teaching Guide}  
+
+\begin{document}
+\begin{abstract}
+
+\end{abstract}
+\maketitle
+
+\section{Notes for problem 1}
+This is a good warmup problem to test if students can identify the
+``inner'' function and the ``outer'' function.
+For time, I suggest you only work through one part.
+
+\section{Notes for problem 3}
+This will be a difficult but good problem for students to work through.
+Be explicit in showing how the values of the derivatives are computed.
+It may be helpful to build a table of values based off the graph.
+
+\section{Notes for problem 4}
+As usual when solving tangent line problems, stress the importance of finding the slope (using derivatives), finding a point on the line, and writing the final answer in point-slope form.
+
+\section{Notes for problem 5}
+Stress which function is the ``inner'' function and which function is the ``outer'' function.
+This problem will test students ability to recognize composition of functions and application of the chain rule to functions whose formulas look similar but are different.
+
+\section{Notes for problem 6}
+When solving this problem it’s helpful to use the story in the solutions to illustrate the problem.
+I read it to my class last semester and I think they both enjoyed it (in a humerous way) and it helped them understand what is going on as well.
+
+
+
+
+\end{document} 

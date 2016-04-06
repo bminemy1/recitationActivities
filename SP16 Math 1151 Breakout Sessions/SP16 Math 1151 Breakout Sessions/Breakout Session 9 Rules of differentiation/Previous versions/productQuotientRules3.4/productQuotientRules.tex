@@ -1,0 +1,287 @@
+\documentclass[handout,nooutcomes]{ximera}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+%I added the commands here so that I would't have to keep looking them up
+%\newcommand{\RR}{\mathbb R}
+%\renewcommand{\d}{\,d}
+%\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+%\renewcommand{\l}{\ell}
+%\newcommand{\ddx}{\frac{d}{dx}}
+%\everymath{\displaystyle}
+%\newcommand{\dfn}{\textbf}
+%\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\input{../preamble.tex} %% we can turn off input when making a master document
+
+\title{3.4 The Product and Quotient Rules}  
+
+\begin{document}
+\begin{abstract}		\end{abstract}
+\maketitle
+
+\section*{Warm up:} 
+Differentiate the function $f(x) = \frac{1}{x^8}$ two different ways.
+
+	\begin{freeResponse}
+	First way:  Since 
+	$$f(x) = \frac{1}{x^8} = x^{-8}$$
+	we have that
+	$$f'(x) = -8x^{-8-1} = -8x^{-9} = -\frac{8}{x^9}.$$
+	
+	Second way:  Using the quotient rule: 
+	\begin{align*}
+	f'(x) &= \frac{(x^8 \cdot \ddx(1)) - (1 \cdot \ddx(x^8))}{(x^8)^2}  \\
+	&= \frac{(x^8 \cdot 0) - (1 \cdot 8x^7)}{x^{16}}  \\
+	&= \frac{-8x^7}{x^{16}}  \\
+	&= - \frac{8}{x^9}.
+	\end{align*}
+	\end{freeResponse}
+	
+	
+	
+	
+	
+
+\section*{Group work:}
+
+%problem 1
+\begin{problem}
+Differentiate the following functions:
+
+	\begin{enumerate}
+	
+	%part a
+	\item  $f(x) = (x^2 + 4x - 7) e^{-2x}$
+			\begin{freeResponse}
+			\begin{align*}
+			f'(x) &= \left( \ddx(x^2 + 4x - 7) \cdot e^{-2x} \right) + \left((x^2 + 4x - 7) \cdot \ddx(e^{-2x}) \right)  \\
+			&= ((2x+4)(e^{-2x}) + (x^2 + 4x - 7)(-2e^{-2x})  \\
+			&= (2x + 4 - 2x^2 - 8x + 14)e^{-2x}  \\
+			&= (-2x^2 - 6x + 18)e^{-2x}.
+			\end{align*}
+			\end{freeResponse}
+			
+			
+			
+	%part b
+	\item  $g(x) = \frac{x^2 + 4x - 7}{e^{-2x}}$
+			\begin{freeResponse}
+			\begin{align*}
+			g'(x) &= \frac{\left( e^{-2x} \cdot \ddx(x^2 + 4x - 7) \right) - \left( (x^2 + 4x - 7) \cdot \ddx(e^{-2x}) \right)}{(e^{-2x})^2}  \\
+			&= \frac{((e^{-2x}) \cdot (2x+4)) - ((x^2 + 4x - 7) \cdot (-2e^{-2x}))}{e^{-4x}}  \\
+			&= \frac{(2x + 4 + 2x^2 + 8x - 14)e^{-2x}}{e^{-4x}}  \\
+			&= \frac{2x^2 + 10x - 10}{e^{-2x}}.
+			\end{align*}
+			\end{freeResponse}
+			
+			
+			
+			
+	\end{enumerate}		
+\end{problem}
+	
+	
+	
+	
+			
+			
+
+%problem 2			
+\begin{problem}
+Suppose that $f(5) = 7$, $f'(5) = 8$, $g(5) = 3$, and $g'(5) = -4$.  Find:
+
+	\begin{enumerate}
+	
+	%part a
+	\item  $(fg)'(5)$.
+		\begin{freeResponse}
+		\begin{align*}
+		(fg)'(5) &= (f'(5) \cdot g(5)) + (f(5) \cdot g'(5))  \\
+		&= (8)(3) + (7)(-4)  \\
+		&= 24 - 28 = -4.
+		\end{align*}
+		\end{freeResponse}
+		
+		
+		
+	%part b
+	\item $ \left( \frac{f}{g} \right)' (5)$
+		\begin{freeResponse}
+		\begin{align*}
+		\left( \frac{f}{g} \right)' (5) &= \frac{(g(5) \cdot f'(5)) - (f(5) \cdot g'(5))}{(g(5))^2}  \\
+		&= \frac{(3)(8) - (7)(-4)}{3^2}  \\
+		&= \frac{24 + 28}{9} = \frac{52}{9}.
+		\end{align*}
+		\end{freeResponse}
+		
+		
+		
+	%part c
+	\item $ \left( \frac{g}{f} \right)' (5)$
+		\begin{freeResponse}
+		\begin{align*}
+		\left( \frac{g}{f} \right)' (5) &= \frac{(f(5) \cdot g'(5)) - (g(5) \cdot f'(5))}{(f(5))^2}  \\
+		&= \frac{(7)(-4) - (3)(8)}{7^2}  \\
+		&= \frac{-28 - 24}{49} = - \frac{52}{49}.
+		\end{align*}
+		\end{freeResponse}
+		
+	
+	
+	\end{enumerate}
+		
+\end{problem}
+
+
+
+
+
+
+
+
+
+%problem 3		
+\begin{problem}
+Find the following derivatives:
+	\begin{enumerate}
+	
+	%part a
+	\item  Given $g(x) = x^3 f(x)$, $f(2) = 4$, and $f'(2) = 7$, find the equation of the tangent line to the graph of $g(x)$ at $x=2$.
+		\begin{freeResponse}
+		$$g'(x) = 3x^2 f(x) + x^3 f'(x).$$  
+		So 
+		$$g'(2) = 12(4) + 8(7) = 48 + 56 = 104.$$  
+		Also, $g(2) = 8f(2) = 32$.  Thus, the equation of the tangent line to the graph of $g(x)$ at $x=2$ is
+		$$y-32 = 104(x-2) \quad \text{or} \quad y = 104x - 176.$$  
+		\end{freeResponse}
+		
+		
+		
+	%part b
+	\item  Given that $h(x) = \frac{x f(x)}{x-3}$, $f(2) = 4$, and $f'(2) = 7$, find the equation of the tangent line to the graph of $h(x)$ at $x=2$.  
+		\begin{freeResponse}
+		\begin{align*}
+		h'(x) &= \frac{ (x-3)\ddx(xf(x)) - xf(x)\ddx(x-3)}{(x-3)^2}  \\
+		&= \frac{(x-3)(f(x) + xf'(x)) - xf(x)(1)}{(x-3)^2}.
+		\end{align*}
+		So, 
+		\begin{align*}
+		h'(2) &= \frac{(2-3)(f(2) + 2f'(2)) - 2f(2)}{(2-3)^2}  \\
+		&= -(4 + 2(7)) - 2(4)  \\
+		&= -18 - 8 = -26.
+		\end{align*}
+		Also, 
+		$$h(2) = \frac{2f(2)}{2-3} = \frac{8}{-1} = -8.$$  
+		Thus, the equation of the tangent line to the graph of $h(x)$ at $x=2$ is
+		$$y-(-8) = -26(x-2) \quad \text{or} \quad y = -26x + 44.$$  
+		\end{freeResponse}
+		
+		
+		
+	%part c
+	\item  Given the following table, find $\ddx \left( \frac{f(x)}{e^x g(x)} \right)$ at $x=2$. 
+	
+	$\begin{array}{|c|c|c|c|c|c|}
+	\hline
+	x	&	1	&	2	&	3	&	4	&	5	\\
+	\hline
+	f(x)	&	5	&	3	&	0	&	-4	&	3	\\
+	\hline
+	f'(x)	&	-3	&	-5	&	-2	&	6	&	-4	\\
+	\hline
+	g(x)	&	6	&	9	&	-8	&	13	&	15	\\
+	\hline
+	g'(x)	&	8	&	5	&	-10	&	7	&	6	\\
+	\hline
+	\end{array}$
+	
+	 
+		\begin{freeResponse}
+		$$\ddx \left( \frac{f(x)}{e^x g(x)} \right)
+		= \frac{e^x g(x) f'(x) - f(x)(e^x g(x) + e^x g'(x))}{(e^x g(x))^2}.$$
+		
+		So, 
+		\begin{align*}
+		\ddx\left(\frac{f(x)}{e^x g(x)}\right) \bigg|_{x=2}
+		&= \frac{e^2 g(2) f'(2) - f(2)(e^2 g(2) + e^2 g'(2))}{(e^2 g(2))^2}  \\
+		&= \frac{e^2 (9)(-5) - (3)(9e^2 + 5e^2)}{(9e^2)^2}  \\
+		&= \frac{-45e^2 -42e^2}{81e^4}  \\
+		&= \frac{-87e^2}{81e^4} = - \frac{87}{81e^2}.
+		\end{align*}
+		\end{freeResponse}
+		
+		
+		
+	\end{enumerate}
+		
+\end{problem}
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+								
+				
+				
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

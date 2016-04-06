@@ -1,0 +1,99 @@
+\documentclass[handout,nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}P\arabic{problem} Outcome: #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 9 Teaching Guide}  
+
+\begin{document}
+\begin{abstract}
+ \textbf{Theme of calculus:} Calculus is the application of  \href{https://en.wikipedia.org/wiki/Derivative}{rates of change} and \href{https://en.wikipedia.org/wiki/Integral}{accumulation} to understand \href{https://en.wikipedia.org/wiki/Elementary_function}{famous functions} in their application to both real world and mathematical processes.
+
+  \textbf{Goal of Math 1151 course:} Promote and cultivate an environment which improves students' ability to construct, organize, and demonstrate their knowledge of calculus.
+
+\end{abstract}
+\maketitle
+
+\section{Notes for Problem 1}
+You should give students a hint on which two differentiation rules they should try.
+The two natural ones are the quotient rule and exteneded power rule.
+
+\textbf{Dangerous and not recommended:} You can also show the students how you can find $f'$ using the product rule.
+(By say, rewriting $x^{-8}$ as $x^{-3} \cdot x^{-5}$.)
+
+\section{Notes for Problem 2}
+ Pick and choose!
+ You probably won't have enough time to solve all of these subproblems.
+
+    This will be another tough problem for the students: this problem combines formulas, differentiation rules, and particular functional values.
+
+    Similar to Problem 4, you should start each solution by writing out the differentiation rule that will be applied.
+
+    Students may be mentally (and physically!) exhausted after computing the value of the derivative.
+    So, it's important to motivate and remind the students that they must complete the problem by finding the equation of the tangent line.
+
+\section{Notes for Problem 3}
+For part (a), the main point of this problem is to practice with the product rule.
+
+You should point out to your students that you can also solve this problem using the quotient rule---but that involves a bit of algebraic manipulation before differentiating.
+Some students may ask, ``how do you pick which rule to use?''
+A possible answer, ``you pick the rule that requires the less amount of upfront algebra.''
+(This is only a heuristic!)
+               
+Make sure you carefully work through the derivation of $f'$ and explicitly mention which rules you are applying.
+While most of your students have previously taken a course called ``Calculus'', there are still many for whom this is the first time they are working with differentiation rules.
+
+\textbf{Important Note:}Also, when presenting the solution it's important to emphasize, generally, students \emph{do not} have to algebraically simplify their final answers.
+You can warn students that the more they write increases the probability that they will make a typo---which increases the probability of point deduction.
+
+For part (b), the main point of this problem is to practice the quotient rule.
+The notes above on which rule to pick also applies here.
+
+Again, carefully work through the derivation of $g'$ and explicitly mention the rules you are using.
+
+
+\section{Notes for Problem 4}
+    This problem stresses students' understanding of the product and quotient rules without a given explicit formula for the functions.
+    Since the power rule doesn't apply, this problem will be tough for the students.
+
+    Before starting the solutions for each problem you should write the differentiation formulas each time.
+
+\section{Notes for Problem 5}
+
+For part (a), the power rule given in Briggs doesn't cover differentiating this function, but you should tell students that it can be extended to cover this function also.
+You should probably rewrite this as $f(x) = x^{1/2}$, before applying the power rule.
+
+For part (b), the power rule given in Briggs doesn’t cover differentiating this function, but you should tell students that it can be extended to cover this function also.
+
+Again, you should probably rewrite this as $s(x) = 5u^{−2}$.
+
+For part (c), this should be a simple application of the sum rule, the power rule, and constant rule.
+Some students may be initially confused about $e^\pi$ but remind them that this is just a fancy name for a constant number.
+
+\section{Notes for Problem 6}
+The point of parts (a) and (b) is to demonstrate to the students that the ``short-cut rules'' give the correct answer (if correctly applied).
+
+\end{document} 

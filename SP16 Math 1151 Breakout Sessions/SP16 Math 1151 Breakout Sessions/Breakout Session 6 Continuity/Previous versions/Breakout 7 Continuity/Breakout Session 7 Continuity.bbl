@@ -1,0 +1,48 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{nty}{nty}
+    \entry{terrell_goodquestions_2005}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=4634b11085d695cebd2cfa4788dc6116}{Terrell}{T\bibinitperiod}{Maria}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=fe6ec4da04351f9bf46ea464069691f3}{Connelly}{C\bibinitperiod}{Robert}{R\bibinitperiod}{}{}{}{}}%
+        {{hash=872353e63f9e43e008f907ca4d6bd303}{Henderson}{H\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=423141b97d7b042887c402044274e175}{Strichartz}{S\bibinitperiod}{Robert}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{7d65361aba9ebe8df0f45b62dfad5e72}
+      \strng{fullhash}{3b0cd7e90fa062c62ee5b67d53b6eb90}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{GoodQuestions} Project}
+      \field{urlday}{17}
+      \field{urlmonth}{09}
+      \field{urlyear}{2015}
+      \field{year}{2005}
+      \verb{url}
+      \verb http://www.math.cornell.edu/~GoodQuestions/
+      \endverb
+      \keyw{Calculus,Good Questions for calculus}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

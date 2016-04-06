@@ -1,0 +1,15 @@
+[0] Config.pm:324> INFO - This is Biber 2.1
+[1] Config.pm:327> INFO - Logfile is 'Breakout Session 4 Limit Laws.blg'
+[112] biber-darwin:276> INFO - === Wed Sep  2, 2015, 12:09:40
+[112] Biber.pm:333> INFO - Reading 'Breakout Session 4 Limit Laws.bcf'
+[246] Biber.pm:645> INFO - Found 1 citekeys in bib section 0
+[284] Biber.pm:2977> INFO - Processing section 0
+[312] Biber.pm:3115> INFO - Looking for bibtex format file 'References.bib' for section 0
+[314] 6ce97eef.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[315] 6ce97eef.pm:895> INFO - Found BibTeX data source 'References.bib'
+[357] 76c5e630.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[357] 76c5e630.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[357] Biber.pm:2854> INFO - Sorting list 'nty' of type 'entry' with scheme 'nty' and locale 'en-US'
+[357] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
+[359] bbl.pm:505> INFO - Writing 'Breakout Session 4 Limit Laws.bbl' with encoding 'ascii'
+[360] bbl.pm:596> INFO - Output to Breakout Session 4 Limit Laws.bbl

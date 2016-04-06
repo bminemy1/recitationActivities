@@ -1,0 +1,87 @@
+\documentclass[nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}\textbf{P\arabic{problem} Outcome:} #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 7 Teaching Guide}  
+
+\begin{document}
+\begin{abstract}
+ \textbf{Theme of calculus:} Calculus is the application of  \href{https://en.wikipedia.org/wiki/Derivative}{rates of change} and \href{https://en.wikipedia.org/wiki/Integral}{accumulation} to understand \href{https://en.wikipedia.org/wiki/Elementary_function}{famous functions} in their application to both real world and mathematical processes.
+
+  \textbf{Goal of Math 1151 course:} Promote and cultivate an environment which improves students' ability to construct, organize, and demonstrate their knowledge of calculus.
+\end{abstract}
+\maketitle
+
+\section{Notes for Problem 1}
+For part (a), one visually based definition you could remind students of is
+\begin{quote}
+  A line is \textsl{\textbf{tangent to a graph at a particular point}} if when we zoom in on the point the graph is nearly indistinguishable from the tangent line.
+\end{quote}
+This definition may help those students who may be tempted to incorrectly state ``a tangent line is a line that intersects the graph at only one point.''
+
+For part (b), you should show that $f'(0)$ doesn't exist both graphically (there is a vertical tangent line at $x = 0$) and, if you feel there is time, from the definition of a derivative.
+        
+Taking the latter approach will review infinite limits.
+\textbf{Important Note:} However, be careful not to confuse students into thinking that $f$ has a vertical asymptote based on this calculation!
+(Of course $f'$ is the function that has a vertical asymptote at $x = 0$, but, at this stage, some students may not be clear on the distinction between $f$ and $f'$.)
+
+\section{Notes for Problem 2}
+These figures are interactive in the eBook version our textbook. 
+If you have a computer and projector setup in you class, it may be helpful to preload these interactive figures to demonstrate to students when they work on this problem.
+
+
+This will be a tricky conceptual problems for the students: some of them will be intimated by the differences in notation.
+(Also, some may be tempted to use both notations simultaneously.)
+
+It's important to emphasize that both notations are mathematically equivalent (they produce the same mathematical information) \emph{but} psychologically inequivalent (one form may be easier to apply in a certain context).
+
+\section{Notes for Problem 3}
+These problems help illustrate the ``mathematically equivalent but psychologically inequivalent'' point mentioned above.
+Also, note which definition of instantaneous rate of change you will use before starting a problem.
+If you think there is time (there probably won't be), you can show how to find the slope of the tangent line using each of the equivalent definitions above.
+
+You should take the algebra slow here and \emph{do not} skip steps.
+No matter which form (of the definition of instantaneous rate of change) you use students will probably find the algebra tough going.
+
+
+\section{Notes for Problem 4}
+This is a trick question, since the derivative doesn't exist at $x = 5$.
+You should go through the demonstration that $\lim_{x \to 5} (f(x) - f(5))/(x - 5)$ does not exist slowly and emphasize how you remove the absolute value sign in your computations by using right-sided and left-sided limits.
+In general, the absolute value sign will be tricky for the students.
+
+For parts (a) and (b), the students will have some trouble computing $f'$ for a general $a$, so also take things slow when you work through this problem.
+
+
+When you're done with this problem, I suggest you draw the graph of $f'$ (but not on the same graph as $f$!).
+As a preview of what's to come, you can say sometime similar to
+\begin{quote}
+  Limits give qualitative information about functions.
+  Derivatives are defined in terms of limits, so they too must give new qualitative information about functions.
+  At the simplest level, they can tell you where functions are increasing, decreasing, and constant.
+  At a deeper level, they can help identify the ``peaks'' and ``valleys'' of the graph of a function.
+\end{quote}
+\end{document} 

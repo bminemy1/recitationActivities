@@ -1,0 +1,56 @@
+\documentclass[nooutcomes]{ximera}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}\textbf{P\arabic{problem} Outcome:} #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+\title{Breakout Session 6 Teaching Guide}  
+
+\begin{document}
+\begin{abstract}
+ \textbf{Theme of calculus:} Calculus is the application of  \href{https://en.wikipedia.org/wiki/Derivative}{rates of change} and \href{https://en.wikipedia.org/wiki/Integral}{accumulation} to understand \href{https://en.wikipedia.org/wiki/Elementary_function}{famous functions} in their application to both real world and mathematical processes.
+
+  \textbf{Goal of Math 1151 course:} Promote and cultivate an environment which improves students' ability to construct, organize, and demonstrate their knowledge of calculus.
+\end{abstract}
+\maketitle
+
+\section{Notes for problem 1}
+For part (a), some students will be tempted to say ``since $f$ is continuous on every point of its domain'' the intermediate value theorem applies in this case.
+It's important to clarify for students the hypotheses for the intermediate value theorem.
+(It may be useful to draw several pictures illustrating the various ways a function can fail the intermediate value theorem.)
+
+Part (b) is a good conceptual question from \href{http://www.math.cornell.edu/~GoodQuestions/}{Cornell's Good Questions} that gives the students practice in applying the intermediate value theorem to a function that is not given to by an explicit formula.
+For this problem you should again review the necessary conditions for the intermediate value theorem.
+(According to \href{http://www.webmd.boots.com/children/baby/guide/normal-baby-size-at-birth}{WebMD} the average weight of a newborn baby is 7.7 pounds while the average height is 20 inches.)
+
+\section{Notes for problem 2}
+The hard part for students will be finding the appropriate intervals to test the function $f$ on; so, please remind students about the unit circle and the corresponding special angles as natural starting points.
+
+Also, if there is time, you can mention how a ``bisection type algorithm'' and the intermediate value theorem can be used to approximate a solution to this equation.
+
+
+\section{Notes for problems 3, 4, 5, and 6}
+These problems are from the Autumn 2015 Math 1151 Exam 1, and will be tricky for students: it's easy to guess the right answer and hard to construct counterexamples.
+Emphasize that these problems are meant to test their knowledge and implication of the definitions of continuity and limits.
+\end{document} 

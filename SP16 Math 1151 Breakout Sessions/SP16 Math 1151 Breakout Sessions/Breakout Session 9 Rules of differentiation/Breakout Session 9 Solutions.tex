@@ -1,0 +1,407 @@
+\documentclass[nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}\textbf{P\arabic{problem} Outcome}: #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 9 Solutions}  
+
+\begin{document}
+\begin{abstract}
+  % \textbf{A look back:} In the previous (February 2, 2016) Breakout Session you were introduced to the concept of the derivative of a function and the connection between derivatives and slopes of tangent lines.
+
+  % \textbf{Overview:} In today's (February 9, 2016) Breakout Session you'll practice the ``shortcut'' rules for computing derivatives.
+  % Computing derivatives is the least important part of this course, but \emph{it is important} that you're able to quickly and accurately compute derivatives of various types of functions.
+
+  % \textbf{A look ahead:} In the next (February 11, 2016) Breakout Session you will practice rules of differentiation.
+  % Becoming comfortable and proficient with computing derivatives is an important skill to practice before we return our focus on the conceptual aspects (and interpretation) of derivatives. 
+\end{abstract}
+\maketitle
+
+\section{Learning Outcomes}
+% \label{section:learning-outcomes}
+% The following outcomes are \emph{not an exhaustive} list of the skills you will need to develop and integrate for demonstration on quizzes and exams.
+% This list is meant to be a starting point for conversation (with your Lecturer, Breakout Session Instructor, and fellow learners) for organizing your knowledge and monitoring the development of your skills.
+
+% \subsection*{Basic rules of differentiation}
+% \begin{itemize}
+%   \item
+%     Use ``shortcut'' rules to find and use derivatives.
+
+%   \item 
+%     Use the definition of the derivative to develop shortcut rules to find the derivatives of constants, constant multiples, powers of x, sums of functions, and the natural exponential function.
+
+%   \item
+%     Define higher order derivatives.
+
+%   \item
+%     Calculate higher order derivatives.
+% \end{itemize}
+
+% \subsection*{Product and quotient rules}
+% \begin{itemize}
+%   \item
+%     Use the product rule to calculate derivatives. 
+
+%   \item 
+%     Use the quotient rule to calculate derivatives. 
+
+%   \item 
+%     Identify products of functions.
+
+%   \item
+%     Identify quotients of functions.
+% \end{itemize}
+% \newpage
+
+\begin{problem}
+  \outcome{Use ``shortcut'' rules to find and use derivatives.}
+  \outcome{Use the quotient rule to calculate derivatives.}
+  \outcome{Use the product rule to calculate derivatives.}
+  \outcome{Identify quotients of functions.}
+  Differentiate the function $f$ defined by $f(x) = 1/x^8$ in two different ways.
+  \begin{freeResponse}
+    Applying the quotient rule:
+    \begin{align*}
+      f'(x) &= \frac{(1)' \cdot x^8 - (1 \cdot (x^8)')}{(x^8)^2} \\
+            &= \frac{(0 \cdot x^8) - (1 \cdot 8x^7)}{x^{16}} \\
+            &= \frac{-8x^7}{x^{16}}\\
+            &= \frac{-8}{x^9}. 
+    \end{align*}
+
+  Applying the power rule:
+  \begin{align*}
+    f(x) &= \frac{1}{x^8} = x^{-8}\\
+    &\implies f'(x) = (x^{-8})'\\
+    &= -8\cdot x^{-8 -1}\\
+    &= -8x^{-9}
+  \end{align*}
+  \end{freeResponse}
+\end{problem}
+
+\begin{problem}
+  \outcome{Use ``shortcut'' rules to find and use derivatives.}
+  \outcome{Use the quotient rule to calculate derivatives.}
+  \outcome{Use the product rule to calculate derivatives.}
+  Use the given information to find the equation of the tangent line.
+  \begin{itemize}
+    \item[(a)]
+      Given $g(x) = x^3 f(x)$, $f(2) = 4$, and $f'(2) = 7$, find the equation of the tangent line to the graph of $g$ at $x = 2$.
+      \begin{freeResponse}
+        Slope of tangent line at $x = 2$:
+        \begin{align*}
+          g'(x) &= 3x^2 f(x) + x^3 f'(x)\\
+          &\implies g'(2) = 12(4) + 8(7) = 48 + 56 = 104.
+        \end{align*}
+
+        Point on tangent line: $(2, g(2)) = (2, 8f(2)) = (2, 32)$.
+
+        Equation of tangent line:
+        \begin{align*}
+          y-32 &= 104(x-2)\\
+          &\implies y = 104x - 176.
+        \end{align*}
+      \end{freeResponse}
+
+
+    \item[(b)]
+      Given $h(z) = \frac{z s(z)}{z-3}$, $s(2) = 4$, and $s'(2) = 7$, find the equation of the tangent line to the graph of $h$ at $z = 2$.
+      \begin{freeResponse}
+        Slope of tangent line at $z = 2$:
+        \begin{align*}
+          h'(z) &= \frac{ (z-3)(z s(z))' - z s(z)(z-3)'}{(z-3)^2}  \\
+		&= \frac{(z-3)(s(z) + z s'(z)) - z s(z)(1)}{(z-3)^2} \\
+                &\implies h'(2) = \frac{(2-3)(s(2) + 2 s'(2)) - 2f(2)}{(2-3)^2} = -26.
+        \end{align*}
+
+        Point on tangent line: $(2, h(2)) = (2, \frac{2s(2)}{2-3}) = (2, -8)$.
+
+        Equation of tangent line:
+        \begin{align*}
+          y-(-8) &= -26(z-2) \\
+          &\implies y = -26z + 44.
+        \end{align*}
+      \end{freeResponse}
+
+
+    \item[(c)]
+      Given
+      \begin{center}
+        \begin{tabular}{cccccc}
+          \toprule
+          $x$ & 1 & 2 & 3 & 4 & 5\\
+          \midrule
+          $f(x)$ & 5 & 3 & 0 &$-4$ & 3\\
+          $f'(x)$ & $-3$ & $-5$ & $-2$ & 6& $-4$\\
+          $g(x)$ & 6 &9&$-8$&13&15\\
+          $g'(x)$ & 8 & 5 & $-10$ &7& 6\\
+          \bottomrule
+        \end{tabular}
+      \end{center}
+      find the equation of the tangent line of 
+      \[
+        \frac{f(x)}{e^xg(x)}
+      \]
+      at $x = 2$.
+      \begin{freeResponse}
+        Slope of tangent line:
+        \begin{align*}
+          \left( \frac{f(x)}{e^x g(x)} \right)'
+          &= \frac{e^x g(x) f'(x) - f(x)(e^x g(x) + e^x g'(x))}{(e^x g(x))^2}.  \\
+          &\implies \frac{d}{dx}\left(\frac{f(x)}{e^x g(x)}\right) \bigg|_{x=2}
+          = \frac{e^2 g(2) f'(2) - f(2)(e^2 g(2) + e^2 g'(2))}{(e^2 g(2))^2}  \\
+		&= \frac{e^2 (9)(-5) - (3)(9e^2 + 5e^2)}{(9e^2)^2}  \\
+		&= \frac{-45e^2 -42e^2}{81e^4}  \\
+		&= \frac{-87e^2}{81e^4}\\
+                  &= \frac{-87}{81e^2}
+        \end{align*}
+
+        Point on tangent line: $(2, f(2)/(e^2g(2))) = (2, 3/(9e^2)) = (2, 1/(3e^2))$.
+
+        Equation of tangent line:
+        \begin{align*}
+          y - \frac{1}{3e^2} &= \frac{-87}{81e^2}(x - 2)\\
+                             &\implies y = \frac{-87}{81e^2}x  - \frac{49}{27e^2}.
+        \end{align*}
+      \end{freeResponse}
+   \end{itemize}
+\end{problem}
+
+\begin{problem}
+  \outcome{Use ``shortcut'' rules to find and use derivatives.}
+  \outcome{Use the quotient rule to calculate derivatives.}
+  \outcome{Use the product rule to calculate derivatives.}
+  Suppose that
+  \begin{center}
+    \begin{tabular}{cccc}
+      \toprule
+      $f(5) = 7$ & $f'(5) = 8$ & $g(5) = 3$ & $g'(5) = -4$\\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  Use the product and quotient rules to find each of the following derivatives:
+  \begin{itemize}
+    \item[(a)]
+      $(fg)'(5)$
+      \begin{freeResponse}
+        \begin{align*}
+          (fg)'(5) &= (f'(5) \cdot g(5)) + (f(5) \cdot g'(5))  \\
+                   &= (8)(3) + (7)(-4)  \\
+                   &= 24 - 28 = -4.
+	\end{align*}
+      \end{freeResponse}
+
+
+    \item[(b)]
+      $\displaystyle \left(\frac{f}{g}\right)'(5)$
+      \begin{freeResponse}
+	\begin{align*}
+		\left( \frac{f}{g} \right)' (5) &= \frac{(g(5) \cdot f'(5)) - (f(5) \cdot g'(5))}{(g(5))^2}  \\
+		&= \frac{(3)(8) - (7)(-4)}{3^2}  \\
+		&= \frac{24 + 28}{9} = \frac{52}{9}.
+		\end{align*}
+      \end{freeResponse}
+
+
+    \item[(c)]
+      $\displaystyle \left(\frac{g}{f}\right)'(5)$
+      \begin{freeResponse}
+                		\begin{align*}
+		\left( \frac{g}{f} \right)' (5) &= \frac{(f(5) \cdot g'(5)) - (g(5) \cdot f'(5))}{(f(5))^2}  \\
+		&= \frac{(7)(-4) - (3)(8)}{7^2}  \\
+		&= \frac{-28 - 24}{49} = - \frac{52}{49}.
+		\end{align*}
+      \end{freeResponse}
+
+
+    \item[(d)]
+      $(gf)'(5)$
+      \begin{freeResponse}
+        \begin{align*}
+          (gf)'(5) &= (g'(5) \cdot f(5)) + (g(5) \cdot f'(5))  \\
+                   &= (-4)(7) + (3)(8)  \\
+                   &= -28 + 24 = -4.
+	\end{align*}
+      \end{freeResponse}
+  \end{itemize}
+\end{problem}
+
+\begin{problem}
+  Differentiate each of the following functions:
+  \begin{itemize}
+    \item[(a)]
+        \outcome{Use ``shortcut'' rules to find and use derivatives.}
+  \outcome{Use the quotient rule to calculate derivatives.}
+  \outcome{Use the product rule to calculate derivatives.}
+      $f(x) = (x^2 + 4x - 7) e^{-5x}$
+      \begin{freeResponse}
+        \begin{align*}
+          f'(x) &= \bigl( (x^2 + 4x - 7) e^{-5x}\bigr)'\\
+                &= (x^2 + 4x - 7)' \cdot e^{-5x} + (x^2 + 4x - 7) \cdot (e^{-5x})'\\
+                &= (2x + 4) \cdot  e^{-5x} + (x^2 + 4x - 7) \cdot -5e^{-5x} \\
+                &= \bigl((2x + 4) + (x^2 + 4x -7)\cdot -5\bigr)\cdot e^{-5x} \\
+                &= (2x + 4 - 5x^2 - 20x + 35)\cdot e^{-5x}\\
+                &= (-5x^2 -18x + 39) e^{-5x}
+        \end{align*}
+      \end{freeResponse}
+
+
+    \item[(b)]
+      $\displaystyle g(t) = \frac{t^2 + 4t - 7}{e^{-3t}}$
+      \begin{freeResponse}
+    \begin{align*}
+      g'(t) &= \frac{\left( e^{-3t} \cdot (t^2 + 4t - 7)' \right) - \left( (t^2 + 4t - 7) \cdot (e^{-3t})' \right)}{(e^{-3t})^2}  \\
+			&= \frac{((e^{-3t}) \cdot (2t+4)) - ((t^2 + 4t - 7) \cdot (-3e^{-3t}))}{e^{-6t}} \\
+			&= \frac{(2t + 4 + 3t^2 + 12t - 21)e^{-3t}}{e^{-6t}}  \\
+            &= \frac{3t^2 + 14t - 17}{e^{-3t}}.
+    \end{align*}        
+      \end{freeResponse}
+
+  \end{itemize}
+\end{problem}
+
+\section{Extra problems for personal practice}
+\begin{problem}
+  \outcome{Use ``shortcut'' rules to find and use derivatives.}
+  \outcome{Use the quotient rule to calculate derivatives.}
+  For each of the following functions use the ``short-cut derivative rules'' to compute their derivatives.
+  \begin{itemize}
+    \item[(a)]
+      The function $f$, defined by $f(x) = \sqrt{x}$.
+      \begin{freeResponse}
+       \begin{align*}
+          f'(x) &= (\sqrt{x})' = (x^{1/2})' \\
+                &= \frac{1}{2} x^{\frac{1}{2} - 1} \\
+                &= \frac{1}{2} x^{-\frac{1}{2}} \\
+                &= \frac{1}{2\sqrt{x}}.
+        \end{align*}
+      \end{freeResponse}
+
+    \item[(b)]
+      The function $s$, defined by $\displaystyle s(u) = \frac{5}{u^2}$.
+      \begin{freeResponse}
+        \begin{align*}
+          s'(x) &= \left(\frac{5}{u^2}\right)' = (5u^{-2})' \\
+          &= -2 \cdot 5\cdot u^{-2 - 1} \\
+          &= -10 u^{-3} \\
+          &= \frac{-10}{u^3}.
+        \end{align*}
+      \end{freeResponse}
+
+
+    \item[(c)]
+      The function $p$, defined by $p(t) = t^5 + 4t^3 + e^\pi$.
+      \begin{freeResponse}
+                \begin{align*}
+          p'(t) &= (t^5 + 4t^3 + e^\pi)'\\
+          &= (t^5)' + (4t^3)' + (e^\pi)' \\
+          &= 5t^{5-1} + (4t^3)' + (e^\pi)' \\
+          &= 5t^{5-1} + 3\cdot 4t^{3-1} + (e^\pi)' \\
+          &= 5t^{5-1} + 3\cdot 4t^{3-1} + 0 \\
+          &= 5t^4 + 12t^2
+        \end{align*}
+      \end{freeResponse}
+  \end{itemize}
+\end{problem}
+
+\begin{problem}
+  Given the polynomial function $q$ defined by $q(v) = 2v^3 - 5v^2 + 7v - 9$ find:
+  \begin{itemize}
+  \outcome{Use ``shortcut'' rules to find and use derivatives.}
+  \outcome{Use the quotient rule to calculate derivatives.}
+  \outcome{Use the product rule to calculate derivatives.}
+    \item[(a)]
+      The slope of $q$ at $v = 3$ using the limit definition of a derivative.
+      \begin{freeResponse}
+        To compute $q'(3)$ from the limit definition we use either 
+        \[
+          \lim_{v \to 3} \frac{q(v)-q(3)}{v-3} \quad \text{or} \quad \lim_{h \to 0} \frac{q(3+h)-q(3)}{h}.
+        \]
+        (Recall from Breakout Session 7 Problem 2) that these two formulas mean the same thing.)
+        
+        Using the first formula:
+        \begin{align*}
+          q'(3) &= \lim_{v \to 3} \frac{q(v)-q(3)}{v-3} \\
+          &= \lim_{v \to 3} \frac{(2v^3 - 5v^2 + 7v - 9) - (54 - 45 + 21 - 9)}{v-3}\\
+          &= \lim_{v \to 3} \frac{(2v^3 - 5v^2 + 7v - 9) - 21}{v-3} \\
+          &= \lim_{v \to 3} \frac{2v^3 - 5v^2 + 7v - 30}{v-3} \\
+          &= \lim_{v \to 3} \frac{(v-3)(2v^2 + v + 10)}{v-3} \\
+          &= \lim_{v \to 3} (2v^2 + v + 10)\\
+          &= 2 \cdot 3^2 + 3 + 10 = 31.
+        \end{align*}
+      \end{freeResponse}
+
+
+    \item[(b)]
+      \outcome{Use ``shortcut'' rules to find and use derivatives.}
+      The slope of $q$ at $v = 3$ using the ``short-cut derivative rules'' to find a formula for $q'$ and evaluating $q'(3)$.
+      \begin{freeResponse}
+        Applying the sum and product rules:
+        \begin{align*}
+          q'(v) &= (2v^3 - 5v^2 + 7v - 9)'\\
+          &= (2v^3)' + (-5v^2)' + (7v)' + (-9)' \\
+          &= 3\cdot 2 \cdot v^{3-1} + (-5v^2)' + (7v)' + (-9)' \\
+          &= 3\cdot 2 \cdot v^{3-1} + 2\cdot -5\cdot v^{2-1} + (7v)' + (-9)'
+\\
+          &= 3\cdot 2 \cdot v^{3-1} + 2\cdot -5\cdot v^{2-1} + 1\cdot 7\cdot v^{1-1} + (-9)'
+\\
+          &= 3\cdot 2 \cdot v^{3-1} + 2\cdot -5\cdot v^{2-1} + 1\cdot 7\cdot v^{1-1} + 0 \\
+          &= 6v^2 - 10v + 7\\
+          &\implies q'(3) = 6\cdot3^2 - 10\cdot3 + 7 = 31.
+        \end{align*}
+      \end{freeResponse}
+
+
+    \item[(c)]
+      The equation of the tangent line of $q$ at $v = 3$.
+      \begin{freeResponse}
+        Slope of tangent line: $q'(3) = 6\cdot3^2 - 10\cdot3 + 7 = 31$.
+
+        Point on tangent line: $(3, q(3)) = (3, 21)$.
+
+        Equation of tangent line:
+        \begin{align*}
+          y-21&=31(x-3)\\
+              &\implies y = 31x -72.
+        \end{align*}
+      \end{freeResponse}
+
+  \end{itemize}
+\end{problem}
+
+\begin{problem}
+  \outcome{Define higher order derivatives.}
+  \outcome{Calculate higher order derivatives.}
+   Find $s'$, $s''$, and $s'''$ of the function $s$ defined by $s(t) = 3t^2 + 5e^t - \frac{1}{t}$.
+   \begin{freeResponse}
+     $s'(t) = 6t + 5e^t + \frac{1}{t^2}$.
+
+     $s''(t) = 6 + 5e^t - \frac{2}{t^3}$.
+
+     $s'''(t) = 5e^t + \frac{6}{t^4}$.
+   \end{freeResponse}
+
+\end{problem}
+\end{document} 

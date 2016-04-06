@@ -1,0 +1,380 @@
+\documentclass[noinstructornotes]{ximera}
+%handout:  for handout version with no solutions or instructor notes
+%handout,instructornotes:  for instructor version with just problems and notes, no solutions
+%noinstructornotes:  shows only problem and solutions
+
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+
+
+%\begin{image}
+%\includegraphics{Figure1.pdf}
+%\end{image}
+
+%add a ``.'' below when used in a specific directory.
+\input{../preamble.tex} %% we can turn off input when making a master document
+
+\usepackage{fullpage}
+
+\title{Recitation \#1: Review of Functions}  
+
+\begin{document}
+\begin{abstract}		\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%problem 1
+\begin{problem}
+Define 
+	$f(x) =   \left\{ \begin{array}{cl}
+	x^2-1		 	&	\qquad \text{if } x > 0					\\
+	\text{? }			&	\qquad \text{if }  x < 0 	\\		\end{array} \right.  $
+\begin{enumerate}	
+	\item  Find an expression for "?" such that $f$ will be even.
+	
+	\item  Find an expression for "?" such that $f$ will be odd.
+	
+	\end{enumerate}
+	
+	\begin{freeResponse}
+
+		\begin{enumerate}
+
+		
+		\item  
+			If $f$ is even then $f(x)=f(-x)$.  $f(-x)$ represents the part of the graph less than zero (which is the part we are trying to find).  Lets call $f(-x)=g(x)$ where $g(x)$ is the blank we are trying to fill in.  Then we need $f(x)=g(x)$.  So ? must equal $x^2-1$
+		
+		\item   If $f$ is odd then $f(-x)=-f(x)$.  Using the same arguement as in part a, we'll allow $g(x)=f(-x)$.  So we need $g(x)=-f(x)$.  So ? must equal $-(x^2-1) =-x^2+1$.  Graphically, this can be seen in the figure below.
+
+	\begin{image}		
+	\includegraphics{Figure3.pdf}
+	\end{image}
+		
+		\end{enumerate}
+	\end{freeResponse}
+	
+\end{problem}
+
+\begin{instructorNotes}
+
+\end{instructorNotes}
+
+
+
+
+%problem 2
+\begin{problem}
+The graph of $g(x)=e^x$ is given below.
+
+	\begin{image}		
+	\includegraphics{Figure1.pdf}
+	\end{image}
+
+\begin{enumerate}	
+	\item  Find the domain and range of $g$.
+	
+	\item  Find the values of $g(1), g(0), g(-1)$ and plot them on the graph below.
+
+	\item Graph $h(x)=ln(x)$ on the same axis below.
+
+	\item Find the domain and range of $h$.
+
+	\item Find the values of $h(1), h(0), h(-1)$, or say $x$ not in the domain.
+	
+	\end{enumerate}
+	
+
+
+	\begin{freeResponse}
+		\begin{enumerate}
+		
+		\item 
+			The domain of $g(x)=e^x$ is $(-\infty,\infty)$.  The range is $(0,\infty)$
+		
+		\item  
+			$$g(1)=e^1=e$$
+			$$ g(0)=e^0=1$$ 
+			$$g(-1)=e^{-1}=\frac{1}{e}$$
+			 These are values of $g(x)=e^x$ that you should have memorized
+
+	\begin{image}		
+	\includegraphics{Figure5.pdf}
+	\end{image}
+
+
+
+		\item Recall:  $ln(x)$ is the inverse of $e^x$.  To find the graph of $ln(x)$ we reflect the graph of $e^x$ over the line $y=x$
+
+	\begin{image}		
+	\includegraphics{Figure4.pdf}
+	\end{image}
+
+ 		\item The domain of $h(x)=ln(x)$ is $(0,\infty)$.  The range is $(-\infty,\infty)$.
+
+		\item $$h(1)=ln(1)=e$$
+			$$ h(0)=ln(0)=1$$
+			$$ h(-1) \text{is not in the domain}$$
+			$$g(-1)=e^{-1}=\frac{1}{e}$$
+			 These are values of $h(x)=ln(x)$ that you should have memorized
+		
+		\end{enumerate}
+	\end{freeResponse}
+	
+\end{problem}
+
+\begin{instructorNotes}
+
+\end{instructorNotes}
+
+
+
+%problem 3
+\begin{problem}
+Given $y(t)=t- \frac{\pi}{3}$ and $w(t)=\sin(t)$.  Find:
+\begin{enumerate}	
+	\item  $y(w(t))$
+	
+	\item  $w(y(t))$
+
+
+	\item  $w \left(y \left(\frac{4\pi}{3} \right)\right)$
+
+
+	\item  $y(w(\frac{4\pi}{3}))$
+	
+	\end{enumerate}
+	
+	\begin{freeResponse}
+		\begin{enumerate}
+		
+		\item $y(w(t))=y\left( \sin(t) \right)=\sin(t)-\frac{\pi}{3}$
+		
+		
+		\item  $w(y(t))=w\left( t-\frac{\pi}{3}\right)$
+
+		\item $w \left(y \left(\frac{4\pi}{3} \right)\right)=\sin \left(\frac{4\pi}{3}-\frac{\pi}{3}\right)=sin(\pi)=0$
+
+		\item $w \left(y \left(\frac{4\pi}{3} \right)\right)=\sin \left(\frac{4\pi}{3}\right)-\frac{\pi}{3}=\frac{\sqrt{3}}{2}-\frac{\pi}{3}$
+
+		You should know values of $sin(x)$ and $cos(x)$ for all values found on the unit circle.
+		
+		\end{enumerate}
+	\end{freeResponse}
+	
+\end{problem}
+
+\begin{instructorNotes}
+
+\end{instructorNotes}
+
+%problem 4
+\begin{problem}
+Define 
+	$g(x) =   \left\{ \begin{array}{cl}
+	|x-2|		 	&	\qquad \text{if } x < 0					\\
+	\cos(x)			&	\qquad \text{if }  x \geq 0  	\\		\end{array} \right.  $
+\begin{enumerate}	
+	\item  Sketch a graph of $g$
+	
+	\item  Find the domain and range of $g$
+		
+	
+	\item  Find the values of $g(\pi)$ and $g(-\pi)$
+
+	
+	\end{enumerate}
+	
+	\begin{freeResponse}
+		\begin{enumerate}
+		
+		\item 
+		
+	\begin{image}		
+	\includegraphics{Figure6.pdf}
+	\end{image}
+
+		\item  Domain: $(-\infty,\infty)$, Range: $[-1,1]\cup[2,\infty)$
+
+		\item $g(\pi)=\cos (\pi)=1$ and $g(-\pi)=|-\pi-2|=\pi+2$
+		
+		\end{enumerate}
+	\end{freeResponse}
+	
+\end{problem}
+
+\begin{instructorNotes}
+
+\end{instructorNotes}
+
+%problem 5
+\begin{problem}
+The entire graph of $f(x)$ is given below.
+
+	\begin{image}
+	\includegraphics{Figure2.pdf}
+	\end{image}
+
+\begin{enumerate}	
+	\item  Find the domain and range of $f$
+	
+	\item  Find the values of $f(-3),f(-2), f(-1),f(2)$
+
+
+	\item  Find the intervals on which $f(x)$ is postive.  Find the intervals on which $f(x)$ is negative.
+
+	\item Find the intervals on which $f$ is increasing.  Find the intervals on which $f$ is decreasing.
+
+	\item True or False: $f(-1.5) < f(1)$
+
+	
+	\end{enumerate}
+	
+	\begin{freeResponse}
+		\begin{enumerate}
+		
+		\item Domain: $[-4,-3)\cup{-2}\cup(-1,4]$
+			Range: $[-4,-3)\cup{-2}\cup[-1,3]$
+
+		\item $f(-3)=0, f(-2)=-2, f(-1) \text{Does not exist, not in the domain}, f(2)=-1$
+ 
+		
+		\item  $f(x)$ is postive on $(1,2)$. $f(x)$ is negative on $[-4,-3),{-2},(-1,1),[2,4)$
+
+		\item $f(x)$ is increasing on $(-4,-3)\cup(0,2)\cup(2,4)$.  $f(x)$ is decreasing on $(-1,0)$
+		
+		\end{enumerate}
+	\end{freeResponse}
+	
+\end{problem}
+
+\begin{instructorNotes}
+
+\end{instructorNotes}
+
+%problem 6
+\begin{problem}
+Determine if the function is even, odd, or neither.
+
+
+\begin{enumerate}	
+	\item  $h(x)=\cos(x)$
+	
+	\item  $s(t)=t^2-t$
+
+	
+	\end{enumerate}
+	
+	\begin{freeResponse}
+
+		A function is even if $f(x)=f(-x)$ which means it is symmetric about the y-axis.  A function is odd if $f(-x)=-f(x)$ which means it is symmetic about the origin. 
+		\begin{enumerate}
+		
+		\item $$h(x)=cos(x)$$
+			$$h(-x)=cos(-x)$$
+			It is a property of $cos(x)$ that $cos(x)=cos(-x)$.  Hence $h(x)=cos(x)$ is even.  This can be verified by graphing $h(x)=cos(x)$ and seeing that it is symmetric about the y-axis.
+		
+		\item  $$s(t)=t^2-t$$
+			$$s(-t)=(-t)^2-(-t)=t^2+t$$ This does not equal $s(t)$ so $s(t)$ is not even.
+			$$-s(t)=-(t^2-t)=-t^2-t$$  This does not equal $s(-t)$ so $s(t)$ is not odd.  Hence, $s(t)$ is neither even, nor odd.
+		
+		\end{enumerate}
+	\end{freeResponse}
+	
+\end{problem}
+
+\begin{instructorNotes}
+
+\end{instructorNotes}
+
+
+%problem 7
+\begin{problem}
+For any function $f$ defined on $(-\infty,\infty)$, can define $f_e$ and $f_o$ as follows: $f_e=\frac{f(x)+f(-x)}{2}$ and $f_o=\frac{f(x)-f(-x)}{2}$
+
+
+\begin{enumerate}	
+	\item  Show  $f_e=\frac{f(x)+f(-x)}{2}$  is even
+	
+	\item  Show $f_o=\frac{f(x)-f(-x)}{2}$ is odd
+
+	\item Show that $f(x)=f_e(x)+f_o(x)$, for all $x$
+
+	
+	\end{enumerate}
+	
+	\begin{freeResponse}
+		\begin{enumerate}
+		
+		\item $$f_e=\frac{f(x)+f(-x)}{2}$$
+			We want to show this is an even function, so we need to show that when we substitute in $-x$ for $x$ we get back $f_e$
+			$$f_e(-x)=\frac{f(-x)+f(-(-x))}{2}$$ 
+			$$=\frac{f(-x)+f(x)}{2}$$
+			$$=f_e$$
+
+		
+		\item   $$f_o=\frac{f(x)-f(-x)}{2}$$
+			We want to show this is an odd function, so we need to show that when we substitute in $-x$ for $x$ we get back $-f_o$
+			First, we'll find $-f_o$
+			$$-f_o=-\frac{f(x)-f(-x)}{2}$$
+			$$-f_o=\frac{-f(x)+f(-x)}{2}$$
+
+			Now we'll find $f_o(-x)$
+			$$\frac{f(-x)-f(-(-x))}{2}$$ 
+			$$=\frac{f(-x)-f(x)}{2}$$
+			$$=f_o$$
+		
+		\item We want to show that $f(x)=f_e(x)+f_o(x)$, for all $x$.  From parts a and b, we know $f_e=\frac{f(x)+f(-x)}{2}$ and $f_o=\frac{f(x)-f(-x)}{2}$.  Therefore,
+			$$f(x)=f_e(x)+f_o(x)=\frac{f(x)+f(-x)}{2}+\frac{f(x)-f(-x)}{2}$$
+			$$f(x)=\frac{f(x)+f(-x)+f(x)-f(-x)}{2}$$
+			$$f(x)=\frac{2f(x)}{2}$$
+			$$f(x)=f(x)$$
+			$$\text{We have just proved that every function can be written as the sum of an odd function and an even function.}$$
+
+		\end{enumerate}
+	\end{freeResponse}
+	
+\end{problem}
+
+\begin{instructorNotes}
+
+\end{instructorNotes}
+
+
+
+
+\end{document} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

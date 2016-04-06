@@ -1,0 +1,312 @@
+\documentclass[nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}\textbf{P\arabic{problem} Outcome:} #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 12 Solutions}  
+
+\begin{document}
+\begin{abstract}
+  % \textbf{A look back:} In the previous (February 16, 2016) Breakout Session you were introduced to a few physical interpretations of rates of change and practiced the last major differentiation technique~---~the chain rule.
+
+  % \textbf{Overview:} In today's (February 18, 2016) Breakout Session you'll practice implicit differentiation and the geometrical interpretation of $dy/dx$ for an implicit equation.
+
+  % \textbf{A look ahead:} In the next (February 23, 2016) Breakout Session you will practice logarithmic differentiation~---~a technique that helps simplify computations of some derivatives~---~and the connection between derivatives and derivatives of inverse functions.
+\end{abstract}
+\maketitle
+
+% \section{Learning Outcomes}
+% \label{section:learning-outcomes}
+% The following outcomes are \emph{not an exhaustive} list of the skills you will need to develop and integrate for demonstration on quizzes and exams.
+% This list is meant to be a starting point for conversation (with your Lecturer, Breakout Session Instructor, and fellow learners) for organizing your knowledge and monitoring the development of your skills.
+
+% \begin{itemize}
+%   \item 
+%     Implicitly differentiate expressions. 
+
+%   \item
+%     Solve equations for $dy/dx$.
+
+%   \item
+%     Find the equation of the tangent line for curves that are not graphs of functions.
+
+%   \item
+%     Find derivatives of functions with rational exponents. 
+
+%   \item 
+%     Understand how changing the variable changes how we take the derivative.
+
+%   \item 
+%     Understand the derivatives of expressions that are not functions or not solved for $y$.  
+% \end{itemize}
+% \newpage
+
+\begin{problem}
+  \outcome{Implicitly differentiate expressions.}
+  \outcome{Solve equations for $dy/dx$.}
+  \outcome{Find the equation of the tangent line for curves that are not graphs of functions.}
+  Consider the equation $x^2 + 4xy + 9y^2 = 9$
+  \begin{image}
+    \includegraphics[scale = 0.6]{Images/"Graph of skewed ellipse".png}
+  \end{image}
+  \begin{enumerate}
+    \item
+      Find $\dd[y]{x}$.
+      \begin{freeResponse}
+        Implicitly differentiate equation:
+        \begin{align*}
+          \ddx(x^2 + 4xy + 9y^2) = \ddx(9)
+          &\implies 2x + \left(4y + 4x \dd[y]{x} \right) + 18 y \dd[y]{x} = 0
+        \end{align*}
+
+        Solving for $\dd[y]{x}$:
+        \begin{align*}
+          2x + \left(4y + 4x \dd[y]{x} \right) + 18 y \dd[y]{x} = 0
+          &\implies 4x \dd[y]{x} + 18y \dd[y]{x} = -2x - 4y\\
+          &\implies (4x+18y) \dd[y]{x} = -2x-4y\\
+          &\implies \dd[y]{x} = \frac{-2x-4y}{4x+18y} \hspace{2em}\mbox{provided that $4x+18y \neq 0$.}
+        \end{align*}
+      \end{freeResponse}
+		
+    \item  Find the equation(s) of the tangent line(s) when $x=0$.  Draw the tangent line(s) on the above picture.
+      \begin{freeResponse}
+        Finding points on tangent lines:
+        \begin{align*}
+          x = 0 &\implies 0^2 + 4(0)y + 9y^2 = 9\\
+                &\implies y^2 = 1 \\
+                &\implies y = \pm 1\\
+          &\implies \mbox{$(0, 1)$ or $(0,-1)$}
+        \end{align*}
+
+        Slope of tangent line at $(0,1)$:
+        \begin{align*}
+          \eval{\dd[y]{x}}_{(0,1)} &= \frac{-4}{18} \\
+                                  &= -\frac{2}{9}
+        \end{align*}
+
+        Slope of tangent line at $(0, -1)$:
+        \begin{align*}
+          \eval{\dd[y]{x}}_{(0,-1)} &= \frac{4}{-18}\\
+                                    &= -\frac{2}{9}
+        \end{align*}
+
+        Equation of tangent line at $(0, 1)$:
+        \begin{align*}
+          y - 1 = -\frac{2}{9}(x-0)  &\implies y = -\frac{2}{9}x + 1 
+        \end{align*}
+        
+        Equation of tangent line at $(0, -1)$:
+        \begin{align*}
+           y + 1 = -\frac{2}{9}(x-0) &\implies y = -\frac{2}{9}x - 1 
+        \end{align*}
+
+        Graph with these two tangent lines:
+        \begin{image}
+          \includegraphics[scale = 0.6]{Images/"Graph of skewed ellipse with two tangents".png}
+        \end{image}
+      \end{freeResponse}
+
+    \item  Find the point(s) where the tangent line is horizontal.  Draw the point(s) and line(s) on the above picture.
+      \begin{freeResponse}
+        A line is horizontal if and only if its slope is 0.  So we are looking for the points $(x_0,y_0)$ such that $\eval{\dd[y]{x}}_{(x_0,y_0)} = 0$.  So we solve:
+	$$ \frac{-2x-4y}{4x+18y} = 0\qquad \Longrightarrow \qquad -2x - 4y = 0 \qquad \Longrightarrow \qquad x=-2y$$
+		
+	But we also need the point to satisfy the given equation.  So, letting $x=-2y$, we solve:
+	$$x^2 + 4xy + 9y^2 = 9 $$
+	$$ (-2y)^2 + 4(-2y)y + 9y^2 = 9 $$
+	$$ 4y^2 - 8y^2 + 9y^2 = 9 $$
+	$$ 5y^2 = 9 $$
+	$$ y^2 = \frac{9}{5} $$
+	$$ y = \pm \frac{3}{\sqrt{5}} $$
+		
+	So there exists two solutions to the given equation where the tangent line to the graph has 0 slope.  Those two points are $\left( -\frac{6}{\sqrt{5}}, \frac{3}{\sqrt{5}} \right)$ and $\left( \frac{6}{\sqrt{5}}, - \frac{3}{\sqrt{5}} \right)$.
+
+        Graph with horizontal tangent lines:
+        \begin{image}
+          \includegraphics[scale = 0.6]{Images/"Graph of skewed ellipse with horizontal tangents".png}
+        \end{image}
+	\end{freeResponse}
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}
+  \outcome{Implicitly differentiate expressions.}
+  \outcome{Solve equations for $dy/dx$.}
+  \outcome{Find the equation of the tangent line for curves that are not graphs of functions.}  
+  A part of the curve with equation $\cos(\pi x y) + x + y = 1$ is sketched below.
+  \begin{image}
+    \includegraphics[scale = 0.3]{Images/"Bean graph".png}
+  \end{image}
+  \begin{itemize}
+    \item[(a)]
+      Use the implicit differentiation to find the derivative $dy/dx$.
+      \begin{freeResponse}
+        Implicitly differentiate equation:
+        \begin{align*}
+          \ddx( \cos(\pi x y) + x + y) = \ddx(1) &\implies -\sin(\pi x y)\cdot(\pi y + \pi x \dd[y]{x}) + 1 + \dd[y]{x} = 0 
+        \end{align*}
+
+        Solve for $\dd[y]{x}$:
+        \begin{align*}
+          -\sin(\pi x y)\cdot(\pi y + \pi x \dd[y]{x}) + 1 + \dd[y]{x} = 0 &\implies -\pi y \sin(\pi x y) - \pi x \dd[y]{x} \sin(\pi x y) + 1 + \dd[y]{x} = 0 \\
+          &\implies  \bigl(1 - \pi x \sin(\pi x y)\bigr)\dd[y]{x} = \pi y \sin(\pi x y) - 1 \\
+          &\implies \dd[y]{x} = \frac{\pi y \sin(\pi x y) - 1}{1 - \pi x \sin(\pi x y)} \hspace{2em} \mbox{if $1 - \pi x \sin(\pi x y) \ne 0$}\\
+        \end{align*}
+      \end{freeResponse}
+
+    \item[(b)]
+      Consider the point $(1, 1)$.
+      Show (algebraically) that this point lies on the curve.
+      \begin{freeResponse}
+        $(1, 1)$ lies on this curve:
+        \begin{align*}
+          \cos(\pi \cdot 1 \cdot 1) + 1 + 1 &= \cos(\pi) + 2\\
+          &= -1 + 2 = 1
+        \end{align*}
+      \end{freeResponse}
+
+    \item[(c)]
+      Find the equation of the line tangent to the curve at $(1,1)$.
+      Draw this line in the figure above.
+      \begin{freeResponse}
+        Slope of tangent line:
+        \begin{align*}
+          \eval{\dd[y]{x}}_{(1,1)} &= \frac{\pi \cdot 1 \cdot\sin(\pi 1 \cdot 1) - 1}{1 - \pi \cdot 1 \cdot \sin(\pi 1 \cdot 1)} \\
+          &= \frac{\pi\sin(\pi) - 1}{1 - \pi \sin(\pi)}\\
+          &= \frac{-1}{1} = -1
+        \end{align*}
+
+        Equation of tangent line:
+        \begin{align*}
+          y - 1 = -1(x - 1) &\implies y = -x + 2
+        \end{align*}
+
+        Graph of tangent line:
+        \begin{image}
+          \includegraphics[scale = 0.7]{Images/"Bean graph with tangent".png}
+        \end{image}
+      \end{freeResponse}
+
+  \end{itemize}
+\end{problem}
+
+\begin{problem}
+  \outcome{Implicitly differentiate expressions.}
+  \outcome{Solve equations for $dy/dx$.}
+  \outcome{Understand the derivatives of expressions that are not functions or not solved for $y$.}
+  For the each of the following implicit equations, find a formula for the slope of the tangent line at a point $(x, y)$.
+  \begin{enumerate}
+    \item
+      $e^{x^2 y^3} - 5x + 7y = 36$
+			\begin{freeResponse}
+			$$ e^{x^2 y^3} \left( 2xy^3 + x^2 (3y^2)\dd[y]{x} \right) - 5 + 7\dd[y]{x} = 0 $$
+			$$ 2xy^3 e^{x^2y^3} + 3x^2y^2e^{x^2y^3}\dd[y]{x} - 5 + 7\dd[y]{x} = 0 $$
+			$$ 3x^2y^2e^{x^2y^3}\dd[y]{x} + 7\dd[y]{x} = -2xy^3 e^{x^2y^3} + 5 $$
+			$$ \left( 3x^2y^2e^{x^2y^3} + 7 \right) \dd[y]{x} = -2xy^3 e^{x^2y^3} + 5 $$
+			$$  \dd[y]{x} = \frac{-2xy^3 e^{x^2y^3} + 5}{3x^2 y^2 e^{x^2y^3} + 7} $$
+			\end{freeResponse}
+			
+     \item
+       $7 = 22 \tan(y) + \frac{4}{x} - \frac{7}{y}$
+			\begin{freeResponse}
+			$$ 0 = 22 \sec^2 (y) \dd[y]{x} - \frac{4}{x^2} + \frac{7}{y^2} \dd[y]{x} $$
+			$$ 22 \sec^2(y) \dd[y]{x} + \frac{7}{y^2} \dd[y]{x} = \frac{4}{x^2} $$
+			$$ \dd[y]{x} = \frac{\frac{4}{x^2}}{22 \sec^2(y) + \frac{7}{y^2}} $$
+			\end{freeResponse}
+
+     \item
+       $\cos(xy) - x^3 = 5y^3$
+			\begin{freeResponse}
+			$$ -\sin(xy) \cdot \left(y + x \dd[y]{x} \right) - 3x^2 = 15y^2 \dd[y]{x} $$
+			$$ -y \sin(xy) - x \sin(xy) \dd[y]{x} - 3x^2 = 15y^2 \dd[y]{x} $$
+			$$ x \sin(xy) \dd[y]{x} + 15y^2 \dd[y]{x} = -y \sin(xy) - 3x^2 $$
+			$$ \dd[y]{x} = \frac{-y \sin(xy) - 3x^2}{x \sin(xy) + 15y^2} $$
+			
+			Provided that $x \sin(xy) + 15y^2 \neq 0$.  It is worth pointing out that this condition was not necessary for parts (a) and (b) because the denominator of those solutions cannot be $0$.  
+			\end{freeResponse}
+	\end{enumerate}
+\end{problem}
+
+\begin{problem}
+  If $9x^2 + y^2 = 9$, find $\dd[^2 y]{x^2}$ as a function of $x$ and $y$.
+  		\begin{freeResponse}
+		$18x + 2y \dd[y]{x} = 0 \qquad \Longrightarrow \qquad \dd[y]{x} = - \frac{18x}{2y} = - \frac{9x}{y}$.
+		
+		Then,
+		$$ \dd[^2y]{x^2} = \ddx \dd[y]{x} = \ddx \left( - \frac{9x}{y} \right) = - \frac{(y)(9) - (9x)(\dd[y]{x} )}{y^2} = \frac{9x\dd[y]{x} - 9y}{y^2}. $$
+		
+		This is not a sufficient answer to the question since $\dd[y]{x}$ is a part of the solution.  But we know that $\dd[y]{x} = -\frac{9x}{y}$, and so we can substitute to get
+		
+		$$ \dd[^2y]{x^2} = \frac{(9x) \left(- \frac{9x}{y} \right) - 9y}{y^2} = \frac{-81x^2 - 9y^2}{y^3}. $$
+		
+		Provided that $y \neq 0$.  
+		\end{freeResponse}
+\end{problem}
+
+\section{Extra Problems for Personal Practice}
+\begin{problem}
+  Explain why both the $x$-coordinate and the $y$-coordinate are generally needed to find the slope of the tangent line at a point on the graph of an implicitly defined function?
+	\begin{freeResponse}
+          If a function is defined \emph{implicitly} rather than \emph{explicitly}, then its graph will usually not pass the ``vertical line test".
+          So fixing a value for $x$ will not typically specify a unique point on the graph because there will be more than one corresponding $y$-value.
+          That is why you need to specify both the $x$ and the $y$ coordinate, to make sure that you are giving the coordinates for a unique point on the graph.
+	\end{freeResponse}	
+\end{problem}
+
+\begin{problem}
+  The volume of a doughnut with an inner radius of $a$ and an outer radius of $b$ is 
+  \[
+    V = \pi^2 \frac{(b+a)(b-a)^2}{4}.
+  \]
+  Find $db/da$ when the volume of a doughnut is $64\pi^2$.
+\begin{freeResponse}
+  We have to (implicitly) differentiate
+  \[
+    64\pi^2 = \pi^2 \frac{(b+a)(b-a)^2}{4}.
+  \]
+  
+  Before doing this we'll perform a bit of algebra to simplify our calculuations:
+  \begin{align*}
+    64\pi^2 = \pi^2 \frac{(b+a)(b-a)^2}{4} &\implies 256 =  (b+a)(b-a)^2.
+  \end{align*}
+
+  Now we'll differentiate with respect to $a$:
+  \begin{align*}
+    256 = (b+a)(b-a)^2 &\implies 0 = \left(\frac{db}{da} + 1\right)(b - a)^2 + (b + a) 2 \cdot (b - a) \cdot \left(\frac{db}{da} - a\right) \\
+    &\implies 0 = \frac{db}{da}(b-a)^2 + (b-a)^2 + 2(b^2-a^2) \frac{db}{da} - 2(b^2 - a^2).
+  \end{align*}
+
+  To finish we solve for $\frac{db}{da}$:
+  \begin{align*}
+    0 &= \frac{db}{da}(b-a)^2 + (b-a)^2 + 2(b^2-a^2) \frac{db}{da} - 2(b^2 - a^2) \\
+      &\implies
+        - \left(\frac{db}{da}(b-a)^2 + 2(b^2-a^2) \frac{db}{da}\right) = (b-a)^2 - 2(b^2 - a^2)\\
+    &\implies
+      \frac{db}{da} = \frac{(b-a)^2 - 2(b^2 - a^2)}{-((b-a)^2 + 2(b^2-a^2))}.
+  \end{align*}
+\end{freeResponse}	
+\end{problem}
+\end{document} 

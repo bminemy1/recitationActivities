@@ -1,0 +1,55 @@
+\documentclass[handout,nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}P\arabic{problem} Outcome: #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 20 Teaching Guide}
+
+\begin{document}
+\begin{abstract}
+
+\end{abstract}
+\maketitle
+
+\section{Notes for Problems 1 and 2} 
+Try to spend only 15 minutes on these two problems.
+
+For problem 1, I suggest you write the statement of the Mean Value Theorem on the board and remind students that its structure (like most theorems) is ``conditions implies some conclusion''.
+
+When summarizing this problem, state something like ``because the conclusion is true for graph (A) doesn't mean that the Mean Value Theorem applies to such functions. The Mean Value Theorem is the assertion that the assumptions implies the conclusion is true.''
+The students may be confused about the differences between the ``components of a theorem'' and the ``theorem itself.''
+
+
+\section{Notes for Problems 4, 5, and 6}
+For all the L'H\^{o}pital type problems be sure to stress that students must indicate the form before apply L’Hˆopital’s rule. (Either by using arrows or writing a short phrase next to the limit.)
+
+Also, it's important to emphasize that only the forms $0/0$ and $\infty/\infty$ are directly usable with L'H\^{o}pital's rule.
+Tell students that if they encounter another indeterminate form, then they should reshape the limit before trying to apply L'H\^{o}pital’s rule.
+
+Finally, it’s good to get the students in the habit of writing ``L.H.'' or ``L.R.'' over the equal sign where they perform L'H\^{o}pital's rule and to remind them not to forget about the other limit techniques.
+are differentiable before attempting to apply L'H\^{o}pital's rule.
+
+\end{document} 

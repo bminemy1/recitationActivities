@@ -1,0 +1,126 @@
+\documentclass[nooutcomes]{ximera}
+
+%% Options for ximera class: handout, space, newpage, numbers, nooutcomes
+
+%\usepackage{graphicx}
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{1in}{\begin{raggedright}\textbf{P\arabic{problem} Outcome:} #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 1 Teaching Guide}  
+
+\begin{document}
+\begin{abstract}
+  \textbf{Theme of calculus:} Calculus is the application of  \href{https://en.wikipedia.org/wiki/Derivative}{rates of change} and \href{https://en.wikipedia.org/wiki/Integral}{accumulation} to understand \href{https://en.wikipedia.org/wiki/Elementary_function}{famous functions} in their application to both real world and mathematical processes.
+
+  \textbf{Goal of Math 1151 course:} Promote and cultivate an environment which improves students' ability to construct, organize, and demonstrate their knowledge of calculus.
+\end{abstract}
+\maketitle
+
+\section{Teaching notes for problems}
+
+\subsection*{Notes for problem 1}
+The point of this problem is to give students practice in reading off from the graph the domain and range, evaluation of particular function values, and determining if a function is invertible.
+Generally, students will have trouble, throughout the semester, with interpreting information from graphs.
+(One (main) reason for students' difficulties with graphs is that interpreting information presented as a graph requires students to integrate a several component skills to be successfully at interpretation.
+This is also one reason why producing a good visualization is hard!)
+
+For part (a) students will have difficulties determining whether to include the point at $x = 0$ and the correct way of writing interval notation and union.
+Break this problem into two steps: first write $(-\infty, 0) \cup \{0\} \cup (0, 1) \cup (1, \infty)$ by reading off the graph and then condense to $(-\infty, 1) \cup (1, \infty)$.
+You should also quickly ask the students ``Why don't we include 1 in the domain?''.
+
+Part (b) is similar to part (a): you should read the intervals off the graph and then condense and ask ``Why don't we include $-1$ or $0$ in the range?''.
+
+For part (c) students will struggle with evaluating $f(0)$ because they don't know which value to pick.
+From their point-of-view there may be three valid possibilities due to the circles.
+Similarly, evaluating $f(1)$ will also be difficult: students may think there are two choices when really there are none.
+Students may also be uncomfortable saying something is undefined.
+It's important to note that $f(1)$ is undefined because 1 is not an element in the domain of $f$, as written in part (a).
+
+For part (c) students will struggle with evaluating $f(0)$ because they don't know which value to pick.
+From their point-of-view there may be three valid possibilities due to the circles.
+Similarly, evaluating $f(1)$ will also be difficult: students may think there are two choices when really there are none.
+Students may also be uncomfortable saying something is undefined.
+It's important to note that $f(1)$ is undefined because 1 is not an element in the domain of $f$, as written in part (a).
+
+For part (d), encourage students to try the horizontal line test.
+Ask them to identify all those values of $y$ for which the horizontal line test fails.
+Students may be tempted to say that the function fails the horizontal line test at $y = 0$.
+This is incorrect and it should be explained why this choice is incorrect by relating it to the fact that 0 is not in the range of $f$.
+
+Of course for part (e), there will be many valid answers.
+The solutions only give two of them.
+
+For part (f), remind the students that $f^{-1}(x) = y \iff x = f(y)$.
+This relationship is important one for inverse function.
+(In fact, I say stress this relationship, along with its graphically interpretation, every time you work through an inverse function problem.)
+
+\subsection*{Notes for problem 2}
+Simple true/false problem designed to test if students incorrectly assume $g^{-1} = 1/g$.
+This is problem is easy for students to get wrong: the standard notation for an inverse function is suggestive but not consistent. 
+
+\subsection*{Notes for problem 3}
+Many students will be tempted to say this statement is ``true'', since $f^{-1}(f(x)) = x$.
+It's important to emphasize that trigonometric functions are \emph{not} invertible, we must restrict their domains to make them one-to-one.
+At this point it is probably a good idea to review the unit circle to help students evaluate $\cos(7\pi/6)$ and draw a picture of the restricted cosine function.
+(If you review the unit circle, you should leave it on the board for the next problem.)
+
+Also emphasize that $\mathrm{Domain}(f) = \mathrm{Range}(f^{-1})$ and $\mathrm{Range}(f) = \mathrm{Domain}(f^{-1})$.
+
+\subsection*{Notes for problem 4}
+Another problem to test if students are familiar with the domain and range of inverse trigonometric functions.
+I recommend referring to the unit circle, from the previous problem, and draw the restricted sine function.
+
+\subsection*{Notes for problem 5}
+The main point of this problem is to review the fact that trigonometric functions are periodic and, using this fact, to solve trigonometric equations.
+\begin{itemize}
+  \item[(a)]
+    Students will remember (or use the unit circle) to conclude $2\pi$ and 0 are both solutions, but they will forgot about multiplying by $n$.
+    Review the graph of cosine along with the unit circle.
+    It's important to mention that cosine gives the $x$-coordinate of the unit circle.
+    (Some students may confuse which coordinate refers to which function.)
+
+  \item[(b)]
+    Again, students will forget about the period of sine and the need to consider integer multiples of $2\pi$.
+    Also, they will struggle with the variable substitution of $x=3\theta$ and how this substitution effects the inequality $0 \le \theta \le 2\pi$.
+
+    It may be better to start by first ignoring the inequality and solve the equation just using the periodicity of sine.
+    
+    Then use the inequality and your variable substitution $x=3\theta$ to find the solutions for this problem.
+    Emphasize that half of the numbers in the collection $\{ \pi/9, 2\pi/9, 7\pi/9, 8\pi/9, 13\pi/9, 14\pi/9 \}$ comes from the equation $\theta = \pi/9 + 2\pi/3n$ while the other half comes from $\theta = 2\pi/9 + 2\pi/3n$.
+\end{itemize}
+
+\subsection*{Notes for problem 6}
+The point of this problem is to review inverse trigonometric functions and function composition in a concrete case.
+\begin{itemize}
+  \item[(a)]
+    This part should be straightforward.
+    Recall the definition of a composition of functions (emphasizing we go from the inside function to the outside function) and the defining property of the inverse of a function.
+
+    As a quick verbal quiz, you may ask students to evaluate $\cos^{-1}(\cos(2\pi)$.
+    (The answer is $\cos^{-1}(\cos(2\pi) = 0$.
+    This quick verbal quiz would also provide the opportunity to review the domain of $\cos^{-1}$ and make a connection with Problem~\ref{problem:warmup}.)
+
+  \item[(b)]
+    Here students may struggle with the geometric interpretation of the inverse sine as sides of a triangle.
+    Again emphasize that in a composition we start with the inside function to the outside function.
+\end{itemize}
+
+\end{document} 

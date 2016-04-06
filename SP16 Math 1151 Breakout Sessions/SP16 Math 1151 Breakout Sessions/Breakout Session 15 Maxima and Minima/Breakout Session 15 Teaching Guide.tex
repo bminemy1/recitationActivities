@@ -1,0 +1,64 @@
+\documentclass[nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}\textbf{P\arabic{problem} Outcome:} #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 15 Teaching Guide}
+
+\begin{document}
+\begin{abstract}
+\end{abstract}
+\maketitle
+
+\section{Notes for Problem 1}
+This is a problem from the AU15 Exam 2.
+Students will initially think this is volume problem, but emphasize the importance of carefully reading the problem, labeling the diagram, and identifying expressions that are variables, constants, and what we need to find.
+
+\section{Notes for Problem 2}
+ You should help students setup the volume equation for this problem.
+ You should also convince students that we only care about the trapezoidal part of the water.
+(That is, for this problem we don't have to worry about the ``shelf'' part of the pool.)
+ You should remind students that we care about the volume of the water and not the volume of the whole trapezoidal part.
+ You can either remind students about the area of a trapezoid
+ \[
+   A = \frac{a+b}{2}\cdot h,
+ \]
+ where $a$ and $b$ are the lengths of the bases (the parellel sides) and $h$ is the height, and connect the area of the trapezoid with the volume of the water in the trapezoidal part.
+  Or, you can derive the area of the trapezoid directly by using the symmetry of the figure and the ``missing area'' of the triangular pieces at the end of the pool.
+  (I recommend the first method: time will be a big issue if you go the second route.)
+
+\section{Notes for Problem 3}
+Remind students the volume of a cone formula $V = \frac{\pi}{3} r^2 h$ and tell students that they will need to know the standard area and volume formulas.
+(Which are included in the front cover of the textbook under the ``Geometry'' section.)
+
+Emphasize that we care about the volume of the oil and not necessarily the volume of the whole funnel.
+Make sure students are clear on which expressions are variables, which expressions are (locally) constant, and which expression we are trying to find.
+
+Go carefully through the application of similar triangles when relating the radius of the oil to its height.
+
+\section{Notes for Problem 4}
+It's important to know Briggs’s definitions for local extrema and absolute extrema. (His definitions are not what you may expect. For instance, ``absolute extrema implies local extrema'' is a false statement using Briggs’s definitions, and endpoints can never be local extrema using.)
+\end{document} 

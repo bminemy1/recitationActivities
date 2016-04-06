@@ -1,0 +1,358 @@
+\documentclass{article}
+
+\usepackage{kpfonts}
+\usepackage{amsthm, booktabs, epigraph, graphicx, mathtools, amssymb}
+\usepackage{changepage}
+\usepackage[framemethod = tikz]{mdframed} 
+\usepackage[onehalfspacing]{setspace}
+
+\usepackage[%
+  backend = biber,%
+  style = numeric,%
+  natbib = true,%,
+  url = false,%
+  doi = false,%
+  eprint = false,%
+  backref=true,%
+]{biblatex}
+
+\usepackage{hyperref}
+
+\definecolor{Green}{RGB}{82, 142, 0}
+\hypersetup{%
+  citecolor = Green,
+  colorlinks,
+  linkcolor = Green,
+  urlcolor = Green%
+}
+
+\newtheoremstyle{plain}
+  {3mm}                         % Space above theorem and previous line.
+  {3mm}                         % Space below theorem box and next line.
+  {\slshape}                    % Use slanted font in body of theorem.
+  {}                            % Indent amount from margin. (Here no
+                                % indent.)
+  {\bfseries}                   % Theorem head font.
+  {.}                           % Punctation after theorem head.
+  {.5em}                        % Space after theorem head.
+  {}                            % Theorem head specification. 
+
+\newtheoremstyle{definition}
+  {3mm}                         % Space above theorem and previous line.
+  {3mm}                         % Space below theorem box and next line.
+  {}                            % Use slanted font in body of theorem.
+  {}                            % Indent amount from margin. (Here no
+                                % indent.)
+  {\bfseries}                   % Theorem head font.
+  {.}                           % Punctation after theorem head.
+  {.5em}                        % Space after theorem head.
+  {}                            % Theorem head specification
+
+\newtheorem*{Theme}{Themes}
+\newtheorem*{FocusQuestion}{Focus Questions}
+\newtheorem*{Keywords}{Important Terminology}
+%\newtheorem*{Limit Laws}{Limit Laws}
+
+
+\theoremstyle{definition}
+\newtheorem{Problem}{Problem}
+
+
+\definecolor{Off-White-Color}{rgb}{0.98, 0.99, 0.93}
+\definecolor{Scarlett-Color}{rgb}{0.73, 0, 0}
+
+\definecolor{Grey-Color}{rgb}{0.4, 0.4, 0.4}
+\definecolor{Off-Gray-Color}{rgb}{0.99, 0.99, 0.98}
+\definecolor{Pale-Yellow}{RGB}{252, 247, 235}
+
+
+\mdfdefinestyle{Focus Question and Theme Style}{%
+  linecolor = Scarlett-Color,%
+  linewidth = 2pt,%
+  roundcorner = 10pt
+}
+\newmdenv[style = Focus Question and Theme Style]{Focus Question and Theme}
+
+\mdfdefinestyle{Limit Laws Style}{%
+  frametitle = {Limit Laws},%
+  linewidth = 2pt,%
+  linecolor = Scarlett-Color,%
+  roundcorner = 10pt,%
+  backgroundcolor = Pale-Yellow%
+}
+\newmdenv[style = Limit Laws Style]{Limit Laws}
+
+\mdfdefinestyle{Solution Style}{%
+  frametitle = {Solution},%
+  linewidth = 2pt,%
+  linecolor = Scarlett-Color,%
+  roundcorner = 10pt,%
+  backgroundcolor = Off-White-Color%
+}
+\newmdenv[style = Solution Style]{Solution}
+
+\mdfdefinestyle{Instructor Notes Style}{%
+  frametitle = {Instructor Notes},%
+  linewidth = 2pt,%
+  linecolor = Grey-Color,%
+  roundcorner = 10pt,%
+  backgroundcolor = Off-Gray-Color%
+}
+\newmdenv[style = Instructor Notes Style]{Instructor Notes}
+
+
+\title{\includegraphics{"Icon Breakout 7".pdf}\\
+  Breakout Session 7\\
+%  Recitation 7\\
+  Continuity\\
+  Solutions
+%  Teaching Guide
+}
+\date{15 September 2015}
+
+\addbibresource{References.bib}
+\begin{document}
+\maketitle
+\begin{Problem}[Warmup]
+  \mbox{}
+  \begin{itemize}
+    \item[(a)]
+      Explain why the Intermediate Value Theorem does not guarantee a zero for $f(x) = \frac{x-1}{x^2 - 5x}$ on the interval $(2,6)$, even though $f(2) < 0$ and $f(6) > 0$.
+      \begin{Solution}
+        Notice that $f$ is not defined on every point in the interval $[2, 6]$, in particular, $f$ is undefined for $x = 5$.
+        Therefore $f$ does not satisfy the conditions for the intermediate value theorem.
+        (For the intermediate value theorem to apply, $f$ needs to be continuous on the interval $[2,6]$.)
+
+        To summarize: the graph of $f$ shows that $f$ has a zero outside the interval $[2, 6]$:
+        \begin{center}
+          \includegraphics[scale = 0.53]{"Graph for warmup problem".png}
+        \end{center}
+        However since $f$ is not continuous on the interval $[2, 6]$, the intermediate value theorem cannot guarantee that $f(x) = 0$ for some $x$ between 2 and 6.
+      \end{Solution}
+
+    \item[(b)]
+      True or False: At some time since you were born your weight in pounds exactly equaled your height in inches.
+      (From \cite[Question 7]{terrell_goodquestions_2005}.)
+      \begin{Solution}
+        This is true!
+
+        Let $\mathrm{weight}(t)$ represent your weight in pounds at time $t$ and let $\mathrm{height}(t)$ represent your height in inches at time $t$.
+        Each of these are continuous functions of time and so their difference $\mathrm{weight}(t) - \mathrm{height}(t)$ is also continuous.
+
+        If $t = 0$ is the moment you where born and $t = T_0$ is the present time, then $\mathrm{weight}(0) - \mathrm{height}(0) > 0$ and $\mathrm{weight}(T_0) - \mathrm{height}(T_0) < 0$.
+        Hence by the intermediate value theorem there is a point in the past where your weight in pounds is equal to your height in inches.
+      \end{Solution}
+  \end{itemize}
+\end{Problem}
+
+\begin{Problem}
+  For the following function $g$ defined by
+  \[
+    g(t) =
+    \begin{cases}
+      5t + 7 & \mbox{if $t < -3$,}\\
+      \displaystyle\frac{(t-1)(t+2)}{t+2} & \mbox{if $-3 \leq t < 1$ and $t \neq -2$, and}\\
+      4 \ln(t) & \mbox{if $t \geq 1$,}
+    \end{cases}
+  \]
+  find the intervals where $g$ is continuous.
+  (\textbf{Important Note:} Write your answer as a list of intervals with each interval separated by a comma.)
+\end{Problem}
+\begin{Solution}
+  The function $g$ is continuous on $(\infty, -3)$ since, in this interval, $g(t)=5t+7$ is a polynomial and therefore continuous on its domain.
+  
+  Note that
+  \[
+    \lim_{t \to -3^-} g(t) = \lim_{t \to -3^-} 5t+7 = 5(-3) + 7 = -8
+  \]
+  and
+  \[
+    g(-3) = \frac{(-3-1)(-3+2)}{-3+2} = \frac{4}{-1} = -4.
+  \]
+  Since $g(-3) = -4 \ne -8 = \lim_{t \to -3^-} g(t)$, we have that $g$ fails the continuity checklist at $t = -3$.
+  Therefore $g$ is not continuous at $t = -3$.
+
+  On the interval $(-3, 1)$, the function $g$ is defined by a rational function, $g(t) = \frac{(t-1)(t+2)}{t+2}$.
+  A rational function is continuous on every point of its domain.
+  Since $g(t) = \frac{(t-1)(t+2)}{t+2}$ is undefined for $t = -2$, on the interval $(-3, 1)$ we have that $g$ is continuous on $(-3, -2)$ and $(-2, 1)$.
+  Since each of these intervals have endpoints, we must check for one-sided continuity.
+  We have the right-sided limit
+  \[
+    \lim_{t \to -3^+} g(t) = \lim_{t \to -3^+} \frac{(t-1)(t+2)}{t+2} = \frac{(-3-1)(-3+2)}{-3+2} = -4 = g(-3).
+  \]
+  Since $g$ satisfies the right-continuity checklist at $t = -3$ we have that $g$ is right-continuous at $t = -3$.
+  We now consider the left-sided limit
+  \[
+    \lim_{t \to 1^-} g(x) = \lim_{t \to 1^-} \frac{(x-1)(x+2)}{x+2} = \frac{0}{3} = 0.
+  \]
+  Since $g(1) = 4 \ln(1) = 0$, we have that $g$ satisfies the left-continuity checklist at $t = 1$.
+  To summarize: on the interval $(-3, 1)$ we have that $g$ is continuous on $[-3, -2)$ and $(-2, 1]$.
+
+  Finally, the function $t \mapsto 4 \ln(t)$ is continuous over the set of positive real numbers.
+  Therefore $g$ is continuous on the interval $[1, \infty)$ since $g(t) = 4 \ln(t)$.
+
+  To finish we can combine the interval $(-2, 1]$ with the interval $[1, \infty)$ to yield $(-2, \infty)$.
+  To conclude: $g$ is continuous on the intervals \[(-\infty, -3), [-3, -2), (-2, \infty)\hspace{0.5em}\fbox{\parbox[c][]{1.5in}{\textbf{Important Note:} You \emph{should not} combine the intervals $(-\infty, -3)$ and $[-3, -2)$!}}\]
+\end{Solution}
+
+
+\begin{Problem}
+  Find all real numbers $a$ and $b$ such that the function $h$ defined by
+  \[
+    h(z) =
+    \begin{cases}
+      az^2 + 38 &  \mbox{if $z < 3$,}\\
+      a + b & \mbox{if $z = 3$, and }\\
+      2bz - a &	\mbox{if $z > 3$,}
+    \end{cases}
+  \]
+  is continuous for all real numbers $z$.
+\end{Problem}
+\begin{Solution}
+  First, notice that for $h$ is \emph{not} continuous at $z = 3$ for several different combinations of values of $a$ and $b$, but it is continuous on the intervals $(-\infty, 3)$ and $(3, \infty)$:
+  \begin{center}
+    \includegraphics[scale = 0.7]{"Graph for problem 3a".png}
+  \end{center}
+  \begin{center}
+    \includegraphics[scale = 0.7]{"Graph for problem 3b".png}
+  \end{center}
+  \begin{center}
+    \includegraphics[scale = 0.7]{"Graph for problem 3c".png}
+  \end{center}
+
+  To make sure $h$ is continuous at $z = 3$ we must satisfy the three requirements on the continuity checklist:
+  \begin{itemize}
+    \item[$\square$]
+      $h$ is defined at $z = 3$,
+
+    \item[$\square$]
+      $\lim_{z \to 3} h(z)$ exists, and
+
+    \item[$\square$]  
+      $\lim_{z \to 3} h(z) = h(3)$.
+  \end{itemize}
+  
+  \subsubsection*{Continuity Checklist: $\square$ $h$ is defined at $z = 3$}
+  Since, by definition of $h$, we have $h(3) = a + b$ and so $h$ is defined at $z = 3$.
+  We can then check this item off the checklist:
+  \begin{itemize}
+    \item[$\text{\rlap{$\checkmark$}}\square$]
+      $h$ is defined at $z = 3$,
+
+    \item[$\square$]
+      $\lim_{z \to 3} h(z)$ exists, and
+
+    \item[$\square$]  
+      $\lim_{z \to 3} h(z) = h(3)$.
+  \end{itemize}
+
+  \subsubsection*{Continuity Checklist: $\square$ $\lim_{z \to 3} h(z)$ exists}
+  To determine if $\lim_{z \to 3} h(z)$ exists we focus on the right-sided limit and left-sided limit as $z \to 3$.
+
+  \begin{align*}
+    \lim_{z \to 3^+} h(z) &= \lim_{z \to 3^+} 2bz - a\\
+    &= 2b\cdot 3 - a \hspace{0.5em}\fbox{\parbox[c][]{1.5in}{Since $z \mapsto 2bz-a$ is a polynomial we can apply \cite[Theorem 2.4, page 71]{briggs_calculus_2015}.}} \\
+    &= 6b - a.
+  \end{align*}
+
+  \begin{align*}
+    \lim_{z \to 3^-} h(z) &= \lim_{z \to 3^+} az^2 + 38\\
+    &= a\cdot 3^2 +38 \\
+    &= 9a + 38.
+  \end{align*}
+
+  To satisfy this continuity checklist item we must then have $6b - a = 9a + 38 \implies a = (-1/10) \cdot (-6b + 38)$.
+  We can then check this item off the checklist:
+  \begin{itemize}
+    \item[$\text{\rlap{$\checkmark$}}\square$]
+      $h$ is defined at $z = 3$,
+
+    \item[$\text{\rlap{$\checkmark$}}\square$]
+      $\lim_{z \to 3} h(z)$ exists, and
+
+    \item[$\square$]  
+      $\lim_{z \to 3} h(z) = h(3)$.
+  \end{itemize}
+
+  \subsubsection*{Continuity Checklist: $\square$ $\lim_{z \to 3} h(z) = h(3)$}
+  To finish we must also have $\lim_{z \to 3} h(z) = h(3)$.
+  Again, we consider the right-sided limit and left-sided limit separately:
+  \begin{align*}
+    \lim_{z \to 3^+} h(z) &= a + b \\
+    &\implies 6b - a = a + b \\
+    &\implies 5b - 2a = 0\\
+    &\implies 20b - 8a = 0 \hspace{0.5em}\fbox{\parbox[c][]{1.5in}{\textbf{Small Algebra Trick:} We multiply both sides by 4 to make solving for $a$ and $b$ easier.}}
+  \end{align*}
+
+  \begin{align*}
+    \lim_{z \to 3^-} h(z) &= a + b \\
+    &\implies 9a + 38 = a + b \\
+    &\implies 8a - b  = -38.
+  \end{align*}
+
+  We can view
+  \begin{align*}
+    20b - 8a &= 0 \\
+    8a - b  &= -38
+  \end{align*}
+  as a system of two equations with two unknowns.
+
+  We can add these two equations:
+  \begin{align*}
+     20b - 8a &= 0 \\
+   + (8a - b  &= -38)\\
+     \cline{1-2}
+    19b &= -38
+  \end{align*}
+  Therefore $b = -2$
+
+  Using $a = (-1/10) \cdot (-6b + 38)$ and $b = -2$ we have that $a = -5$.
+
+  We can now check the final item off the checklist:
+  \begin{itemize}
+    \item[$\text{\rlap{$\checkmark$}}\square$]
+      $h$ is defined at $z = 3$,
+
+    \item[$\text{\rlap{$\checkmark$}}\square$]
+      $\lim_{z \to 3} h(z)$ exists, and
+
+    \item[$\text{\rlap{$\checkmark$}}\square$]  
+      $\lim_{z \to 3} h(z) = h(3)$.
+  \end{itemize}
+  
+  Therefore $h$ is continuos at $z = 3$ when $a = -5$ and $b = -2$.
+
+  With these choices for $a$ and $b$ we have that $h$ is continuous on every point of its domain:
+  \begin{center}
+    \includegraphics[scale = 0.7]{"Graph for problem 3d".png}
+  \end{center}
+\end{Solution}
+
+\begin{Problem}
+  Use the Intermediate Value Theorem to find an interval in which you can guarantee that there is a solution to the equation $x^3 = x + \sin x + 1$.
+  Do not use a graphing device or calculator to solve this problem!
+\end{Problem}
+\begin{Solution}
+  The intermediate value theorem is a result about functions.
+  Since we are simply given an equation $x^3 = x + \sin x + 1$ we must transform this into a corresponding result using functions.
+
+  Define the function $f$ by $f(x) = x^3 - x - \sin(x) - 1$.
+  Since both $x \mapsto x^3 - x - 1$ and $x \mapsto \sin(x)$ are continuous over the set of all real numbers \cite[Theorems 2.10 and 2.15]{briggs_calculus_2015}, and $f$ is the difference of these two functions, we have $f$ is continuous everywhere \cite[Theorem 2.9]{briggs_calculus_2015}.
+
+  To apply the intermediate value theorem we must find an interval $[a, b]$ with $f(a) < 0$ and $f(b) > 0$.
+  (We could also find an interval $[c, d]$ with $f(c) > 0$ and $f(d) < 0$.)
+
+  Using the unit circe we have $f(0) = 0^3 - 0 - 0 - 1 = -1 < 0$ and $f(\pi) = \pi^3 - \pi - \sin(\pi) - 1 = \pi(\pi^2 - 1) - 1 > 3(3^2 - 1) - 1 = 23 > 0$.
+  Therefore, by the intermediate value theorem, there exists a number $c \in (0, \pi)$ such that $f(c) = 0$.
+
+  % (\textbf{Potential application of intermediate value theorem:} To actually approximate this value of $c$ we could write a ``bisection algorithm'' that implicitly utilizes intermediate value theorem:
+  % \begin{itemize}
+  %   \item[(Step 1)]
+  %     Divide interval $[0, \pi]$ into two intervals $[0, \pi/2]$ and $[\pi/2, \pi]$.
+
+  %   \item[(Step 2)]
+  %     Test sign of $f(0)$ and $f(\pi/2)$ and $f(\pi/2)$ and $f(\pi)$. 
+  % \end{itemize}
+  \end{Solution}
+\printbibliography
+\end{document}

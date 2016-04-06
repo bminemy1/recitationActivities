@@ -1,0 +1,407 @@
+\documentclass[nooutcomes]{ximera}
+
+%% Options for ximera class: handout, space, newpage, numbers, nooutcomes
+
+%\usepackage{graphicx}
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}\textbf{P\arabic{problem} Outcome:} #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 1 Solutions}  
+
+\begin{document}
+\begin{abstract}
+  % \textbf{A look back:} In your previous mathematics courses you learned that each famous function consists of three components: its domain, its rule for relating inputs to outputs, and its range.
+  % (In fact all functions consists of these three parts.)
+  % Moreover, a graph of a function is a powerful way to visually see the relationship between a function's domain, rule, and range.
+
+  % \textbf{Overview:} In today's (January 12, 2016) Breakout Session you will investigate and review the properties of a few famous functions and interpert properties of functions from their graphs.
+
+  % \textbf{A look ahead:} In the next (January 14, 2016) Breakout Session you will investigate how ``rates of change'' helps us further analyze properties of famous functions.
+\end{abstract}
+\maketitle
+
+% \section{Learning Outcomes}
+% The following outcomes are \emph{not an exhaustive} list of the skills you will need to develop and integrate for demonstration on quizzes and exams.
+% This list is meant to be a starting point for conversation (with your Lecturer, Breakout Session Instructor, and fellow learners) for organizing your knowledge and monitoring the development of your skills.
+
+% \begin{itemize}
+%   \item
+%     Define a function.
+%     (Understand that the definition of a function consists of three interrelated components: domain, “rule”, and range.)
+
+%   \item 
+%     Find domain and range of a function.
+%     (Understand that the domain and range can be determined by a function's formulaic representation (if it has one), graphical representation, verbal representation, or tabular representation.)
+
+%   \item
+%     Determine where a function is positive, negative, or zero.
+
+%   \item
+%     Define and work with inverse functions.
+%     (Understand that not all functions are invertible, those functions that have inverses can be determined graphically, and the notation for inverse functions is \emph{strange}.)
+
+%   \item
+%     Understand the relationship between exponential and logarithmic functions.
+%     (A special case of an invertible function and its inverse.)
+    
+%   \item
+%     Evaluate expressions and solve equations involving trigonometric functions and inverse trigonometric functions.
+    
+%   \item
+%     Understand the properties of trigonometric functions.
+
+%   \item
+%     Know the graphs and properties of ``famous'' functions.
+%     (The famous functions are polynomial functions, rational functions, algebraic functions, exponential functions, logarithmic functions, trigonometric functions, and inverse trigonometric functions.)
+% \end{itemize}
+% \newpage
+
+\section{Inverse Functions}
+\label{section:inverse-functions}
+
+\begin{problem}
+  \label{problem:properties-of-fuction-from-graph}
+  \outcome{Define a function.}
+  \outcome{Find domain and range of a function.}
+  \outcome{Determine and work with inverse functions.}
+  We're given the following graph of a function:
+  \begin{image}
+    \includegraphics[scale = 0.4]{Images/"Graph of piecewise defined function".png}
+  \end{image}
+  Use this graph to answer the following questions:
+  \begin{itemize}
+    \item[(a)]
+      What is the domain of this function?
+      \begin{freeResponse}
+        $(-\infty, 1) \cup (1, \infty)$
+      \end{freeResponse}
+
+    \item[(b)]
+      What is the range of this function?
+      \begin{freeResponse}
+        $(-\infty, -1) \cup (0, \infty)$
+      \end{freeResponse}
+
+    \item[(c)]
+      What is the value of $f(0)$, $f(1)$, and $f(2)$?
+      \begin{freeResponse}
+        $f(0) = 3$, $f(1)$ does not exist, $f(2) = -2$
+      \end{freeResponse}
+
+    \item[(d)]
+      Does this function have an inverse?
+      (Why or why not?)
+      \begin{freeResponse}
+        No, the function does not have an inverse.
+        It is not one-to-one (that is, it does not pass the horizontal line test).
+      \end{freeResponse}
+      
+    \item[(e)]
+      Find at least two intervals on which the function is one-to-one.
+      \begin{freeResponse}
+        The function becomes one-to-one when we restrict its domain to $(-\infty, 0)$:
+        \begin{image}
+          \includegraphics[scale = 0.25]{Images/"Graph of restricted function".png}
+        \end{image}
+        The function also becomes one-to-one when we restrict its domain to $[0, \infty)$:
+        \begin{image}
+          \includegraphics[scale = 0.5]{Images/"Graph of second restricted function".png}
+        \end{image}
+      \end{freeResponse}
+
+    \item[(f)]
+      Find $f^{-1}(3)$ on a restricted domain of $f$.
+      \begin{freeResponse}
+        In this case restrict the domain of $f$ to $[0, \infty)$.
+        By definition we have $f^{-1}(3) = y \iff 3 = f(y)$.
+        Looking at the second graph of the restricted function we see that $f(0) = 3$, that is, $f^{-1}(3) = 0$.
+
+        (If we restric the domain of $f$ to $(-\infty, 0)$, then $f^{-1}(3) = y \iff 3 = f(y)$ implies that $f(-1.7) \approx 3$.
+        Hence $-1.7 \approx f^{-1}(3)$.)
+      \end{freeResponse}
+  \end{itemize}
+\end{problem}
+
+\begin{problem}
+  \label{problem:applying-definition-of-inverse-function}
+  \outcome{Determine and work with inverse functions.}
+  Let $g$ be a one-to-one function and let $g^{-1}$ be its inverse.
+  \textbf{True or False:}
+  If the point $(2, 1/5)$ lies on the graph of $g$, then the point $(2, 5)$ lies on the graph of $g^{-1}$.
+  \begin{freeResponse}
+    This statement is \textbf{false}: we have $g(2) = 1/5 \iff 2 = g^{-1}(1/5)$.
+    The notation $g^{-1}$ never, in this course, means $1/g$.
+  \end{freeResponse}
+\end{problem}
+
+\section{Trigonometric functions and their inverses}
+\label{section:trigonometric-functions-and-their-inverses}
+
+\begin{problem}
+  \label{problem:applying-domain-of-arccos}
+  \outcome{Understand the properties of trigonometric functions.}
+  \outcome{Determine and work with inverse functions.}
+  \outcome{Know the graphs and properties of famous functions.}
+  Without using a calculator, determine if the equation
+  \[
+    \cos^{-1}\bigl(\cos(7\pi/6)\bigr) = 7\pi/6
+  \]
+  is true or false.
+  \begin{freeResponse}
+    This statement is \textbf{false}: the correct equation is $\cos^{-1}\bigl(\cos(7\pi/6)\bigr) = 5\pi/6$. (Why?)
+
+    \textbf{Spoiler Alert}: the cosine function is \emph{not} invertible since its graph fails the horizontal line test.
+    \begin{image}
+      \includegraphics[scale = 0.8]{Images/"Graph of cosine function".png}
+    \end{image}
+    To produce the inverse cosine we must first restrict the domain of cosine, to the interval $[0, \pi]$, to produce an invertible function:
+    \begin{image}
+      \includegraphics[scale = 0.8]{Images/"Graph of restricted cosine".png}
+    \end{image}
+    So, the range of $\cos^{-1}$ is $[0, \pi]$.
+    Since $7\pi/6$ is not in this range, $7\pi/6$ is \emph{never} a possible output of $\cos^{-1}$.
+  \end{freeResponse}
+\end{problem}
+
+\begin{problem}
+  \label{problem:applying-domain-of-arcsin}
+  \outcome{Understand the properties of trigonometric functions.}
+  \outcome{Determine and work with inverse functions.}
+  \outcome{Know the graphs and properties of famous functions.}
+  \textbf{True or False:}
+  $\sin^{-1}(0) = \pi$.
+  \begin{freeResponse}
+    This statement is \textbf{false}: the correct equation is $\sin^{-1}(0) = 0$. (Why?)
+
+    \textbf{Spoiler Alert}: the sine function is \emph{not} invertible since its graph fails the horizontal line test.
+    \begin{image}
+      \includegraphics[scale = 0.4]{Images/"Graph of sine function".png}
+    \end{image}
+    To produce the inverse sine we first restrict the domain of sine, to the interval $[-\pi/2, \pi/2]$, to produce an invertible function:
+    \begin{image}
+      \includegraphics[scale = 0.4]{Images/"Graph of restricted sine".png}
+    \end{image}
+    So, the range of $\sin^{-1}$ is $[-\pi/2, \pi/2]$.
+    Since $\pi$ is not in this range, $\pi$, is \emph{never} a possible output of $\sin^{-1}$.
+  \end{freeResponse}
+\end{problem}
+
+\begin{problem}
+  \label{problem:solving-trigonometric-equations}
+  \outcome{Understand the properties of trigonometric functions.}
+  \outcome{Evaluate expressions and solve equations involving trigonometric functions and inverse trigonometric functions.}
+  Find all real numbers which satisfy each of the equations.
+  \begin{itemize}
+    \item[(a)]
+      $\cos(x) = 1$
+      \begin{freeResponse}
+        This is asking for the collection of all angles such that cosine of that angle equals 1.
+
+        The unit circle shows that one such angle is $0$ (since $\cos(0) = 1$).
+        There is a slight trick here: since cosine has period $2\pi$ we actually have $\cos(0 + 2\pi n) = 1$ for every integer $n$.
+        In summary, $x = 2\pi n$, where $n$ is any integer, gives all the solutions to this equation.
+      \end{freeResponse}
+
+    \item[(b)]
+      $\sin(3 \theta) = \sqrt{3}/2$ for $0 \leq \theta \leq 2\pi$
+      \begin{freeResponse}
+        Finding all numbers $\theta$ with $0 \leq \theta \leq 2\pi$ that satisfy $\sin(3 \theta) = \sqrt{3}/2$ is a bit tricky.
+        We first perform a useful trick from algebra~---~variable substitution.
+
+        Let $x = 3\theta$.
+        So, we are trying to find all numbers $x$ such that $\sin(x) = \sqrt{3}/2$ for $0 \leq x/3 \leq 2\pi$.
+        Then $ x= \frac{\pi}{3} + 2 \pi n$ or $ x = \frac{2 \pi }{3} + 2 \pi n $ for $n$ any integer.
+        Since $x = 3 \theta$, we can solve for $\theta$ to obtain $\theta = \pi/9 + (2 \pi n)/3$ or $\theta = (2\pi)/9 + (2\pi n)/3$, where $n$ is again any integer.
+        We are only looking for solutions of $\theta$ in $[0, 2\pi ]$, and so our solutions are
+        \[
+        \theta = \frac{\pi}{9}, \frac{2\pi}{9}, \frac{7\pi}{9}, \frac{8\pi}{9}, \frac{13\pi}{9}, \frac{14\pi}{9}. 
+        \]
+      \end{freeResponse}
+  \end{itemize}
+\end{problem}
+
+\begin{problem}
+  \label{problem:simplifying-trigonometric-expressions}
+  \outcome{Understand the properties of trigonometric functions.}
+  \outcome{Evaluate expressions and solve equations involving trigonometric functions and inverse trigonometric functions.}
+  Simplify each of the following expressions.
+  \begin{itemize}
+    \item[(a)]
+      $\cos^{-1} \bigl( \sin(\pi/2) \bigr)$
+      \begin{freeResponse}
+        By the unit circle, $\sin(\pi/2) = 1$, and so we are looking for $\cos^{-1}(1)$.
+        The range of $\cos^{-1}$ is $[0, \pi]$, and so, by properties of inverse functions, $\cos^{-1}(1) = 0$.
+      \end{freeResponse}
+
+    \item[(b)]
+      $\tan \bigl( \sin^{-1}(4/x ) \bigr)$
+      \begin{freeResponse}
+        Let $\theta = \sin^{-1}(4/x)$, then $\sin(\theta) = 4/x$.
+        We can then draw the corresponding right triangle:
+        \begin{image}
+          \includegraphics[scale = 0.8]{Images/"Figure Right-angled triangle".png}
+        \end{image}
+        Calling the adjacent side $y$, by the Pythagorean Theorem we obtain
+        \begin{align*}
+          x^2 = 16 + y^2 &\implies y = \pm\sqrt{x^2 - 16}, \\
+                         &\implies y = \sqrt{x^2 - 16}.\\
+                         &\hspace{-0.5em} \mbox{\parbox[b][]{6cm}{(since we assume the side of a triangle can't have negative length)}}
+        \end{align*}
+        Then
+        \begin{align*}
+          \tan \left( \sin^{-1} \left(4/x \right) \right) &= \tan( \theta), \\
+                                                                   &= \frac{4}{y}, \\
+                                                                 &= \frac{4}{\sqrt{x^2 - 16}}.
+        \end{align*}
+      \end{freeResponse}
+  \end{itemize}
+\end{problem}
+
+\section{Extra Problems for  Personal Practice}
+\label{section:extra-problems}
+
+\begin{problem}
+  \label{problem:computing-inverse-algebraically}
+  \outcome{Define and work with inverse functions.}
+  \outcome{Understand the relationship between exponential and logarithmic functions.}
+  Each of the following functions are invertible on their given domains.
+  For each one find a formula for its inverse and give the domain and range of the inverse.
+  \begin{itemize}
+    \item[(a)]
+      The function $f$ defined by $f(x)=x^2-4x-5$ for every $x \ge 2$.
+      \begin{freeResponse}
+        To help find the a formula for $f^{-1}$ we will first ``complete the square'':
+        \begin{align*}
+          x^2-4x-5 &= x^2 - 4x + 4 - 4 - 5,\\
+                   &= (x - 2)^2 - 9.
+        \end{align*}
+    
+        Setting $y = f(x) = x^2-4x-5 = (x - 2)^2 - 9$, we can follow the procedures outlined for algebracially finding the formula for an inverse function.
+        \begin{align*}
+          &\mbox{} y = (x - 2)^2 - 9\\
+          &\implies y + 9 = (x - 2)^2\\
+          &\implies \sqrt{y + 9} = |x - 2| \\
+          &\implies \sqrt{y + 9} = x - 2 \hspace{1em} \mbox{(since $x \ge 2$)}\\
+          &\implies \sqrt{y + 9} + 2 = x \\
+          &\implies 2 + \sqrt{x + 9} = y \hspace{1em} \mbox{\parbox[b][]{6cm}{(interchange $x$ and $y$ along with minor rewriting)}}
+        \end{align*}
+        Therefore we have that $f^{-1}$ is defined by $f^{-1}(x) = 2 + \sqrt{x + 9}$.
+        The domain of $f^{-1}(x)$ is $[-9, \infty)$ and the range is $[2, \infty)$.
+      \end{freeResponse}
+
+    \item[(b)]
+      The function $g$ defined by $g(u) = \sqrt[4]{u + 2}$.
+      \begin{freeResponse}
+        Following the procedure to algebraically find the formula for the inverse function we have
+        \begin{align*}
+          &\mbox{} z = \sqrt[4]{u + 2}\\
+          &\implies z = (u+2)^{1/4}\\
+          &\implies z^4 = u + 2\\
+          &\implies z^4 - 2 = u\\
+          &\implies u^4 - 2 = z \hspace{1em} \mbox{(interchange $u$ and $z$)}
+        \end{align*}
+        Therefore we have that $g^{-1}$ is defined by $g^{-1}(u) = u^4 - 2$.
+        The domain of $g^{-1}$ is $[0, \infty)$ and the range is $[-2, \infty)$.
+      \end{freeResponse}
+
+    \item[(c)]
+      The function $h$ defined by $h(t) = 1/(t+2)^2$ for every $t > -2$.
+      \begin{freeResponse}
+        Following the procedure to algebraically find  the formula for the inverse function we have
+        \begin{align*}
+          &\mbox{} s = \frac{1}{(t+2)^2}\\
+          &\implies (t+2)^2 = \frac{1}{s}\\
+          &\implies |t + 2| = \sqrt{\frac{1}{s}} \\
+          &\implies t + 2 = \sqrt{\frac{1}{s}} \hspace{1em} \mbox{(since $t > -2$)}\\
+          &\implies t = \sqrt{\frac{1}{s}} - 2 \\
+          &\implies s = \frac{1}{\sqrt{t}} - 2 \hspace{1em} \mbox{(interchange $s$ and $t$)}
+        \end{align*}
+        Therefore we have $h^{-1}$ is defined by $h^{-1} = \frac{1}{\sqrt{t}} - 2$.
+        The domain of $h^{-1}$ is $(0, \infty)$ and the range is $(-2, \infty)$.
+      \end{freeResponse}
+
+    \item[(d)]
+      The function $p$ defined by $p(s) = e^{3s+1}$.
+      \begin{freeResponse}
+        Following the procedure to algebraically find  the formula for the inverse function we have
+        \begin{align*}
+          &\mbox{} y = e^{3s+1}\\
+          &\implies \ln(y) = 3s + 1 \hspace{1em} \mbox{(since $\ln$ is the inverse of the natural exponential function)}\\
+          &\implies \frac{\ln(y) - 1}{3} = s\\
+          &\implies s = \frac{\ln(y) - 1}{3}\\
+          &\implies y = \frac{\ln(s) - 1}{3} \hspace{1em} \mbox{(interchange $y$ and $s$)}
+        \end{align*}
+        Therefore we have $p^{-1}$ is defined by $p^{-1}(s) = (\ln(s) - 1)/3$.
+        The domain of $p^{-1}$ is $(0, \infty)$ and the range is $(-\infty, \infty)$.
+      \end{freeResponse}
+  \end{itemize}
+\end{problem}
+
+\begin{problem}
+  \label{problem:solving-logarithmic-exponential-equations}
+  \outcome{Understand the relationship between exponential and logarithmic functions.}
+  Find all real numbers $x$ which satisfy each of the following equations.
+  \begin{itemize}
+    \item[(a)]
+      $\log_x 25 = 2$.
+      \begin{freeResponse}
+        Recall from that, by definition of the inverse to an exponential function,
+        \[
+        \log_b x = y \iff x = b^y.
+        \]
+        Using this relationship we have $\log_x 25 = 2 \iff x^2 = 25$.
+        Therefore
+        \begin{align*}
+          x^2 = 25 &\implies x = \pm 5,\\
+                   &\implies x = 5 \hspace{1em} \mbox{(base of log is always $>0$)}.
+        \end{align*}
+        Therefore $x = 5$ is the only solution to $\log_x 25 = 2$.
+      \end{freeResponse}
+
+
+    \item[(b)]
+      $7^x = 15$
+      \begin{freeResponse}
+        Similar to the previous problem,
+        \[
+        \log_b x = y \iff x = b^y .
+        \]
+        Using this relationship we have $7^x = 15  \iff x = \log_{7} 15$.
+        Therefore $x = \log_7 15$ is the only solution to $7^x = 15$.
+      \end{freeResponse}
+      
+    \item[(c)]
+      $\ln(x) + 1 = 0$.
+      \begin{freeResponse}
+        Similar to the previous two problems we'll use the relationship 
+        \[
+          \ln(x) = y \iff x = e^y.
+        \]
+        Before applying this relationship we perform a bit of algebra first:
+        \[
+          \ln(x) + 1 = 0 \implies \ln(x) = -1.
+        \]
+        Now we have $\ln(x) = -1 \iff x = e^{-1}$.
+        Therefore $x = e^{-1} (= 1/e)$ is the only solution to $\ln(x) + 1 = 0$.
+      \end{freeResponse}
+  \end{itemize}
+\end{problem}
+\end{document} 

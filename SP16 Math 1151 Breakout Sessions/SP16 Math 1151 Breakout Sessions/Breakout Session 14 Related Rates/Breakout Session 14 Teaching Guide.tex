@@ -1,0 +1,51 @@
+\documentclass[handout,nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}P\arabic{problem} Outcome: #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 14 Teaching Guide}
+
+\begin{document}
+\begin{abstract}
+  % \textbf{A look back:} In the previous (February 23, 2016) Breakout Session you practiced differentiating inverse functions.
+
+  % \textbf{Overview:} In today's (February 25, 2016) Breakout Session you'll be introduced to an important application of derivatives: related rates.
+  
+  % \textbf{A look ahead:} In the next (March 1, 2016) Breakout Session you continue to practice related rates and learn another important application of derivatives: locating local extrema.
+\end{abstract}
+\maketitle
+
+\section{Notes for problem 1}
+Some students may forget that the variables are with respect to time: so they may write $x' = 1$ instead of $dx/dt$.
+Remind the students that often the variables are functions of some other parameter, but we don’t explicitly mention this when writing our equation.
+
+Also, some students may be tempted to substitute too early.
+Suggest students work problem 3 and that usually substitution is one of the last steps we apply when solving related rate problems.
+
+\section{Notes for problem 2}
+This will be a difficult problems for students to answer since it only gives one number and asks students to make a qualitative comparison between two rates of change.
+When solving I suggest you draw the picture and make the connection to the Pythagorean Theorem.
+\end{document} 

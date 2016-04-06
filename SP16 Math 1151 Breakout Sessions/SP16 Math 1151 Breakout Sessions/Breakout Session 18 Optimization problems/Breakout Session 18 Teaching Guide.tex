@@ -1,0 +1,54 @@
+\documentclass[handout,nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}P\arabic{problem} Outcome: #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 18 Teaching Guide}
+
+\begin{document}
+\begin{abstract}
+  % \textbf{A look back:} In the previous (March 10, 2016) Breakout Session you practiced using local and absolute extrema, first and second derivatives, and symmetry to sketch a graph of a function.
+
+  % \textbf{Overview:} In today's (March 22, 2016) Breakout Session you'll practice another important application of calculus: solving optimization problems.
+  
+  % \textbf{A look ahead:} In the next (March 24, 2016) Breakout Session you'll learn how to apply linear approximation and differentials to (famous) functions.
+\end{abstract}
+\maketitle
+
+\section{Notes for problem 1}
+The purpose of this problem is to simply remind students of the usual procedure we apply to locate absolute extrema for a continuous function on a closed and bounded interval.
+
+\section{Notes for problem 2}
+This is a problem from the AU15 Exam 3.
+When working this problem it's important to emphasize the usual procedure of writing the ``objective function'' (in this case the function $A$) and the ``constraints'' (in this case the domain of $A$).
+Some students may have trouble setting up the function $A$ in terms of $\theta$.
+
+\section{Notes for problems 3 and 4}
+Again, it's important to emphasize that we first construct the ``objective function'' and list the ``constraints'' then we apply our usual procedure for locating absolute extrema.
+
+\section{Notes for problems 5 and 6}
+These problems are challenging, but please encourage students to try them on their own immediately after the Breakout Session.
+\end{document} 
