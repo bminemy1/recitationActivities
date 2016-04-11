@@ -15,8 +15,23 @@
 \begin{abstract}		\end{abstract}
 \maketitle
 
+\section{Some notes on notation for solving limits:}
+\begin{enumerate}
+	\item When writing a form of a limit, we NEVER write $\lim_{x \to a}f(x)=\frac{0}{0}$.  It is the $=$ that makes this a mathematically incorrect statement.  Instead, write $\lim_{x \to a}f(x)$ is of the form $\frac{0}{0}$
 
-  The limits laws:
+	\item When solving limits, do NOT drop the $\lim_{x \to a}$ until you have plugged in the limit number for $x$.  For example, the following is INCORRECT:
+	\begin{center}
+	$\lim_{x \to 2}\frac{2x^2-4x}{x-2}=\frac{2x(x-2)}{x-2}=2x=4$\\	
+	\end{center}
+
+	Instead, we write: 
+		\begin{center}
+	$\lim_{x \to 2}\frac{2x^2-4x}{x-2}=\lim_{x \to 2}\frac{2x(x-2)}{x-2}=\lim_{x \to 2}2x=4$\\	
+	\end{center}
+
+\end{enumerate}
+
+ \section{The limits laws:}
   
   Assume $\lim_{x \to a} f(x)$ and $\lim_{x \to a} g(x)$ both exist.
   The following properties hold, where $c$ is a real number and $m > 0$ and $n > 0$ are both integers.
@@ -304,18 +319,11 @@ Let $f$ be the function defined on the interval $[1,3]$ that satisfies the follo
 	\item State the form of the limit, evaluate the limit, or state that it does not exist.  Justify your answer.
 		\begin{enumerate}
 		
-		\item $\lim_{x \to 2^-}\frac{1}{f(x)}$
-		\begin{freeResponse}
-		Form: $\frac{\text{number}}{0}$ \\
-		In the fraction: the numerator $1 \to1$ while the denominator $f(x) \to 0^-$ \\			
-		Therefore: $\lim_{x \to 2^-}\frac{1}{f(x)}=\infty$
-	 
-		\end{freeResponse}		
-
+		
 		\item $\lim_{x \to 2}\frac{\frac{x^2-4}{4}}{x-2}$
 
 		\begin{freeResponse}
-		Form: $\frac{\text{0}}{0}$ \\
+		Form: $\frac{{0}}{0}$ \\
 		\begin{align*}
 		\lim_{x \to 2}\frac{\frac{x^2-4}{4}}{x-2}&=\lim_{x \to 2}\frac{(x-2)(x+2)}{4}\cdot \frac{1}{x-2}\\
 		&= \lim_{x \to 2^+} \frac{x+2}{4}\\
@@ -327,7 +335,7 @@ Let $f$ be the function defined on the interval $[1,3]$ that satisfies the follo
 		\item $\lim_{x \to 2^+}\frac{h(x)}{g(x)}$
 
 		\begin{freeResponse}
-		Form: $\frac{\text{0}}{0}$ \\
+		Form: $\frac{{0}}{0}$ \\
 		This problem requires us to use the Squeeze Theorem.  We have: \\ 
 		\begin{center}
 		$g(x) \le f(x) \le h(x)$ \\
