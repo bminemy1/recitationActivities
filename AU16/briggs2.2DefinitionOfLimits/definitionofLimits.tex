@@ -9,7 +9,7 @@
 \input{../preamble.tex} %% we can turn off input when making a master document
 \usepackage{fullpage}
 
-\title{2.2:  Definition of Limits (Solutions)}  
+\title{2.2:  Definition of Limits}  
 
 \begin{document}
 \begin{abstract}		\end{abstract}
@@ -40,7 +40,7 @@
 	
 	
 	
-	\item  True or False: If we know the value of $f(2)$, then we know the value of $\lim_{x \to 2} f(x)$.
+	\item  True or False: If we know the value of $f(2)$, then can we conclude that $\lim_{x \to 2} f(x)=f(2)$?
 		\begin{freeResponse}
 		False.  In the above example, we have that $f(2) = 0$, while $\lim_{x \to 2} f(x)$ does not exist.
 		\end{freeResponse}
@@ -51,7 +51,7 @@
 
 %Problem 2
 \begin{problem}
-Use the graphs and the given definitions of the following two functiosn to answer the questions below.
+Use the graphs and the given definitions of the following two functions to answer the questions below.
 	
 	\begin{image}
 
@@ -151,24 +151,31 @@ Use the graphs and the given definitions of the following two functiosn to answe
 \begin{problem}
 Sketch the graph of a function that satisfies all of the given properties.
   (You \emph{do not} need to find a formula for the function.)
-	$$ f(3) = -2 , f(5) = 6 , \lim_{x \to 5^-} f(x) = -1 ,   \lim_{x \to 5^+} f(x) = 4 ,  \lim_{x \to 3} f(x) = 7 $$
-	$$  \lim_{x \to -2^-} f(x) = 3 ,  \lim_{x \to -2^+} f(x) = 0 ,  \lim_{x \to 1^+} f(x) = 5  $$
-	\begin{freeResponse} \hfil
+	\begin{align*}
+	 \text{Domain:}\ [-4,3)&\cup(3,5)&  f(1) &= 3 & f(-1) &= 1& f(-4)=1\\
+	 \lim_{x \to -1^-} f(x) &= -2 & \lim_{x \to -1^+} f(x) &= 1 &   \lim_{x \to 1} f(x) &= 2&  \lim_{x \to 3^+} f(x) &=-1\\
+	\lim_{x \to 3^-} f(x)&=1&\lim_{x \to 3} f(x)\ & \text{Does Not Exist} & \lim_{x \to -4^+} f(x) &= 1 &  \lim_{x \to 5^-} f(x) &= 1
+	\end{align*}
+	\begin{freeResponse} 
+	One way to go about sketching the graph is as follows.  First, on the x-axis, indicate the domain (seen here in purple)
 	    \begin{image}
-      \includegraphics[scale = 0.5]{"Construction step 1".png}
+	\includegraphics[scale=.5]{"Sketching stage 1"}
     \end{image}
-    \begin{image}
-      \includegraphics[scale = 0.4]{"Construction step 2".png}
-    \end{image}
-    \begin{image}
-      \includegraphics[scale = 0.4]{"Construction step 3".png}
-    \end{image}
-    \begin{image}
-      \includegraphics[scale = 0.4]{"Construction step 4".png}
-    \end{image}
-    \begin{image}
-      \includegraphics[scale = 0.4]{"Construction step 5".png}
-    \end{image}
+
+	Next plot the given points (seen here in blue)
+	    \begin{image}
+		\includegraphics[scale=.5]{"Sketching stage 2"}
+  	  \end{image}
+	
+	Then indicate the limits using open circles and tails to indicate if the limit is the value as the function approaches from the left or right or both(seen here in green)
+	    \begin{image}
+	\includegraphics[scale=.5]{"Sketching stage 3"}
+	    \end{image}
+
+	Finally connect the graph.
+	    \begin{image}
+	\includegraphics[scale=.5]{"Sketching stage 4"}
+	    \end{image}
 	\end{freeResponse}
 \end{problem}
 	
@@ -186,16 +193,16 @@ True/False:  Give an explanation or counterexample.  Assume $a$ and $L$ are fini
 			\begin{freeResponse}
 			False.  In the graph below $ \lim_{x \to 1} f(x) = 2 $, but $f(1)$ does not exist.
 				\begin{image}
-				      \includegraphics[trim= 70 470 250 160]{Figure1}
+				      \includegraphics{Figure1}
 				\end{image}
 			\end{freeResponse}
 			
 			\item  If $  \lim_{x \to a^-} f(x) = L$, then $  \lim_{x \to a^+} f(x) = L $.
 			\begin{freeResponse}
-			False.  In the graph below $ \lim_{x \to 1^-} f(x) = 5$ but $ \lim_{x \to 1^+} f(x) = 6$.
+			False.  In the graph below $ \lim_{x \to 2^-} f(x) = -1$ but $ \lim_{x \to 2^+} f(x) = 1$.
 			
 				\begin{image}
-						      \includegraphics[trim= 70 470 250 160]{Figure3}		
+						      \includegraphics{Figure2}		
 				\end{image}
 			\end{freeResponse}
 			
@@ -204,10 +211,10 @@ True/False:  Give an explanation or counterexample.  Assume $a$ and $L$ are fini
 			 False.  If we let 
 			 
 			 	\begin{image}
-			       \includegraphics[trim= 70 470 250 160]{Figure9}
+			       \includegraphics{Figure3}
 			 	\end{image}
 				
-			 we see that $ \lim_{x \to 1} f(x) = \lim_{x \to 1} g(x) = 2$, but $f(1) = 3$ and $g(1) = 1$.
+			 we see that $ \lim_{x \to 1} f(x) = \lim_{x \to 1} g(x) = 2$, but $f(1) \ne g(1)$.
 			\end{freeResponse}
 			
 			\item  $ \lim_{x \to a} \frac{f(x)}{g(x)} $ does not exist if $g(a) = 0$.

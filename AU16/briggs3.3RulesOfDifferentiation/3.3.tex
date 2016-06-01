@@ -1,0 +1,260 @@
+\documentclass[nooutcomes, handout]{ximera}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+%\ddx
+%\dfn
+
+
+\input{../preamble.tex} %% we can turn off input when making a master document
+\usepackage{fullpage}
+
+\title{Section 3.3 Rules of Differentiation}  
+
+\begin{document}
+\begin{abstract}		\end{abstract}
+\maketitle
+
+
+%problem 1
+\begin{problem}
+For each of the following functions, use the "short cut derivative rules" to compute their derivative.
+	
+	\begin{enumerate}
+	
+	\item $f(x) = \sqrt{x}$
+	
+		\begin{freeResponse}
+		$$f(x) = \sqrt{x} = x^{\frac{1}{2}}.$$ 
+		\begin{align*}
+		f'(x) &= \frac{1}{2} x^{\frac{1}{2} - 1}\\
+		&= \frac{1}{2} x^{-\frac{1}{2}} \\
+		&= \frac{1}{2\sqrt{x}}
+		\end{align*}
+		\end{freeResponse}
+			
+
+	\item $s(u) = \frac{5}{u^2}$
+	
+		\begin{freeResponse}
+		$$s(u) = \frac{5}{u^2} = 5u^{-2}.$$  
+		\begin{align*}
+		s'(u) &= 5(-2) u^{-2-1}\\
+		 &= -10u^{-3}\\
+		&= \frac{-10}{u^3} 
+		\end{align*}
+		\end{freeResponse}
+			
+			
+
+	\item $p(t) = t^5 + 4t^3 + \pi $
+	
+		\begin{freeResponse}
+		\begin{align*}
+		p'(t) &= 5t^{5-1} + 4(3)t^{3-1} + 0\\ 
+		&= 5t^4 + 12t^2
+		\end{align*}  
+		Note that $\ddx (\pi) = 0$ because $\pi$ is a constant.	
+		\end{freeResponse}
+			
+			
+	\end{enumerate}
+\end{problem}
+	
+	
+\begin{problem}
+  Given the polynomial function $q$ defined by $q(v) = 2v^3 - 5v^2 + 7v - 9$ find:
+  \begin{enumerate}
+
+    \item
+      The slope of the tangent line to the graph of $q$ at the point where $v = 3$ using the limit definition of a derivative.
+      \begin{freeResponse}
+        To compute $q'(3)$ from the limit definition we use either 
+        \[
+          \lim_{v \to 3} \frac{q(v)-q(3)}{v-3} \quad \text{or} \quad \lim_{h \to 0} \frac{q(3+h)-q(3)}{h}.
+        \]
+
+        
+        Using the second formula:
+        \begin{align*}
+          q'(3) &= \lim_{h \to 0} \frac{q(h+3)-q(3)}{h} \\
+          &= \lim_{h \to 0} \frac{(2(3+h)^3 - 5(3+h)^2 + 7(3+h) - 9) - (54 - 45 + 21 - 9)}{h}\\
+          &= \lim_{h \to 0} \frac{(2(27+27h+9h^2+h^3) - 5(9+6h+h^2) + 21+7h - 9) - 21}{h} \\
+          &= \lim_{h \to 0} \frac{54+54h+18h^2+2h^3-45-30h-5h^2+21+7h-9-21}{h} \\
+          &= \lim_{h \to 0} \frac{31h+18h^2-3h^3}{h} \\
+          &= \lim_{h \to 0} (31+18h-3h^2)\\
+          &= 31.
+        \end{align*}
+      \end{freeResponse}
+
+
+    \item
+
+      The slope of the tangent line to the graph of $q$ at the point where $v = 3$ using the ``short-cut derivative rules'' to find a formula for $q'$ and evaluating $q'(3)$.
+      \begin{freeResponse} \hfil
+
+        \begin{align*}
+          q'(v) &= (2v^3 - 5v^2 + 7v - 9)'\\
+          &= (2v^3)' + (-5v^2)' + (7v)' + (-9)' \\
+          &= 3\cdot 2 \cdot v^{3-1} + 2\cdot (-5)\cdot v^{2-1} + 1\cdot 7\cdot v^{1-1} + 0 \\
+          &= 6v^2 - 10v + 7\\
+          &\implies q'(3) = 6\cdot3^2 - 10\cdot3 + 7 = 31.
+        \end{align*}
+      \end{freeResponse}
+
+
+    \item     The equation of the tangent line to the graph of $q$ at $v = 3$.
+      \begin{freeResponse}
+        Slope of tangent line to the graph of $q$ at the point where $v=3$: $q'(3) = 6\cdot3^2 - 10\cdot3 + 7 = 31$.
+
+        Point on tangent line at the point where $v=3$: $(3, q(3)) = (3, 21)$.
+
+        Equation of tangent line to the graph of $q$ at the point where $v=3$:
+        \begin{align*}
+          y-21&=31(x-3)\\
+              &\implies y = 31x -72.
+        \end{align*}
+      \end{freeResponse}
+
+  \end{enumerate}
+\end{problem}
+	
+			
+%problem3			
+\begin{problem}
+
+   Find $s'$, $s''$, and $s'''$ of the function $s$ defined by $s(t) = 3t^2 + 5e^t - \frac{1}{t}$.
+   \begin{freeResponse}
+     $s'(t) = 6t + 5e^t + \frac{1}{t^2}$.
+
+     $s''(t) = 6 + 5e^t - \frac{2}{t^3}$.
+
+     $s'''(t) = 5e^t + \frac{6}{t^4}$.
+   \end{freeResponse}
+
+\end{problem}
+
+%problem4
+\begin{problem}
+
+  Use the given graphs of $f$ and $g$ and their accompanying derivatives to answer the following problems.
+  \begin{image}
+    \hspace*{-7em}
+     \includegraphics[scale = 0.3]{"Graph of squaring function".png}
+     \hspace{2em}
+     \includegraphics[scale = 0.3]{"Graph of derivative of squaring function".png}
+   \end{image}
+   \begin{image}
+     \hspace*{-7em}
+     \includegraphics[scale = 0.23]{"Graph of identity function".png}
+     \hspace{2em}
+     \includegraphics[scale = 0.23]{"Graph of derivative of identity function".png}
+   \end{image}
+
+   \begin{enumerate}
+     \item
+       Compute the value of the $(5f+3g)'(2)$.
+
+       \begin{freeResponse}
+         \begin{align*}
+           (5f+3g)'(2) &= 5\cdot f'(2) + 3 \cdot g'(2)\\
+                       &= 5 \cdot 4 + 3 \cdot 1 \\
+                       &= 20 + 3 = 23.
+         \end{align*}
+       \end{freeResponse}
+
+
+     \item
+       Compute the value of $(5f+3g)''(2)$.
+       \begin{freeResponse}
+         \begin{align*}
+		(5f+3g)''(2)&=[(5f+3g)'](2)\\
+		&=[5f'+3g']'(2)\\
+		&=[5f''+3g''](2)
+	\end{align*}
+	Finding $f''$:
+         \begin{align*}
+           \mbox{$f'$ is a linear function with slope 2} &\implies f''(x) = 2.
+         \end{align*}
+
+         Finding $g''$:
+         \begin{align*}
+           \mbox{$g'$ is a constant function} &\implies g''(x) = 0.
+         \end{align*}
+         
+         Computing $(5f+3g)''(2)$:
+         \begin{align*}
+           (5f+3g)''(2) &= 5\cdot f''(2) + 3 \cdot g''(2) \\
+                        &= 5 \cdot 2 + 3 \cdot 0 = 10.
+         \end{align*}
+       \end{freeResponse}
+
+     \item
+       Find the equation of the tangent line to the graph of $(5f+3g)'$ at the point $(2, (5f+3g)'(2))$.
+
+       \begin{freeResponse}
+         Slope of tangent line to the graph of $(5f+3g)'$ at $x = 2$:
+            \begin{align*} 
+           (5f+3g)''(2) = 10
+         \end{align*}
+
+         Point on tangent line at $x = 2$:
+         \begin{align*}
+           (2, (5f+3g)'(2)) = (2, 23).
+         \end{align*}
+
+         Equation of tangent line at $x = 2$:
+         \begin{align*}
+           y - 23 = 10(x-2) &\implies y = 10x - 20 + 23 = 10x + 3.
+         \end{align*}
+       \end{freeResponse}
+
+	\item
+	Use the given graph of $f'$ and $g'$ to find the following:
+	\begin{enumerate}
+		\item A formula for $f'$
+			\begin{freeResponse}
+				$f'(x)=2x$.  The graph shows a linear function through the point $(0,0)$ and $(1,2)$.
+			\end{freeResponse}
+	
+		\item A formula for $g'$
+			\begin{freeResponse}
+				$g'(x)=1$.  The graph shows a linear function with slope $0$ and through the point $(0,1)$.
+			\end{freeResponse}
+		\item A formula for $(5f+3g)'$.  Comment on the relationship between this formula and the equation of the tangent line to $(5f+3g)'$ at the point where $x=2$.
+			\begin{freeResponse}
+				\begin{align*}
+				(5f+3g)'(x)&= 5f'(x)+3g'(x)\\
+				&= 5(2x)+3(1)\\
+				&=10x+3				
+				\end{align*}
+			The formula for $(5f+3g)'(x)$ is a linear function. Any line tangent to $(5f+3g)'(x)$  will have the forumula $y=10x+3$
+			\end{freeResponse}
+	\end{enumerate}
+   \end{enumerate}
+
+\end{problem}
+
+%problem5
+\begin{problem}
+Sketch the graph of the derivative of the given function:
+
+  \begin{image}
+   \hspace*{-3em}
+    \includegraphics[scale = 0.25]{"Graph of derivative".png}
+  \end{image}
+
+\begin{freeResponse} \hfil
+  \begin{image}
+    \hspace*{-3em}
+    \includegraphics[scale=.9]{"Solution for graph the derivative".png}
+  \end{image}
+
+\end{freeResponse}
+\end{problem}
+
+
+\end{document} 
