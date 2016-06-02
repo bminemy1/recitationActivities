@@ -98,7 +98,7 @@ The graph of $g(x)=e^x$ is given below.
 
 
 	
-	\item  Find the values of $g(1), g(0), g(-1)$ and plot them on the graph below.
+	\item  Find the values of $g(1), g(0), g(-1)$ and plot the points $(1,g(1)), (0,g(0)),$ and $(-1,g(-1))$  on the graph below.
 		\begin{freeResponse}
 	
 			$$g(1)=e^1=e$$
@@ -172,7 +172,7 @@ Given $y(t)=t- \frac{\pi}{3}$ and $w(t)=\sin(t)$.  Find:
 
 	\item  $y(w(\frac{4\pi}{3}))$
 		\begin{freeResponse}
-		$w \left(y \left(\frac{4\pi}{3} \right)\right)=\sin \left(\frac{4\pi}{3}\right)-\frac{\pi}{3}=\frac{\sqrt{3}}{2}-\frac{\pi}{3}$
+		$y \left(w \left(\frac{4\pi}{3} \right)\right)=\sin \left(\frac{4\pi}{3}\right)-\frac{\pi}{3}=\frac{-\sqrt{3}}{2}-\frac{\pi}{3}$
 
 		You should know values of $sin(x)$ and $cos(x)$ for all values found on the unit circle.
 		\end{freeResponse}	
@@ -208,7 +208,7 @@ Define
 	
 	\item  Find the values of $g(\pi)$ and $g(-\pi)$
 		\begin{freeResponse}	
-			$g(\pi)=\cos (\pi)=1$ and $g(-\pi)=|-\pi-2|=\pi+2$
+			$g(\pi)=\cos (\pi)=-1$ and $g(-\pi)=|-\pi-2|=\pi+2$
 		\end{freeResponse}
 	
 	\end{enumerate}
@@ -246,7 +246,7 @@ The entire graph of $f(x)$ is given below.
 	
 	\item Find the intervals on which $f$ is increasing.  Find the intervals on which $f$ is decreasing.
 		\begin{freeResponse}
-		$f(x)$ is increasing on $(-4,-3),(0,2),(2,4)$.  $f(x)$ is decreasing on $(-1,0)$
+		$f$ is increasing on $(-4,-3),(0,2),(2,4)$.  $f$ is decreasing on $(-1,0)$
 		\end{freeResponse}
 	
 	\item True or False: $f(1.5) < f(2)$
@@ -272,17 +272,17 @@ Determine if the function is even, odd, or neither.
 	\item  $h(x)=x^4+x^2-3$
 		\begin{freeResponse}
 
-		A function is even if $f(x)=f(-x)$ which means it is symmetric about the y-axis.  A function is odd if $f(-x)=-f(x)$ which means it is symmetic about the origin. 
+		A function is even if $f(x)=f(-x)$ which means it is symmetric about the y-axis.  A function is odd if $f(-x)=-f(x)$ which means its graph is symmetic about the origin. 
 		 $$h(x)=x^4+x^2-3$$
 			$$h(-x)=(-x)^4+(-x)^2-3=x^4+x^2-3$$
-			$h(x)=h(-x)$Hence $h(x)=x^4+x^2-3$ is even.  This can be verified by graphing $h$ and seeing that it is symmetric about the y-axis.
+			$h(x)=h(-x)$Hence $h(x)=x^4+x^2-3$ is even.  This can be verified by graphing $h$ and seeing that its graph is symmetric about the y-axis.
 		\end{freeResponse}
 
 	\item  $s(t)=t^2-t$
 		\begin{freeResponse}
 			$$s(t)=t^2-t$$
 			$$s(-t)=(-t)^2-(-t)=t^2+t$$ This does not equal $s(t)$ so $s(t)$ is not even.
-			$$-s(t)=-(t^2-t)=-t^2-t$$  This does not equal $s(-t)$ so $s(t)$ is not odd.  Hence, $s(t)$ is neither even, nor odd.
+			$$-s(t)=-(t^2-t)=-t^2+t$$  This does not equal $s(-t)$ so $s(t)$ is not odd.  Hence, $s(t)$ is neither even, nor odd.
 		\end{freeResponse}
 
 	\item  Given $\sin(\theta)$ is odd and $\cos(\theta)$ is even, is $g(\theta)=\tan(\theta)$ even, odd, or neither?
@@ -290,7 +290,7 @@ Determine if the function is even, odd, or neither.
 		 $$g(\theta)=\tan(\theta)=\frac{\sin(\theta)}{\cos(\theta)}$$
 			\begin{align*}
 			g(-\theta)&=\frac{\sin(-\theta)}{\cos(-\theta)}\\
-			&=\frac{\sin(\theta)}{-\cos(\theta)}\\
+			&=\frac{-\sin(\theta)}{\cos(\theta)}\\
 			&=-\frac{\sin(\theta)}{\cos(\theta)}
 			\end{align*}
 			\begin{center}
@@ -311,7 +311,7 @@ Determine if the function is even, odd, or neither.
 
 %problem 7
 \begin{problem}
-For any function $f$ defined on $(-\infty,\infty)$, can define $f_e$ and $f_o$ as follows: $f_e=\frac{f(x)+f(-x)}{2}$ and $f_o=\frac{f(x)-f(-x)}{2}$
+For any function $f$ defined on $(-\infty,\infty)$, we can define $f_e$ and $f_o$ as follows: $f_e=\frac{f(x)+f(-x)}{2}$ and $f_o=\frac{f(x)-f(-x)}{2}$
 
 
 \begin{enumerate}	
@@ -330,8 +330,7 @@ For any function $f$ defined on $(-\infty,\infty)$, can define $f_e$ and $f_o$ a
 			We want to show this is an odd function, so we need to show $f_o(-x)=-f_o(x)$ for all $x$
 			First, we'll find $-f_o$
 			\begin{align*}
-			-f_o(x)&=-\frac{f(x)-f(-x)}{2}\\
-			&=\frac{-f(x)+f(-x)}{2}
+			-f_o(x)&=-\frac{f(x)-f(-x)}{2}
 			\end{align*}
 
 			Now we'll find $f_o(-x)$
@@ -347,10 +346,12 @@ For any function $f$ defined on $(-\infty,\infty)$, can define $f_e$ and $f_o$ a
 		\begin{freeResponse}
 		
 		We want to show that $f(x)=f_e(x)+f_o(x)$, for all $x$.  From parts a and b, we know $f_e=\frac{f(x)+f(-x)}{2}$ and $f_o=\frac{f(x)-f(-x)}{2}$.  Therefore,
-			$$f(x)=f_e(x)+f_o(x)=\frac{f(x)+f(-x)}{2}+\frac{f(x)-f(-x)}{2}$$
-			$$f(x)=\frac{f(x)+f(-x)+f(x)-f(-x)}{2}$$
-			$$f(x)=\frac{2f(x)}{2}$$
-			$$f(x)=f(x)$$
+			\begin{align*}
+			f_e(x)+f_o(x)&=\frac{f(x)+f(-x)}{2}+\frac{f(x)-f(-x)}{2}\\
+			&=\frac{f(x)+f(-x)+f(x)-f(-x)}{2}\\
+			&=\frac{2f(x)}{2}\\
+			&=f(x)
+			\end{align*}
 		We have just proved that every function defined on $(-\infty,\infty)$ can be written as the sum of an odd function and an even function.
 	
 		\end{freeResponse}	
@@ -359,12 +360,57 @@ For any function $f$ defined on $(-\infty,\infty)$, can define $f_e$ and $f_o$ a
 
 \end{problem}
 
-\begin{instructorNotes}
+%problem8
+\begin{problem}
+Using the known graphs of $y=\sqrt(x)$ and $y=\frac{1}{x}$, sketch the graphs of the following using transformations.
 
-\end{instructorNotes}
+\begin{enumerate}
+ 	\item $y=\sqrt{x+2}-3$
+	\begin{freeResponse}
+		This is a shift of $y=\sqrt(x)$ moved left 2 units and down three units.
+	\begin{image}		
+	\includegraphics[scale = 0.8]{Figure8.png}
+	\end{image}
+	\end{freeResponse}
+	
 
+	\item $y=\frac{1}{x-4}+1$
 
+	\begin{freeResponse}
+		This is a shift of $y=\frac{1}{x}$ moved right 4 units and up one unit.
+		\begin{image}		
+	\includegraphics[scale=0.8]{Figure7.png}
+	\end{image}
+	\end{freeResponse}
+\end{enumerate}
 
+\end{problem}
+
+%problem9
+\begin{problem}
+Find the domain and the range of the function.  Determine whether the function is odd, even, or neither.
+
+\begin{enumerate}
+	\item $f(x)=\frac{x}{\sqrt{x^2-9}}$
+		\begin{freeResponse}
+			To find the domain, recall that a rational expression cannot have $0$ in the denominator and a square root expression cannot have a negative number under the square root.  Thus, $x^2-9>0$.
+			$(x-3)(x+3)$
+		\end{freeResponse}
+
+	\item $g(x)= \frac{\sin(x)}{x}$
+		\begin{freeResponse}
+
+		\end{freeResponse}
+
+	\item $h(t)= \ln(t^2-4t+3)$
+
+		\begin{freeResponse}
+
+		\end{freeResponse}
+
+\end{enumerate}
+
+\end{problem}
 
 \end{document} 
 
