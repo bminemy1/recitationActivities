@@ -1,0 +1,248 @@
+\documentclass[nooutcomes]{ximera}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+
+\input{../preamble.tex} %% we can turn off input when making a master document
+\usepackage{fullpage}
+
+\title{3.5 Derivatives of Trig Functions}  
+
+\begin{document}
+\begin{abstract}		\end{abstract}
+\maketitle
+
+
+%problem 1
+\begin{problem}
+Find the following limits:
+
+	\begin{enumerate}
+	
+	\item  $\lim_{x \to 0} \frac{\sin(8x)}{x}$
+			\begin{freeResponse}
+			\begin{align*}
+			\lim_{x \to 0} \frac{\sin(8x)}{x} &= \lim_{x \to 0} \frac{\sin(8x)}{x} \cdot \frac{8}{8}  \\
+			&= 8 \lim_{x \to 0} \frac{\sin(8x)}{8x}  \\
+			&= 8 \lim_{u \to 0} \frac{\sin(u)}{u}  \\
+			&= 8 \cdot 1 = 8
+			\end{align*}
+			where $u = 8x$.  
+			\end{freeResponse}
+			
+	
+	\item  $\lim_{x \to 0} \frac{x}{\tan(5x)}$
+			\begin{freeResponse}
+			\begin{align*}
+			\lim_{x \to 0} \frac{x}{\tan(5x)} &= \lim_{x \to 0} \frac{x}{\frac{\sin(5x)}{\cos(5x)}}  \\
+			&= \lim_{x \to 0} \left( \frac{x}{1} \cdot \frac{\cos(5x)}{\sin(5x)} \right)  \\
+			&= \lim_{x \to 0} \left( \cos(5x) \frac{x}{\sin(5x)} \cdot \frac{5}{5} \right)  \\
+			&= \frac{1}{5} \left( \lim_{x \to 0} \cos(5x) \right) \left( \lim_{x \to 0} \frac{5x}{\sin(5x)} \right)  \\
+			&= \frac{1}{5} (1) (1) = \frac{1}{5}
+			\end{align*}
+			\end{freeResponse}
+			
+			
+			
+	\end{enumerate}
+\end{problem}
+	
+%problem 2			
+\begin{problem}
+Find the derivative of the following functions:
+
+	\begin{enumerate}
+	
+	%part a
+	\item  $f(x) = \frac{x+5}{7x^6 + \cot(x)}$
+			\begin{freeResponse}
+			\begin{align*}
+			f'(x) &= \frac{(7x^6 + \cot(x))(1) - (x+5)(42x^5 - \csc^2(x))}{(7x^6 + \cot(x))^2}  \\
+			&= \frac{7x^6 + \cot(x) - (x+5)(42x^5 - \csc^2(x))}{(7x^6 + \cot(x))^2}.
+			\end{align*}
+			\end{freeResponse}
+			
+			
+			
+	%part b
+	\item  $f(x) = \sin(x) \cos(x)$
+			\begin{freeResponse}
+			$$f'(x) = (\cos(x))(\cos(x)) + (\sin(x))(-\sin(x)) = \cos^2(x) - \sin^2(x).$$
+			\end{freeResponse}
+			
+			
+			
+	%part c
+	\item  $f(x) = \frac{e^x \tan(x)}{\sec(x) + 2}$
+			\begin{freeResponse}
+			\begin{align*}
+			f'(x) &= \frac{(\sec(x)+2)(e^x \tan(x) + e^x \sec^2(x)) - e^x \tan(x) (\sec(x) \tan(x))}{(\sec(x) + 2)^2}  \\
+			&= \frac{e^x[(\sec(x) + 2)(\tan(x) + \sec^2(x)) - \sec(x) \tan^2(x)]}{(\sec(x) + 2)^2}.
+			\end{align*}
+			\end{freeResponse}
+			
+			
+			
+	%part d
+	\item  $f(x) = \sin(x) \cos(x) e^{3x}$
+			\begin{freeResponse}
+			\begin{align*}
+			f'(x) &= \ddx[\sin(x) \cos(x)] e^{3x} + (\sin(x) \cos(x)) \ddx(e^{3x})  \\
+			&= (\cos^2(x) - \sin^2(x))e^{3x} + 3e^{3x} \sin(x) \cos(x)  \\
+			&= e^{3x}(\cos^2(x) + 3\sin(x) \cos(x) - \sin^2(x)).
+			\end{align*}
+			\end{freeResponse}
+			
+			
+			
+	\end{enumerate}
+		
+\end{problem}	
+
+%problem 3
+\begin{problem}
+Let $f(x) = \sin(x)$ and $g(x) = \cos(x)$.  Can you compute $f^{(48)}(x)$ and $g^{(42)}(x)$?  Does this remind you of anything that you learned in a high school mathematics course?  Let $f(x) = \sin(x)$ and $g(x) = \cos(x)$.
+  Can you compute $f^{(48)}(x)$ and $g^{(42)}(x)$?
+  Does this remind you of anything that you learned in a high school mathematics course?
+
+\begin{freeResponse}
+Let's find the first several derivatives of $f(x)=sin(x)$.
+
+	\begin{align*}
+	f^{(0)}(x)&=sin(x)\\
+	f^{(1)}(x)&=cos(x)\\
+	f^{(2)}(x)&=-sin(x)\\
+	f^{(3)}(x)&=-cos(x)\\
+	f^{(4)}(x)&=sin(x)
+	\end{align*}
+
+  Recall that, for $n$ a nonnegative integer,
+  $$f^{(4n)}(x) = f(x) = \sin(x) \quad \text{and} \quad g^{(4n)}(x) = g(x) = \cos(x).$$
+  Thus, 
+  $$f^{(48)}(x) = \sin(x) \quad \text{and} \quad g^{(42)}(x) = g''(x) = - \cos(x).$$  
+
+
+
+\end{freeResponse}
+
+\end{problem}
+	
+
+
+
+	
+	
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+%problem 3
+
+\begin{problem}
+Find values for $a$, $b$, and $c$ so that the following function is both continuous and differentiable everywhere.
+
+$f(x) =   \left\{ \begin{array}{cl}
+	a \sin(x) + b \cos(x)		 	&	\qquad \text{if } x < 0					\\
+	ax^2 + bx + c   				&	\qquad \text{if } x \geq 0	 \end{array} \right.  $
+		\begin{freeResponse}
+		First, if $f'(0)$ exists, then:
+		\begin{align*}
+		f'(0)&=\lim_{x\to 0} \frac{f(x)-f(0)}{x-0}\\\\
+		& \text{since}\ f(0)=a \cdot 0^2+b \cdot 0 +c =c\\\\
+		& \lim_{x\to 0} \frac{f(x)-f(0)}{x-0}=\lim_{x\to 0} \frac{f(x)-c}{x}
+		\end{align*}
+		To determine if this limit exists, we need to examine the left and right limits.
+		
+		\begin{align*}
+		\lim_{x\to 0^+} \frac{f(x)-c}{x}&=\lim_{x\to 0^+} \frac{ax^2+bx+c-c}{x}\\
+		&=\lim_{x\to 0^+} \frac{ax^2+bx}{x}\\
+		&=\lim_{x\to 0^+} (ax+b)\\
+		&=b
+		\end{align*}
+		\begin{align*}
+		\lim_{x\to 0^-} \frac{f(x)-c}{x}&=\lim_{x\to 0^-} \frac{asinx+bcosx-c}{x}\\
+		&=\lim_{x\to 0^-} \frac{asinx}{x}+\lim_{x\to 0^-} \frac{bcosx-c}{x}\\ \\
+		& \text{we already found}\ b=c \ \text{so we have}\\
+		&\lim_{x\to 0^-} \frac{asinx}{x}+\lim_{x\to 0^-} \frac{bcosx-c}{x}=\lim_{x\to 0^-} \frac{asinx}{x}+\lim_{x\to 0^-} \frac{c\cdot cosx-c}{x}\\
+		&=a\cdot \lim_{x\to 0^-} \frac{sinx}{x}+c \cdot \lim_{x\to 0^-} \frac{cosx-1}{x}\\ \\
+		& \text{since}\ \lim_{x\to 0} \frac{sinx}{x}=1 \text{and}\  \lim_{x\to 0} \frac{cosx-1}{x}=0 \ \text{we have}\\
+		&a\cdot \lim_{x\to 0^-} \frac{sinx}{x}+c \cdot \lim_{x\to 0^-} \frac{cosx-1}{x}=a
+		\end{align*}
+
+		This means in order for the derivative to exist, $a=b=c$.
+		\end{freeResponse}
+\end{problem}
+		
+%problem4
+
+\begin{problem} \hfil
+
+\begin{enumerate}
+	\item Let $f(x)= \frac{x^2-5x}{(x+5)sin(x)}$.  Compute $f'(x)$
+
+	\begin{freeResponse}	
+	$f'(x)= \frac{(2x-5)(x+5)sin(x)-(x^2-5x)(sin(x)+(x+5)cos(x))}{(x+5)^2 \cdot sin^2(x)}$
+
+	\end{freeResponse}
+
+	\item Evaluate the liimit. $\lim_{x \to 5} \frac{x^2-5x}{sin(x-5)}$
+
+	\begin{freeResponse}
+	\begin{align*}
+	\lim_{x \to 5} \frac{x^2-5x}{sin(x-5)}=\lim_{x \to 5} \frac{x(x-5)}{sin(x-5)}\\
+	&=\lim_{x \to 5}(x) \cdot  \lim_{x \to 5}\frac{x-5}{sin(x-5)}\\
+	&=\lim_{x \to 5}(x) \cdot  \lim_{x \to 5}\frac{1}{\frac{sin(x-5)}{x-5}}\\
+	&=\lim_{x \to 5}(x) \cdot  \frac{1}{\lim_{x \to 5}\frac{sin(x-5)}{x-5}}\\
+	&= 5(1)=5
+	\end{align*}
+	\end{freeResponse}
+
+\end{enumerate}
+\end{problem}		
+				
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

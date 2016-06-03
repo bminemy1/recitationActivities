@@ -1,4 +1,4 @@
-\documentclass[handout]{ximera}
+\documentclass[nooutcomes, noinstructornotes]{ximera}
 %handout:  for handout version with no solutions or instructor notes
 %handout,instructornotes:  for instructor version with just problems and notes, no solutions
 %noinstructornotes:  shows only problem and solutions
@@ -35,22 +35,33 @@
 \begin{problem}
 Define 
 	$f(x) =   \left\{ \begin{array}{cl}
-	x^2-1		 	&	\qquad \text{if } x > 0					\\
-	\text{? }			&	\qquad \text{if }  x < 0 	\\		\end{array} \right.  $
+	x^2-1		 	&	\qquad \text{if } x < 0					\\
+	\text{? }			&	\qquad \text{if }  x > 0 	\\		\end{array} \right.  $
 \begin{enumerate}	
 	\item  Find an expression for "?" such that $f$ will be even.
 	
 	\begin{freeResponse} 
-			If $f$ is even then $f(x)=f(-x)$.  $f(-x)$ represents the part of the graph less than zero (which is the part we are trying to find).  Lets call $f(-x)=g(x)$ where $g(x)$ is 			the blank we are trying to fill in.  Then we need $f(x)=g(x)$.  So ? must equal $x^2-1$
+			If $f$ is even then $f(x)=f(-x)$.  
+			\begin{align*}
+			f(x)&=f(-x)\ \text{for}\ x>0\\
+			&=(-x)^2-1\\
+			&=x^2-1	
+			\end{align*}
 	\end{freeResponse}
 	
 	\item  Find an expression for "?" such that $f$ will be odd.
 	
 	\begin{freeResponse}
-	   If $f$ is odd then $f(-x)=-f(x)$.  Using the same arguement as in part a, we'll allow $g(x)=f(-x)$.  So we need $g(x)=-f(x)$.  So ? must equal $-(x^2-1) =-x^2+1$.  Graphically, this 		can be seen in the figure below.
-
+	   If $f$ is odd then $f(-x)=-f(x)$. 
+			\begin{align*}
+			-f(x)&=f(-x)\ \text{for}\ x>0\\
+			&=(-x)^2-1\\
+			&=x^2-1\\
+			& \implies f(x)=-x^2+1	
+			\end{align*}
+	
 	\begin{image}		
-	\includegraphics{Figure3.jpg}
+	\includegraphics{Figure3.pdf}
 	\end{image}
 		
 
@@ -76,7 +87,7 @@ Define
 The graph of $g(x)=e^x$ is given below.
 
 	\begin{image}		
-	\includegraphics{Figure1.jpg}
+	\includegraphics{Figure1.pdf}
 	\end{image}
 
 \begin{enumerate}	
@@ -87,26 +98,26 @@ The graph of $g(x)=e^x$ is given below.
 
 
 	
-	\item  Find the values of $g(1), g(0), g(-1)$ and plot them on the graph below.
+	\item  Find the values of $g(1), g(0), g(-1)$ and plot the points $(1,g(1)), (0,g(0)),$ and $(-1,g(-1))$  on the graph below.
 		\begin{freeResponse}
 	
 			$$g(1)=e^1=e$$
 			$$ g(0)=e^0=1$$ 
 			$$g(-1)=e^{-1}=\frac{1}{e}$$
-			 These are values of $g(x)=e^x$ that you should have memorized
+			 These are values of $g(x)=e^x$ that you should know.
 
 		\begin{image}		
-		\includegraphics{Figure5.png}
+		\includegraphics{Figure5.pdf}
 		\end{image}
 
 
 		\end{freeResponse}
 	\item Graph $h(x)=ln(x)$ on the same axis below.
 		\begin{freeResponse}
-		Recall:  $ln(x)$ is the inverse of $e^x$.  To find the graph of $ln(x)$ we reflect the graph of $e^x$ over the line $y=x$
+		Recall:  $ln(x)$ is the inverse of $e^x$.  To find the graph of $ln(x)$ we reflect the graph of $e^x$ over the line $y=x$.  Since the points $\left(-1,\frac{1}{e}\right),(0,1),(1,e)$ are on $y=e^x=g(x)$, the points $\left(\frac{1}{e}, -1\right),(1,0),(e,1)$ are on the graph of $y=\ln(x)=g^{-1}(x)=h(x)$ 
 
 		\begin{image}		
-		\includegraphics{Figure4.png}
+		\includegraphics{Figure4.pdf}
 		\end{image}
 		\end{freeResponse}
 
@@ -115,14 +126,14 @@ The graph of $g(x)=e^x$ is given below.
 		The domain of $h(x)=ln(x)$ is $(0,\infty)$.  The range is $(-\infty,\infty)$.
 		\end{freeResponse}
 
-	\item Find the values of $h(1), h(0), h(-1)$, or say $x$ not in the domain.
+	\item Find the values of $h(1), h(0), h(-1), h(e), h\left(\frac{1}{e}\right)$, or say $x$ not in the domain.
 			\begin{freeResponse}
-			 $$h(1)=ln(1)=e$$
-			$$ h(0)=ln(0)=1$$
+			 $$h(1)=ln(1)=0$$
+			$$ h(0) \text{is not in the domain}$$
 			$$ h(-1) \text{is not in the domain}$$
-			$$g(-1)=e^{-1}=\frac{1}{e}$$
-			 These are values of $h(x)=ln(x)$ that you should have memorized
-
+			$$h(e)=ln(e)=1$$
+			$$h\left(\frac{1}{e}\right)=\ln\left(\frac{1}{e}\right)=\ln\left(e^{-1}\right)= -1\ln(e)=-1$$
+			 These are values of $h(x)=ln(x)$ that you should know.
 		\end{freeResponse}
 	\end{enumerate}
 	
@@ -161,7 +172,7 @@ Given $y(t)=t- \frac{\pi}{3}$ and $w(t)=\sin(t)$.  Find:
 
 	\item  $y(w(\frac{4\pi}{3}))$
 		\begin{freeResponse}
-		$w \left(y \left(\frac{4\pi}{3} \right)\right)=\sin \left(\frac{4\pi}{3}\right)-\frac{\pi}{3}=\frac{\sqrt{3}}{2}-\frac{\pi}{3}$
+		$y \left(w \left(\frac{4\pi}{3} \right)\right)=\sin \left(\frac{4\pi}{3}\right)-\frac{\pi}{3}=\frac{-\sqrt{3}}{2}-\frac{\pi}{3}$
 
 		You should know values of $sin(x)$ and $cos(x)$ for all values found on the unit circle.
 		\end{freeResponse}	
@@ -185,19 +196,19 @@ Define
 	\item  Sketch a graph of $g$
 		\begin{freeResponse} \hfil
 			\begin{image}			
-			\includegraphics{Figure6.png}
+			\includegraphics{Figure6.pdf}
 			\end{image}
 
 		\end{freeResponse}
 
 	\item  Find the domain and range of $g$
 		\begin{freeResponse}	
-			Domain: $(-\infty,\infty)$, Range: $[-1,1]\cup[2,\infty)$
+			Domain: $(-\infty,\infty)$, Range: $[-1,1]\cup(2,\infty)$
 		\end{freeResponse}		
 	
 	\item  Find the values of $g(\pi)$ and $g(-\pi)$
 		\begin{freeResponse}	
-			$g(\pi)=\cos (\pi)=1$ and $g(-\pi)=|-\pi-2|=\pi+2$
+			$g(\pi)=\cos (\pi)=-1$ and $g(-\pi)=|-\pi-2|=\pi+2$
 		\end{freeResponse}
 	
 	\end{enumerate}
@@ -213,14 +224,14 @@ Define
 The entire graph of $f(x)$ is given below.
 
 	\begin{image}
-	\includegraphics{Figure2.png}
+	\includegraphics{Figure2.pdf}
 	\end{image}
 
 \begin{enumerate}	
 	\item  Find the domain and range of $f$
 		\begin{freeResponse}
-			Domain: $[-4,-3)\cup{-2}\cup(-1,4]$
-			Range: $[-4,-3)\cup{-2}\cup[-1,3]$
+			Domain: $[-4,-3]\cup\left\{-2\right\}\cup(-1,4]$
+			Range: $[-4,-3)\cup\left\{-2\right\}\cup[-1,3)$
 		\end{freeResponse}	
 
 	\item  Find the values of $f(-3),f(-2), f(-1),f(2)$
@@ -230,12 +241,12 @@ The entire graph of $f(x)$ is given below.
 
 	\item  Find the intervals on which $f(x)$ is postive.  Find the intervals on which $f(x)$ is negative.
 		\begin{freeResponse}
-		 $f(x)$ is postive on $(1,2)$. $f(x)$ is negative on $[-4,-3),{-2},(-1,1),[2,4)$
+		 $f(x)$ is postive on $(1,2)$. $f(x)$ is negative on $[-4,-3),\left\{-2\right\},(-1,1),[2,4)$
 		\end{freeResponse}
 	
 	\item Find the intervals on which $f$ is increasing.  Find the intervals on which $f$ is decreasing.
 		\begin{freeResponse}
-		$f(x)$ is increasing on $(-4,-3)\cup(0,2)\cup(2,4)$.  $f(x)$ is decreasing on $(-1,0)$
+		$f$ is increasing on $(-4,-3),(0,2),(2,4)$.  $f$ is decreasing on $(-1,0)$
 		\end{freeResponse}
 	
 	\item True or False: $f(1.5) < f(2)$
@@ -258,23 +269,38 @@ Determine if the function is even, odd, or neither.
 
 
 \begin{enumerate}	
-	\item  $h(x)=\cos(x)$
+	\item  $h(x)=x^4+x^2-3$
 		\begin{freeResponse}
 
-		A function is even if $f(x)=f(-x)$ which means it is symmetric about the y-axis.  A function is odd if $f(-x)=-f(x)$ which means it is symmetic about the origin. 
-		 $$h(x)=cos(x)$$
-			$$h(-x)=cos(-x)$$
-			It is a property of $cos(x)$ that $cos(x)=cos(-x)$.  Hence $h(x)=cos(x)$ is even.  This can be verified by graphing $h(x)=cos(x)$ and seeing that it is symmetric about the y-axis.
+		A function is even if $f(x)=f(-x)$ which means it is symmetric about the y-axis.  A function is odd if $f(-x)=-f(x)$ which means its graph is symmetic about the origin. 
+		 $$h(x)=x^4+x^2-3$$
+			$$h(-x)=(-x)^4+(-x)^2-3=x^4+x^2-3$$
+			$h(x)=h(-x)$Hence $h(x)=x^4+x^2-3$ is even.  This can be verified by graphing $h$ and seeing that its graph is symmetric about the y-axis.
 		\end{freeResponse}
 
 	\item  $s(t)=t^2-t$
 		\begin{freeResponse}
 			$$s(t)=t^2-t$$
 			$$s(-t)=(-t)^2-(-t)=t^2+t$$ This does not equal $s(t)$ so $s(t)$ is not even.
-			$$-s(t)=-(t^2-t)=-t^2-t$$  This does not equal $s(-t)$ so $s(t)$ is not odd.  Hence, $s(t)$ is neither even, nor odd.
+			$$-s(t)=-(t^2-t)=-t^2+t$$  This does not equal $s(-t)$ so $s(t)$ is not odd.  Hence, $s(t)$ is neither even, nor odd.
+		\end{freeResponse}
+
+	\item  Given $\sin(\theta)$ is odd and $\cos(\theta)$ is even, is $g(\theta)=\tan(\theta)$ even, odd, or neither?
+		\begin{freeResponse}
+		 $$g(\theta)=\tan(\theta)=\frac{\sin(\theta)}{\cos(\theta)}$$
+			\begin{align*}
+			g(-\theta)&=\frac{\sin(-\theta)}{\cos(-\theta)}\\
+			&=\frac{-\sin(\theta)}{\cos(\theta)}\\
+			&=-\frac{\sin(\theta)}{\cos(\theta)}
+			\end{align*}
+			\begin{center}
+			$$-g(\theta)=-\frac{\sin(\theta)}{\cos(\theta)}$$
+			$g(-\theta)=-g(\theta) \implies g(\theta)$ odd
+			\end{center}
 		\end{freeResponse}
 	\end{enumerate}
 	
+
 	
 \end{problem}
 
@@ -285,41 +311,48 @@ Determine if the function is even, odd, or neither.
 
 %problem 7
 \begin{problem}
-For any function $f$ defined on $(-\infty,\infty)$, can define $f_e$ and $f_o$ as follows: $f_e=\frac{f(x)+f(-x)}{2}$ and $f_o=\frac{f(x)-f(-x)}{2}$
+For any function $f$ defined on $(-\infty,\infty)$, we can define $f_e$ and $f_o$ as follows: $f_e=\frac{f(x)+f(-x)}{2}$ and $f_o=\frac{f(x)-f(-x)}{2}$
 
 
 \begin{enumerate}	
 	\item  Show  $f_e=\frac{f(x)+f(-x)}{2}$  is even
 		\begin{freeResponse}	
 			 $$f_e=\frac{f(x)+f(-x)}{2}$$
-			We want to show this is an even function, so we need to show that when we substitute in $-x$ for $x$ we get back $f_e$
+			We want to show this is an even function, so we need to show $f_e(-x)=f_e(x)$ for all $x$
 			$$f_e(-x)=\frac{f(-x)+f(-(-x))}{2}$$ 
 			$$=\frac{f(-x)+f(x)}{2}$$
-			$$=f_e$$
+			$$=f_e(x)$$
 		\end{freeResponse}
 
 	\item  Show $f_o=\frac{f(x)-f(-x)}{2}$ is odd
 		\begin{freeResponse}	
 			 $$f_o=\frac{f(x)-f(-x)}{2}$$
-			We want to show this is an odd function, so we need to show that when we substitute in $-x$ for $x$ we get back $-f_o$
+			We want to show this is an odd function, so we need to show $f_o(-x)=-f_o(x)$ for all $x$
 			First, we'll find $-f_o$
-			$$-f_o=-\frac{f(x)-f(-x)}{2}$$
-			$$-f_o=\frac{-f(x)+f(-x)}{2}$$
+			\begin{align*}
+			-f_o(x)&=-\frac{f(x)-f(-x)}{2}
+			\end{align*}
 
 			Now we'll find $f_o(-x)$
-			$$\frac{f(-x)-f(-(-x))}{2}$$ 
-			$$=\frac{f(-x)-f(x)}{2}$$
-			$$=f_o$$
+			\begin{align*}
+			f_o(-x)&=\frac{f(-x)-f(-(-x))}{2}\\
+			&=\frac{f(-x)-f(x)}{2}\\
+			&=-\frac{f(x)-f(-x)}{2}\\
+			&=-f_o(x)
+			\end{align*}
+			
 		\end{freeResponse}
 	\item Show that $f(x)=f_e(x)+f_o(x)$, for all $x$
 		\begin{freeResponse}
 		
 		We want to show that $f(x)=f_e(x)+f_o(x)$, for all $x$.  From parts a and b, we know $f_e=\frac{f(x)+f(-x)}{2}$ and $f_o=\frac{f(x)-f(-x)}{2}$.  Therefore,
-			$$f(x)=f_e(x)+f_o(x)=\frac{f(x)+f(-x)}{2}+\frac{f(x)-f(-x)}{2}$$
-			$$f(x)=\frac{f(x)+f(-x)+f(x)-f(-x)}{2}$$
-			$$f(x)=\frac{2f(x)}{2}$$
-			$$f(x)=f(x)$$
-			$$\text{We have just proved that every function can be written as the sum of an odd function and an even function.}$$
+			\begin{align*}
+			f_e(x)+f_o(x)&=\frac{f(x)+f(-x)}{2}+\frac{f(x)-f(-x)}{2}\\
+			&=\frac{f(x)+f(-x)+f(x)-f(-x)}{2}\\
+			&=\frac{2f(x)}{2}\\
+			&=f(x)
+			\end{align*}
+		We have just proved that every function defined on $(-\infty,\infty)$ can be written as the sum of an odd function and an even function.
 	
 		\end{freeResponse}	
 	\end{enumerate}
@@ -327,23 +360,86 @@ For any function $f$ defined on $(-\infty,\infty)$, can define $f_e$ and $f_o$ a
 
 \end{problem}
 
-\begin{instructorNotes}
+%problem8
+\begin{problem}
+Using the known graphs of $y=\sqrt(x)$ and $y=\frac{1}{x}$, sketch the graphs of the following using transformations.
 
-\end{instructorNotes}
+\begin{enumerate}
+ 	\item $y=\sqrt{x+2}-3$
+	\begin{freeResponse}
+		This is a shift of $y=\sqrt(x)$ moved left 2 units and down three units.
+	\begin{image}		
+	\includegraphics[scale = 0.8]{Figure8.png}
+	\end{image}
+	\end{freeResponse}
+	
+
+	\item $y=\frac{1}{x-4}+1$
+
+	\begin{freeResponse}
+		This is a shift of $y=\frac{1}{x}$ moved right 4 units and up one unit.
+		\begin{image}		
+	\includegraphics[scale=0.8]{Figure7.png}
+	\end{image}
+	\end{freeResponse}
+\end{enumerate}
+
+\end{problem}
+
+%problem9
+\begin{problem}
+Find the domain and the range of the function.  Determine whether the function is odd, even, or neither.
+
+\begin{enumerate}
+	\item $f(x)=\frac{x}{\sqrt{x^2-9}}$
+		\begin{freeResponse}
+			To find the domain, recall that a rational expression cannot have $0$ in the denominator and a square root expression cannot have a negative number under the square root.  Thus, $x^2-9>0$.
+			$\implies (x-3)(x+3)>0$  The zeros are located at $x=-3,3$.  From this we can draw a sign chart and test values.
+		\begin{image}		
+	\includegraphics[scale=0.2]{Figure9.png}
+	\end{image}
+		We see that $x^2-9>0$ on the interval $(-3,3)$.  Thus our domain is $(-3,3)$.\\ \\
+
+		Next we check for even/odd/neither.\\
+		$f(-x)=\frac{-x}{\sqrt{(-x)^2-9}}$ which does not equal $f(x)$ so $f(x)$ is not even\\
+		$-f(x)=-\frac{x}{\sqrt{x^2-9}}$ which is equal to $f(-x)$ so $f(x)$ is odd.
+		
+		\end{freeResponse}
+
+	\item $g(x)= \frac{\sin(x)}{x}$
+		\begin{freeResponse}
+	To find the domain, recall that a rational expression cannot have $0$ in the denominator.  Therefore, our domain is $(-\infty,0) \cup (0,\infty)$\\ \\
+	
+	Next we check for even/odd/neither.\\
+		$f(-x)= \frac{\sin(-x)}{-x}=\frac{-\sin(x)}{-x}=\frac{\sin(x)}{x}$ which equals $f(x)$ so $f(x)$ is even
 
 
+		\end{freeResponse}
 
+	\item $h(t)= \ln(t^2-4t+3)$
+
+		\begin{freeResponse}
+		To find the domain, recall that we cannot have $0$ or a negative number inside the natural logarithm.  Therefore, $t^2-4t+3>0$.
+			$\implies (t-3)(t-1)>0$.  The zeros are located at $t=1,3$.  From this we can draw a sign chart and test values.
+
+	\begin{image}		
+	\includegraphics[scale=0.2]{Figure10.png}
+	\end{image}
+		We see that $t^2-4t+3>0$ on the interval $(-\infty,1) \cup (3,\infty)$.  Thus our domain is $(-\infty,1) \cup (3,\infty)$.\\ \\
+		
+		Next we check for even/odd/neither.\\
+		$h(-t))=ln((-t)^2+4t+3)$ which does not equal $h(t)$ so $h(t)$ is not even\\
+		$-h(t)=-\ln(t^2-4t+3)=\ln\left( \frac{1}{t^2-4t+3} \right)$ which is not equal to $h(-t)$ so $h(t))$ is not odd.\\
+		$h(t)$ is neither even nor odd.
+
+
+		\end{freeResponse}
+
+\end{enumerate}
+
+\end{problem}
 
 \end{document} 
-
-
-
-
-
-
-
-
-
 
 
 

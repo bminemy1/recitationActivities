@@ -23,26 +23,26 @@
 
 	\begin{enumerate}
 
-		\item What does a secant line to a linear function look like?  What does a tangent line to a linear function look like? 
+		\item What does a secant line to the graph of a  linear function look like?  What does a tangent line to the graph of a linear function look like? 
 
  \begin{freeResponse}		 
 	
-	A (non-vertical) line can be represented by a function $L$ defined by $L(x) = mx + b$, where $m$ is the slope of the line and $b$ is the $y$-intercept.
+	A graph of a linear function $L$ defined by $L(x) = mx + b$, is a line, where $m$ is the slope of the line and $b$ is the $y$-intercept.
       
         For instance, here is the graph of a particular linear function
         \begin{image}
-          \includegraphics[scale = 0.7]{"Graph of linear function".png}
+          \includegraphics[scale = 0.3]{"Graph of linear function".png}
         \end{image}
 
         If we draw a secant line between two points of this graph we have
         \begin{image}
-          \includegraphics[scale = 0.7]{"Graph of linear function with secant line".png}
+          \includegraphics[scale = 0.3]{"Graph of linear function with secant line".png}
         \end{image}
         So the secant line is identical to the line itself.
 
         If we draw a tangent line at one point on this graph we have
         \begin{image}
-          \includegraphics[scale = 0.7]{"Graph of linear function with tangent line".png}
+          \includegraphics[scale = 0.3]{"Graph of linear function with tangent line".png}
         \end{image}
         So the tangent line is identical to the line itself.
 \end{freeResponse}
@@ -77,7 +77,7 @@
           Secant lines usually don't have this property.
 	\end{freeResponse}
 
-		\item In the graph below, is the given line a secant line or a tangent line?
+		\item In the graph below, is the given line a secant line or a tangent line at the point $\left(\frac{-2-\sqrt{7}}{3},f\left(\frac{-2-\sqrt{7}}{3}\right)\right)$?
 		\begin{image}
 		 \includegraphics[scale = 0.5]{"A secant or tangent line".png}
 		\end{image}
@@ -85,8 +85,8 @@
 	\begin{freeResponse}
 	This is a trick question!
 
-        The given line is a tangent line---when we zoom in enough the graph is nearly indistinguishable from its tangent line at that point.
-        But, it can also be considered a secant line---it intersects the graph at two points.
+        The given line is a tangent line at  $\left(\frac{-2-\sqrt{7}}{3},f\left(\frac{-2-\sqrt{7}}{3}\right)\right)$---when we zoom in enough the graph is nearly indistinguishable from its tangent line at that point.
+        But, it can also be considered a secant line at  $\left(\frac{-2-\sqrt{7}}{3},f\left(\frac{-2-\sqrt{7}}{3}\right)\right)$---it intersects the graph at two points.
 
         By convention however, since we have drawn the graph by emphasizing only one point of intersection we usually interpert such a line as a tangent line.
 	      \end{freeResponse}
@@ -94,11 +94,12 @@
 
 \end{problem}
 
+%problem2
 \begin{problem}
- Part of the given graph can be used to model to ``position-time''graph of a ball thrown straight up into the air.
+ Part of the given graph can be used to model to ``position-time''graph of a ball thrown straight up into the air.  The graph gives the height of the ball in feet $t$ seconds after being released into the air.
   Use this graph, and the given function, to answer the following questions.
   \begin{image}
-    \includegraphics[scale = 0.3]{"Graph of polynomial function".png}
+    \includegraphics[scale = 0.2]{"Graph of polynomial function".png}
   \end{image}
 	
 	
@@ -116,17 +117,16 @@
         The ball is thrown straight up and has no horizontal movement.
 		\end{freeResponse}
 	
+		\item What is the height of the ball at time $t=0$?
+		\begin{freeResponse}
+		The height can be found by finding $f(0)$
+		\begin{align*}
+			f(0)&=-16(0)^2+128(0)+144 \\
+			f(0)&=144\  \text{feet}
+ 			\end{align*}
 
-		\item  What is the domain of the position-time graph of the ball?
-
-		 \begin{freeResponse}
-     	   The domain of $f$ is the interval $[0, 9]$.
-     	   With this domain the position-time graph of the ball is given by
-       		 \begin{center}
-       	  	 \includegraphics[scale = 0.4]{"Position time graph of ball".png}
-        		\end{center}
-     	 \end{freeResponse}
-
+		\end{freeResponse}
+		
 		\item  When will the ball hit the ground?
 		\begin{freeResponse}		 
 		The ball will hit the ground when the height $f(t)$ equals zero.
@@ -136,8 +136,20 @@
  			0&=-16(t+1)(t-9) \\
  			t&=-1,9 
  			\end{align*}
-		The ball will hit the ground at $t=9$ or 9 seconds after the ball is thrown into the air.  We do not use $t=-1$ since we can't have negative time. (In part c, we just excluded $t=-1$ from our domain).
+		The ball will hit the ground at $t=9$ or 9 seconds after the ball is thrown into the air.  
 		\end{freeResponse}
+
+		\item  What is the domain of the position-time graph of the ball?
+
+		 \begin{freeResponse}
+     	   The domain of $f$ is the interval $[0, 9]$.  The ball is released at $t=0$ and hits the ground at $t=9$.
+     	   With this domain the position-time graph of the ball is given by
+       		 \begin{center}
+       	  	 \includegraphics[scale = 0.4]{"Position time graph of ball".png}
+        		\end{center}
+     	 \end{freeResponse}
+
+		
 		
 		\item Use the table of values to find the average velocity of the ball between $t=8.9$ and $t=9$ seconds.
 	\[
@@ -160,7 +172,7 @@
   \begin{freeResponse}
     The average velocity of the ball between $t = 8.9$ seconds and $t = 9$ seconds is
     \[
-       \frac{f(9) - f(8.9)}{9- 8.9} = \frac{0- 15.84}{0.1} = -158.4
+       \frac{f(9) - f(8.9)}{9- 8.9} = \frac{0- 15.84}{0.1} = -158.4\  \text{feet per second}
     \]
   \end{freeResponse}
 
@@ -190,7 +202,7 @@
 		
 		
 			
-		\item    Use the  graph to determine if the ball has instantaneous velocity equal to 0.  Why or why not?
+		\item    Use the  graph to determine if, at any moment in time, the ball has instantaneous velocity equal to 0.  Why or why not?
 
 		\begin{freeResponse}		 
 		 The ball has zero instantaneous velocity when it has a tangent line with zero slope:

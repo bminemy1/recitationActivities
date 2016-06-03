@@ -1,9 +1,13 @@
+\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
 \newcommand {\RR }[0]{\mathbb R}
 \newcommand {\d }[0]{\,d}
 \newcommand {\l }[0]{\ell }
 \newcommand {\ddx }[0]{\frac {d}{dx}}
 \newcommand {\dfn }[0]{\textbf }
 \newcommand {\eval }[1]{\bigg [ ##1 \bigg ]}
+\newcommand {\theenumii }[0]{\textup {(\roman {enumii})}}
+\newcommand {\labelenumii }[0]{\theenumii }
 \newcommand {\RLmulticolcolumns }[0]{\let \maybe@reverse@columns \reverse@column@boxes }
 \newcommand {\LRmulticolcolumns }[0]{\let \maybe@reverse@columns \relax }
 \newcommand {\freeResponse }[0]{ \ifhandout \setbox 0\vbox \bgroup \else \begin {trivlist}\item [\hskip \labelsep \bfseries Solution:\hspace {2ex}] \fi }
