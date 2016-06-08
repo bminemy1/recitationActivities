@@ -77,16 +77,16 @@
           Secant lines usually don't have this property.
 	\end{freeResponse}
 
-		\item In the graph below, is the given line a secant line or a tangent line at the point $\left(\frac{-2-\sqrt{7}}{3},f\left(\frac{-2-\sqrt{7}}{3}\right)\right)$?
+		\item In the graph below, is the given line a secant line or a tangent line at the point $A(a,f(a))$?
 		\begin{image}
-		 \includegraphics[scale = 0.5]{"A secant or tangent line".png}
+		 \includegraphics[scale = 0.7]{figure1.png}
 		\end{image}
 
 	\begin{freeResponse}
 	This is a trick question!
 
-        The given line is a tangent line at  $\left(\frac{-2-\sqrt{7}}{3},f\left(\frac{-2-\sqrt{7}}{3}\right)\right)$---when we zoom in enough the graph is nearly indistinguishable from its tangent line at that point.
-        But, it can also be considered a secant line at  $\left(\frac{-2-\sqrt{7}}{3},f\left(\frac{-2-\sqrt{7}}{3}\right)\right)$---it intersects the graph at two points.
+        The given line is a tangent line at  $A(a,f(a))$---when we zoom in enough the graph is nearly indistinguishable from its tangent line at that point.
+        But, it can also be considered a secant line through A and B.
 
         By convention however, since we have drawn the graph by emphasizing only one point of intersection we usually interpert such a line as a tangent line.
 	      \end{freeResponse}
@@ -96,18 +96,24 @@
 
 %problem2
 \begin{problem}
- Part of the given graph can be used to model to ``position-time''graph of a ball thrown straight up into the air.  The graph gives the height of the ball in feet $t$ seconds after being released into the air.
+ Part of the given parabola can be used to model to ``position-time''graph of a ball thrown straight up into the air.  The graph gives the height of the ball in feet $t$ seconds after being thrown into the air.
   Use this graph, and the given function, to answer the following questions.
   \begin{image}
-    \includegraphics[scale = 0.2]{"Graph of polynomial function".png}
+    \includegraphics[scale = 0.8]{figure2.png}
   \end{image}
 	
 	
 		\begin{enumerate}
-			
+		\item Mark the part of the parabola that can be used to model the position of the ball.		
+		\begin{freeResponse} \hfil
+       		 \begin{center}
+       	  	 \includegraphics[scale = 0.4]{"Position time graph of ball".png}
+        		\end{center}
+		\end{freeResponse}		
+
 		 \item  What are the units on the $t$ axis?  What are the units on the $y$ axis?
 		 \begin{freeResponse}		 
-	The units on the $t$ axis are ``seconds'' (for time), while the units on the $f(t)$ axis are ``feet'' (for height).        
+	The units on the $t$ axis are ``seconds'' (for time), while the units on the $y$ axis are ``feet'' (for height).        
 		\end{freeResponse}
 			
 		\item  If you were watching a movie of the ball being thrown, is the graph a picture of the path that the ball follows?  Why or why not?
@@ -117,7 +123,7 @@
         The ball is thrown straight up and has no horizontal movement.
 		\end{freeResponse}
 	
-		\item What is the height of the ball at time $t=0$?
+		\item Let $f(t)$ done the height of the ball at time $t, t\geq 0$.  What is the height of the ball at time $t=0$?
 		\begin{freeResponse}
 		The height can be found by finding $f(0)$
 		\begin{align*}
@@ -139,7 +145,7 @@
 		The ball will hit the ground at $t=9$ or 9 seconds after the ball is thrown into the air.  
 		\end{freeResponse}
 
-		\item  What is the domain of the position-time graph of the ball?
+		\item  What is the domain of the position function, $f$, of the ball?
 
 		 \begin{freeResponse}
      	   The domain of $f$ is the interval $[0, 9]$.  The ball is released at $t=0$ and hits the ground at $t=9$.
@@ -205,7 +211,7 @@
 		\item    Use the  graph to determine if, at any moment in time, the ball has instantaneous velocity equal to 0.  Why or why not?
 
 		\begin{freeResponse}		 
-		 The ball has zero instantaneous velocity when it has a tangent line with zero slope:
+		 The ball has zero instantaneous velocity when the graph $f=f(t)$  has a tangent line with zero slope:
         \begin{image}
           \includegraphics[scale = 0.5]{"Position time graph with zero velocity".png}
         \end{image}

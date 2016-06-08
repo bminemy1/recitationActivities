@@ -21,8 +21,8 @@
 	\begin{enumerate}
 	\item As $x$ becomes arbitrarily negatively large, $f(x)$ approaches $6$
 	\item As $x$ becomes arbitrarily positively large, $f(x)$ approaches $6$
-	\item As $x$ becomes approaches 6, $f(x)$ becomes arbitrarily negatively large
-	\item As $x$ becomes approaches 6, $f(x)$ becomes arbitrarily positively large
+	\item As $x$ approaches 6, $f(x)$ becomes arbitrarily negatively large
+	\item As $x$ approaches 6, $f(x)$ becomes arbitrarily positively large
 	\end{enumerate}
 
 	\begin{freeResponse}
@@ -56,7 +56,8 @@ Evaluate the following limits.
 
 		\item $\lim_{x \to \infty} \frac{\sin{9x}}{5x}$
 		\begin{freeResponse}
-		 Since $-1 \le  \sin(9x) \le 1$ for all $x$ , $\lim_{x \to \infty} \left(-\frac{1}{5x} \right) = 0$, and $\lim_{x \to \infty} \frac{1}{5x} = 0$ implies, by Squeeze theorem that
+		 Since $-1 \le  \sin(9x) \le 1$ for all $x$ , and therefore $\frac{-1}{5x} \le  \sin(9x) \le \frac{1}{5x}$.\\
+		  We have $\lim_{x \to \infty} \left(-\frac{1}{5x} \right) = 0$ and $\lim_{x \to \infty} \frac{1}{5x} = 0$.  The Squeeze theorem implies that
         \[
           \lim_{x \to \infty} \frac{\sin{9x}}{5x} = 0
         \]
@@ -94,7 +95,7 @@ The function $f$ defined by $\displaystyle f(x) = \frac{\sqrt{2x^2 + 1}}{3x-5}$.
           &= \lim_{x \to \infty}  \frac{\frac{\sqrt{2x^2 + 1}}{\sqrt{x^2}}}{3 - \frac{5}{x}}\\
           &= \lim_{x \to \infty}  \frac{\sqrt{2 + \frac{1}{x^2}}}{3 - \frac{5}{x}} \\
           &= \frac{\sqrt{2}}{3} \\
-          &\implies \mbox{horizontal asymptote $y = \sqrt{2}/3$ as $x \to \infty$}
+          &\implies \mbox{The line $y = \sqrt{2}/3$ is a horizontal asymptoteas $x \to \infty$.}
         \end{align*}
 
         Test of horizontal asymptote as $x \to -\infty$:
@@ -104,7 +105,7 @@ The function $f$ defined by $\displaystyle f(x) = \frac{\sqrt{2x^2 + 1}}{3x-5}$.
           &= \lim_{x \to -\infty}  \frac{\frac{\sqrt{2x^2 + 1}}{-\sqrt{x^2}}}{3 - \frac{5}{x}}\\
           &= \lim_{x \to -\infty}  \frac{-\sqrt{2 + \frac{1}{x^2}}}{3 - \frac{5}{x}} \\
           &= \frac{-\sqrt{2}}{3} \\
-          &\implies \mbox{horizontal asymptote $y = -\sqrt{2}/3$ as $x \to -\infty$}
+          &\implies \mbox{The line $y = -\sqrt{2}/3$ is a horizontal asymptote as $x \to -\infty$}
         \end{align*}
 	
       \end{freeResponse}
@@ -166,20 +167,20 @@ The function $f$ defined by $\displaystyle f(x) = \frac{\sqrt{2x^2 + 1}}{3x-5}$.
  Sketch a possible graph of a function that satisfies all of the given properties.
   (You \emph{do not} need to find a formula for the function.)
   \begin{align*}
- 	\lim_{x \to -2^-} f(x) &= \infty &   f(-2) &= 5 &  f(1) &= 2 \\
-	 \lim_{x \to \infty} f(x) &= 3 & \lim_{x \to -\infty} f(x) &= -\infty & \lim_{x \to 5} f(x) &= \infty \\
-	 \lim_{x \to 6} f(x) &= 3 & f(6) &=  1 & \lim_{x \to -4^-} f(x) &= \infty \\
-	 \lim_{x \to -4^+} f(x) &= -\infty & f(4) &\text{ is undefined} 
+ 	\lim_{x \to -2^-} f(x) &= \infty &   f(-2) &= -5 &  f(1) &= 2 \\
+	 \lim_{x \to \infty} f(x) &= -\infty & \lim_{x \to -\infty} f(x) &= 4 & \lim_{x \to 5} f(x) &= \infty \\
+	 \lim_{x \to 3} f(x) &= 3 & f(3) &=  1 &\\
+	  \lim_{x \to -2^+}f(x)&=5  & f(4) &\text{ is undefined}& \lim_{x \to 4}f(x)&=3\\
   \end{align*}
   \begin{freeResponse}
       There are many correct solutions to this problem.
   One possible solution can be constructed as follows:
-	First we draw the given points.  We'll draw open brackets on the x-axis at $x=4$ since $f(x)$ is not defined at $x=4$ (This is seen in blue)
+	First we draw the given points.  We'll also draw open brackets on the x-axis at $x=4$ since $f(x)$ is not defined at $x=4$ (This is seen in green.)
 	\begin{image}
    	 \includegraphics[scale = 0.4]{Figure10.png}   
 	\end{image} 
 
-	Then we draw the vertical asymptotes and arrows indicating how the graph approaches the asymptote (seen in green).  We also draw end-behavior as $x$ approaches $\infty$ and $-\infty$ (seen in purple)
+	Then we draw the vertical  and horizontal asymptotes (in purple) and arrows indicating how the graph approaches the asymptote (in blue).  We also draw end-behavior as $x$ approaches $\infty$ and $-\infty$ (in blue).  We can also draw tails where we know limits at particular x-values.  Such as $ \lim_{x \to -2^+}f(x)=5$.
 	\begin{image}
 	\includegraphics[scale = 0.4]{figure11.png}
 	\end{image}

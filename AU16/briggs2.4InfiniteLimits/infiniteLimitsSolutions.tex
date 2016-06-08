@@ -138,33 +138,23 @@
 
   \begin{enumerate}
 	\item
-      $\displaystyle \lim_{x \to 3} \frac{x^2 - 3}{x^2 - x - 6}$
-      \begin{freeResponse} Checking left and right sided limits we have:
+      $\displaystyle \lim_{x \to 3^-} \frac{x^2 - 3}{x^2 - x - 6}$
+      \begin{freeResponse} Checking right sided limit we have:
 
-          $\lim_{x \to 3^+} \frac{x^2 - 3}{x^2 - x - 6} = \lim_{x \to 3^+} \frac{x^2 - 3}{(x-3)(x+2)}$ is of the form:  $\frac{\text{ pos}}{0^+}$
-
-	$$\lim_{x \to 3^+} \frac{x^2 - 3}{x^2 - x - 6} = \infty$$
 
          $ \lim_{x \to 3^-} \frac{x^2 - 3}{x^2 - x - 6} = \lim_{x \to 3^-} \frac{x^2 - 3}{(x-3)(x+2)}$  is of the form:  $\frac{\text{ pos}}{0^-}$
 
 	$$\lim_{x \to 3^-} \frac{x^2 - 3}{x^2 - x - 6} =-\infty$$
-
-	Since $\lim_{x \to 3^-} \frac{x^2 - 3}{x^2 - x - 6} \ne \lim_{x \to 3^+} \frac{x^2 - 3}{x^2 - x - 6}\implies \lim_{x \to 3} \frac{x^2 - 3}{x^2 - x - 6}$ Does not exist
       \end{freeResponse}
 
     \item
-      $\displaystyle \lim_{x \to 5} \frac{x^2 + 6}{x^2 - 3x - 10}$
+      $\displaystyle \lim_{x \to 5^+} \frac{x^2 + 6}{x^2 - 3x - 10}$
       \begin{freeResponse}
        Checking left and right sided limits we have:
         \begin{align*}
           \lim_{x \to 5^+} \frac{x^2 + 6}{x^2 - 3x - 10} &= \lim_{x \to 5^+} \frac{x^2 + 6}{(x-5)(x+2)}  = \infty \\
 	&\text{because the limit is of the form:} \frac{\text{ pos}}{0^+}
         \end{align*}
-        and
-        \begin{align*}
-          \lim_{x \to 5^-} \frac{x^2 + 6}{x^2 - 3x - 10} &= \lim_{x \to 5^-} \frac{x^2 + 6}{(x-5)(x+2)} \text{form $\text{pos}/0^-$} = -\infty
-        \end{align*}
-Since $ \lim_{x \to 5^+} \frac{x^2 + 6}{x^2 - 3x - 10}  \ne \lim_{x \to 5^-} \frac{x^2 + 6}{x^2 - 3x - 10}\implies \lim_{x \to 5} \frac{x^2 + 6}{x^2 - 3x - 10}$ Does not exist
       \end{freeResponse}
 
     \item
@@ -186,7 +176,7 @@ Since $ \lim_{x \to 5^+} \frac{x^2 + 6}{x^2 - 3x - 10}  \ne \lim_{x \to 5^-} \fr
     \item
       $\displaystyle \lim_{x \to 2} \frac{-e^x}{(2-x)^3}$
       \begin{freeResponse}
-        Checking left and right sided limits we have:
+        Checking left limit we have:
  \begin{align*}
           \lim_{x \to 2^+} \frac{-e^x}{(2-x)^3} &= \infty\\
 	&\text{because the limit is of the form:} \frac{\text{neg}}{0^-}
@@ -205,19 +195,21 @@ Since $ \lim_{x \to 5^+} \frac{x^2 + 6}{x^2 - 3x - 10}  \ne \lim_{x \to 5^-} \fr
 \begin{problem}
 	Sketch a possible graph of a function $g$ that satisfies the following conditions:
 	\begin{align*}
-	&\text{Domain:} [-5,-2) \cup (-2,1] \cup (1,3) \cup (3,5)
+	&\text{Domain:} [-5,-2) \cup (-2,3) \cup (3,5)
 	& \lim_{x \to -2} g(x) = 3\\
 	& g(1)=1
 	& \lim_{x \to 1^+} g(x) = -\infty\\
 	& \lim_{x \to 3} g(x) = \infty
-	& \lim_{x \to 5^-} g(x) = \infty
+	& \lim_{x \to 5^-} g(x) = \infty\\
+	& \lim_{x \to 1^-} g(x) = 1
+	& g(-5)=-1.8
 	\end{align*}
 	\begin{freeResponse}
 	First we will draw our domain on the x-axis using green.  We will use a bracket when a point is in the domain and curved parenthesis when it is not.
   \begin{center}
     \includegraphics[scale=.5]{Figure2.pdf}
   \end{center}
-	Next, we draw and open circle at $(-1,3)$ because we know $\lim_{x \to -2} g(x) = 3$.  We also draw a closed circle at (1,1) because we know $g(1)=1$.  Finally we draw in our vertical asymptotes in purple as indicated by the infinite limits at $x=1, x=3, x=5$.  We draw the tails of the asmyptotes in blue to indice whether the function $g$ approaches $ -\infty$ or $\infty$.
+	Next, we draw and open circle at $(-1,3)$ because we know $\lim_{x \to -2} g(x) = 3$.  We also draw a closed circle at (1,1) and (-5,-1.8) because we know $g(1)=1$ and $g(-5)=-1.8$.  Finally we draw in our vertical asymptotes in purple as indicated by the infinite limits at $x=1, x=3, x=5$.  We draw the tails of the asmyptotes in blue to indice whether the function $g$ approaches $ -\infty$ or $\infty$.
   \begin{center}
     \includegraphics[scale=.5]{Figure3.pdf}
   \end{center}
@@ -248,11 +240,13 @@ Since $ \lim_{x \to 5^+} \frac{x^2 + 6}{x^2 - 3x - 10}  \ne \lim_{x \to 5^-} \fr
     \item
       $\displaystyle \lim_{x \to 0^+} x \cdot \sin(\ln(x))$.
       \begin{freeResponse}
-	We know sine of any number is always between $-1$ and $1$, thus $-1 \le  \cdot \sin(\ln(x)) \le 1$.
-        Since $-x \le x \cdot \sin(\ln(x)) \le x$ for $x$ near $0$ and $x>0$, $\lim_{x \to 0^+} -x = 0$, and $\lim_{x \to 0^+} x = 0$ implies, by Squeeze theorem that
-        \[
-          \lim_{x \to 0^+} x \cdot \sin(\ln(x)) = 0
-        \]
+	We know sine of any number is always between $-1$ and $1$, so we have $-1 \le  \cdot \sin(\ln(x)) \le 1$.
+	\begin{align*}
+	(-1 \le  \cdot& \sin(\ln(x)) \le 1) \cdot x\\
+       	-x \le x \cdot& \sin(\ln(x)) \le x\ \text{for}\ x \text{postive and near} 0\\
+	\text{Since}\ \lim_{x \to 0^+} -x = 0,\ &\text{and}\ \lim_{x \to 0^+} x = 0\ \text{By Squeeze theorem we get:}\\
+          &\lim_{x \to 0^+} x \cdot \sin(\ln(x)) = 0
+ 		\end{align*}
       \end{freeResponse}
 
 
@@ -280,9 +274,7 @@ Let $f$ be a function given by $f(x)=\ln(1+x)$.
 	
 	\item Find the vertical asymptotes of $f$ and justify.
 	\begin{freeResponse}
-	$g(x)=\ln(x)$ has a vertical asymptote at $x=0$.  $f$ is $g$ shifted one unit left so $f$ will have a vertical asymptote at $x=-1$.  We justify this using limits.\\
-	Anaylzing $\lim_{x \to -1^+} \ln(1+x)$, we see as $x$ approaches $-1$ from the right, the value inside $\ln$ will approach $0$ from the right.  
-	Since, $\lim_{x \to 0^+}\ln(x)=-\infty$, $\lim_{x \to -1^+} \ln(1+x)=-\infty$
+	$g(x)=\ln(x)$ has a vertical asymptote at $x=0$.  $f$ is $g$ shifted one unit left so $f$ will have a vertical asymptote at $x=-1$. 
 	
 	\end{freeResponse}
 

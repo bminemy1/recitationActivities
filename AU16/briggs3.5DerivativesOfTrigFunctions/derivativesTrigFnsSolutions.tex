@@ -1,4 +1,4 @@
-\documentclass[nooutcomes]{ximera}
+\documentclass[nooutcomes,handout]{ximera}
 %% handout
 %% space
 %% newpage
@@ -112,11 +112,11 @@ Let $f(x) = \sin(x)$ and $g(x) = \cos(x)$.  Can you compute $f^{(48)}(x)$ and $g
 Let's find the first several derivatives of $f(x)=sin(x)$.
 
 	\begin{align*}
-	f^{(0)}(x)&=sin(x)\\
-	f^{(1)}(x)&=cos(x)\\
-	f^{(2)}(x)&=-sin(x)\\
-	f^{(3)}(x)&=-cos(x)\\
-	f^{(4)}(x)&=sin(x)
+	f^{(0)}(x)&=\sin(x)\\
+	f^{(1)}(x)&=\cos(x)\\
+	f^{(2)}(x)&=-\sin(x)\\
+	f^{(3)}(x)&=-\cos(x)\\
+	f^{(4)}(x)&=\sin(x)
 	\end{align*}
 
   Recall that, for $n$ a nonnegative integer,
@@ -172,13 +172,13 @@ $f(x) =   \left\{ \begin{array}{cl}
 		&=b
 		\end{align*}
 		\begin{align*}
-		\lim_{x\to 0^-} \frac{f(x)-c}{x}&=\lim_{x\to 0^-} \frac{asinx+bcosx-c}{x}\\
-		&=\lim_{x\to 0^-} \frac{asinx}{x}+\lim_{x\to 0^-} \frac{bcosx-c}{x}\\ \\
+		\lim_{x\to 0^-} \frac{f(x)-c}{x}&=\lim_{x\to 0^-} \frac{a \sin(x)+b \cos(x)-c}{x}\\
+		&=\lim_{x\to 0^-} \frac{a \sin(x)}{x}+\lim_{x\to 0^-} \frac{b\cos(x)-c}{x}\\ \\
 		& \text{we already found}\ b=c \ \text{so we have}\\
-		&\lim_{x\to 0^-} \frac{asinx}{x}+\lim_{x\to 0^-} \frac{bcosx-c}{x}=\lim_{x\to 0^-} \frac{asinx}{x}+\lim_{x\to 0^-} \frac{c\cdot cosx-c}{x}\\
-		&=a\cdot \lim_{x\to 0^-} \frac{sinx}{x}+c \cdot \lim_{x\to 0^-} \frac{cosx-1}{x}\\ \\
-		& \text{since}\ \lim_{x\to 0} \frac{sinx}{x}=1 \text{and}\  \lim_{x\to 0} \frac{cosx-1}{x}=0 \ \text{we have}\\
-		&a\cdot \lim_{x\to 0^-} \frac{sinx}{x}+c \cdot \lim_{x\to 0^-} \frac{cosx-1}{x}=a
+		&\lim_{x\to 0^-} \frac{a \sin(x)}{x}+\lim_{x\to 0^-} \frac{b \cos(x)-c}{x}=\lim_{x\to 0^-} \frac{a \sin(x)}{x}+\lim_{x\to 0^-} \frac{c\cdot \cos(x)-c}{x}\\
+		&=a\cdot \lim_{x\to 0^-} \frac{ \sin(x)}{x}+c \cdot \lim_{x\to 0^-} \frac{\cos(x)-1}{x}\\ \\
+		& \text{since}\ \lim_{x\to 0} \frac{\sin(x)}{x}=1 \text{and}\  \lim_{x\to 0} \frac{\cos(x)-1}{x}=0 \ \text{we have}\\
+		&a\cdot \lim_{x\to 0^-} \frac{\sin(x)}{x}+c \cdot \lim_{x\to 0^-} \frac{\cos(x)-1}{x}=a
 		\end{align*}
 
 		This means in order for the derivative to exist, $a=b=c$.
@@ -190,21 +190,21 @@ $f(x) =   \left\{ \begin{array}{cl}
 \begin{problem} \hfil
 
 \begin{enumerate}
-	\item Let $f(x)= \frac{x^2-5x}{(x+5)sin(x)}$.  Compute $f'(x)$
+	\item Let $f(x)= \frac{x^2-5x}{(x+5)\sin(x)}$.  Compute $f'(x)$
 
 	\begin{freeResponse}	
-	$f'(x)= \frac{(2x-5)(x+5)sin(x)-(x^2-5x)(sin(x)+(x+5)cos(x))}{(x+5)^2 \cdot sin^2(x)}$
+	$f'(x)= \frac{(2x-5)(x+5)\sin(x)-(x^2-5x)(\sin(x)+(x+5)\cos(x))}{(x+5)^2 \cdot\sin^2(x)}$
 
 	\end{freeResponse}
 
-	\item Evaluate the liimit. $\lim_{x \to 5} \frac{x^2-5x}{sin(x-5)}$
+	\item Evaluate the liimit. $\lim_{x \to 5} \frac{x^2-5x}{\sin(x-5)}$
 
 	\begin{freeResponse}
 	\begin{align*}
-	\lim_{x \to 5} \frac{x^2-5x}{sin(x-5)}=\lim_{x \to 5} \frac{x(x-5)}{sin(x-5)}\\
-	&=\lim_{x \to 5}(x) \cdot  \lim_{x \to 5}\frac{x-5}{sin(x-5)}\\
-	&=\lim_{x \to 5}(x) \cdot  \lim_{x \to 5}\frac{1}{\frac{sin(x-5)}{x-5}}\\
-	&=\lim_{x \to 5}(x) \cdot  \frac{1}{\lim_{x \to 5}\frac{sin(x-5)}{x-5}}\\
+	\lim_{x \to 5} \frac{x^2-5x}{\sin(x-5)}=\lim_{x \to 5} \frac{x(x-5)}{\sin(x-5)}\\
+	&=\lim_{x \to 5}(x) \cdot  \lim_{x \to 5}\frac{x-5}{\sin(x-5)}\\
+	&=\lim_{x \to 5}(x) \cdot  \lim_{x \to 5}\frac{1}{\frac{\sin(x-5)}{x-5}}\\
+	&=\lim_{x \to 5}(x) \cdot  \frac{1}{\lim_{x \to 5}\frac{\sin(x-5)}{x-5}}\\
 	&= 5(1)=5
 	\end{align*}
 	\end{freeResponse}
