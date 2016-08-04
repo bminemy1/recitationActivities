@@ -1,4 +1,4 @@
-\documentclass[nooutcomes, handout]{ximera}
+\documentclass[nooutcomes]{ximera}
 %% handout
 %% space
 %% newpage
@@ -64,7 +64,7 @@ For each of the following functions, use the "short cut derivative rules" to com
 	\end{enumerate}
 \end{problem}
 	
-	
+%problem2	
 \begin{problem}
   Given the polynomial function $q$ defined by $q(v) = 2v^3 - 5v^2 + 7v - 9$ find:
   \begin{enumerate}
@@ -84,8 +84,8 @@ For each of the following functions, use the "short cut derivative rules" to com
           &= \lim_{h \to 0} \frac{(2(3+h)^3 - 5(3+h)^2 + 7(3+h) - 9) - (54 - 45 + 21 - 9)}{h}\\
           &= \lim_{h \to 0} \frac{(2(27+27h+9h^2+h^3) - 5(9+6h+h^2) + 21+7h - 9) - 21}{h} \\
           &= \lim_{h \to 0} \frac{54+54h+18h^2+2h^3-45-30h-5h^2+21+7h-9-21}{h} \\
-          &= \lim_{h \to 0} \frac{31h+18h^2-3h^3}{h} \\
-          &= \lim_{h \to 0} (31+18h-3h^2)\\
+          &= \lim_{h \to 0} \frac{31h+13h^2+2h^3}{h} \\
+          &= \lim_{h \to 0} (31+13h+2h^2)\\
           &= 31.
         \end{align*}
       \end{freeResponse}
@@ -148,15 +148,29 @@ For each of the following functions, use the "short cut derivative rules" to com
      \includegraphics[scale = 0.3]{"Graph of derivative of squaring function".png}
    \end{image}
    \begin{image}
-     \hspace*{-7em}
      \includegraphics[scale = 0.23]{"Graph of identity function".png}
-     \hspace{2em}
-     \includegraphics[scale = 0.23]{"Graph of derivative of identity function".png}
    \end{image}
 
    \begin{enumerate}
      \item
-       Compute the value of the $(5f+3g)'(2)$.
+	Write an equation for the tangent line to $f$ at $x=2$.
+
+	\begin{freeResponse} \hfil
+	[\
+		f(2)=4
+		f'(2)=4
+		y-4=4(x-2)
+		y=4x-4
+	/]
+	\end{freeResponse}
+
+	\item Draw the graph of $g'$
+		\begin{freeResponse}
+	   \begin{image}
+     \includegraphics[scale = 0.23]{"Graph of derivative of identity function".png}
+   \end{image}	
+		\end{freeResponse}
+       \item Compute the value of the $(5f+3g)'(2)$.
 
        \begin{freeResponse}
          \begin{align*}
@@ -166,12 +180,48 @@ For each of the following functions, use the "short cut derivative rules" to com
          \end{align*}
        \end{freeResponse}
 
+	\item Find the equation of the tangent line to the graph of $(5f+3g)$ at the point where $x=2$.
+
+	\begin{freeResponse}
+         \begin{align*}
+           (5f+3g)(2) &= 5\cdot f(2) + 3 \cdot g(2)\\
+                       &= 5 \cdot 4 + 3 \cdot 2 \\
+                       &= 20 + 6 = 26\\\\
+	y-26 &=23(x-2)\\
+	y&=23x-20
+         \end{align*}
+	\end{freeResponse}
+
+	\item Use the given graph of $f'$ and $g'$ to find the following:
+	\begin{enumerate}
+		\item A formula for $f'$
+			\begin{freeResponse}
+				$f'(x)=2x$.  The graph shows a linear function through the point $(0,0)$ and $(1,2)$.
+			\end{freeResponse}
+	
+		\item A formula for $g'$
+			\begin{freeResponse}
+				$g'(x)=1$.  The graph shows a linear function with slope $0$ and through the point $(0,1)$.
+			\end{freeResponse}
+	\end{enumerate}
+
+	\item Find the expression for $(5f+3g)'(x)$.
+	
+	\begin{freeResponse}
+         \begin{align*}
+           (5f+3g)'(x) &= 5\cdot f'(x) + 3 \cdot g'(x)\\
+                       &= 5 \cdot 2x + 3 \cdot 1 \\
+                       &= 10x+3\\\\
+	y-26 &=23(x-2)\\
+	y&=23x-20
+         \end{align*}
+	\end{freeResponse}
 
      \item
        Compute the value of $(5f+3g)''(2)$.
        \begin{freeResponse}
          \begin{align*}
-		(5f+3g)''(2)&=[(5f+3g)'](2)\\
+		(5f+3g)''(2)&=[(5f+3g)]'(2)\\
 		&=[5f'+3g']'(2)\\
 		&=[5f''+3g''](2)
 	\end{align*}
@@ -192,48 +242,7 @@ For each of the following functions, use the "short cut derivative rules" to com
          \end{align*}
        \end{freeResponse}
 
-     \item
-       Find the equation of the tangent line to the graph of $(5f+3g)'$ at the point $(2, (5f+3g)'(2))$.
 
-       \begin{freeResponse}
-         Slope of tangent line to the graph of $(5f+3g)'$ at $x = 2$:
-            \begin{align*} 
-           (5f+3g)''(2) = 10
-         \end{align*}
-
-         Point on tangent line at $x = 2$:
-         \begin{align*}
-           (2, (5f+3g)'(2)) = (2, 23).
-         \end{align*}
-
-         Equation of tangent line at $x = 2$:
-         \begin{align*}
-           y - 23 = 10(x-2) &\implies y = 10x - 20 + 23 = 10x + 3.
-         \end{align*}
-       \end{freeResponse}
-
-	\item
-	Use the given graph of $f'$ and $g'$ to find the following:
-	\begin{enumerate}
-		\item A formula for $f'$
-			\begin{freeResponse}
-				$f'(x)=2x$.  The graph shows a linear function through the point $(0,0)$ and $(1,2)$.
-			\end{freeResponse}
-	
-		\item A formula for $g'$
-			\begin{freeResponse}
-				$g'(x)=1$.  The graph shows a linear function with slope $0$ and through the point $(0,1)$.
-			\end{freeResponse}
-		\item A formula for $(5f+3g)'$.  Comment on the relationship between this formula and the equation of the tangent line to $(5f+3g)'$ at the point where $x=2$.
-			\begin{freeResponse}
-				\begin{align*}
-				(5f+3g)'(x)&= 5f'(x)+3g'(x)\\
-				&= 5(2x)+3(1)\\
-				&=10x+3				
-				\end{align*}
-			The formula for $(5f+3g)'(x)$ is a linear function. Any line tangent to $(5f+3g)'(x)$  will have the forumula $y=10x+3$
-			\end{freeResponse}
-	\end{enumerate}
    \end{enumerate}
 
 \end{problem}

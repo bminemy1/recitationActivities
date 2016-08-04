@@ -1,4 +1,4 @@
-\documentclass[nooutcomes, handout]{ximera}
+\documentclass[nooutcomes]{ximera}
 %% handout
 %% space
 %% newpage
@@ -23,7 +23,33 @@
 \begin{abstract}		\end{abstract}
 \maketitle
 
-%Problem1
+
+%problem1
+\begin{problem} Differentiate the functions using product or quotient rule.
+\begin{enumerate}
+	\item $h(u)=7ue^u$
+	\begin{freeResponse}
+ Applying the power rule:
+  \begin{align*}
+    h(u) &=7ue^u\\
+    &\implies h'(u) = (7ue^u) '\\
+    &= 7\cdot e^u+7u \cdot e^u
+  \end{align*}
+  \end{freeResponse}
+	
+	\item $s(t)=\frac{\sqrt{t}}{e^t}$
+	\begin{freeResponse}
+ Applying the quotient rule:
+  \begin{align*}
+    s(t)&=\frac{\sqrt{t}}{e^t}\\
+    &\implies s'(t) = \left(\frac{\sqrt{t}}{e^t}\right)' \\
+    &= \frac{t^{-1/2} \cdot e^t -  \sqrt{t}\cdot e^t}{e^{2t}}
+  \end{align*}
+  \end{freeResponse}
+\end{enumerate}
+\end{problem}
+
+%Problem2
 \begin{problem}
  Differentiate the function $f$ defined by $f(x) = 1/x^8$ in two different ways.
   \begin{freeResponse}
@@ -45,7 +71,7 @@
   \end{freeResponse}
 \end{problem}
 	
-%problem 2			
+%problem 3			
 \begin{problem}
 Suppose that $f(5) = 7$, $f'(5) = 8$, $g(5) = 3$, and $g'(5) = -4$.  Find:
 
@@ -81,11 +107,11 @@ Suppose that $f(5) = 7$, $f'(5) = 8$, $g(5) = 3$, and $g'(5) = -4$.  Find:
 		\end{align*}
 		\end{freeResponse}
 		
-	\item  $\eval{ \ddx \left( \frac{g}{x+2} \right) (x)}_{x=5}$
+	\item  $\eval{ \ddx \left( \frac{g(x)}{x+2} \right)}_{x=5}$
 		\begin{freeResponse}
 		\begin{align*}
-		\eval{\ddx \left( \frac{g}{x+2} \right) (x)}_{x=5} &= \eval{\frac{(x+2) \cdot g'(x)) - (g(x) \cdot (x+2)'}{(x+2)^2}}_{x=5}  \\
-		&= \frac{(x+2)(-4) - (3)(1)}{(5+2)^2}  \\
+		\eval{\ddx \left( \frac{g(x)}{x+2} \right)}_{x=5} &= \eval{\frac{(x+2) \cdot g'(x)) - (g(x) \cdot (x+2)'}{(x+2)^2}}_{x=5}  \\
+		&= \frac{(5+2)(-4) - (3)(1)}{(5+2)^2}  \\
 		&= \frac{(7)(-4) - (3)(1)}{7^2}  \\
 		&= \frac{-28 - 3}{49} = - \frac{31}{49}
 		\end{align*}
@@ -93,10 +119,10 @@ Suppose that $f(5) = 7$, $f'(5) = 8$, $g(5) = 3$, and $g'(5) = -4$.  Find:
 
 
 
-	\item $\eval{ \ddx \left( \frac{xf(x)}{g(x)} \right) (x)}_{x=5}$
+	\item $\eval{ \ddx \left( \frac{xf(x)}{g(x)} \right)}_{x=5}$
 		\begin{freeResponse}
 		\begin{align*}
-		\eval{\ddx \left( \frac{xf(x)}{g(x)} \right) (x)}_{x=5} &= \eval{\frac{(((xf(x))' \cdot g(x)) - (g'(x) \cdot (xf(x)))}{(g(x))^2}}_{x=2}  \\
+		\eval{\ddx \left( \frac{xf(x)}{g(x)} \right)}_{x=5} &= \eval{\frac{(((xf(x))' \cdot g(x)) - (g'(x) \cdot (xf(x)))}{(g(x))^2}}_{x=5}  \\
 		&= \eval{\frac{\left( (x)' \cdot f(x)+x \cdot f'(x) \right) \cdot g(x)) - (g'(x) \cdot (xf(x))}{(g(x))^2}}_{x=5}  \\
 		&= \frac{(1 \cdot 7+ 5 \cdot 8)(3) - (-4)(5)(7)}{(3)^2}  \\
 		&= \frac{50 - 140}{9}  \\
@@ -111,7 +137,7 @@ Suppose that $f(5) = 7$, $f'(5) = 8$, $g(5) = 3$, and $g'(5) = -4$.  Find:
 
 
 
-%problem 3	
+%problem 4	
 \begin{problem}
   Use the given information to find the equation of the tangent line.
   \begin{enumerate}
@@ -197,7 +223,7 @@ Suppose that $f(5) = 7$, $f'(5) = 8$, $g(5) = 3$, and $g'(5) = -4$.  Find:
    \end{enumerate}
 \end{problem}
 
-%problem 4
+%problem 5
 \begin{problem}
 Differentiate the following functions:
 
@@ -233,7 +259,7 @@ Differentiate the following functions:
 	\end{enumerate}		
 \end{problem}
 	
-%problem5
+%problem6
 \begin{problem}
 	The graph of a function $g$ is given below.  Using the graph, estimate the derivative at the given point: \\
 	$\ddx \left({\frac{xg(x)}{x+3}}\right)\ \text{at}\ x=1$
@@ -248,10 +274,10 @@ Differentiate the following functions:
     			 \includegraphics[scale = 0.5]{Figure2.png}
  		  \end{image}
 		
-		Since $g'(1)$ is the slope of the line tangent to the curve $y=g(x)$ at the point $(1,g(1))$, we can estimate its slope of the line.  It seems that when $x$ grows by any $\Delta x$, $y$ also grows by the same amount.  So the slope $=g'(1) \approx 1$.  Therefore,
+		Since $g'(1)$ is the slope of the line tangent to the curve $y=g(x)$ at the point $(1,g(1))$, we can estimate it from the figure above.  The tangent line seems to pass through the points $(1,2)$ and $(2,3)$, so its slope is $\frac{3-2}{2-1}=1$.
 
 	\begin{align*}
-	\eval{ \ddx \left( \frac{xg(x)}{x+2}\right)}_{x=1}&= \eval{\frac{(g(x)+xg'(x))(x+3)-xg(x)}{(x+3)^2}}_{x=1}\\
+	\eval{ \ddx \left( \frac{xg(x)}{x+3}\right)}_{x=1}&= \eval{\frac{(g(x)+xg'(x))(x+3)-xg(x)}{(x+3)^2}}_{x=1}\\
 	&=\frac{(g(1)+1g'(1))(1+3)-(1)g(1)}{(1+3)^2} \\
 	& \approx \frac{(2+1(1))(4)-1(2)}{4^2}\\
 	&=\frac{(2+1)(4)-2}{16}\\
