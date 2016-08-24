@@ -1,4 +1,4 @@
-\documentclass[nooutcomes]{ximera}
+\documentclass[nooutcomes,handout]{ximera}
 %% handout
 %% space
 %% newpage
@@ -15,7 +15,7 @@
 \begin{abstract}		\end{abstract}
 \maketitle
 
-\section{Some notes on notation for solving limits:}
+\section{Some notes on notation for finding limits:}
 \begin{enumerate}
 	\item When writing a form of a limit, we NEVER write $\lim_{x \to a}f(x)=\frac{0}{0}$.  It is the $=$ that makes this a mathematically incorrect statement.  Instead, write $\lim_{x \to a}f(x)$ is of the form $\frac{0}{0}$.
 
@@ -58,7 +58,7 @@
 
       \item[Quotient]
         \[
-          \lim_{x \to a} \left(\frac{f(x)}{g(x)}\right) = \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)}, \text{provided} \lim_{x \to a} g(x) \ne 0
+          \lim_{x \to a} \left(\frac{f(x)}{g(x)}\right) = \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)},\ \text{provided} \lim_{x \to a} g(x) \ne 0
         \]   
 
       \item[ Power]
@@ -188,12 +188,12 @@ Suppose
 	\begin{freeResponse}
 	 To find a number $a$ for which $\lim_{x \to 3} f(x)$ exists we find $a$ such that $\lim_{x \to 3^-} f(x) = \lim_{x \to 3^+} f(x)$.
 
-    To find the left-sided limit we have
+    To find the left-sided limit:
     \[
       \lim_{x \to 3^-} f(x) = \lim_{x \to 3^-} (x^2 - ax) = 9 - 3a.
     \]
   
-    To find the right-sided limit we have
+    To find the right-sided limit:
     \[
       \lim_{x \to 3^+} f(x) = \lim_{x \to 3^+} (a2^x + 7 + a) = a2^3 + 7 + a = 9a + 7.
     \]
@@ -213,10 +213,11 @@ Suppose
 
   Determine the value of $\lim_{x \to 0} (x^2 \cos(1/x))$.
   \begin{freeResponse}
-	$\lim_{x \to 0} \cos(1/x)$ does not exist so we cannot apply the product rule.
+	$\lim_{x \to 0} \cos(1/x)$ does not exist (see Briggs 2.2 example 5) so we cannot apply the product rule.
 	\begin{align*}    
-		&\text{We have}\ -x^2 \le x^2 \cdot \cos(1/x) \le x^2\ \text{for}\ x \text{near}\ 0\\
-		 &\lim_{x \to 0} -x^2 = 0\ \text{and}\ \lim_{x \to 0} x^2 = 0\ \text{so by the squeeze theorem}\\
+		&\text{Since}\ -1\le \frac{1}{x} \le 1, x\ne 0,\ \text{by multiple by}\ x^2>0,\ \text{we get:}\\
+		&-x^2 \le x^2 \cdot \cos(1/x) \le x^2\ \text{for}\ x\ \text{near}\ 0\\
+		 &\lim_{x \to 0} (-x^2) = 0\ \text{and}\ \lim_{x \to 0} x^2 = 0\ \text{so by the squeeze theorem}\\
     		&\lim_{x \to 0} x^2 \cdot \cos(1/x) = 0
 	\end{align*}
   \end{freeResponse}
@@ -230,7 +231,7 @@ Suppose
 	
 %problem 5
 \begin{problem}
- For all $x$ near 0 the inequalities $1 - x^2/6 \le \sin(x)/x \le 1$ are true.
+ For all $x$ near 0, the inequalities $1 - x^2/6 \le \sin(x)/x \le 1$ are true.
   Use these inequalities to find $\displaystyle\lim_{x \to 0} \frac{\sin(x)}{x}$.
   \begin{freeResponse}
     Since

@@ -1,0 +1,9 @@
+This is makeindex, version 2.15 [MiKTeX 2.9] (kpathsea + Thai support).
+Scanning input file derivativesOfLogAndExpFnsSolutions.oc...
+!! Input index error (file = derivativesOfLogAndExpFnsSolutions.oc, line = 1):
+   -- Unknown index keyword \outcome.
+!! Input index error (file = derivativesOfLogAndExpFnsSolutions.oc, line = 2):
+   -- Unknown index keyword \outcome.
+done (0 entries accepted, 2 rejected).
+Nothing written in derivativesOfLogAndExpFnsSolutions.ind.
+Transcript written in derivativesOfLogAndExpFnsSolutions.ilg.

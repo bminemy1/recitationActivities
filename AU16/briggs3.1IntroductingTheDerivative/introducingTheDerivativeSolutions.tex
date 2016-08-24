@@ -1,4 +1,4 @@
-\documentclass[nooutcomes]{ximera}
+\documentclass[nooutcomes,handout]{ximera}
 %% handout
 %% space
 %% newpage
@@ -25,7 +25,7 @@
   \]
   \begin{enumerate}
     \item
-      In Figure 1 on the left, what are the coordinates of $P$ and $Q$?  In Figure 2 on the right, what are the coordinates of $P$ and $Q$?
+      In Figure 1 on the left, what are the coordinates of $P$ and $Q$?  In Figure 2 on the right, what are the expressions for the coordinates of $P$ and $Q$?
 
 	\begin{freeResponse}
 	Figure 1 on the left: $P(a,f(a))$ and $Q(x,f(x))$ \\
@@ -36,15 +36,15 @@
 	\item Express the slope of the secant line through $P$ and $Q$ in terms of the above coordinates for each Figure 1 and Figure 2.
 
       \begin{freeResponse}
-	Figure 1: $\frac{f(x)-f(a)}{x-a}$ 
+	Figure 1: $\frac{f(x)-f(a)}{x-a}$ \quad
 	Figure 2: $\frac{f(a+h)-f(a)}{h}$
         \end{freeResponse}
 	
 	\item
-	Express the slope of the tangent line at the point $x=P$ in terms of the above coordinates for each Figure 1 and Figure 2.
+	Express the slope of the tangent line at the point $P$ in terms of the above coordinates for each Figure 1 and Figure 2.
 
 	\begin{freeResponse}
-        	Figure 1:  $ \lim_{x \to a} \frac{f(x)-f(a)}{x-a}$
+        	Figure 1:  $ \lim_{x \to a} \frac{f(x)-f(a)}{x-a}$\quad
 	Figure 2: $\lim_{h \to 0} \frac{f(a+h)-f(a)}{h}$
       \end{freeResponse}
 
@@ -77,7 +77,7 @@
  For each of the following functions find the equation of the tangent line at the given point.
   \begin{enumerate}
     \item
-      $f(x) = -5x^2 + 7x - 9$ at $x = 3$.
+      $f(x) = -5x^2 + 7x - 9$\quad at $x = 3$.
       \begin{freeResponse}
         Slope of tangent line:
         \begin{align*}
@@ -100,7 +100,7 @@
       \end{freeResponse}
 
     \item
-      $g(u) = \sqrt{5u-4}$ at $u = 3$.
+      $g(u) = \sqrt{5u-4}$\quad at $u = 3$.
       \begin{freeResponse}
         Slope of tangent line:
         \begin{align*}
@@ -125,7 +125,7 @@
       \end{freeResponse}
 
     \item
-      $\displaystyle s(z) = \frac{z}{z-5}$ at $z = 3$.
+      $\displaystyle s(z) = \frac{z}{z-5}$\quad at $z = 3$.
       \begin{freeResponse}
         Slope of tangent line:
         \begin{align*}
@@ -154,7 +154,7 @@
 
 
 %problem3
-\begin{problem} Find the equation of the tangent line at the given point.  Then graph the function and its derivative on the same plot.
+\begin{problem} Find the equation of the tangent line at the given point.  Then graph the function and the tangent line on the same plot.
 $f(x)=\sqrt{x+1}$ at $x=3$
 
 	\begin{freeResponse}
@@ -177,7 +177,7 @@ $f(x)=\sqrt{x+1}$ at $x=3$
           &\implies y = \frac{1}{4}x + 1\frac{1}{4}.
         \end{align*}
 	        \begin{image}
-          \includegraphics[scale = 0.6]{Figure5.JPG}
+          \includegraphics[scale = 0.5]{Figure5.JPG}
         \end{image}
 
 	\end{freeResponse}
@@ -193,7 +193,7 @@ The graph of a function $p$ and a point in its domain, $b$, are shown in the fig
         \end{image}
 
 	\begin{enumerate}
-		\item In the figure above, draw and mark clearly the quantity $\Delta y=[p(b)-p(1)]$ and the quantity $\Delta x=b-1$.
+		\item In the figure above, draw and mark clearly the quantity $\Delta y=p(b)-p(1)$ and the quantity $\Delta x=b-1$.
 		\begin{freeResponse}\hfil
 	        \begin{image}
           \includegraphics[scale = 0.7]{Figure7.png}
@@ -209,7 +209,7 @@ The graph of a function $p$ and a point in its domain, $b$, are shown in the fig
 
 		\item Complete the sentence.  Provided it exists, the limit $\lim_{x \to 1}\frac{p(x)-p(1)}{x-1}$ is the slope...
 		\begin{freeResponse}
-			 Provided it exists, the limit $\lim_{x \to 1}\frac{p(x)-p(1)}{x-1}$ is the slope of the tangent line to the curve at the point $(1,p(1))$
+			 Provided it exists, the limit $\lim_{x \to 1}\frac{p(x)-p(1)}{x-1}$ is the slope of the tangent line to the curve $y=p(x)$ at the point $(1,p(1))$
 		\end{freeResponse}
 	\end{enumerate}
 \end{problem}
@@ -219,7 +219,7 @@ The graph of a function $p$ and a point in its domain, $b$, are shown in the fig
 	
 %problem5	
 \begin{problem} 
-The position, $s(t)$, of an object moving along a horizontal line is given by $s(t) = t^2 - 4$.  Where $s$ is in meters and $t$ is in seconds.
+The position, $s(t)$, of an object moving along a horizontal line is given by $s(t) = t^2 - 4$, where $s$ is in meters and $t$ is in seconds.
 \begin{enumerate}
 \item
 Mark the position of the object on the line at time $t = 1$:
@@ -251,10 +251,10 @@ Compute the average velocity, $v_{\mathrm{AV}}(t)$, of the object during the tim
 \item
 $[1, t]$, for $t > 1$;
 \begin{freeResponse}
-The average velocity over $[1, t]$ is
+The average velocity,$v_{\mathrm{AV}}(t)$ over $[1, t]$ is
 \begin{align*}
-\frac{s(t) - s(1)}{t-1} &= \frac{(t^2-4) - (-3)}{t-1}\\
-&= \frac{t^2-1}{t-1} = t+1.
+v_{\mathrm{AV}}(t)=\frac{s(t) - s(1)}{t-1} &= \frac{(t^2-4) - (-3)}{t-1}\\
+&= \frac{t^2-1}{t-1} = t+1,\quad t>1
 \end{align*}
 \end{freeResponse}
 
@@ -263,11 +263,11 @@ $[t, 1]$, for $0 < t < 1$.
 \begin{freeResponse}
 The average velocity over $[t, 1]$ is
 \begin{align*}
-\frac{s(1) - s(t)}{1-t} &=\frac{(-3) - (t^2-4)}{1-t}\\
-&= \frac{1-t^2}{1-t} = 1+t.
+v_{\mathrm{AV}}(t)=\frac{s(1) - s(t)}{1-t} &=\frac{(-3) - (t^2-4)}{1-t}\\
+&= \frac{1-t^2}{1-t} = 1+t, \quad 0<t<1
 \end{align*}
 
-Note: $\frac{s(1) - s(t)}{1-t}= \frac{s(t) - s(1)}{t-1}=1+t$
+Note: $v_{\mathrm{AV}}(t)=\frac{s(1) - s(t)}{1-t}= \frac{s(t) - s(1)}{t-1}=1+t, \quad t>0$
 \end{freeResponse}
 \end{enumerate}
 

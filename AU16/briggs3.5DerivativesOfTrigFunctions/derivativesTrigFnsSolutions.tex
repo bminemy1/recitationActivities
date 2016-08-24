@@ -79,7 +79,7 @@
 	\item Express $\sin\left(\frac{\pi}{3}\right)$ and $\cos\left(\frac{\pi}{3}\right)$ in terms of the sides of the triangle.
 
 	\begin{freeResponse}
-	$\sin\left(\frac{\pi}{3}\right)=\frac{\sqrt{3}}{2}$ and $\cos\left(\frac{\pi}{3}\right)=\frac{1}{2}$
+	$\sin\left(\frac{\pi}{3}\right)=\frac{B}{C}=\frac{\sqrt{3}}{2}$ and $\cos\left(\frac{\pi}{3}\right)=\frac{A}{C}=\frac{1}{2}$
 
 	\end{freeResponse}
 	\end{enumerate}
@@ -109,20 +109,20 @@
 For any point P(x,y) on the unit circle, we can express its coordinates in terms of $\sin(\theta)$ and $\cos(\theta)$.
 Here $\theta$ is the radian measure of the angle in standard position whose terminal side is the line through the origin and the point $P(x,y)$.
 \begin{image}
-		\includegraphics[scale=.8]{figure12.png}
+		\includegraphics[scale=.8]{figure13.png}
 		\end{image}
 		\begin{freeResponse}
 	$(x,y)=(\cos(\theta),\sin(\theta))$
 	\end{freeResponse}
 
-	\item  Use all of the above information to label the given points on the unit circle.
+	\item  Use all of the above information to label the given points on the unit circle.  That is, for each point on the unit circle, provide the angle measure in radians and degrees, and give the (x,y) coordinate for the point.
 		\begin{image}
 		\includegraphics{figure6.png}
 		\end{image}
 
 		\begin{freeResponse} \hfil
 		\begin{image}
-		\includegraphics[scale=.6]{figure7.png}
+		\includegraphics[scale=.7]{figure7.png}
 		\end{image}
 		\end{freeResponse}
 	\end{enumerate}
@@ -171,10 +171,10 @@ Here $\theta$ is the radian measure of the angle in standard position whose term
 	\item Graph $f(\theta)=\sin(\theta)$ and $g(\theta)=\cos(\theta)$ from $[-\frac{\pi}{8},2\pi+\frac{\pi}{8}]$
 		\begin{freeResponse} \hfil
 		\begin{image}
-		\includegraphics[scale=.3]{figure8.png}
+		\includegraphics{figure8.png}
 		\end{image}
 		\begin{image}
-		\includegraphics[scale=.3]{figure9.png}
+		\includegraphics{figure9.png}
 		\end{image}
 		\end{freeResponse}
 
@@ -207,6 +207,10 @@ Here $\theta$ is the radian measure of the angle in standard position whose term
 					$(0,\frac{\pi}{2})$
 				\end{freeResponse}
 			\end{enumerate}
+			\item Estimate the slope of $f$ at the points $x=0$ (i.e. $f'(0)$), $x=\pi$ (i.e. $f'(\pi)$), $x=2\pi$ (i.e. $f'(2\pi)$).
+				\begin{freeResponse}
+					The slope of $f$ at $x=0$ and $x=2\pi$ is 1.  	The slope of $f$ at $x=\pi$ is -1
+				\end{freeResponse}
 			\item Where does $g'(\theta)=0$?
 		\begin{freeResponse}
 			$g'(\theta=0$ at $\theta=0,\pi,2\pi$
@@ -234,17 +238,19 @@ Here $\theta$ is the radian measure of the angle in standard position whose term
 					$(\frac{3\pi}{2},2\pi)$
 				\end{freeResponse}
 			\end{enumerate}
-		\begin{freeResponse}
-			$g'$ is steepest at $\frac{\pi}{2},\frac{3\pi}{2}$
-		\end{freeResponse}
-		\end{enumerate}
-	\item Use the above information to sketch a graph of $f'$ and $g'$.
+			\item Estimate the slope of $g$ at the points $x=\frac{\pi}{2}$ (i.e. $g'(\frac{\pi}{2})$), $x=\frac{3\pi}{2}$ (i.e. $g'(\frac{3\pi}{2}i)$).
+				\begin{freeResponse}
+					The slope of $g$ at  $x=\frac{\pi}{2}$  is -1.  The slope of $g$ at $x=\frac{3\pi}{2}$ is 1.
+				\end{freeResponse}
+		\end{enumerate}			
+
+		\item Use the above information to sketch a graph of $f'$ and $g'$
 		\begin{freeResponse} \hfil
 		\begin{image}
-		\includegraphics[scale=.3]{figure10.png}
+		\includegraphics{figure10.png}
 		\end{image}
 		\begin{image}
-		\includegraphics[scale=.3]{figure11.png}
+		\includegraphics{figure11.png}
 		\end{image}
 		\end{freeResponse}
 
@@ -363,8 +369,8 @@ Let's find the first several derivatives of $f(x)=sin(x)$.
   $$f^{(4n)}(x) = f(x) = \sin(x) \quad \text{and} \quad g^{(4n)}(x) = g(x) = \cos(x).$$
   Thus: \\ 
   $f^{(48)}(x) =f(x)= \sin(x)$ \\
- $g^{(42)}(x) =g^{(40+2)}(x)= g^{(2)}(x) = g''(x) = - \cos(x)$  \\
-$g^{(39)}(x) =g^{(36+3)}(x)= g^{(3)}(x) = g'''(x) = \sin(x)$  
+ $g^{(42)}(x) =g^{(40+2)}(x)=g^{(40)^{(2)}}(x)= g^{(2)}(x) = g''(x) = - \cos(x)$  \\
+$g^{(39)}(x) =g^{(36+3)}(x)=g^{(36)^{(3)}}(x)= g^{(3)}(x) = g'''(x) = \sin(x)$  
 
 
 
@@ -372,13 +378,6 @@ $g^{(39)}(x) =g^{(36+3)}(x)= g^{(3)}(x) = g'''(x) = \sin(x)$
 
 \end{problem}
 	
-
-
-
-	
-	
-			
-
 
 
 		
@@ -413,14 +412,14 @@ $g^{(39)}(x) =g^{(36+3)}(x)= g^{(3)}(x) = g'''(x) = \sin(x)$
 		
 %problem8		
 \begin{problem}
-Find values for $a$, $b$, and $c$ so that the following function is both continuous and differentiable everywhere.
+Find values for $a$, $b$, and $c$ so that the following function is differentiable everywhere.
 
 $f(x) =   \left\{ \begin{array}{cl}
 	a \sin(x) + b \cos(x)		 	&	\qquad \text{if } x < 0					\\
 	ax^2 + bx + c   				&	\qquad \text{if } x \geq 0	 \end{array} \right.  $
 		\begin{freeResponse}
-		The function $f$ is differentiable for $x<0$ since $f$ is a combination of trigonometric functions.  $f$ is also differentiable $x>0$ since $f$ is a polynomial.  We need to focus on $x=0$.  Since $f$ is differentiable everywhere, $f$ must also be differentiable at $x=0$ and therefore continuous at $x=0$.  Therefore: \\\\
-We need that $\lim_{x \to 0^-} f(x) = \lim_{x \to 0^+} f(x)$ and $\lim_{x \to 0} f(x)=f(0)$.  Observe that
+		The function $f$ is differentiable for $x<0$ since $f$ is a combination of trigonometric functions.  $f$ is also differentiable $x>0$ since $f$ is a polynomial on that interval.  We need to focus on $x=0$.  Since $f$ is differentiable everywhere, $f$ must also be differentiable at $x=0$ and therefore continuous at $x=0$.  Therefore: \\\\
+We need that $\lim_{x \to 0^-} f(x) = \lim_{x \to 0^+} f(x)=\lim_{x \to 0} f(x)=f(0)$.  Observe that
 		
 		\begin{itemize}
 		
@@ -429,7 +428,7 @@ We need that $\lim_{x \to 0^-} f(x) = \lim_{x \to 0^+} f(x)$ and $\lim_{x \to 0}
 		= b(1) = b$.
 		
 		\item  $ \lim_{x \to 0^+} f(x)
-		= \lim_{x \to 0^+} ax^2 + bx + c 
+		= \lim_{x \to 0^+} (ax^2 + bx + c)
 		= c$.
 		
 		\end{itemize}
@@ -453,9 +452,9 @@ We need that $\lim_{x \to 0^-} f(x) = \lim_{x \to 0^+} f(x)$ and $\lim_{x \to 0}
 		\lim_{x\to 0^-} \frac{f(x)-c}{x}&=\lim_{x\to 0^-} \frac{a \sin(x)+b \cos(x)-c}{x}\\
 		&=\lim_{x\to 0^-} \frac{a \sin(x)}{x}+\lim_{x\to 0^-} \frac{b\cos(x)-c}{x}\\ \\
 		& \text{we already found}\ b=c \ \text{so we have}\\
-		&\lim_{x\to 0^-} \frac{a \sin(x)}{x}+\lim_{x\to 0^-} \frac{b \cos(x)-c}{x}=\lim_{x\to 0^-} \frac{a \sin(x)}{x}+\lim_{x\to 0^-} \frac{c\cdot \cos(x)-c}{x}\\
+		&\lim_{x\to 0^-} \frac{a \sin(x)}{x}+\lim_{x\to 0^-} \frac{c\cdot \cos(x)-c}{x}\\
 		&=a\cdot \lim_{x\to 0^-} \frac{ \sin(x)}{x}+c \cdot \lim_{x\to 0^-} \frac{\cos(x)-1}{x}\\ \\
-		& \text{since}\ \lim_{x\to 0} \frac{\sin(x)}{x}=1 \text{and}\  \lim_{x\to 0} \frac{\cos(x)-1}{x}=0 \ \text{we have}\\
+		& \text{since}\ \lim_{x\to 0} \frac{\sin(x)}{x}=1\ \text{and}\  \lim_{x\to 0} \frac{\cos(x)-1}{x}=0 \ \text{we have}\\
 		&a\cdot \lim_{x\to 0^-} \frac{\sin(x)}{x}+c \cdot \lim_{x\to 0^-} \frac{\cos(x)-1}{x}=a
 		\end{align*}
 
