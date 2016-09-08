@@ -1,4 +1,4 @@
-\documentclass[nooutcomes,handout]{ximera}
+\documentclass[nooutcomes]{ximera}
 %% handout
 %% space
 %% newpage
@@ -108,8 +108,8 @@
         This statement is \textbf{false}!
         \begin{align*}
           \lim_{h \to 0^+} \frac{f(0  + h) - f(0)}{h}
-          &= \lim_{h \to 0} \frac{h^{1/3}}{h} \\
-          &= \lim_{h \to 0} \frac{1}{h^{\frac{2}{3}}} \\	
+          &= \lim_{h \to 0^+} \frac{h^{1/3}}{h} \\
+          &= \lim_{h \to 0^+} \frac{1}{h^{\frac{2}{3}}} \\	
           &= \infty\ \text{because the limit is of the form:}\ \frac{\text{pos}}{0^+}\\
           &\implies \mbox{$f'(0)$ is undefined}
         \end{align*}
@@ -124,8 +124,9 @@
     \includegraphics[scale=.7]{Figure1.png}
   \end{image}
   \begin{enumerate}
+	%part a
     \item
-      Using this graph to find the following:  (Assume all values will be integers or $+\infty$ or $-\infty$)
+      Use this graph to find the following:  (Assume all values will be integers or $+\infty$ or $-\infty$)
       \begin{enumerate}
         \item 
           all $x$ where $f(x) = 0$,
@@ -149,13 +150,13 @@
           \end{freeResponse}
 
         \item
-          all $x$ where $f(x)$ attains a local maximum and all $x$ where $f(x)$ attains a local minimum.
+          all $x$ where $f(x)$ attains a local maximum and all $x$ where $f$ attains a local minimum.
           \begin{freeResponse}
             $f(x)$ has a local maximum at $x=-3$.
             $f(x)$ has a local minimum at $x=2$.
           \end{freeResponse}
       \end{enumerate}
-
+	%part b
     \item
 
       Without sketching the graph of $f'$ find
@@ -171,7 +172,7 @@
           all $x$ where $f'(x) > 0$,
           \begin{freeResponse}
             ${f}'(x)$ is positive when the slope of the tangent line is positive.
-            Observe that the graph of $f$ is increasing on $(-\infty ,-3), (2,\infty)$ and this same set of intervals is where the tangent lines have positive slope.
+            Observe that $f$ is increasing on $(-\infty ,-3), (2,\infty)$ and this same set of intervals is where the tangent lines have positive slope.
             Therefore $f'(x) > 0$ on $(-\infty ,-3), (2,\infty)$.
           \end{freeResponse}
         
@@ -179,7 +180,7 @@
           all $x$ where $f'(x) < 0$, and
           \begin{freeResponse}
             ${f}'(x)$ is negative when the slope of the tangent line is negative.
-            Observe that the graph of $f$ is decreasing on $(-3,2)$ and this interval is where the tangent lines have negative slope.
+            Observe that $f$ is decreasing on $(-3,2)$ and this interval is where the tangent lines have negative slope.
             Therefore $f'(x) < 0$ on $(-3,2)$.
           \end{freeResponse}
 
@@ -198,13 +199,13 @@
 	\end{enumerate}
 
       \end{enumerate}
-
+	%part c
       \item
       Sketch a graph of $f'$.
       \begin{freeResponse}
         The graph of $f'$ is approximately
         \begin{image}
-          \includegraphics[scale = 0.7]{Figure2.png}
+          \includegraphics[scale = 0.5]{Figure2.png}
         \end{image}
       \end{freeResponse}
   \end{enumerate}
@@ -305,7 +306,7 @@ Let $f(x) = |5-x|$.
 		\begin{freeResponse}
 		Recall that 
 		$$f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x-a}.$$
-		When $a < 5$, $0 < 5-a$ and so $f(a) = |5-a| = 5-a$.  Since we are considering the limit as $x$ approaches $a$, (and therefore interested in value really close to $a$), we may also assume that $x < 5$ and therefore $f(x) = 5-x$.  Thus
+		When $a < 5$, $0 < 5-a$ and so $f(a) = |5-a| = 5-a$.  Since we are considering the limit as $x$ approaches $a$, (and therefore interested in values of $x$  really close to $a$), we may also assume that $x < 5$ and therefore $f(x) = 5-x$.  Thus
 		\begin{align*}
 		f'(a) &= \lim_{x \to a} \frac{f(x) - f(a)}{x-a}  \\
 		&= \lim_{x \to a} \frac{(5-x) - (5-a)}{x-a}  \\
@@ -332,22 +333,23 @@ Let $f(x) = |5-x|$.
 	\item Determine whether $f'(5)$ exists.  
 	
 		\begin{freeResponse}
-		If  $f'(5)$ exists then $\lim_{x \to 5} \frac{f(x) - f(5)}{x-5}$ exists.  But when $x$ is close to $5$ it may be that $x>5$ or $x<5$. \\
+		If  $f'(5)$ exists then $\lim_{x \to 5} \frac{f(x) - f(5)}{x-5}$ exists.  But when $x$ is close to $5$ it may be that $x>5$ or $x<5$.   So in order to find this limit, we have to check whether the two one-sided limits are equal.\\
 		This means,  $\lim_{x \to 5^-} \frac{f(x) - f(5)}{x-5}=\lim_{x \to 5^+} \frac{f(x) - f(5)}{x-5}$\\ 
+
 
 		\begin{align*}
 		\lim_{x \to 5^-} \frac{f(x) - f(5)}{x-5}&=\lim_{x \to 5^-} \frac{-(x-5) - (0)}{x-5}=-1\\
 		\lim_{x \to 5^+} \frac{f(x) - f(5)}{x-5}&=\lim_{x \to 5^+} \frac{(x-5) - (0)}{x-5}=1\\
 		\lim_{x \to 5^-} \frac{f(x) - f(5)}{x-5} &\ne\lim_{x \to 5^+} \frac{f(x) - f(5)}{x-5}
 		\end{align*}
-		Therefore, $f'(5)$ does not exist.
+		Therefore, $f'(5)$ does not exist.\\\\
 			$f'(a) =   \left\{ \begin{array}{cl}
 	1	 	&	\qquad \text{if } a>5					\\ \\
 	\text{undefined}	&	\qquad \text{if } a=5	\\ \\
 	-1			&	\qquad \text{if } a<5				\end{array} \right.  $
 		\end{freeResponse}
 		
-	\item Sketch a graph of the function $f(x)$ and it's derivative $f'(x)$
+	\item Sketch a graph of the function $f(x)$ and its derivative $f'(x)$
 
 		\begin{freeResponse} \hfil
 \begin{image}

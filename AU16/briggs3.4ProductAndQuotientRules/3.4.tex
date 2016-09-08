@@ -1,4 +1,4 @@
-\documentclass[nooutcomes]{ximera}
+\documentclass[nooutcomes,handout]{ximera}
 %% handout
 %% space
 %% newpage
@@ -43,7 +43,7 @@
   \begin{align*}
     s(t)&=\frac{\sqrt{t}}{e^t}\\
     &\implies s'(t) = \left(\frac{\sqrt{t}}{e^t}\right)' \\
-    &= \frac{t^{-1/2} \cdot e^t -  \sqrt{t}\cdot e^t}{e^{2t}}
+    &= \frac{\frac{1}{2}t^{-1/2} \cdot e^t -  \sqrt{t}\cdot e^t}{e^{2t}}
   \end{align*}
   \end{freeResponse}
 \end{enumerate}
@@ -125,8 +125,8 @@ Suppose that $f(5) = 7$, $f'(5) = 8$, $g(5) = 3$, and $g'(5) = -4$.  Find:
 		\eval{\ddx \left( \frac{xf(x)}{g(x)} \right)}_{x=5} &= \eval{\frac{(((xf(x))' \cdot g(x)) - (g'(x) \cdot (xf(x)))}{(g(x))^2}}_{x=5}  \\
 		&= \eval{\frac{\left( (x)' \cdot f(x)+x \cdot f'(x) \right) \cdot g(x)) - (g'(x) \cdot (xf(x))}{(g(x))^2}}_{x=5}  \\
 		&= \frac{(1 \cdot 7+ 5 \cdot 8)(3) - (-4)(5)(7)}{(3)^2}  \\
-		&= \frac{50 - 140}{9}  \\
-		&= \frac{-90}{9} = - 10
+		&= \frac{141+140}{9}  \\
+		&= \frac{281}{9}
 		\end{align*}
 		\end{freeResponse}
 
