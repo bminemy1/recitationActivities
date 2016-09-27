@@ -28,7 +28,7 @@
 
 %problem 1
 \begin{problem}
-The graph of $s=f(t)$ is the position of John walking along a straight path.
+John is walking along a straight path.  His position at the time $t>0$ is given by $s=f(t)$.  He starts at $t=0$ from his house ($f(0)=0$) and the graph of $f$ is given below.
 
 
 	\begin{image}
@@ -36,17 +36,17 @@ The graph of $s=f(t)$ is the position of John walking along a straight path.
 	\end{image}
 
 	\begin{image}
-	\includegraphics[trim= 140 420 290 180]{Figure2.pdf}
+	\includegraphics{Figure2a.png}
 	\end{image}
 	
 	\begin{enumerate}
 	
 	%part a
-	\item  Describe the motion of the object as precisely as you can.
+	\item  Describe the motion of John as precisely as you can.
 		\begin{freeResponse}
 		Let us assume that $f(t)$ gives the position of John from his house at time $t$.  If $f(t) < 0$, then John is west of his house;  if $f(t) > 0$, then John is east of his house; if $f(t)=0$, then John is in front of his house.  
 		
-		For the first hour, that is, for $0 \leq t \leq 1$, John walks east away from his house.
+		For the first hour, that is for $0 \leq t \leq 1$ John walks east away from his house.
 		
 		\begin{image}
 		\includegraphics[trim= 140 570 290 200]{Figure3.pdf}
@@ -58,7 +58,7 @@ The graph of $s=f(t)$ is the position of John walking along a straight path.
 		\includegraphics[trim= 140 570 290 200]{Figure4.pdf}
 		\end{image}
 		
-		For the third hour, that is, for $2\le t\le 3$, John realizes he needs to pick up an apple from the grocery store, which is way east of his house, for Elaine.  So he turns around again and walks east to the store.
+		For the third hour, that is, for $2\le t\le 3$, John realizes he needs to pick up an apple from the store, which is way east of his house, for Elaine.  So he turns around again and walks east to the store.
 		
 		\begin{image}
 		\includegraphics[trim= 140 570 290 200]{Figure5.pdf}
@@ -75,15 +75,15 @@ The graph of $s=f(t)$ is the position of John walking along a straight path.
 		
 		
 	%part b
-	\item  When is the velocity of the object zero?  What is happening to the object at those times? 
+	\item  When is John's velocity zero?  What is happening to John at those times? 
 		\begin{freeResponse}
-		John's velocity is zero at times $t=0,t=1,t=2$, and $t=3$ (the times where the slopes of the tangent lines are zero).  At these times, John changes direction since the slopes of the tangent lines to the graph of $f(t)$ change from positive to negative.
+		John's velocity is zero at times $t=0,t=1,t=2$, and $t=3$ (the times where the slopes of the tangent lines are zero). At these times, John changes direction since the sign of the slope of the tangent line to the graph of $f$ changes then.
 		\end{freeResponse}
 		
 		
 		
 	%part c
-	\item  When is the object moving in the positive direction?  When is the object the furthest in the positive direction and the furthest in the negative direction?
+	\item  When is John moving in the positive direction?  When is John the furthest in the positive direction and the furthest in the negative direction?
 		\begin{freeResponse}
 		John is moving in the positive direction (in this story, east) during times in the region $(0,1) \cup (2,3)$.  John is furthest in the positive direction at time $t=3$ and furthest in the negative direction at (approximately) time $t=3.5$.
 		\end{freeResponse}
@@ -91,9 +91,9 @@ The graph of $s=f(t)$ is the position of John walking along a straight path.
 		
 		
 	%part d
-	\item  When is the object speeding up and slowing down? When is the object going at maximum velocity?
+	\item  When is John's velocity increasing?  And when is it decreasing?  When is John going at maximum velocity?
 		\begin{freeResponse}
-		John is speeding up in the region $(0,0.5) \cup (1, 1.5) \cup (2, 2.5) \cup (3, 3.5)$.  He is slowing down in the region $(0.5, 1) \cup (1.5, 2) \cup (2.5, 3)$.  John is moving the fastest at time $t = 3.5$, but that maximizes his speed, not his velocity, because he is moving in the negative direction at that time.  It appears that he maximizes his velocity at about $t=2.5$.  
+		John's velocity is increasing on the time intervals $(0,0.3),(1.5,2.5)$.  John's velocity is decreasing on the time intervals $(0.3, 1.5),(2.5,3.5)$.  John is moving the fastest at time $t = 3.5$, but that maximizes his speed, not his velocity, because he is moving in the negative direction at that time.  It appears that he maximizes his velocity at about $t=2.5$.  
 		\end{freeResponse}
 		
 		
@@ -110,7 +110,7 @@ The graph of $s=f(t)$ is the position of John walking along a straight path.
 
 %problem 2
 \begin{problem}
-Suppose that a stone is thrown vertically upward from a cliff on Mars with an initial velocity of $64$ ft/s from a height of $192$ ft.  The height $s$ of the stone above the ground after $t$ seconds is given by $s(t) = -6t^2 + 24t + 192$.
+Suppose that a stone is thrown vertically upward from a cliff on Mars with an initial velocity of $24$ ft/s from a height of $192$ ft.  The height $s$ of the stone above the ground after $t$ seconds is given by $s(t) = -6t^2 + 24t + 192$.
 
 	\begin{enumerate}
 	
@@ -129,7 +129,7 @@ Suppose that a stone is thrown vertically upward from a cliff on Mars with an in
 			\begin{freeResponse}
 			Since the function $s(t)$ is differentiable everywhere (it is a polynomial), the maximum height must occur at a time when the velocity is $0$.  So we solve:
 			\begin{align*}
-			v(t) = -12t+24 &:= 0 \\
+			v(t) = -12t+24 &= 0 \\
 			12t &= 24 \\
 			t &= 2
 			\end{align*}
@@ -144,7 +144,7 @@ Suppose that a stone is thrown vertically upward from a cliff on Mars with an in
 			\begin{freeResponse}
 			The stone hits the ground when $s(t) = 0$.  So we solve:
 			\begin{align*}
-			s(t) = -6t^2 + 24t + 192 &:= 0 \\
+			s(t) = -6t^2 + 24t + 192 &= 0 \\
 			-6(t^2 - 4t - 32) &= 0 \\
 			-6(t-8)(t+4) &= 0 
 			\end{align*}
@@ -208,10 +208,12 @@ Suppose the average cost of producing 300 cellphones is 2 dollars per cellphone 
 The total number of people, $N$ who have contracted a common cold by a time $t$ days after its outbreak on an island is given by $N=N(t)= \frac{200000}{1+100e^{-0.1t}},t\geq0$.
 
 	\begin{enumerate}
+		%a
 		\item Evaluate and interpret the limit $\lim_{t \to \infty} N(t)$
 			\begin{freeResponse}	
 			$\lim_{t \to \infty} N(t)=\lim_{t \to \infty} \frac{200000}{1+100e^{-0.1t}}=200000$.  In the long run, 200000 people will get the cold.
 			\end{freeResponse}
+		%b
 		\item How long will it take for the number of people who have contracted the cold to reach 40,000?
 			\begin{freeResponse}
 				\begin{align*}
@@ -224,47 +226,48 @@ The total number of people, $N$ who have contracted a common cold by a time $t$ 
 				-0.1t&=\ln(.04)\\
 				t&=\frac{\ln(0.04)}{-0.1}=32.1888
 				\end{align*}
-			It will take 33 days for the numbe rof people who have contracted the cold to reach 40,000.
+			It will take 33 days for the number of people who have contracted the cold to reach 40,000.
 			\end{freeResponse}
 		\item The graph of the function $N$ on the interval $[0,100]$ is given below.  Sketch (as best you can) the graph of its derivative, $N'(t)$.
 			\begin{image}
 			\includegraphics[scale=.4]{Figure8.png}
 			\end{image}
-				\begin{freeResponse}	
+				\begin{freeResponse}\hfil
 				\begin{image}
-			\includegraphics[scale=.4]{Figure9.png}
+			\includegraphics[scale=.5]{Figure9.png}
 			\end{image}		
 				\end{freeResponse}
 		\item Calculate $N'(t)$.  What does $N'(t)$ represent?
 			\begin{freeResponse}	
-				$N'(t)=\frac{-200000(100)e^{-0.1t}}{(1+100e^{-0.1t})^2}=\frac{2000000e^{-0.1t}}{(1+100e^{-0.1t})^2}$.\\
-				$N'(t)$ represents the instantaneous growth rate of the number of people getting the cold at time $t$ days.
+				$N'(t)=\frac{-200000(10)e^{-0.1t}}{(1+100e^{-0.1t})^2}=\frac{2000000e^{-0.1t}}{(1+100e^{-0.1t})^2}$.\\
+				$N'(t)$ represents the instantaneous growth rate of the number of people who have contracted the cold at the time $t$.
 			\end{freeResponse}
 
 		\item Evaluate and interpret the limit $\lim_{t \to \infty} N'(t)$
 			\begin{freeResponse}	
 				$\lim_{t \to \infty} N'(t)=\lim_{t \to \infty}\frac{2000000e^{-0.1t}}{(1+100e^{-0.1t})^2}=\frac{2000000(0)}{(1+100(0))^2}=\frac{0}{1}=0$.\\
-				There is no growth to teh cold in the long run.
+				In the long run, the number of people who have contracted the cold will stabilize.  There will be no growth in the long run.
 			\end{freeResponse}
 
-		\item Find the average growth rate of the number of people who have contracted the disease during the time interval $[5,6]$ (or during the fifth day after the outbreak).
+		\item Find the average growth rate of the number of people who have contracted the disease during the time interval $[5,6]$ (or during the sixth day after the outbreak).
 			\begin{freeResponse}	
 				$AVRG=\frac{N(6)-N(5)}{6-5}=N(6)-N(5)=\frac{200000}{1+100e^{-0.1(6)}}-\frac{200000}{1+100e^{-0.1(5)}} \approx 335.1$
 			\end{freeResponse}
 
-		\item Find the instantaneous growth rate of the number of people who have contracted the disease for $t=5$.
+		\item Find the instantaneous growth rate of the number of people who have contracted the disease for $t=5$ (round to a whole number).
 			\begin{freeResponse}	
-				$N'(5)=\frac{2000000e^{-0.1(5)}}{(1+100e^{-0.1(5)})^2}$
+				$N'(5)=\frac{2000000e^{-0.1(5)}}{(1+100e^{-0.1(5)})^2}=319$ people per day
 			\end{freeResponse}
 
 	\end{enumerate}
 \end{problem}	
 			
-%problem5			
+%problem6			
 \begin{problem}
 An oil tank is to be drained for cleaning. There are $V(t)$ gallons of oil left in the tank $t$ minutes after the draining began, where $V(t)=45(60-t)^2$.
 
 	\begin{enumerate} 
+		%part a
 		\item Find the average rate at which the oil drians during the first 15 minutes.
 			\begin{freeResponse}
 				\begin{align*}
@@ -278,7 +281,7 @@ An oil tank is to be drained for cleaning. There are $V(t)$ gallons of oil left 
 
 			\end{freeResponse}
 			
-
+		%part b
 		\item Find the average rate at which the oil drains during the time interval $[10,15]$.
 			\begin{freeResponse}
 					\begin{align*}
@@ -291,20 +294,21 @@ An oil tank is to be drained for cleaning. There are $V(t)$ gallons of oil left 
 
 
 			\end{freeResponse}
-	
-		\item Find the rate at whcih the oil is flowing out of the tank 15 minutes after the draining began.
+		%part c
+		\item Find the rate at which the oil is flowing out of the tank 15 minutes after the draining began.
 			\begin{freeResponse}
 			\begin{align*}
 			V'(t)&= \eval{\dd{t} 45(60-t)^2)}_{t=15}\\
 			&=\eval{45 \dd{t} (60-t)^2}_{t=15}\\
 			&=45\eval{\dd{t}(3600-120t+t^2)}_{t=15}\\
 			&=\eval{45(-120+2t)}_{t=15}\\
-			&=45(120+2(15))\\
+			&=45(-120+2(15))\\
 			&=45(-120+30)\\
 			&=45(-90)\\
 			&=-4050\ \text{gallons per minute}
 			\end{align*}
 			\end{freeResponse}
+		%part d
 		\item Find the average rate, $AR \Delta t$, at which the oil drains during the time interval:
 			\begin{enumerate}
 				\item $[15+ \Delta t,15],\ \text{if}\ -1< \Delta t<0$
@@ -345,7 +349,7 @@ An oil tank is to be drained for cleaning. There are $V(t)$ gallons of oil left 
 \end{problem}
 
 
-%problem6
+%problem7
 \begin{problem}
 The graph of $h(t)$ represents the height in feet of water in a pool at time $t$ minutes.
 			\begin{image}
@@ -354,9 +358,9 @@ The graph of $h(t)$ represents the height in feet of water in a pool at time $t$
 	
 
 	\begin{enumerate}
-		\item During what time intervals is the heigh of water in the pool increasing? Decreasing?
+		\item During what time intervals is the height of water in the pool increasing? Decreasing?
 			\begin{freeResponse}
-			The height of the water in the pool is increasing when the function $h$ is increasing or has positive slope.  This is $(0,4),(7,10)$.  The height of the water is decreasing when the function $h$ is decreasing or has negative slope.  This is $(3,7),(7,12)$.
+			The height of the water in the pool is increasing when the function $h$ is increasing or has positive slope.  This is $(0,3),(7,10)$.  The height of the water is decreasing when the function $h$ is decreasing or has negative slope.  This is $(3,7),(10,12)$.
 			\end{freeResponse}
 		\item  Assume the rate of change of the water in the pool is $0$ when $t=0$.  For what other values of $t$ is the rate of change of the water in the pool $0$?
 			\begin{freeResponse}
@@ -373,11 +377,11 @@ The graph of $h(t)$ represents the height in feet of water in a pool at time $t$
 			\begin{image}
 			\includegraphics[scale=.4]{Figure10.png}
 			\end{image}
-			Next, we'll use information about whether the slope is increasing (positive) or decreasing (negative) to add tails to the zeros to indicate if the derivative should be postive or negate.  Remember, the derivative tells us about the slope. The slope of $h$ is increasing (postive) on $(0,4),(7,10)$, so $h'(t)$ is positive on $(0,4),(7,10)$.  The slope of $h$ is decreasing (negativee) on $(3,7),(7,12)$, so $h'(t)$ is negative on $(3,7),(7,12)$.
+			Next, we'll use information about whether the slope is positive or negative to add tails to the zeros to indicate if the derivative should be postive or negative.  Remember, the derivative tells us about the slope. The slope of $h$ is postive on $(0,3),(7,10)$, so $h'(t)$ is positive on $(0,3),(7,10)$.  The slope of $h$ is negative on $(3,7),(10,12)$, so $h'(t)$ is negative on $(3,7),(10,12)$.
 			\begin{image}
 			\includegraphics[scale=.4]{Figure11.png}
 			\end{image}
-			Finally, we'll connect our tails.  If you've already taken calculus, you may recall that we know when our derivitive $h'$ has it's highest and lowest points based on where $h$ changes concavity.  If you haven't had calculus, don't worry, we'll get there in chapter 4.  For now, just guess where you think these might be.
+			Finally, we'll connect our tails.  If you've already taken calculus, you may recall that we know when our derivitive $h'$ has its highest and lowest points based on where $h$ changes concavity.  If you haven't had calculus, don't worry, we'll get there in chapter 4.  For now, just guess where you think these might be.
 			\begin{image}
 			\includegraphics[scale=.4]{Figure12.png}
 			\end{image}

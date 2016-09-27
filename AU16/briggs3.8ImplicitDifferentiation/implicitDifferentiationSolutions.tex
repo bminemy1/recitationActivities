@@ -1,4 +1,4 @@
-\documentclass[nooutcomes]{ximera}
+\documentclass[nooutcomes,handout]{ximera}
 %% handout
 %% space
 %% newpage
@@ -26,14 +26,14 @@
 
 %problem1
 \begin{problem}
-On the graph below, sketch the tangent lines at $x=0$.  Then, explain why both the $x$-coordinate and the $y$-coordinate are generally needed to find the slope of the tangent line at a point on the graph of an implicitly defined function.
+On the graph below, sketch the tangent lines at $x=0$.  Then, explain why both the $x$-coordinate and the $y$-coordinate are generally needed to find the slope of the tangent line at a point on the graph of an equation of the form $F(x,y)=0$
 \begin{image}
-\includegraphics[scale=.5]{figure1.png}
+\includegraphics[scale=.2]{figure1.png}
 \end{image}
 
 
 	\begin{freeResponse}
-		If a function is defined \emph{implicitly} rather than \emph{explicitly}, then its graph will usually not pass the ``vertical line test".  As illustrated in the figure below, fixing a value for $x$ (in this case $x=0$) will not typically specify a unique point on the graph because there will be more than one corresponding $y$-value.  That is why you need to specify both the $x$ and the $y$ coordinate, to make sure that you are giving the coordinates for a unique point on the graph.  In this case, there are two tangent lines to the curve at $x=0$.  One passes through the point $(0,1)$ and the other through $(0,-1)$.
+		Given the equation $F(x,y)=0$, its graph may not pass the ``vertical line test".  As illustrated in the figure below, fixing a value for $x$ (in this case $x=0$) will not typically specify a unique point on the graph because there may be more than one corresponding $y$-value.  That is why you need to specify both the $x$ and the $y$ coordinate, to make sure that you are giving the coordinates for a unique point on the graph.  In this case, there are two tangent lines to the curve at $x=0$.  One passes through the point $(0,1)$ and the other through $(0,-1)$.
 	\begin{image}
 \includegraphics[scale=.5]{figure2.png}
 \end{image}		
@@ -47,10 +47,10 @@ On the graph below, sketch the tangent lines at $x=0$.  Then, explain why both t
 
 %problem2
 \begin{problem}
-Consider the equation $x^2 + 4xy + 9y^2 = 9$
+Consider the equation $x^2 + 4xy + 9y^2 = 9$.  Note: This equation is equivalent to $x^2 + 4xy + 9y^2 - 9=0$.  Therefore it has a form $F(x,y)=0$
 
 \begin{image}
-\includegraphics[scale=.6]{figure1.png}
+\includegraphics[scale=.2]{figure1.png}
 \end{image}
 
 	\begin{enumerate}
@@ -78,7 +78,7 @@ Consider the equation $x^2 + 4xy + 9y^2 = 9$
 		$$\eval{\dd[y]{x}}_{(0,1)} = \frac{-4}{18} = -\frac{2}{9}$$
 		$$\eval{\dd[y]{x}}_{(0,-1)} = \frac{4}{-18} = -\frac{2}{9} $$
 		
-		So there are two tangent lines to the graph of the solution set to the given equation when $x=0$.  The two solutions are $(0,1)$ and $(0,-1)$, and the tangent lines at both points have slope $-\frac{2}{9}$.  Thus, the equations to the two tangent lines are
+		So there are two tangent lines to the graph of the given equation when $x=0$.  The two points are $(0,1)$ and $(0,-1)$, and the tangent lines at both points have slope $-\frac{2}{9}$.  Thus, the equations of the two tangent lines are
 		$$ y - 1 = -\frac{2}{9}(x-0)  \qquad \Longrightarrow \qquad y = -\frac{2}{9}x + 1 $$
 		$$ y + 1 = -\frac{2}{9}(x-0) \qquad \Longrightarrow \qquad y = -\frac{2}{9}x - 1 $$
 \begin{image}
@@ -95,7 +95,7 @@ Consider the equation $x^2 + 4xy + 9y^2 = 9$
 		A line is horizontal if and only if its slope is 0.  So we are looking for the points $(x_0,y_0)$ such that $\eval{\dd[y]{x}}_{(x_0,y_0)} = 0$.  So we solve:
 		$$ \frac{-2x-4y}{4x+18y} = 0\qquad \Longrightarrow \qquad -2x - 4y = 0 \qquad \Longrightarrow \qquad x=-2y$$
 		
-		But we also need the point to satisfy the given equation.  So, letting $x=-2y$, we solve:
+		But we also need the point to lie on the the given curve.  So, letting $x=-2y$, we solve:
 		$$x^2 + 4xy + 9y^2 = 9 $$
 		$$ (-2y)^2 + 4(-2y)y + 9y^2 = 9 $$
 		$$ 4y^2 - 8y^2 + 9y^2 = 9 $$
@@ -183,7 +183,7 @@ Consider the equation $x^2 + 4xy + 9y^2 = 9$
 
 %problem 4
 \begin{problem}
-  For the each of the following implicit equations, find a formula for the slope of the tangent line at a point $(x, y)$.
+  For each of the curves given by the following equations, find a formula for the slope of the tangent line at a point $(x, y)$.
 
 	\begin{enumerate}
 	
@@ -217,7 +217,7 @@ Consider the equation $x^2 + 4xy + 9y^2 = 9$
 			$$ x \sin(xy) \dd[y]{x} + 15y^2 \dd[y]{x} = -y \sin(xy) - 3x^2 $$
 			$$ \dd[y]{x} = \frac{-y \sin(xy) - 3x^2}{x \sin(xy) + 15y^2} $$
 			
-			Provided that $x \sin(xy) + 15y^2 \neq 0$.  It is worth pointing out that this condition was not necessary for parts (a) and (b) because the denominator of those solutions cannot be $0$.  
+			Provided that $x \sin(xy) + 15y^2 \neq 0$.  It is worth pointing out that equivalent condition was not necessary for parts (a) and (b) because the denominator of those solutions cannot be $0$.  
 			\end{freeResponse}
 			
 			
@@ -236,7 +236,7 @@ Consider the equation $x^2 + 4xy + 9y^2 = 9$
   \[
     V = \pi^2 \frac{(b+a)(b-a)^2}{4}.
   \]
-  Find $db/da$ when the volume of a doughnut is $64\pi^2$.
+  Find $db/da$ if the volume of a doughnut is $64\pi^2$ and does not change.
 \begin{freeResponse}
   We have to (implicitly) differentiate
   \[
@@ -250,7 +250,7 @@ Consider the equation $x^2 + 4xy + 9y^2 = 9$
 
   Now we'll differentiate with respect to $a$:
   \begin{align*}
-    256 = (b+a)(b-a)^2 &\implies 0 = \left(\frac{db}{da} + 1\right)(b - a)^2 + (b + a) 2 \cdot (b - a) \cdot \left(\frac{db}{da} - a\right) \\
+    256 = (b+a)(b-a)^2 &\implies 0 = \left(\frac{db}{da} + 1\right)(b - a)^2 + (b + a) 2 \cdot (b - a) \cdot \left(\frac{db}{da} - 1\right) \\
     &\implies 0 = \frac{db}{da}(b-a)^2 + (b-a)^2 + 2(b^2-a^2) \frac{db}{da} - 2(b^2 - a^2).
   \end{align*}
 
@@ -265,7 +265,29 @@ Consider the equation $x^2 + 4xy + 9y^2 = 9$
 \end{freeResponse}	
 \end{problem}
 
+%problem6
 
+\begin{problem}
+
+Find $\frac{d^2y}{dx^2}$.  $x^{1/3}+y^{2/3}=2$.
+	\begin{freeResponse}	
+
+	Take the first derivative:\\
+	 $$\frac{1}{3}x^{-2/3}+\frac{2}{3}y^{-1/3}\cdot \dd[y]{x}=0 $$ \\\\
+	Solving for $\dd[y]{x}$:\\
+	$$\dd[y]{x}=\frac{\frac{-1}{3x^{2/3}}}{\frac{2}{3y^{1/3}}}=\frac{-y^{1/3}}{2x^{2/3}}$$\\\\
+	Take the second derivative:
+	$$ \frac{d^2y}{dx^2}= \frac{-\frac{1}{3}y^{-2/3} \cdot \dd[y]{x} \cdot 2x^{2/3}+y^{1/3}\cdot \frac{4}{3}x^{-1/3}}{4x^{4/3}}$$ \\\\
+	We need to subsitute in for $\dd[y]{x}$ we have:\\ 
+	$$ \frac{d^2y}{dx^2}= \frac{-\frac{1}{3}y^{-2/3} \cdot \frac{-y^{1/3}}{2x^{2/3}}  \cdot 2x^{2/3}+y^{1/3}\cdot \frac{4}{3}x^{-1/3}}{4x^{4/3}}$$ \\\\
+	
+	
+	\end{freeResponse}
+
+
+
+
+\end{problem}
 
 
 \end{document} 
