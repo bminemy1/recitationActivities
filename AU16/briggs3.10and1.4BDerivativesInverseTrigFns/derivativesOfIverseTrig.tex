@@ -112,22 +112,22 @@ Explain what each of the following means:
     \item
       $\tan \bigl( \sin^{-1}(4/x ) \bigr)$
       \begin{freeResponse}
-        Let $\theta = \sin^{-1}(4/x)$, then $\sin(\theta) = 4/x$.
+        Let $\theta = \sin^{-1}(x/4)$, then $\sin(\theta) = x/4$.
         We can then draw the corresponding right triangle:
         \begin{image}
-          \includegraphics[scale = 0.8]{figure5.png}
+          \includegraphics[scale = 0.4]{figure5.png}
         \end{image}
         Calling the adjacent side $y$, by the Pythagorean Theorem we obtain
         \begin{align*}
-          x^2 = 16 + y^2 &\implies y = \pm\sqrt{x^2 - 16}, \\
-                         &\implies y = \sqrt{x^2 - 16}.\\
+          4^2 = x^2 + y^2 &\implies y = \pm\sqrt{16-x^2}, \\
+                         &\implies y = \sqrt{16-x^2}.\\
                          &\hspace{-0.5em} \mbox{\parbox[b][]{6cm}{(since we assume the side of a triangle can't have negative length)}}
         \end{align*}
         Then
         \begin{align*}
           \tan \left( \sin^{-1} \left(4/x \right) \right) &= \tan( \theta), \\
-                                                                   &= \frac{4}{y}, \\
-                                                                 &= \frac{4}{\sqrt{x^2 - 16}}.
+                                                                   &= \frac{x}{y}, \\
+                                                                 &= \frac{x}{\sqrt{16-x^2}}.
         \end{align*}
       \end{freeResponse}
   \end{enumerate}
@@ -162,7 +162,7 @@ Explain what each of the following means:
       \begin{freeResponse}
 
         \begin{align*}
-          \ddx f(f(x)) = f'(f(x)) \cdot f'(x) &\implies \eval{\ddx}_{x = 3} f(f(x)) = f'(f(3)) \cdot f'(3)\\
+          \ddx f(f(x)) = f'(f(x)) \cdot f'(x) &\implies \eval{\ddx f(f(x))}_{x = 3} = f'(f(3)) \cdot f'(3)\\
           &= f'(4) \cdot 5 = 3 \cdot 5 = 15
         \end{align*}
       \end{freeResponse}
@@ -203,15 +203,15 @@ $\lim_{x \to 4} \frac{f(x)-f(4)}{x-4} = f'(4)=3$
 
 %problem6
 \begin{problem}
-Find the derivative of $f^{-1}$ at the following points without solving for $f^{-1}$.
+Find the derivative of $f^{-1}$ at the following points on the graph of $f^{-1}$  without solving for $f^{-1}$.
 	\begin{enumerate}
 	
-	\item  $f(x) = x^2 + 1$ (for $x \geq 0$) at the point $(5,2)$.  
+	\item  $f(x) = x^2 + 1$ (for $x \geq 0$) at the point $(5,2)$ on the graph of $f^{-1}$.  
 		\begin{freeResponse}
 		$(f^{-1})'(5) = \frac{1}{f'(2)}$.  Since $f'(x) = 2x$, $f'(2) = 4$.  Thus, $(f^{-1})'(5) = \frac{1}{4}$.  
 		\end{freeResponse}
 
-	\item  $f(x) = x^2 - 2x - 3$ (for $x \leq 1$) at the point $(12, -3)$.  
+	\item  $f(x) = x^2 - 2x - 3$ (for $x \leq 1$) at the point $(12, -3)$ on the graph of $f^{-1}$. 
 		\begin{freeResponse}
 		$(f^{-1})'(12) = \frac{1}{f'(-3)}$.  Since $f'(x) = 2x - 2$, $f'(-3) = -6 - 2 = -8$.  Thus, $(f^{-1})'(12) = - \frac{1}{8}$. 
 		\end{freeResponse}
@@ -266,7 +266,7 @@ Find the derivatives of the following functions:
 
 %problem9
 \begin{problem}
-A boat sails directly toward a 100-meter skyscraper that stands on the edge of a harbor.  The angular size $\theta$of the building is the angle formed by lines from the top and bottom of the building to the observer (see figure below).
+A boat sails directly toward a 100-meter skyscraper that stands on the edge of a harbor.  The angular size $\theta$ of the building is the angle formed by lines from the top and bottom of the building to the observer on the boat (see figure below).
     \begin{image}
       \includegraphics[scale = 0.7]{figure6.png}
     \end{image}
@@ -285,19 +285,19 @@ A boat sails directly toward a 100-meter skyscraper that stands on the edge of a
 	\begin{align*}
 	\frac{d\theta}{dt}&=\dd{t}\tan^{-1}\left( \frac{100}{x} \right)\\
 	&=\dd{x}\tan^{-1}\left( \frac{100}{x} \right)\dd[x]{t}\\
-	&=\frac{1}{1+\frac{100}{x}^2} \cdot \frac{-100}{x^2} \dd[x]{t}\\
-	&=\frac{1}{1+\frac{100}{x}^2} \cdot \frac{-100}{x^2} \cdot (-3)\\
+	&=\frac{1}{1+\left(\frac{100}{x}\right)^2} \cdot \frac{-100}{x^2} \dd[x]{t}\\
+	&=\frac{1}{1+\left(\frac{100}{x}\right)^2} \cdot \frac{-100}{x^2} \cdot (-3)\\
 	&=\frac{300}{x^2+100^2}\\\\
 	\eval{\dd[\theta]{t}}_{x=300}&=\frac{300}{300^2+100^2}\\
 	&=\frac{3}{900+100}\\
 	&=\frac{3}{1000}\\
 	&=0.003\ \text{rad/sec}
 		\end{align*}
-		Alternatively, this problem could be done without inverse trigonometry.\\
+		Alternatively, this problem could be done without inverse functions.\\
 	\begin{align*}
 	\tan\theta&=\frac{100}{x}\\
 	\dd{t}(\tan\theta)&=\dd{t} \left(\frac{100}{x}\right)\\
-	\sec^2\theta \dd[\theta]{t}&=\frac{-100}{x}\dd[x]{t}
+	\sec^2\theta \dd[\theta]{t}&=\frac{-100}{x^2}\dd[x]{t}
 	\end{align*}
 	
 	We have to evaluate $\sec^2\theta$ at the moment when $x=300$m\\
@@ -308,7 +308,7 @@ A boat sails directly toward a 100-meter skyscraper that stands on the edge of a
 	$\sec\theta=\frac{\sqrt{300^2+100^2}}{300}=100\frac{\sqrt{3^2+1^2}}{300}=\frac{\sqrt{10}}{3}$, we obtain:\\
 	\begin{align*}
 	\left(\frac{\sqrt{10}}{3}\right)^2 \eval{\dd[\theta]{t}}_{x=300}&=-\frac{100}{300^2}(-3)\\
-	\eval{\dd[\theta]{t}}_{x=300}&=\frac{1}{100} \cdot\frac{9}{10}=\frac{3}{1000}\  \text{rad/sec}
+	\eval{\dd[\theta]{t}}_{x=300}&=\frac{1}{300} \cdot\frac{9}{10}=\frac{3}{1000}\  \text{rad/sec}
 	\end{align*}
 
 	\end{freeResponse}
