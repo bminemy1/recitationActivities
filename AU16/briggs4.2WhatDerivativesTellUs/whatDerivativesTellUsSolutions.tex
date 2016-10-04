@@ -5,25 +5,13 @@
 %% numbers
 %% nooutcomes
 
-%I added the commands here so that I would't have to keep looking them up
-%\newcommand{\RR}{\mathbb R}
-%\renewcommand{\d}{\,d}
-%\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
-%\renewcommand{\l}{\ell}
-%\newcommand{\ddx}{\frac{d}{dx}}
-%\everymath{\displaystyle}
-%\newcommand{\dfn}{\textbf}
-%\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
 
-%\begin{image}
-%\includegraphics[trim= 170 420 250 180]{Figure1.pdf}
-%\end{image}
 
 \usepackage{fullpage}
 
-\input{../preamble.tex} %% we can turn off input when making a master document
+\input{../preamble.tex} 
 
-\title{4.2 What Derivatives Tell Us}  
+\title{4.2: What Derivatives Tell Us}  
 
 \begin{document}
 \begin{abstract}		\end{abstract}
@@ -63,32 +51,39 @@ $$ \text{Increasing, decreasing, positive, negative, concave up, concave down} $
 	\end{enumerate}	
 		
 \end{problem}
-		
+
+		%problem2		
 \begin{problem}
-Sketch a graph of a function that is continuous on $(\-infty,\infty) has has the following properties.
+Sketch a graph of a function that is continuous on $(-\infty,\infty)$ that has the following properties.
 	\begin{enumerate}
 	\item Function $f$ does not have a local maximum or minimum.  $f$ contains a point where $f'(x)=0$
 	
 	
+\begin{freeResponse} \hfil
+            \begin{image}
+              \includegraphics[scale = 0.7]{figure11.png}
+            \end{image}	
+\end{freeResponse}	
 	
-	\item Function $g$ changes from concave down to concave up at $x$ increases.  How does the second derivative of $g$ change as $x$ increases?
-	
-	
-	
-	\item $f'(x)<0$ on $(\-infty, -1)$; $f'(x)>0$ on $(-1,2)$; $f'(x)<0$ on $(5,\infty)$.
-	
+	\item $g'(x)<0$ on $(-\infty, -1)$; $g'(x)>0$ on $(-1,2)$; $g'(x)<0$ on $(2,\infty)$.
+
+\begin{freeResponse} \hfil
+	            \begin{image}
+              \includegraphics[scale = 0.5]{figure6.png}
+            \end{image}
+\end{freeResponse}		
 	
 	\end{enumerate}
 	
 \end{problem}
 
 
-%problem 2
+%problem 3
 \begin{problem}
 Let $f(x) = \frac{1}{1 + x^2}$ on the interval $[-2,2]$.  Find the following for $f$:
 
 	\begin{enumerate}
-	
+	%part a
 	\item  $f'$ and $f''$
 	
 		\begin{freeResponse}
@@ -103,7 +98,7 @@ Let $f(x) = \frac{1}{1 + x^2}$ on the interval $[-2,2]$.  Find the following for
 			&= \frac{6x^2 - 2}{(1+x^2)^3}
 			\end{align*}
 		\end{freeResponse}
-		
+	%part b	
 	\item  Critical points
 	
 		\begin{freeResponse}
@@ -111,10 +106,14 @@ Let $f(x) = \frac{1}{1 + x^2}$ on the interval $[-2,2]$.  Find the following for
 		$$ f'(x) = 0 \qquad \Longrightarrow \qquad -2x = 0 \qquad \Longrightarrow \qquad x=0 $$
 		Hence, the only critical point is $x=0$.  
 		\end{freeResponse}
-		
+	%part c	
 	\item  Intervals where $f$ is increasing and decreasing
 	
 		\begin{freeResponse}
+		We can arrive at the answer two ways: \\\\	
+		First, we can look at $f'(x)= \frac{-2x}{(1+x^2)^2}$ and see that the denominator will be positive for all $x$.  The sign of $f'$ depends on the numerator.  If $x<0$, the $f'>0$.  If $x>0, f'<0$.   Therefore $f$ is increasing on $(-2,0)$ and decreasing on $(0,2)$.  \\
+		
+		On the other hand, we can perform computations: 
 		Because $f'$ doesn’t change sign in the interval $(-2,0)$, we can use a test point in this interval to determine the sign of $f'$ on the interval.  Let us chose $x=-1$ and, similarly on $(0,2)$, choose $x=1$.
 		$$ f'(-1) = \frac{2}{4} > 0 $$
 		$$ f'(1) = \frac{-2}{4} < 0 $$
@@ -151,7 +150,7 @@ Let $f(x) = \frac{1}{1 + x^2}$ on the interval $[-2,2]$.  Find the following for
 
 		Thus, $f'$ is positive on the interval $(-2,0)$ and negative on $(0,2)$, and therefore $f$ is increasing on $(-2,0)$ and decreasing on $(0,2)$.  
 		\end{freeResponse}
-		
+	%part d	
 	\item  Local extrema (and check your answers with both the first and second derivative tests)
 	
 		\begin{freeResponse}
@@ -161,7 +160,7 @@ Let $f(x) = \frac{1}{1 + x^2}$ on the interval $[-2,2]$.  Find the following for
 		$$ f''(0) = \frac{6(0)^2 - 2}{(1+0^2)^3} = \frac{-2}{1} = -2 < 0 $$
 		and thus we again conclude that $x=0$ is a local maximum of $f$.
 		\end{freeResponse}
-		
+	%part e	
 	\item  Intervals of concavity
 	
 		\begin{freeResponse}
@@ -172,6 +171,11 @@ Let $f(x) = \frac{1}{1 + x^2}$ on the interval $[-2,2]$.  Find the following for
  		& {{x}^{2}}=\frac{2}{6} \\ 
  		& x=\pm \frac{1}{\sqrt{3}} \\ 
 		\end{align*}
+		
+		We can determine intervals of concavity two ways:\\\\
+		First, since the denominator of $f''$ is always positive, $f''$ has the same sign as the numerator.  The factors of the numerator are $\left(x- \frac{1}{\sqrt{3}} \right) \left(x+ \frac{1}{\sqrt{3}} \right) $.  When $x>\frac{1}{\sqrt{3}}$, both factors are positive and $f''>0$.  When $x<-\frac{1}{\sqrt{3}}$, both factors are negative and $f''>0$.  When $-\frac{1}{\sqrt{3}}<x<\frac{1}{\sqrt{3}}$, one factor is negative and the other is positive so $f''<0$. Thus, $f$ is concave down on $\left( - \frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}} \right)$ and concave up on $\left( -2, - \frac{1}{\sqrt{3}} \right)$ and $ \left( \frac{1}{\sqrt{3}}, 2 \right)$\\\\
+		
+		The other way we go about this is using test points:
 		Picking test points of $-1, 0, $ and $1$, we have that
 		\begin{align*}
 		& f''(-1) = \frac{6-2}{2^3} = \frac{4}{8} > 0 \\
@@ -216,20 +220,20 @@ Let $f(x) = \frac{1}{1 + x^2}$ on the interval $[-2,2]$.  Find the following for
 		
 		
 		Thus, $f$ is concave down on $\left( - \frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}} \right)$ and concave up on \\ 
-		$\left( -2, - \frac{1}{\sqrt{3}} \right) \cup \left( \frac{1}{\sqrt{3}}, 2 \right)$
+		$\left( -2, - \frac{1}{\sqrt{3}} \right)$ and $\left( \frac{1}{\sqrt{3}}, 2 \right)$
 		\end{freeResponse}
-		
+	%part f	
 	\item  Inflection points
 	
 		\begin{freeResponse}
-		To find the inflection points, we need to find where $f''(x)=0$ or $f''(x)$ does not exist, \dfn{and} where$f''$changes sign.  We found these values in part (e):
+		To find the inflection points, we need to find where $f''(x)=0$ or $f''(x)$ does not exist, \dfn{and} where $f''$changes sign.  We found these values in part (e):
 		\begin{align*}
  		 & f\left( \frac{1}{\sqrt{3}} \right)=\frac{3}{4} \\ 
  		& f\left( -\frac{1}{\sqrt{3}} \right)=\frac{3}{4} \\ 
 		\end{align*}  
 		So our inflection points are: $\left( -\frac{1}{\sqrt{3}},\frac{3}{4} \right),\left( \frac{1}{\sqrt{3}},\frac{3}{4} \right)$
 		\end{freeResponse}
-		
+	%g	
 	\item  Absolute extrema
 	
 		\begin{freeResponse}
@@ -274,34 +278,34 @@ Let $f(x) = \frac{1}{1 + x^2}$ on the interval $[-2,2]$.  Find the following for
 
 
 
-
+%problem4
 
 \begin{problem}
 
   \begin{enumerate}
+  %part a
     \item
       The (entire) graph of a function $f$ is shown in the figure below.
       \begin{image}
         \includegraphics[scale = 0.3]{figure3.png}
       \end{image}
       \begin{enumerate}
+      	%part i
         \item
           Find the $x$-coordinates of all critical points of $f$ (or write NONE).
           \begin{freeResponse}
-            $x = 0$ is a critical point since $f'(0) = 0$
+            $f$ has a critical point at $x = 0$ since $f'(0) = 0$
 
             $x = 1$ is a critical point since $f'(1)$ DNE.
 
             $x = 3$ is a critical point since $f'(3)$ DNE.
           \end{freeResponse}
-
+	%part ii
         \item
           Find the $x$-coordinates of all local minima of $f$ (or write NONE).
-          $x = 3$ is local minima by first derivative test:  
-          \begin{freeResponse} \hfil
-            \begin{image}
-              \includegraphics[scale = 0.7]{figure1.png}
-            \end{image}
+        
+          \begin{freeResponse} 
+           By first derivative test there is a local minimum at $x=3$
           \end{freeResponse}
 
         \item
@@ -334,20 +338,89 @@ Let $f(x) = \frac{1}{1 + x^2}$ on the interval $[-2,2]$.  Find the following for
 
 	
 	
-	
+%problem5	
 \begin{problem}
-Given the graph of $f'$. sketch the graph of $f$ on the same set of axis.
+Given the graph of $h'$, sketch a graph of $h$ and $h''$ on the same set of axis.
+      \begin{image}
+        \includegraphics[scale = 0.6]{figure1.png}
+      \end{image}
 
-\begin{freeResponse}
 
-	
-	
-	
+
+\begin{freeResponse} \hfil
+
+
+      \begin{image}
+        \includegraphics[scale = 0.5]{figure7.png}
+      \end{image}	
+				
+				
+To sketch $h''$ from $h'$, we need to think back to section 3.2.  It might be easier for you to think of $h'=g$ and $h''=g'$.  We're really just sketching a graph of the derivative from the graph of its function.  \\
+
+We need to recall when the graph of:\\
+$h'=g$ is increasing, $h''=g'$ is positive\\
+$h'=g$ is decreasing, $h''=g'$ is negative\\
+$h'=g$ has a local maxima or minima, $h''=g'=0$\\
+$h'=g$ has an inflection point, $h''=g'$ has a local maxima or minima\\
+$h'=g$ is concave up, $h''=g'$ is increasing\\
+$h'=g$ is concave down, $h''=g'$ is decreasing\\
+
+$\implies$
+The graph of $h''=g$ is/has:
+Positive slope on the intervals $(-\infty,-1.5)$ and $(2,\infty)$\\
+Negative slope on the interval $(-1.5,2)$\\
+Local maximum at $x=-1.5$, local minimum at $x=2$\\
+Inflection point at $x=0$\\
+Concave down on the interval $(-\infty,0)$\\
+Concave up on the interval $(0,\infty)$\\\\
+
+To sketch $h$ from $h'$, we are using the same information, but in reverse.  \\\\
+The graph of $h$ is/has:\\
+Positive slope on the intervals $(-\infty,2)$ and $(5.5,\infty)$\\
+Negative slope on the interval $(2,5.5)$\\
+Local maximum at $x=2$\\
+Inflection points at $x=-3,0,4$\\
+Concave down on the intervals  $(-\infty,-3)$ and $(0,3.7)$\\
+Concave up on the intervals $(-3,0)$ and $(3.7,\infty)$
+
+
+		
+						
 \end{freeResponse}
+\end{problem}
 
-	
+%problem6
+\begin{problem}
+Give an example or sketch of a function that is continuous on $(-\infty,\infty)$ and satisfies given properies.  If such a function does not exist, explain why.
+\begin{enumerate}
+	\item A function $f$ is concave up and negative everywhere.
+	\begin{freeResponse}
+	This is not possible.  If a function is always concave up then at some point, the function must cross the $x$-axis and become positive.  See the three example figures below.
+	      \begin{image}
+        \includegraphics[scale = 0.5]{figure8.png}
+      \end{image}	
+			
+	\end{freeResponse}
+	\item A function $f$ is decreasing and concave up everywhere.
+	\begin{freeResponse}
+	This is possible.  See figure B above.
+	\end{freeResponse}	
+	\item A function $s$ has exactly 3 local extrema and four inflection points.
+		\begin{freeResponse}
+	This is possible.  See the figure below.  The graph of $s$ has inflection points at $a,b,c,d$ and local extrema at $e,f,g$.
+		      \begin{image}
+        \includegraphics[scale = 0.5]{figure9.png}
+      \end{image}	
+	\end{freeResponse}	
+	\item A function $f$ has exactly 2 zeros and one local extrema.
+  	  		\begin{freeResponse}
+	This is possible.  See the figures below for examples.
+		      \begin{image}
+        \includegraphics[scale = 0.5]{figure10.png}
+      \end{image}	
+      	\end{freeResponse}	
 
-
+\end{enumerate}
 
 
 
@@ -355,18 +428,46 @@ Given the graph of $f'$. sketch the graph of $f$ on the same set of axis.
 
 
 
+%problem7
+\begin{problem}
+Consider the parabola $f(x)=ax^2+bx+c$ where $a,b,c$ are constants.  For what values of $a,b,c$ is $f$ concave up?  For what values of $a,b,c$ is $f$ concave down?				
+\begin{freeResponse}
+\begin{align*}
+f'(x)&=2ax+b\\
+f''(x)&=2a
+\end{align*}
+$\implies$ the sign of $a$ will determine is $f$ is concave up or down.  When $a<0$, $f$ is concave down.  When $a>0$, $f$ is concave up.  Note: If $a=0$, $f$ has no concavity because it is a linear function.
 
-								
+
 				
+\end{freeResponse}
 				
-	
+\end{problem}	
 
 
+%problem8
+\begin{problem}
+Locate the critical points and use the second derivative test to determine whether they correspond to local maxima or local minima.
+$f(x)=(x+c)^4$ where $c$ is a positive constant 
 
+\begin{freeResponse}
 
+$$f'(x)=4(x+c)^3, f''(x)=12(x+c)^2$$
 
+To find the critical points: $f'(x)=0=4(x+c)^3$.  This occurs when $x=-c$
+ 
+Using the second derivative test: $f''(-c)=12(-c+c)^2=0$.  The second derivative test was inconclusive so we need to use the first derivative test.
 
+Making a sign chart we see that if we plug something a little less than $-c$ into $f'$, we'll get a negative number.  If we plug something a little greater than $-c$ into $f'$, we'll get a positive number. 
 
+      \begin{image}
+        \includegraphics[scale = 0.3]{figure4.png}
+             \end{image}
+
+Therefore, there is a local minimum at $x=-c$.  This is also a global minimum.
+
+\end{freeResponse}
+\end{problem}
 
 
 

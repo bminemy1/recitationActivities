@@ -1,4 +1,4 @@
-\documentclass[nooutcomes]{ximera}
+\documentclass[nooutcomes,handout]{ximera}
 %% handout
 %% space
 %% newpage
@@ -56,13 +56,13 @@ Explain what each of the following means:
 
 %problem2
 \begin{problem}
- Without using a calculator, determine if the equation
+ Without using a calculator, determine if the statement
   \[
     \cos^{-1}\bigl(\cos(7\pi/6)\bigr) = 7\pi/6
   \]
   is true or false.
   \begin{freeResponse}
-    This statement is \textbf{false}: the correct equation is $\cos^{-1}\bigl(\cos(7\pi/6)\bigr) = 5\pi/6$. (Why?)
+    This statement is \textbf{false}: the correct statement is $\cos^{-1}\bigl(\cos(7\pi/6)\bigr) = 5\pi/6$. (Why?)
 
     \textbf{Spoiler Alert}: the cosine function is \emph{not} invertible since its graph fails the horizontal line test.
     \begin{image}
@@ -83,7 +83,7 @@ Explain what each of the following means:
   \textbf{True or False:}
   $\sin^{-1}(0) = \pi$.
   \begin{freeResponse}
-    This statement is \textbf{false}: the correct equation is $\sin^{-1}(0) = 0$. (Why?)
+    This statement is \textbf{false}: the correct statement is $\sin^{-1}(0) = 0$. (Why?)
 
     \textbf{Spoiler Alert}: the sine function is \emph{not} invertible since its graph fails the horizontal line test.
     \begin{image}
@@ -110,7 +110,7 @@ Explain what each of the following means:
       \end{freeResponse}
 
     \item
-      $\tan \bigl( \sin^{-1}(4/x ) \bigr)$
+      $\tan \bigl( \sin^{-1}(x/4) \bigr)$
       \begin{freeResponse}
         Let $\theta = \sin^{-1}(x/4)$, then $\sin(\theta) = x/4$.
         We can then draw the corresponding right triangle:
@@ -118,17 +118,16 @@ Explain what each of the following means:
           \includegraphics[scale = 0.4]{figure5.png}
         \end{image}
         Calling the adjacent side $y$, by the Pythagorean Theorem we obtain
-        \begin{align*}
-          4^2 = x^2 + y^2 &\implies y = \pm\sqrt{16-x^2}, \\
-                         &\implies y = \sqrt{16-x^2}.\\
-                         &\hspace{-0.5em} \mbox{\parbox[b][]{6cm}{(since we assume the side of a triangle can't have negative length)}}
-        \end{align*}
+
+          $$4^2 = x^2 + y^2 \implies y = \sqrt{16-x^2}$$
+Remark: Since $\theta$ is in the range of $\sin^{-1}$, it follows that $-\pi /2 <\theta <\pi /2$.  Therefore, $\cos(\theta)=y/4>0$.  Therefore, $y>0$.\\
         Then
         \begin{align*}
           \tan \left( \sin^{-1} \left(4/x \right) \right) &= \tan( \theta), \\
                                                                    &= \frac{x}{y}, \\
                                                                  &= \frac{x}{\sqrt{16-x^2}}.
         \end{align*}
+Note: $\tan\theta$ has the same sign as $x$, since $y>0$.
       \end{freeResponse}
   \end{enumerate}
 \end{problem}  
@@ -206,14 +205,18 @@ $\lim_{x \to 4} \frac{f(x)-f(4)}{x-4} = f'(4)=3$
 Find the derivative of $f^{-1}$ at the following points on the graph of $f^{-1}$  without solving for $f^{-1}$.
 	\begin{enumerate}
 	
-	\item  $f(x) = x^2 + 1$ (for $x \geq 0$) at the point $(5,2)$ on the graph of $f^{-1}$.  
+	\item  $f(x) = x^2 + 1$ (for $x \geq 0$) at the point $(5,2)$ on the graph of $f^{-1}$.  Verify your answer by evaluating the derivative of $f^{-1}$ at the given point.
 		\begin{freeResponse}
-		$(f^{-1})'(5) = \frac{1}{f'(2)}$.  Since $f'(x) = 2x$, $f'(2) = 4$.  Thus, $(f^{-1})'(5) = \frac{1}{4}$.  
+		$(f^{-1})'(5) = \frac{1}{f'(2)}$.  Since $f'(x) = 2x$, $f'(2) = 4$.  Thus, $(f^{-1})'(5) = \frac{1}{4}$. \\
+		Verifying: $f^{-1}(x)=\sqrt{x-1} \implies \ddx f^{-1}(x)= \frac{1}{2\sqrt{x-1}} \implies \eval{\ddx f^{-1}}_{x=5}=\frac{1}{2\sqrt{5-1}}=\frac{1}{4}$ 
+		
+		
 		\end{freeResponse}
 
 	\item  $f(x) = x^2 - 2x - 3$ (for $x \leq 1$) at the point $(12, -3)$ on the graph of $f^{-1}$. 
 		\begin{freeResponse}
-		$(f^{-1})'(12) = \frac{1}{f'(-3)}$.  Since $f'(x) = 2x - 2$, $f'(-3) = -6 - 2 = -8$.  Thus, $(f^{-1})'(12) = - \frac{1}{8}$. 
+		$(f^{-1})'(12) = \frac{1}{f'(-3)}$.  Since $f'(x) = 2x - 2$, $f'(-3) = -6 - 2 = -8$.  Thus, $(f^{-1})'(12) = - \frac{1}{8}$. \\
+		Notice that for this problem, finding the inverse of $f(x)$ involves complicated algebra.  In this case, it's much easier to find the derivative of $f^{-1}$ without solving for $f^{-1}$
 		\end{freeResponse}
 	\end{enumerate}
 \end{problem}
@@ -268,16 +271,14 @@ Find the derivatives of the following functions:
 \begin{problem}
 A boat sails directly toward a 100-meter skyscraper that stands on the edge of a harbor.  The angular size $\theta$ of the building is the angle formed by lines from the top and bottom of the building to the observer on the boat (see figure below).
     \begin{image}
-      \includegraphics[scale = 0.7]{figure6.png}
+      \includegraphics[scale = 0.6]{figure6.png}
     \end{image}
 
 \begin{enumerate}
 	\item Express the angle $\theta$ as the function of $x$, the distance of the boat from the building.
 	\begin{freeResponse}
-	\begin{align*}
-	\tan\theta&=\frac{100}{x}\\
-	\theta&=\tan^{-1}\left( \frac{100}{x} \right)
-	\end{align*}
+	$\tan\theta=\frac{100}{x} \implies \theta=\tan^{-1}\left( \frac{100}{x} \right)$
+	
 	\end{freeResponse}
 	
 	\item The boat is sailing directly toward the skyscraper at $3$ m/s.  Find $\dd[\theta]{t}$ when the boat is $x=300$m from the building.
@@ -288,6 +289,8 @@ A boat sails directly toward a 100-meter skyscraper that stands on the edge of a
 	&=\frac{1}{1+\left(\frac{100}{x}\right)^2} \cdot \frac{-100}{x^2} \dd[x]{t}\\
 	&=\frac{1}{1+\left(\frac{100}{x}\right)^2} \cdot \frac{-100}{x^2} \cdot (-3)\\
 	&=\frac{300}{x^2+100^2}\\\\
+	\end{align*}
+	\begin{align*}	
 	\eval{\dd[\theta]{t}}_{x=300}&=\frac{300}{300^2+100^2}\\
 	&=\frac{3}{900+100}\\
 	&=\frac{3}{1000}\\

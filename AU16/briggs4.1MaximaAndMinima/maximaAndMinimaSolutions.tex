@@ -1,4 +1,4 @@
-\documentclass[nooutcomes]{ximera}
+\documentclass[nooutcomes,handout]{ximera}
 %% handout
 %% space
 %% newpage
@@ -74,15 +74,7 @@ Determine whether the following statements are true or false and give either an 
 	%part d
 	\item  Absolute extreme values on a closed interval always occur at a critical point or an endpoint of the interval.
 		\begin{freeResponse}
-		True.  The pretty much follows directly from the Local Extreme Value Theorem.  All absolute extrema must either be local extrema or endpoints.  And by the Local Extreme Value Theorem, all local extrema must be critical points of the function.  
-		\end{freeResponse}	
-		
-		
-		
-	%part e
-	\item  If $x=3$ is in the domain of $f$ and if $f'(3)$ does not exist, then $x=3$ is a critical point of $f$.
-		\begin{freeResponse}
-		Technically this is false, but morally it is true.  If the domain of $f$ is some closed interval with $3$ as an endpoint, then $3$ is in the domain of $f$ and $f'(3)$ does not exist (since one of the sided limits of the derivative will not exist).  Certainly $x=3$ may not be a critical point of $f$, for example, consider the function $f(x) = x$ with domain $[0,3]$.  But this whole setup is a technicality because we had to restrict the natural domain of the function.  If $f'(3)$ does not exist and $x=3$ is an \emph{interior} point of the domain of $f$, then $x=3$ is a critical point of $f$.  
+		True.  That pretty much follows directly from the Local Extreme Value Theorem.  All absolute extrema must either be local extrema or endpoints.  And by the Local Extreme Value Theorem, all local extrema must be critical points of the function.  
 		\end{freeResponse}	
 		
 		
@@ -97,7 +89,7 @@ Determine whether the following statements are true or false and give either an 
 
 %problem 2
 \begin{problem}
-For each of the points identified on the graph below, determine if the point is a critical point, a local max or min, and/or an absolute max or min.
+For each of the points in the domain of $f$ identified on the graph below, determine if the function $f$ has a critical point, a local max or min, and/or an absolute max or min at that point.
 
 	\begin{center}
 	\begin{image}
@@ -106,19 +98,19 @@ For each of the points identified on the graph below, determine if the point is 
 	\end{center}	
 	
 		\begin{freeResponse}
-(a) This point is the absolute minimum.
+(a) The function $f$ has an absolute maximum at $x=a$
 
-(p) This point is a critical point and is the absolute maximum.  It is also a local maximum.
+(p) The function $f$ has a critical point and an absolute maximum/local maximum at $x=p$.  
 
-(q) This point is a critical point and is a local minimum.
+(q) The function $f$ has a critical point and a local minimum at $x=q$.
 
-(r) This point is a critical point and is a local maximum.
+(r) The function $f$ has a critical point and a local maximum at $x=r$
 
-(s) The derivative does not exist because the function has a corner.  This point is a critical point and is a local minimum.
+(s) The derivative of $f$ does not exist at $x=s$ because the function $f$ has a corner at $x=s$.  The function has a critical point and a local minimum at $x=s$.
 
-(t) This point is a critical point but is not a local maximum or minimum.
+(t) The function $f$ has a critical point but not a local maximum or minimum at $x=t$.
 
-(b) This point is not an absolute or local max or min.
+(b) The function $f$ does not have an absolute or local max or min at $x=b$.
 		\end{freeResponse}	
 		
 \end{problem}
@@ -226,7 +218,7 @@ Find the critical points of $f$ on the given interval, and determine the absolut
 
 %problem 4
 \begin{problem}
-All rectangles with an area of $64$ have a perimeter given by $P(x)=2x+\frac{128}{x}$, where $x$ is the length of one side of the rectangle.  Find the absolute minimum value of the perimeter function.  What are the dimensions of the rectangle with minimum perimeter?   
+All rectangles with an area of $64$ inches squared have a perimeter given by $P(x)=2x+\frac{128}{x}$, where $x$ is the length of one side of the rectangle in inches.  Find the absolute minimum value of the perimeter function.  What are the dimensions of the rectangle with minimum perimeter?   
 		\begin{freeResponse}
 		First note that the domain for $P(x)$ is $(0,\infty)$.  To find the critical points of $P$, we solve the equation $P'(x) = 0$:
 		$$ P'(x) = 2 - \frac{128}{x^2} := 0 $$
@@ -234,9 +226,9 @@ All rectangles with an area of $64$ have a perimeter given by $P(x)=2x+\frac{128
 		$$ 2x^2 = 128 $$
 		$$ x^2 = 64 $$
 		$$ x = \pm 8 $$
-		but since we must have $x>0$, our only critical point is $x=8$.  Notice that for $x \in (0,8)$, $P'(x) < 0$, and for $x \in (8, \infty)$, $P'(x) > 0$.  Thus $x=8$ is a local minimum by the first derivative test.  But since $P$ is decreasing over the entire interval $(0,8)$ and increasing over the entire interval $(8,\infty)$, $x=8$ must be an absolute minimum.
+		but since we must have $x>0$, our only critical point is $x=8$.  Notice that for $x \in (0,8)$, $P'(x) < 0$, and for $x \in (8, \infty)$, $P'(x) > 0$.  Thus $x=8$ is a local minimum.  But since $P$ is decreasing over the entire interval $(0,8)$ and increasing over the entire interval $(8,\infty)$, $x=8$ must be an absolute minimum.
 		
-		Hence, the absolute minimum perimeter is $P(4) = 16 + \frac{128}{8} = 16 + 16 = 32$.  Since the dimensions of such a rectangle are $8 \times 8$, a rectangle of minimum perimeter is a square.
+		Hence, the absolute minimum perimeter is $P(8) = 16 + \frac{128}{8} = 16 + 16 = 32$ inches.  Since the dimensions of such a rectangle are $8$ inches by $8$ inches, a rectangle of minimum perimeter is a square.
 		\end{freeResponse}
 			
 			
@@ -252,25 +244,32 @@ All rectangles with an area of $64$ have a perimeter given by $P(x)=2x+\frac{128
 \begin{problem}
 In each problem, sketch a graph of a function meeting the given critera.
 \begin{enumerate}
+	%part a
 	\item Sketch a possible graph of a function which is continuous on an open interval $(-1,5)$ but does not have an absolute maximum or minimum.
 	\begin{freeResponse} \hfil
 	\begin{image}
 	\includegraphics[scale=.5]{Figure5.png}
 	\end{image}	
 	\end{freeResponse}
+	
+	%part b
 	\item Sketch a possible graph of a function with an absolute minimum, a local maximum and a local minimum, but no absolute maximum on the interval $[-4,5]$.
 	\begin{freeResponse} \hfil
 	\begin{image}
 	\includegraphics[scale=.4]{Figure6.png}
 	\end{image}	
-	\end{freeResponse}	
+	\end{freeResponse}
+	
+	%part c	
 	\item Sketch a possible graph of a function, $f$, with a local maximum at $2$, and $f'(2)$ is undefined.
 	\begin{freeResponse} \hfil
 	\begin{image}
 	\includegraphics[scale=.4]{Figure4.png}
 	\end{image}	
-	\end{freeResponse}	
-	 \item Sketch a possible graph of a function $f$, continuous on $[1,5]$ with the following properties: $f'(x)=0$ for $x=2$ and $x=3$; $f$ has an absolute minimum at $x=4$; $f$ has an absolute maxmimum at $x=3$, and $f$ has a local minimum at $x=2$.
+	\end{freeResponse}
+	
+	%part d	
+	 \item Sketch a possible graph of a function $f$, continuous on $[1,4]$ with the following properties: $f'(x)=0$ for $x=2$ and $x=3$; $f$ has an absolute minimum at $x=4$; $f$ has an absolute maxmimum at $x=3$, and $f$ has a local minimum at $x=2$.
 		\begin{freeResponse} \hfil
 	\begin{image}
 	\includegraphics[scale=.5]{Figure7.png}
