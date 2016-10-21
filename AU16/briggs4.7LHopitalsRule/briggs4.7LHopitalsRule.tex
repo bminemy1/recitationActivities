@@ -1,0 +1,412 @@
+\documentclass[nooutcomes]{ximera}
+
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\input{../preamble.tex}
+\usepackage{fullpage}
+
+
+
+\title{4.7: L'Hopital's Rule}
+
+\begin{document}
+\begin{abstract}
+\end{abstract}
+\maketitle
+
+%problem 1
+\begin{problem}
+
+Evaluate each limit.  Remember to state the form of the limit.
+  \begin{enumerate}
+  \item  $\lim_{x \to \infty}\left( \ln (1 + e^{-x}) \right)^x $
+    \begin{freeResponse}
+      Since $\lim_{x \to \infty} (1 + e^{-x}) = 1 + 0 = 1$ and $\ln (1) = 0$, this limit is of the form $0^{\infty}$.
+      This is a determinate form which converges to $0$.
+      Thus, $\lim_{x \to \infty} \left( \ln (1 + e^{-x}) \right)^x = 0$.
+    \end{freeResponse}
+    
+  \item  $\lim_{x \to \infty} \left( \frac{1}{x} + 1 \right)^{\frac{1}{x}} $
+    \begin{freeResponse}
+      This limit is of the form $1^0$, which is a determinate form that converges to 1.
+      Thus, $\lim_{x \to \infty} \left( \frac{1}{x} + 1 \right)^{\frac{1}{x}} = 1 $
+    \end{freeResponse}
+    
+  \item  $\lim_{x \to \infty} \left( \frac{\arctan x}{x} \right) $
+    \begin{freeResponse}
+      Since $\lim_{x \to \infty} \arctan x = \frac{\pi}{2}$, this limit is of the form $\frac{\text{\#}}{\infty} \to 0$.
+      Thus, $\lim_{x \to \infty} \left( \frac{\arctan x}{x} \right) = 0$  
+    \end{freeResponse}
+    
+  \item  $\lim_{x \to \infty} (x-ln(x)) $
+    \begin{freeResponse}
+      This limit is of the form $\infty - \infty$, which is an indeterminate form.  We can rewrite this as:
+   
+      $$\lim_{x \to \infty} (x-ln(x))= \lim_{x \to \infty} \left(x\left(1-\frac{ln(x)}{x}\right)\right)$$
+     
+     We can see that $\lim_{x \to \infty}\left(\frac{ln(x)}{x}\right)$ is of the form $\frac{\infty}{\infty}$ so we can use L'Hopital's Rule.
+     
+      $$\stackrel{L.R.}{\implies} \lim_{x \to \infty}\left(\frac{1/x}{1}\right)=\lim_{x \to \infty}\left(\frac{1}{x}\right)=0$$
+      
+      Now we have: 
+      $$\lim_{x \to \infty} \left(x\left(1-\frac{ln(x)}{x}\right)\right)$$
+      This limit has the form $\infty \cdot 1$.  This is a determinate form, and, therefore,
+
+	 $\lim_{x \to \infty} (x-ln(x)) =\infty$
+   
+    \end{freeResponse}
+
+  \item  $\lim_{x \to \infty} \left( x \ln \left( \frac{1}{x} \right) \right) $
+    \begin{freeResponse}
+      As $x$ approaches $\infty$, $\frac{1}{x}$ approaches $0$ from the right.
+      So  $$\lim_{x \to \infty} \ln \left( \frac{1}{x} \right) = - \infty $$
+      Therefore, the limit in question is of the form $\infty \cdot - \infty$, which converges to $- \infty$.
+      Thus, 
+      $$ \lim_{x \to \infty} \left( x \ln \left( \frac{1}{x} \right) \right) = - \infty $$
+    \end{freeResponse}
+
+  \item  $\lim_{x \to 0^+} (\sin x \cot x ) $
+    \begin{freeResponse}
+      Since $\lim_{x \to 0^+} \cot x = \infty$, this limit is of the form $0 \cdot \infty$.
+      This is an indeterminate form.
+      
+     Note: $\cot x = \frac{\cos x }{\sin x}$.  So
+      $$\lim_{x \to 0^+} (\sin x \cot x ) = \lim_{x \to 0^+} \cos x = 1 .$$
+    \end{freeResponse}
+  \end{enumerate}
+\end{problem}
+
+
+%problem 2
+\begin{problem}
+
+  True or False: You can use L'H\^{o}pital's Rule to compute
+  $\lim_{x \to 0} \frac{|x|}{x}$.
+  \begin{freeResponse}
+    False.
+    The function $|x|$ is not differentiable at $x=0$, and so L'Hospital's Rule is not applicable.
+  \end{freeResponse}
+\end{problem}
+
+%problem 3
+\begin{problem}
+
+  Circle the correct answer in each part:
+  \begin{enumerate}
+    \item
+      Consider the limit $\lim_{x \to 0} (\cos x)^{\sin x}$.
+      \begin{enumerate}
+        \item
+          Evaluate the limit.
+          \begin{freeResponse}
+            \textbf{The correct choice is (iii).}
+
+            Evaluation of limit:
+            \begin{align*}
+              \lim_{x \to 0} \underbrace{(\cos x)^{\sin x}}_{\text{form $1^0$}} &= 1
+            \end{align*}
+          \end{freeResponse}
+          \begin{enumerate}
+            \item
+              the limit DNE
+            \item
+              $e$
+             \item
+              $1$
+            \item
+              $\infty$
+            \item
+              $-\infty$
+            \item
+              $0$
+            \item
+              none of the previous answers is correct
+          \end{enumerate}
+        \item
+          What Limit Law, rule or technique did you use to find this limit?
+          \begin{freeResponse}
+            The correct choice is (iv).
+          \end{freeResponse}
+          \begin{enumerate}
+            \item
+              The Squeeze Theorem;
+            \item
+              L'H\^{o}pital's Rule;
+            \item
+              The Product Law;
+            \item
+              evaluated the function at $x = 0$, since the function is continuous at $x = 0$;
+            \item
+              none of the previous answers is correct
+          \end{enumerate}
+      \end{enumerate}
+
+    \item
+      Evaluate the limit $\lim_{x \to 4^-} \frac{\ln x}{x - 4}$.
+      \begin{freeResponse}
+        The correct choice is (v).
+
+        Evaluation of limit:
+        \begin{align*}
+          \lim_{x \to 4^-} \underbrace{\frac{\ln x}{x - 4}}_{\text{form $\ln(4)/0^-$}} &= - \infty
+        \end{align*}
+      \end{freeResponse}
+
+      \begin{enumerate}
+        \item
+          the limit DNE
+        \item
+          $e$
+        \item
+          $1$
+        \item
+          $\infty$
+        \item
+          $-\infty$
+        \item
+          $0$
+        \item
+          none of the previous answers is correct
+      \end{enumerate}
+
+    \item
+      Evaluate the limit $\lim_{x \to \infty} \frac{\ln x}{x - 4}$.
+      \begin{freeResponse}
+        The correct choice is (vi).
+
+        Evaluation of limit:
+        \begin{align*}
+          \lim_{x \to \infty} \underbrace{\frac{\ln x}{x - 4}}_{\text{form $\infty/\infty$}} &\stackrel{L.H.}{=} \lim_{x \to \infty} \frac{1/x}{1} \\
+          &= 0
+        \end{align*}
+
+      \end{freeResponse}
+
+      \begin{enumerate}
+        \item
+          the limit DNE
+        \item
+          $e$
+        \item
+          $1$
+        \item
+          $\infty$
+        \item
+          $-\infty$
+        \item
+          $0$
+        \item
+          none of the previous answers is correct
+      \end{enumerate}
+
+    \item
+      Consider the limit $\lim_{h \to 0} \frac{(2+h)^3 - 8}{h} = f'(2)$.
+      Determine the function $f$.
+      \begin{freeResponse}
+        The correct choice is (ii).
+      \end{freeResponse}
+      \begin{enumerate}
+       \item
+         such a function DNE;
+       \item
+         $f(x) = x^3$;
+       \item
+         $f(x) = (2 + x)^3$;
+       \item
+         $f(x) = \frac{(2+x)^3}{x}$;
+       \item
+         none of the previous answers is correct
+      \end{enumerate}
+      
+    \item
+      Consider the limit $\lim_{x \to 0^+} \left( \frac{\sin x}{x} \right)^{|\ln x|}$.
+      Determine the form of this limit.
+      \begin{freeResponse}
+        The correct choice is (v).
+      \end{freeResponse}
+      \begin{enumerate}
+       \item
+         $\frac{0}{0}$;
+       \item
+         $\frac{\infty}{\infty}$;
+       \item
+         $1^0$;
+       \item
+         $0^0$;
+       \item
+         $1^\infty$;
+       \item
+         $\infty^\infty$;
+       \item
+         none of the previous answers is correct
+      \end{enumerate}
+  \end{enumerate}
+\end{problem}
+
+
+
+%problem 4
+\begin{problem}
+  Determine the following limits.
+  Use L'Hospital's Rule if applicable.
+  \begin{enumerate}
+  
+    %part a  
+  \item  $\lim_{x \to \infty} \frac{x}{\sqrt{x^2 + 1}}  $
+
+    \begin{freeResponse}
+    
+    This limit is of the form:  $\frac{\infty}{\infty}$
+      \begin{align*}
+        \lim_{x \to \infty} \frac{x}{\sqrt{x^2 + 1}} &= \lim_{x \to \infty} \frac{x}{\sqrt{x^2 \left(1 + \frac{1}{x^2} \right)}} \\
+                                                     &=  \lim_{x \to \infty} \frac{x}{|x| \sqrt{1 + \frac{1}{x^2} }} \\
+                                                     &=  \lim_{x \to \infty} \frac{x}{x \sqrt{1 + \frac{1}{x^2} }} \\
+                                                     &=  \lim_{x \to \infty} \frac{1}{\sqrt{1 + \frac{1}{x^2} }} \\
+                                                     &= \frac{1}{\sqrt{1 + 0}} = 1
+      \end{align*}
+    \end{freeResponse}
+    
+    
+    %part b
+  \item  $\lim_{x \to - \infty} x^2 e^x $
+    \begin{freeResponse}
+    This limit is of the form: $\infty \cdot 0$
+      \begin{align*}
+        \lim_{x \to - \infty} x^2 e^x &= \lim_{x \to - \infty} \frac{x^2}{ e^{-x}} \; \left( \text{of the form } \frac{\infty}{\infty} \right) \\
+                                      &\stackrel{L.R.}{=}  \lim_{x \to - \infty} \frac{2x}{- e^{-x}} \; \left( \text{of the form } \frac{\infty}{\infty} \right) \\
+                                      &\stackrel{L.R.}{=}  \lim_{x \to - \infty} \frac{2}{ e^{-x}}  \\
+                                      &= 0
+      \end{align*}
+      where ``L.R.'' above an equals sign means that that equality is due to ``L'Hospital's Rule''.  
+    \end{freeResponse}
+    
+    
+    
+    % part c
+  \item  $\lim_{x \to \infty} x^{\frac{1}{x}} $
+    \begin{freeResponse}
+    This limit is of the form: $\infty^0$
+      \begin{align*}
+        \lim_{x \to \infty} x^{\frac{1}{x}} &= \lim_{x \to \infty} e^{\ln \left( x^{\frac{1}{x}} \right) } \\
+                                            &= \lim_{x \to \infty} e^{\frac{1}{x} \ln x } \\
+                                            &= e^{ \lim_{x \to \infty} \frac{\ln x}{x} } \; \left( \text{limit is of the form } \frac{\infty}{\infty} \right) \\
+                                            &\stackrel{L.R.}{=} e^{\lim_{x \to \infty}\frac{\frac{1}{x}}{1}} \\
+                                            &= e^{\lim_{x \to \infty} \frac{1}{x}} \\
+                                            &= e^0 = 1
+      \end{align*}
+    \end{freeResponse}
+    
+    %part d
+    \item $\lim_{x \to \infty} \left(1+\frac{2}{x}\right)^x$
+        \begin{freeResponse}
+    This limit is of the form: $1^\infty$
+     \begin{align*}
+        \lim_{x \to \infty} \left(1+\frac{2}{x}\right)^x &= \lim_{x \to \infty} e^{\ln \left(\left(1+\frac{2}{x}\right)^x \right) } \\
+                                            &= \lim_{x \to \infty} e^{x \ln \left(1+\frac{2}{x}\right) } \\
+                                            &= e^{ \lim_{x \to \infty} \frac{\ln \left(1+\frac{2}{x}\right)}{1/x} } \; \left( \text{limit is of the form } \frac{0}{0} \right) \\
+                                            &\stackrel{L.R.}{=} e^{\lim_{x \to \infty}\frac{-2x^{-2}\cdot \frac{1}{(1+2/x)}}{-x^{-2}}} \\
+                                            &= e^{\lim_{x \to \infty} \left(2\left(\frac{1}{1+\frac{2}{x}}\right)\right)} \\
+                                            &= e^2 
+        \end{align*}
+    \end{freeResponse}
+    
+    
+        %part e
+    \item $\lim_{x \to 0^+} (\sin\theta)^{\tan\theta}$
+        \begin{freeResponse}
+    This limit is of the form: $0^0$
+    
+     \begin{align*}
+        \lim_{x \to 0^+} (\sin\theta)^{\tan\theta} &= \lim_{x \to 0^+} e^{\ln \left((\sin\theta)^{\tan\theta} \right) } \\
+                                            &= \lim_{x \to 0^+} e^{\tan\theta \ln (\sin\theta) } \\
+                                            &= e^{ \lim_{x \to 0^+} \frac{\ln (\sin\theta)}{\cot\theta} } \; \left( \text{limit is of the form } \frac{\infty}{\infty} \right) \\
+                                            &\stackrel{L.R.}{=} e^{\lim_{x \to 0^+}\frac{\cos\theta \cdot \frac{1}{\sin\theta}}{-\csc^2\theta}} \\
+                                            &= e^{\lim_{x \to 0^+} \left(\frac{\cos\theta}{\sin\theta}\cdot\frac{\sin^2\theta}{1}\right)} \\
+                                              &= e^{\lim_{x \to 0^+} (\cos\theta\cdot\sin\theta)} \\
+                                            &= e^0=1
+        \end{align*}
+    \end{freeResponse}
+    
+
+    
+  \end{enumerate}
+\end{problem}
+
+%problem5
+\begin{problem}
+Use limits to compare growth rates.  State which function grows faster or that they have comparable growth rates.
+
+\begin{enumerate}
+	\item$b^x; x^x; b>1$
+		\begin{freeResponse}
+		$\lim_{x \to \infty}\frac{b^x}{(x^x}=\lim_{x \to \infty}\left(\frac{b}{x}\right)^x=0$.  Since this limit is of the form $0^{\infty}$ which is a determinate form and equals $0$.
+		Therefore, $x^x$ grows faster.
+		
+		\end{freeResponse}
+	
+	\item $x^x; \left(\frac{x}{e}\right)^x$
+		\begin{freeResponse}
+		$\lim_{x \to \infty}\frac{x^x}{(x/e)^x}=\lim_{x \to \infty}\frac{x^x}{\frac{x^x}{e^x}}=\lim_{x \to \infty}{x^x}\cdot{\frac{e^x}{x^x}}=\lim_{x \to \infty}{e^x}=\infty$  Therefore, $x^x$ grows faster.
+		
+		\end{freeResponse}
+	
+
+	
+	\item $x^3; x^3 \cdot \ln(x)$
+		\begin{freeResponse}
+		$\lim_{x \to \infty}\frac{x^3}{x^3 \cdot \ln(x)}=\lim_{x \to \infty}\frac{1}{\ln(x)}=0$.  
+		Therefore, $x^3 \cdot \ln(x)$ grows faster.
+		
+		\end{freeResponse}
+	\item $a^x; b^x; 0<a<b$
+	\begin{freeResponse}
+		$\lim_{x \to \infty}\frac{a^x}{b^x}=\lim_{x \to \infty}\left(\frac{a}{b}\right)^x=0$
+		Therefore, $b^x$ grows faster
+	
+	
+	\end{freeResponse}
+	\item $\log_a(x); \log_b(x); 1<a<b$
+	\begin{freeResponse}
+	$\lim_{x \to \infty}\frac{\log_a(x)}{\log_b(x)}$\\
+	By L'Hopital's Rule: $\lim_{x \to \infty}\frac{\frac{1}{x\ln(a)}}{\frac{1}{x\ln(b)}}=\lim_{x \to \infty}\left(\frac{1}{x\ln(a)} \cdot \frac{x\ln(b)}{1}\right)=\frac{\ln b}{\ln a}$\\
+	Therefore, $\log_a(x)$ and $\log_b(x)$ grow at comparable rates.
+	
+		\end{freeResponse}
+	\item $\ln^{3} (x); x^{1/2}$
+		\begin{freeResponse}
+	$\lim_{x \to \infty}\frac{\ln^{3}(x)}{x^{1/2}}$\\
+	By L'Hopital's Rule:$\lim_{x \to \infty}\frac{\ln^{3}(x)}{x^{1/2}}=\lim_{x \to \infty}\frac{3\ln^2 (x) \cdot (1/x)}{(1/2)x^{-1/2}}=\lim_{x \to \infty}\frac{6 \cdot \ln^2 (x)}{x^{1/2}}$\\
+	By L'Hopital's Rule:$\lim_{x \to \infty}\frac{12\ln (x) \cdot (1/x)}{(1/2)x^{-1/2}}=\lim_{x \to \infty}\frac{24 \cdot \ln (x)}{x^{1/2}}$\\
+	By L'Hopital's Rule: $\lim_{x \to \infty}\frac{48}{x^{1/2}}=0$
+	Therefore, $x^{1/2}$ grows faster
+		\end{freeResponse}
+	
+		%part g	
+	\item $x; \ln(x)\sqrt{x}$
+		\begin{freeResponse}
+	
+	$\lim_{x \to \infty}\frac{x}{\ln (x)\sqrt{x}}=\lim_{x \to \infty}\frac{x^{1/2}}{\ln x}$\\
+	By L'Hopital's Rule:$\lim_{x \to \infty}\frac{(1/2)x^{-1/2}}{x^{-1}}=\lim_{x \to \infty}{(1/2)x^{1/2}}=\infty$\\
+		Therefore, $x$ grows faster
+		\end{freeResponse}
+		
+		%part h
+		\item Challenge: $x^{40}; 1.004^x$ (Hint: Use the substitution $x=lnt$.)
+			\begin{freeResponse}
+			\begin{align*}
+			\lim_{x \to \infty}\frac{x^{40}}{1.004^x} &=\lim_{t \to \infty}\frac{\ln (t)^{40}}{1.004^{\ln(t)}}\\
+			&=\lim_{t \to \infty}\frac{\ln (t)^{40}}{e^{\ln(1.004)^{\ln t}}}\\
+			&=\lim_{t \to \infty}\frac{\ln (t)^{40}}{t^{\ln(1.004)}}\\
+			&=\lim_{t \to \infty}\frac{40\ln(t)}{1.004t}\\
+			&\stackrel{L.R.}{=} \lim_{t \to \infty}\frac{\frac{40}{t}}{1.004}\\
+			&=0	
+				\end{align*}
+		Therefore, $1.004^x$ grows faster.
+		\end{freeResponse}
+\end{enumerate}
+\end{problem}
+\end{document} 

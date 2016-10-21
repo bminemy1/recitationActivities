@@ -1,3 +1,5 @@
+\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
 \newcommand {\RR }[0]{\mathbb R}
 \newcommand {\d }[0]{\,d}
 \newcommand {\l }[0]{\ell }

@@ -1,4 +1,4 @@
-\documentclass[nooutcomes]{ximera}
+\documentclass[nooutcomes,handout]{ximera}
 \usepackage{fullpage}
 %% handout
 %% space
@@ -316,10 +316,10 @@
   Given that:
   \begin{align*}
     \lim_{x \to - \infty} f(x) &= 0 & \lim_{x \to -3^-} f(x) &= \infty  & \lim_{x \to -3^+} f(x) &= - \infty & \lim_{x \to 4^-} f(x) &= \infty\\
-  \lim_{x \to 4^+} f(x) &= -\infty & f(1) &= 1 & f(5) &= -2 && \\
+  \lim_{x \to 4^+} f(x) &= -\infty & f(1) &= 1 & f(5) &= -2 & \lim_{x \to 9} f(x) &= 3& \\
     f'(1) &\ne 0 & f'(7) &= 0 & f'(x) &= 2 \text{ for } x > 9 & f''(1) &= 0 &
  \end{align*}
-     the domain of $f$ is: $(-\infty,-3) \cup (-3,4) \cup (4,\infty)$ and $f$ is continuous on its domain.
+     the domain of $f$ is: $(-\infty,-3) \cup (-3,4) \cup (4,9)\cup (9,\infty)$ and $f$ is continuous on its domain.
 The following sign chart for the first and second derivatives of $f$:
   \begin{image}
     \includegraphics[scale=.8]{Figure8.png}
@@ -328,7 +328,7 @@ The following sign chart for the first and second derivatives of $f$:
 find the following:
   \begin{enumerate}
      \item  Critical points.
-     \item  Intervals where $f$ is increasing and decreasing.
+     \item  Intervals where $f$ is increasing/decreasing.
      \item  Local extrema.
      \item  Inflection points.
      \item  Intervals of concavity.
@@ -344,17 +344,15 @@ find the following:
                 Therefore, $x=7$ is the only critical point of $f$.  
 			
       \item
-        Intervals where $f$ is increasing and decreasing.  \\
+        Intervals where $f$ is increasing/decreasing.  \\
         $f$ is increasing when $f'(x)>0$.
-        From the sign chart and our critical points, these are the intervals $(-\infty ,-3)$, $(-3,4)$, $(4,7]$, and $(9,\infty )$.
+        From the sign chart and our critical points, these are the intervals $(-\infty ,-3)$, $(-3,4)$, $(4,7)$, and $(9,\infty )$.
         $f(x)$ is decreasing when $f'(x)<0$.
-        From the sign chart, this is on the interval $[7,9)$.
+        From the sign chart, this is on the interval $(7,9)$.
 			
       \item
         Local extrema.  \\
-        Using the first derivative test, $f(7)$ is a local maximum because the derivative changes sign from positive to negative.
-        Although the derivative changes sign from negative to positive at $f(9)$, this is not a local minimum because the function is not defined at this point.
-        Therefore, $x=7$ is the only local extremum of $f$, and it is a local maximum.
+        Using the first derivative test, $f(7)$ is a local maximum because the derivative changes sign from positive to negative.  So, $x=7$ is the only local extremum of $f$, and it is a local maximum.
 			
       \item
         Inflection points.  \\
@@ -397,7 +395,7 @@ find the following:
   Intervals of increasing/decreasing\\
   Maxima/Minima\\
   Inflection points\\
-    Intervals of concavity
+    Intervals of concavity\\
     Sketch a graph of $f$
 
 \begin{freeResponse}
@@ -443,13 +441,13 @@ $-f(x)=-3\sin\left(\frac{x}{2}\right)=f(-x)$ so $f$ is odd
      
 \item Maxima/minima:
  
-       Using the sign chart above, the first derivative test states
+      The first derivative test states
         we have a local maximum if the sign of $f'$ changes from
         positive to negative, and a local minimum if the sign of $f'$
         changes from negative to positive.
 
         Therefore there is a local maximum at $x = \pi$ and local
-        minimum at $x = -\pi$.
+        minimum at $x = -\pi$ by the results in part (d).
         
         
      \item Intervals of concavity:
@@ -471,14 +469,14 @@ We have a candidate for an inflection point at $x=0$. \\
             So $f$ is concave up on the interval $(-2\pi, 0)$, and $f$
             is concave down on the interval $(0, 2\pi)$.   
     \item Inflection points: 
-             Inflection points only occur where the concavity of a
+             Inflection points occur where the concavity of a
             function changes. Those interior points in $[-2\pi, 2\pi]$
             where $f''$ is undefined or equal to 0 are only
             \emph{candidates} for the inflection points.  We found in part f that we had a candidate for an inflection point at $x=0$.  We verified in part f that concavity changes at $x=0$.
             
 
 
-            Thus we have that $x = 0$ is the only inflection point.  $f(0)=3\sin\left(\frac{0}{2}\right)=0$.  The inflection point is $(0,0)$
+            Since $f(0)=3\sin\left(\frac{0}{2}\right)=0$, the inflection point is $(0,0)$
             
             
 
@@ -508,8 +506,8 @@ We have a candidate for an inflection point at $x=0$. \\
   Intervals of increasing/decreasing\\
   Maxima/Minima (including absolute)\\
   Intervals of concavity\\
-  Inflection points
-Given $\lim{x \to 0^+}=0$, sketch a graph $f$.
+  Inflection points\\
+Given $\lim_{x \to 0^+}f(x)=0$, sketch a graph $f$.
 
 \begin{freeResponse}
 \begin{enumerate}
@@ -538,12 +536,12 @@ Therefore, $f$ is decreasing on $(0,e^{-1})$ and $f$ is increasing on $(e^{-1},\
 
 Since the function is decreasing on $(0,e^{-1})$ and $f$ is increasing on $(e^{-1},\infty)$., the absolute minimum value of $f$ is attained at $x=e^{-1}$.  The absolute minimum value of $f(x)=f(e^{-1})=e^{-1}\ln e^{-1}=-e^{-1}=-\frac{1}{e}$
 
-The absolute maximum value of $f$ does not exist, since the only critical point is a minimum and $\lim{x \to \infty}f(x)=+\infty$
+The absolute maximum value of $f$ does not exist, since the only critical point is a minimum and $\lim_{x \to \infty}f(x)=+\infty$
 
 \item Intervals of concavity and inflection points:
 $f'(x)=\ln(x)+1 \implies f''(x)=\frac{1}{x}>0$ on the domain of $f$.  Concave up on its domain and there are no inflection points.
 
-\item Given $\lim{x \to 0^+}=0$, sketch a graph $f$:
+\item Given $\lim_{x \to 0^+}f(x)=0$, sketch a graph $f$:
         \begin{image}
         \includegraphics[scale = .7]{figure7.png}
       \end{image}
@@ -604,7 +602,7 @@ $f'(x)=\ln(x)+1 \implies f''(x)=\frac{1}{x}>0$ on the domain of $f$.  Concave up
  \begin{freeResponse}
         For $x>2$ we have
         \begin{align*}
-          f''(x) &= \frac{-1}{4(x-2)^{-3/2}}
+          f''(x) &= \frac{-1}{4(x-2)^{3/2}}
         \end{align*}
       \end{freeResponse}
 
@@ -615,7 +613,7 @@ $f'(x)=\ln(x)+1 \implies f''(x)=\frac{1}{x}>0$ on the domain of $f$.  Concave up
         \item
           Vertical asymptotes:
               \begin{freeResponse}
-            NONE: For $x \ge 2$, $f(x)=\sqrt{x - 2}$ so no vertical asymptotes there.  For $x \le 1,\ f(x)= 2x - 2\tan^{-1}(x) - x \ln(x^2+1)$ we can look at each term.  The term $2x$ is a polynomial.  The term $- 2\tan^{-1}(x)$ is bounded.  Finally, the term $- x \ln(x^2+1)$.  We would be concerned about where $x^2+1=0$ but that never happens because of the squared term.
+            NONE: For $x \ge 2$, $f(x)=\sqrt{x - 2}$ so no vertical asymptotes there.  For $x \le 1,\ f(x)= 2x - 2\tan^{-1}(x) - x \ln(x^2+1)$ and we can look at each term.  The term $2x$ is a polynomial.  The term $- 2\tan^{-1}(x)$ is bounded.  Finally, the term $- x \ln(x^2+1)$.  We would be concerned about where $x^2+1=0$ but that never happens because of the squared term.
           \end{freeResponse}
 
         \item
@@ -628,7 +626,7 @@ $f'(x)=\ln(x)+1 \implies f''(x)=\frac{1}{x}>0$ on the domain of $f$.  Concave up
 
             No H.A. as $x \to -\infty$:
             \begin{align*}
-              \lim_{x \to -\infty} f(x) &= \lim_{x \to -\infty} 2x - 2\tan^{-1}(x) - x \ln(x^2+1)\\
+              \lim_{x \to -\infty} f(x) &= \lim_{x \to -\infty} (2x - 2\tan^{-1}(x) - x \ln(x^2+1))\\
               &= \lim_{x \to -\infty} \left[x\cdot(2 - \ln(x^2+1)) - 2\tan^{-1}(x)\right]\\
               &= \lim_{x \to -\infty} \left[x \cdot(2 + \ln(x^2+1)^{-1} -2\tan^{-1}(x) \right]\\
               &= \lim_{x \to -\infty} \left[\underbrace{x}_{\text{$\to -\infty$}} \cdot \left(2 + \ln\left(\underbrace{\frac{1}{x^2+1}}_{\text{$\to 0$}}\right)\right) -2\underbrace{\tan^{-1}(x)}_{\text{$\to -\pi/2$}} \right]\\
@@ -648,7 +646,7 @@ $f'(x)=\ln(x)+1 \implies f''(x)=\frac{1}{x}>0$ on the domain of $f$.  Concave up
         \end{image}
         
            \begin{freeResponse}
-        \textbf{Finding critical points of $f'$:}
+        \textbf{Finding critical points of $f$:}
 
         For $x < 1$ we have
         \begin{align*}
@@ -671,13 +669,11 @@ $f'(x)=\ln(x)+1 \implies f''(x)=\frac{1}{x}>0$ on the domain of $f$.  Concave up
           \includegraphics[scale = 0.2]{"Sign chart of derivative2".png}
         \end{image}
         
-        local max: none
-        
-        local min: none
+        Using the sign chart above, we see that the sign of $f'$ does not change at $x=0$ and is therefore neither a maximum or minimum. So $f$ does not have a local maximum or local minimum.
 
-        intervals where $f$ is increasing: $(2, \infty)$
+	Using the sign chart above, we see $f'$ is positive on $(2, \infty)$ and thus intervals where $f$ is increasing: $(2, \infty)$
 
-        intervals where $f$ is decreasing: $(-\infty, 0)$, $(0, 1)$, 
+        Using the sign chart above, we see $f'$ is negative on $(-\infty, 0)$, $(0, 1)$ and thus intervals where $f$ is decreasing: $(-\infty, 0)$, $(0, 1)$.
 
         \textbf{Find candidates for inflection points:}
 

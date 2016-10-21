@@ -1,0 +1,397 @@
+\documentclass[nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}P\arabic{problem} Outcome: #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 22 Solutions}
+
+\begin{document}
+\begin{abstract}
+  % \textbf{A look back:} In the previous (March 31, 2016) Breakout Session you practiced calculating antiderivatives and working with initial value problems.
+
+  % \textbf{Overview:} In today's (April 5, 2016) Breakout Session you'll practice approximating the area under a curve using Riemann sums and the important notion of accumulation (in terms of definite integrals).
+  
+  % \textbf{A look ahead:} In the next (April 7, 2016) Breakout Session you'll learn how evaluating definite integrals is connected to antiderivatives and the graphical interpretation of accumulation.
+\end{abstract}
+\maketitle
+
+% \section{Learning Outcomes}
+% \label{section:learning-outcomes}
+% The following outcomes are \emph{not an exhaustive} list of the skills you will need to develop and integrate for demonstration on quizzes and exams.
+% This list is meant to be a starting point for conversation (with your Lecturer, Breakout Session Instructor, and fellow learners) for organizing your knowledge and monitoring the development of your skills.
+
+% \begin{itemize}
+%   \item Express sums using sigma notation.
+%   \item Add up a large number of terms quickly using sigma notation.
+%   \item Approximate area under a curve.
+%   \item Approximate displacement from velocity.
+%   \item Compute left, right, and midpoint Riemann Sums.
+%   \item Define area.
+%   \item Understand the relationship between area under a curve and sums of rectangles.
+%   \item Associate the components of the sum formula with their geometric meaning.
+%   \item Approximate net area.
+%   \item Compute definite integrals using limits of Riemann Sums.
+%   \item Compute definite integrals using geometry.
+%   \item Compute definite integrals using the properties of integrals.
+%   \item Define net area.
+%   \item Understand how Riemann sums are used to find exact area.
+%   \item Justify the properties of definite integrals using algebra or geometry.
+% \end{itemize}
+% \newpage
+
+\begin{problem}
+  \outcome{Understand the relationship between area under a curve and sums of rectangles.}
+  If a function is positive and decreasing on an interval $[a,b]$,  will a right Riemann sum underestimate or overestimate the area of the region under the graph of the function?
+  Justify your answer.
+\begin{freeResponse}
+  Because the function is decreasing, a right Reimann sum will be an underestimate.
+  By definition, $f(x_k)< f(x)$ for all $x$ in the interval $[x_{k-1},x_k]$.
+\end{freeResponse}	
+\end{problem}
+
+\begin{problem}
+  \outcome{Approximate area under a curve.}
+  \outcome{Compute left, right, and midpoint Riemann Sums.}
+  \outcome{Express sums using sigma notation.}
+Estimate the area under each curve with the given value of $n$ using a right Riemann Sum. Write the sum in summation notation.
+	\begin{enumerate}
+	%part a
+	\item  $f(x) = x^2 - 9x + 18$, \; $[7,10]$, \; $n=6$
+		\begin{freeResponse}
+		$\Delta x=\frac{b-a}{n}=\frac{10-7}{6}=\frac{1}{2}.$  \\
+		$x_i =a+i\Delta x=7+\frac{1}{2}i.$  
+		\begin{align*}
+		\sum_{i=1}^{6} f(a + i \Delta x) \Delta x &= \sum_{i=1}^{6} \left( f \left( 7 + \frac{1}{2} i \right) \cdot \frac{1}{2} \right)  \\
+		&= \frac{1}{2} \sum_{i=1}^{6} \left( \left( 7 + \frac{1}{2} i \right)^2 - 9 \left( 7 + \frac{1}{2} i \right) + 18 \right) \\
+		&= \frac{1}{2} \sum_{i=1}^{6} \left( 49 + 7i + \frac{1}{4} i^2 - 63 - \frac{9}{2} i + 18 \right) \\
+		&= \frac{1}{2} \sum_{i=1}^{6} \left( 4 + \frac{5}{2} i + \frac{1}{4} i^2 \right) \\
+		&= \frac{1}{2} \left( 4 \sum_{i=1}^{6} 1 + \frac{5}{2} \sum_{i=1}^{6} i + \frac{1}{4} \sum_{i=1}^{6} i^2 \right) \\
+		&= \frac{1}{2} \left( 4(6) + \frac{5}{2} \cdot \frac{(6)(7)}{2} + \frac{1}{4} \cdot \frac{(6)(7)(13)}{6} \right) \\
+		&= \frac{1}{2} \left( 24 + \frac{105}{2} + \frac{91}{4} \right) \\
+		&= \frac{1}{2} \cdot \frac{96 + 210 + 91}{4} = \frac{397}{8}
+		\end{align*}
+		\end{freeResponse}
+		
+		
+		
+	%part b
+	\item  $\sin (x)$, \; $\left[ 0, \frac{\pi}{2} \right]$, \; $n=3$
+		\begin{freeResponse}
+		$\Delta x=\frac{b-a}{n}=\frac{\frac{\pi }{2}-0}{3}=\frac{\pi }{6}$.  \\
+		$x_i=a+i\Delta x=0+\frac{\pi }{6}i=\frac{\pi }{6}i.$
+		\begin{align*}
+		\sum_{i=1}^{3}  f ( a + i \Delta x ) \Delta x  &= \sum_{i=1}^{3} \left( f \left( \frac{\pi}{6}i \right) \cdot \frac{\pi}{6} \right) \\
+		&= \frac{\pi}{6} \sum_{i=1}^{3} \sin \left( \frac{\pi}{6} i \right) \\
+		&= \frac{\pi}{6} \left( \sin \left( \frac{\pi}{6} \right) + \sin \left( \frac{2 \pi}{6} \right) + \sin \left( \frac{3 \pi}{6} \right) \right) \\
+		&= \frac{\pi}{6} \left( \sin \left( \frac{\pi}{6} \right) + \sin \left( \frac{\pi}{3} \right) + \sin \left( \frac{\pi}{2} \right) \right) \\
+		&= \frac{\pi}{6} \left( \frac{1}{2} + \frac{\sqrt{3}}{2} + 1 \right)  \\
+		&= \frac{\pi}{6} \left( \frac{3}{2} + \frac{\sqrt{3}}{2} \right)  \\
+		&= \frac{\pi}{12} (3 + \sqrt{3} )
+		\end{align*}
+		\end{freeResponse}
+	\end{enumerate}
+\end{problem}
+	
+\begin{problem}
+  \outcome{Express sums using sigma notation.} 
+  \outcome{Associate the components of the sum formula with their geometric meaning.}
+  \outcome{Compute definite integrals using limits of Riemann Sums.}
+Snow is starting to fall with a rate at any time $t$ after the start being 
+$$ f'(t) = \frac{3}{2} t - \frac{1}{4} t^2 + \frac{3}{10} $$
+inches per hour for $t$ in $[0,4]$ (i.e., the snow falls for 4 hours - from noon until 4pm).  
+There were already $5$ inches of snow on the ground when the storm started.  
+	\begin{enumerate}
+	
+	%part a 
+	\item  Use the formula for a right Riemann sum to estimate how much snow fell during the storm using $n$ rectangles.
+		\begin{freeResponse}
+		$\Delta x = \frac{b-a}{n} = \frac{4-0}{n} = \frac{4}{n}$.
+		
+		$x_i = a + i \Delta x = 0 + i \frac{4}{n} = \frac{4i}{n}$.
+			\begin{align*}
+			f'(x_i) = f' \left( \frac{4i}{n} \right) &= \frac{3}{10} + \frac{3}{2} \left( \frac{4i}{n} \right) - \frac{1}{4} \left( \frac{4i}{n} \right)^2  \\
+			&= \frac{3}{10} + \frac{6i}{n} - \frac{4i^2}{n^2}
+			\end{align*}
+			
+		So our approximate area is:
+			\begin{align*}
+			\sum_{i=1}^n f'(x_i) \Delta x &= \sum_{i=1}^n \left[ \left( \frac{3}{10} + \frac{6i}{n} - \frac{4i^2}{n^2} \right) \left( \frac{4}{n} \right) \right]  \\
+			&= \frac{4}{n} \sum_{i=1}^n \left( \frac{3}{10} + \frac{6i}{n} - \frac{4i^2}{n^2} \right)  \\
+			&= \frac{4}{n} \sum_{i=1}^n \left( \frac{3}{10} \right) + \frac{4}{n} \sum_{i=1}^n \left( \frac{6i}{n} \right) - \frac{4}{n} \sum_{i=1}^n \left( \frac{4i^2}{n^2} \right)  \\
+			&= \frac{6}{5n} \sum_{i=1}^n 1 + \frac{24}{n^2} \sum_{i=1}^n i - \frac{16}{n^3} \sum_{i=1}^n i^2  \\
+			&= \frac{6}{5n} (n) + \frac{24}{n^2} \left( \frac{n(n+1)}{2} \right) - \frac{16}{n^3} \left( \frac{n(n+1)(2n+1)}{6} \right)  \\
+			&= \frac{6}{5} + \frac{12n(n+1)}{n^2} - \frac{8n(n+1)(2n+1)}{3n^3}.
+			\end{align*}
+		\end{freeResponse}
+		
+		
+		
+	%part b
+	\item  Take the limit as $n$ goes to infinity to find the exact amount of snow that fell.
+		\begin{freeResponse}
+			\begin{align*}
+			&  \lim_{n \to \infty} \left( \frac{6}{5} + \frac{12n(n+1)}{n^2} - \frac{8n(n+1)(2n+1)}{3n^3} \right)  \\
+			&= \lim_{n \to \infty} \left( \frac{6}{5} + \frac{12n^2(1+\frac{1}{n})}{n^2} - \frac{8n^3(1+\frac{1}{n})(2+\frac{1}{n})}{3n^3} \right)  \\
+			&= \lim_{n \to \infty} \left( \frac{6}{5} + 12 \left( 1 + \frac{1}{n} \right) - \frac{8(1 + \frac{1}{n})(2 + \frac{1}{n})}{3} \right)  \\
+			&= \frac{6}{5} + 12(1 + 0) - \frac{8(1+0)(2+0)}{3}  \\
+			&= \frac{6}{5} + 12 - \frac{16}{3} = \frac{18 + 180 - 80}{15} = \frac{118}{15}.
+			\end{align*}
+		\end{freeResponse}
+	\end{enumerate}
+\end{problem}
+
+\begin{problem}
+  \outcome{Understand how Riemann sums are used to find exact area.}
+  Consider the following limit of (general) Riemann sums of a function $g$ on $[a, b]$:
+  \[
+    \lim_{\Delta \to 0} \sum_{k = 1}^n (x_k^* + \cos(x_k^*)) \Delta x_k\mbox{ , $[0, \pi]$.}
+  \]
+  Express the limit as a definite integral.
+  \begin{freeResponse}
+    We have 
+    \[
+      \int_0^\pi(x + \cos(x))\d x = \lim_{\Delta \to 0} \sum_{k = 1}^n (x_k^* + \cos(x_k^*)) \Delta x_k.
+    \]
+  \end{freeResponse}
+\end{problem}
+
+\begin{problem}
+  \outcome{Compute definite integrals using the properties of integrals.}
+Let $f(x)$ and $g(x)$ be functions for which we only know the following:
+$$ \int_1^4 f(x)\d x = 7	\qquad	\int_2^4 f(x)\d x = 5	\qquad	\int_1^4 g(x)\d x = 2 $$
+Compute the following integrals, if possible.  If it is not possible, give examples explaining why not.
+	\begin{enumerate}
+	
+	%part a 
+	\item  $\int_1^4 (8f(x) - 7g(x))\d x $
+		\begin{freeResponse}
+			\begin{align*}
+			\int_1^4 (8f(x) - 7g(x))\d x &= 8 \int_1^4 f(x) \d x - 7 \int_1^4 g(x) \d x  \\
+			&= 8(7) - 7(2) \\
+			&= 56 - 14 = 42
+			\end{align*}
+		\end{freeResponse}
+		
+		
+		
+	%part b
+	\item  $\int_1^2 (-f(x)) \d x $
+		\begin{freeResponse}
+		First notice that
+			\begin{equation*}
+			\int_1^4 f(x) \d x - \int_2^4 f(x) \d x = \int_1^2 f(x) \d x.
+			\end{equation*}
+		So
+			\begin{align*}
+			\int_1^2 (-f(x)) \d x &= - \int_1^2 f(x) \d x  \\
+			&= - \left( \int_1^4 f(x)\d x - \int_2^4 f(x)\d x \right)  \\
+			&= - (7 - 5) = -2.
+			\end{align*}
+			
+			%\begin{align*}
+			%\int_1^2 (-f(x)) \d x &= - \int_1^2 f(x) \d x  \\
+			%&= - \left( \int_1^4 f(x)\d x + \int_4^2 f(x)\d x \right)  \\
+			%&= - \left( \int_1^4 f(x)\d x - \int_2^4 f(x)\d x \right)  \\
+			%&= - (7 - 5) = -2
+			%\end{align*}
+		\end{freeResponse}
+		
+		
+		
+	%part c
+	\item  $\int_1^4 \left| f(x) \right| \d x$
+		\begin{freeResponse}
+		We are not given enough information to solve this integral because we do not know the regions where $f$ is positive or negative.
+		Consider the following two functions $f_1(x)$ and $f_2(x)$:  
+		
+		$f_1(x) =   \left\{ \begin{array}{cl}
+	2		 	&	\qquad \text{if } \quad 1 \leq x < 2					\\
+	\frac{5}{2}		&	\qquad \text{if } \quad 2 \leq x \leq 4		\end{array} \right.  $
+	
+	$f_2(x) =   \left\{ \begin{array}{cl}
+	6		 	&	\qquad \text{if } \quad 1 \leq x < 1.5					\\
+	-2		 	&	\qquad \text{if } \quad 1.5 \leq x < 2					\\
+	\frac{5}{2}		&	\qquad \text{if } \quad 2 \leq x \leq 4		\end{array} \right.  $
+	
+	Just using geometry, one can check that
+	$$ \int_1^4 f_1(x)\d x = 7	\qquad	\int_2^4 f_1(x)\d x = 5	\qquad	\int_1^4 f_2(x)\d x = 7	\qquad	\int_2^4 f_2(x)\d x = 5 $$
+	and so both $f_1$ and $f_2$ satisfy the assumptions of $f$.  But notice that
+	$$\int_1^4 \left| f_1(x) \right| \d x = 7	\qquad	\text{and}		\qquad	\int_1^4 \left| f_2(x) \right| \d x = 9  $$
+	These two examples demonstrate that we were not given enough information to solve this problem.
+		
+		\end{freeResponse}
+		
+	%part d
+	\item  $\int_1^4 \left( 2 - x + f(x) \right) \d x$
+		\begin{freeResponse}
+		First notice that since the integral is linear over addition:
+			\begin{equation}\label{3d}
+			\int_1^4 \left( 2 - x + f(x) \right) \d x = \int_1^4 2 \d x - \int_1^4 x \d x + \int_1^4 f(x) \d x = \int_1^4 2 \d x - \int_1^4 x \d x + 7.
+			\end{equation}
+		By using geometry, we can see that
+			\begin{equation*}
+			\int_1^4 2 \d x = 2(4-1) = 6
+			\end{equation*}
+			\begin{equation*}
+			\int_1^4 x \d x = 1(4-1) + \frac{1}{2} (4-1)(4-1) = 3 + \frac{9}{2} = \frac{15}{2}.
+			\end{equation*}
+		Then substituting into equation \eqref{3d} gives:
+			\begin{equation*}
+			\int_1^4 \left( 2 - x + f(x) \right) \d x = 6 - \frac{15}{2} + 7 = \frac{11}{2}.
+			\end{equation*}
+		\end{freeResponse}
+	\end{enumerate}
+\end{problem}
+
+\section{Extra problems for personal practice}    
+\begin{problem}
+  Evaluate the following sums:
+  \begin{enumerate}
+  \item $\sum_{i=1}^{4} i^5 $
+    \begin{freeResponse}
+      $\sum_{i=1}^{4} i^5 = 1^5 + 2^5 + 3^5 + 4^5 = 1 + 32 + 243 +
+      1024 = 1300$.
+    \end{freeResponse}
+
+  \item $\sum_{i=1}^{400} (5(i+1)^2 + 3) $
+    \begin{freeResponse}
+      \begin{align*}
+        \sum_{i=1}^{400} (5(i+1)^2 + 3) 
+        &= \sum_{i=1}^{400} (5(i^2 + 2i + 1) + 3) \\
+        &= \sum_{i=1}^{400} (5i^2 + 10i + 8) \\
+        &= \sum_{i=1}^{400} 5i^2 + \sum_{i=1}^{400} 10i + \sum_{i=1}^{400} 8  \\
+        &= 5\sum_{i=1}^{400} i^2 + 10 \sum_{i=1}^{400} i + 8(400)  \\
+        &= 5 \left( \frac{400(400+1)(2(400) + 1)}{6} \right) + 10 \left( \frac{400(400+1)}{2} \right) + 3,200  \\
+        &= 5 (200)(401)(267) + 10(200)(401) + 3,200  \\
+        &= 107,067,000 + 802,000 + 3,200 = 107,872,200
+      \end{align*}
+    \end{freeResponse}
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}
+  The \dfn{velocity} function for a man walking along a straight road which runs east and west is given by $v(t) = -t^2 + 4t - 3$ ft/min.
+  \begin{enumerate}
+    
+  \item  Set up a definite integral for the man's \dfn{displacement} during the time interval from $2$ minutes to $6$ minutes after he began running.
+    \begin{freeResponse}
+      \begin{align*}
+        \int_2^6 v(t) \d t &= \lim_{n \to \infty} \sum_{i=1}^n v(x_i) \Delta x
+      \end{align*}
+      Where:  \\	
+      $\Delta x = \frac{b-a}{n} = \frac{6-2}{n} = \frac{4}{n}$.
+      
+      $x_i = a + i \Delta x = 2 + i \frac{4}{n} = 2 + \frac{4i}{n}$.
+    \end{freeResponse}
+    
+  \item  \dfn{At home:}  Solve the definite integral using the limit of a right Riemann sum.
+    \begin{freeResponse}
+      \begin{align*}
+        v(x_i) &= -\left(2 + \frac{4i}{n} \right)^2 + 4 \left( 2 + \frac{4i}{n} \right) - 3  \\
+               &= - \left( 4 + \frac{16i}{n} + \frac{16i^2}{n^2} \right) + 8 + \frac{16i}{n} - 3  \\
+               &= 1 - \frac{16i^2}{n^2}
+      \end{align*}
+      
+      So we compute:
+      \begin{align*}
+        \int_2^6 v(t) \d t &= \lim_{n \to \infty} \sum_{i=1}^n \left[ \left( 1 - \frac{16i^2}{n^2} \right) \left( \frac{4}{n} \right) \right]  \\
+                           &= \lim_{n \to \infty} \sum_{i=1}^n \left( \frac{4}{n} - \frac{64 i^2}{n^3} \right)  \\
+                           &= \lim_{n \to \infty} \left[ \frac{4}{n} \sum_{i=1}^n 1 - \frac{64}{n^3} \sum_{i=1}^n i^2 \right]  \\
+                           &= \lim_{n \to \infty} \left[ \frac{4}{n} (n) - \frac{64}{n^3} \left( \frac{n(n+1)(2n+1)}{6} \right) \right]  \\
+                           &= 4 - \frac{64}{3} = \frac{12-64}{3} = - \frac{52}{3}.
+      \end{align*}
+    \end{freeResponse}
+    
+  \item  Is this the same as the total \dfn{distance} the man walked from $2$ minutes to $6$ minutes?
+    Why or why not?
+    \begin{freeResponse}
+      This number is not the same as the total distance.
+      The man starts his walk by going east (the positive direction) but eventually ends his walk west of where he started.
+      
+      The total distance that the man walks would be measured by computing 
+      $$\int_2^6 \left| v(t) \right| \d t$$  
+    \end{freeResponse}
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}
+  Snow is accumulating on the ground at a rate of  
+  $$f^\prime (t)=1.5t-.25 t^2+.3$$
+  inches per hour for $t$ in $[0,4]$ (i.e., the snow falls for 4 hours- from noon until 4PM).  
+
+  There were already $5$ inches of snow on the ground when the storm started.  What does this statement say notation-wise?
+
+  A natural question would be to ask how much the amount of snow on the ground changed during the storm.  But because the rate is always changing, this is a difficult question to answer (yet, we will eventually answer it!).  Let’s take what we know about constant rates and amounts and use that to help us answer our question (i.e., once again, taking what we know and using it to find out something about what we do not know).
+
+  \begin{enumerate}
+    
+
+  \item  Assume the rate stays the same as it was at the start of the storm: 0.3 inches per hour.  How much did the height of the snow on the ground change?  Is this a realistic estimate?
+    \begin{freeResponse}
+      We are assuming that snow is falling at a constant rate of $f^\prime (0)=.3$ inches per hour for the full four hours.  We estimate that the net amount of snow fallen is:
+      
+      (rate snow is falling)$\times$(change in time)=$f^\prime (0) \cdot (4-0) =.3 \cdot 4=1.2$ inches of snow.  
+      
+      No this is not a realistic estimate because $f^\prime$ is not constant.
+    \end{freeResponse}
+
+  \item  Now assume the rate is the same as it is at the start for the first two hours, then changes to what it is at 2PM for the final two hours.  How much did the height of the snow on the ground change?  Is this a realistic estimate?  Is it likely to be better or worse than that of part (a)?
+    \begin{freeResponse}
+      We are assuming that snow is falling at a constant rate of $f^\prime (0)=.3$ inches per hour for the first two hours, then at the constant rate of $f^\prime (2)=2.3$ inches per hour for the final two hours.  Thus, we estimate that the net amount of snow fallen is:
+      
+      $f^\prime (0)\cdot (2-0)+ f^\prime (2) \cdot (4-2)= (0.3)(2) + (2.3)(2) = 0.6+4.6=5.2$ inches.
+      
+      No this is not a realistic estimate, but it is better than the estimate from part (a).  
+    \end{freeResponse}
+    
+  \item  Now assume the rate stays constant by the hour (i.e., it only changes on the hour to its rate at those times of noon, 1PM, 2PM, and 3PM).  How much did the height of the snow change?
+    \begin{freeResponse}
+      We are assuming that snow is falling at a constant rate of $f^\prime (0)=.3$ inches per hour for the first hour, then at the constant rate of $f^\prime (1)=1.55$ inches per hour for the second hour, then at a constant rate of $f^\prime (2)=2.3$ inches per hour for the third hour, and finally at a constant rate of $f^\prime (3)=2.55$ inches per hour for the final hour.  c. Thus, we estimate that the net amount of snow fallen is:
+      $$ (0.3)(1) + (1.55)(1) + (2.3)(1) + (2.55)(1) = 0.3 + 1.55 + 2.3 + 2.55 = 6.7 $$
+      
+      So we estimate that 6.7 inches of snow fell throughout the four hours.
+    \end{freeResponse}
+    
+  \item  Now do the same, but it changes on the half-hour.
+    \begin{freeResponse}
+      Snow falls at the constant rate of $f^\prime (0)=.3$ inches per hour for the first half hour, then at the constant rate of $f^\prime (.5)=.9875$ inches per hour for the next half hour, then at the constant rate of $f^\prime (1)=1.55$ inches per hour for the next half hour, and so on, changing rates at each half hour to the constant rates of $f^\prime (1.5)=1.9875, f^\prime (2)=2.3, f^\prime (2.5)=2.4875, f^\prime (3)=2.55, $ and $f^\prime (3.5)=2.4875$ inches per hour, respectively.  Thus, we estimate that the net amount of snow fallen is:
+      \begin{align*}
+        & [0.3 + 0.9875 + 1.55 + 1.9875 + 2.3 + 2.4875 + 2.55 + 2.4875](0.5) \\
+        &= 7.325 \text{ inches}.
+      \end{align*}
+    \end{freeResponse}
+    
+    
+    
+
+  \item  What would we need to do to find the exact amount that the height of the snow on the ground changed?  And how much snow in total would be on the ground?  Describe these in words, do not try to calculate them.
+    \begin{freeResponse}
+      To find the exact amount of snow that fell, we would need to calculate the amount of snow that fell at $n$ different places, add them up, multiply by $\frac{4}{n}$, and then take the limit at $n$ goes to infinity.
+    \end{freeResponse}
+  \end{enumerate}
+\end{problem}
+
+\end{document} 

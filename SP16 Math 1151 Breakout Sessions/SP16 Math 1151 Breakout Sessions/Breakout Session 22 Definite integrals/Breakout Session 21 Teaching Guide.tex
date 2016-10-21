@@ -1,0 +1,62 @@
+\documentclass[handout,nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}P\arabic{problem} Outcome: #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 22 Teaching Guide}
+
+\begin{document}
+\begin{abstract}
+
+\end{abstract}
+\maketitle
+
+\section{Notes for Problem 1}
+For this problem, you should probably remind students about the definitions of Riemann sum, left Riemann sum, right Riemann sum, and midpoint Riemann sum.
+(It may also be helpful to draw a graph of a decreasing function that is positive.)
+
+When working the solution I suggest you draw two graphs: a decreasing concave down function and a decreasing concave up function.
+(Or, you can also spin this into another problem and ask ``does the right Riemann sum of a concave up positive continuous function overestimates, underestimates, or there is not enough information to tell the area under the graph?'')
+
+\section{Notes for Problem 2}
+I would skip part (a) and work directly on part (b).
+This problem gives students practice in reshaping sigma notation and is part of the usual first step when computing integrals via limits.
+
+\section{Notes for Problem 3}
+Please make sure you and the students work this problem completely!
+Remind the students about the important summation formulas.
+
+This problem will take an extremely long time to solve: students will have difficulties with the notation, algebra, and they may forget how the limits are evaluated.
+Therefore it’s important to go through part (b) slowly and clearly.
+
+\section{Notes for Problem 4}
+This problem is from the AU15 Final Exam and simply tests if students can identify the corresponding components in the limit of (general) Riemann sums and the definite integrals.
+(You can mention that they will learn how to (easily) evaluate such integrals in Wednesday's lecture.)
+
+\section{Notes for Problem 5}
+Before working this problem remind students about the basic properties of integrals (with the appropriate graphs!).
+Part (c) will give students trouble (since they may assume that absolute ``composed'' with a definite integral ``commutes'').
+\end{document} 
