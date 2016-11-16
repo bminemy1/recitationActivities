@@ -1,0 +1,56 @@
+\documentclass[handout, nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}P\arabic{problem} Outcome: #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 26: Teaching Guide}
+
+\begin{document}
+\begin{abstract}
+
+\end{abstract}
+\maketitle
+
+\section{Notes for problem 1}
+This problem is from a previous exam.
+
+Please remind students about the usual procedure for sketching the graph of a function.
+(In particular, remind students about the connection between increasing/decreasing with the sign of the first derivative and concave up/concave down with whether the first derivative is increasing/decreasing.)
+
+\section{Notes for problem 2}
+After solving problem 2 I also recommend graphing both velocity $v$ and speed $|v|$.
+The graph for speed (as well as the sign chart for $v$) is helpful in motivating decomposing a definite integral when the integrand is the absolute value of a function.
+
+\section{Notes for problem 5}
+This problem is also form a previous exam.
+
+I would recommend working at least parts (i) and (ii) in class.
+(For part (i) many students may have trouble remembering the distance formula.)
+
+For part (iii), I suggest working collaboratively with the students to determine the objective function and the domain of the objective function.
+(Many students struggle with this part!)
+
+\end{document} 

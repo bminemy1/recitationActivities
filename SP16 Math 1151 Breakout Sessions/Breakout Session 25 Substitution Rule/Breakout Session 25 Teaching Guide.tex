@@ -1,0 +1,60 @@
+\documentclass[handout, nooutcomes]{ximera}
+\usepackage{booktabs}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\renewcommand{\outcome}[1]{\marginpar{\null\vspace{2ex}\scriptsize\framebox{\parbox{0.75in}{\begin{raggedright}P\arabic{problem} Outcome: #1\end{raggedright}}}}}
+
+\renewenvironment{freeResponse}{
+\ifhandout\setbox0\vbox\bgroup\else
+\begin{trivlist}\item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+\fi}
+{\ifhandout\egroup\else
+\end{trivlist}
+\fi}
+
+\newcommand{\RR}{\mathbb R}
+\renewcommand{\d}{\,d}
+\newcommand{\dd}[2][]{\frac{d #1}{d #2}}
+\renewcommand{\l}{\ell}
+\newcommand{\ddx}{\frac{d}{dx}}
+\everymath{\displaystyle}
+\newcommand{\dfn}{\textbf}
+\newcommand{\eval}[1]{\bigg[ #1 \bigg]}
+
+
+\title{Breakout Session 25: Teaching Guide}
+
+\begin{document}
+\begin{abstract}
+
+\end{abstract}
+\maketitle
+
+\section{Overall notes}
+It's important to cover substitution for both indefinite and definite integrals.
+
+I suggest you only work problems 1, 3, and 6(a) and (c). 
+
+\section{Notes for problem 1}
+This problem forces students to start thinking about how they will perform a particular substitution.
+It’s important to stress that students should practice and be comfortable with both substitutions.
+
+\section{Notes for problem 3}
+This problem is from a previous exam.
+Please go through the algebra and substitution slowly: students will have problems with the algebra and determining which expression should be substituted.
+
+
+Before starting on the first couple of problems, I suggest you review the definition, appropriate graphs, and a few examples of even and odd functions.
+
+Part (3) (of problem 1) will be tricky for students.
+The point of this problem is to encourage students to understand symmetry by looking at the appropriate graph before integrating.
+(Cosine is an even function, but on the given non-symmetric interval, it has rotational symmetry.)
+
+\section{Notes for problem 6}
+For at least one part, I suggest you draw the graph of the integrand over the appropriate interval and the graph of the $y = f(u)$ function over the transformed interval.
+This way students can see how substitution makes integration easier.
+\end{document} 

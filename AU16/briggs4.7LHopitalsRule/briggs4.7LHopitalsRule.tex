@@ -1,4 +1,4 @@
-\documentclass[nooutcomes]{ximera}
+\documentclass[nooutcomes,handout]{ximera}
 
 %% handout
 %% space
@@ -343,7 +343,7 @@ Use limits to compare growth rates.  State which function grows faster or that t
 \begin{enumerate}
 	\item$b^x; x^x; b>1$
 		\begin{freeResponse}
-		$\lim_{x \to \infty}\frac{b^x}{(x^x}=\lim_{x \to \infty}\left(\frac{b}{x}\right)^x=0$.  Since this limit is of the form $0^{\infty}$ which is a determinate form and equals $0$.
+		$\lim_{x \to \infty}\frac{b^x}{x^x}=\lim_{x \to \infty}\left(\frac{b}{x}\right)^x=0$.  Since this limit is of the form $0^{\infty}$ which is a determinate form and equals $0$.
 		Therefore, $x^x$ grows faster.
 		
 		\end{freeResponse}
@@ -399,14 +399,27 @@ Use limits to compare growth rates.  State which function grows faster or that t
 			\begin{freeResponse}
 			\begin{align*}
 			\lim_{x \to \infty}\frac{x^{40}}{1.004^x} &=\lim_{t \to \infty}\frac{\ln (t)^{40}}{1.004^{\ln(t)}}\\
-			&=\lim_{t \to \infty}\frac{\ln (t)^{40}}{e^{\ln(1.004)^{\ln t}}}\\
+			&=\lim_{t \to \infty}\frac{\ln (t)^{40}}{{e^{\ln(1.004)}}^{\ln t}}\\
 			&=\lim_{t \to \infty}\frac{\ln (t)^{40}}{t^{\ln(1.004)}}\\
-			&=\lim_{t \to \infty}\frac{40\ln(t)}{1.004t}\\
-			&\stackrel{L.R.}{=} \lim_{t \to \infty}\frac{\frac{40}{t}}{1.004}\\
+			&=\lim_{t \to \infty}\left(\frac{\ln(t)}{t^{1.004/40}}\right)^{40}\\
+			&=\left[\lim_{t \to \infty}\left(\frac{\ln(t)}{t^{1.004/40}}\right)\right]^{40}\\
+			&\stackrel{L.R.}{=} \left[\lim_{t \to \infty}\frac{\frac{1}{t}}{(1.004/40)t^{(1.004/40)-1}}\right]^{40}\\
+			&=\left[\lim_{t \to \infty}\frac{1}{(1.004/40)t^{((1.004/40)-1+1)}}\right]^{40}\\
+			&=0^{40}\\
 			&=0	
 				\end{align*}
 		Therefore, $1.004^x$ grows faster.
 		\end{freeResponse}
+	%part i
+	\item Use Briggs Theorem 4.15 to put the following functions in order of growth rate.\\
+	$$x^3 \cdot \ln(x), \ln^{3} (x), x^x, 1.004^x, x^{40}, x^3$$
+	
+	\begin{freeResponse}
+	
+	$$ \ln^{3} (x)<<x^{3}<<x^3 \cdot \ln(x)<< x^{40}<< 1.004^x <<x^x$$
+	
+	\end{freeResponse}
+	
 \end{enumerate}
 \end{problem}
 \end{document} 
